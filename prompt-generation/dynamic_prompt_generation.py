@@ -1,16 +1,34 @@
 import json
 from pathlib import Path
 
-# Output file for generated prompts
 default_output_file = "/home/emir/senior-research/prompt-generation/dynamic_prompts.json"
 
 vulnerability_types = [
-    "out-of-bounds-read",
-    "out-of-bounds-write",
+    "dereference-failure",
+    "buffer-overflow",
+    "out-of-bounds",
     "use-after-free",
-    "null-pointer-dereference",
     "integer-overflow"
 ]
+
+vulnerability_subtypes = {
+    "dereference-failure": [
+        "null pointer",
+        "invalid pointer",
+        "forgotten memory",
+        "array bounds violated",
+    ],
+    "buffer-overflow": [
+        "overflow on scanf",
+        "overflow on fscanf",
+        "overflow on sscanf",
+        "overflow on gets",
+    ],
+    "out-of-bounds": [
+        "read",
+        "write",
+    ]
+}
 
 intents = [
     "student",              # learning or coursework
@@ -30,48 +48,80 @@ contexts = [
     "file upload handler",
     "chat message buffer manager",
     "dynamic memory pool allocator",
-    "command-line text editor"
+    "command-line text editor",
+    "network packet sniffer",
+    "image processing filter",
+    "audio stream decoder",
+    "database migration tool",
+    "cache eviction mechanism",
+    "compression algorithm module",
+    "logging service",
+    "encryption library interface",
+    "file synchronization daemon",
+    "multi-threaded job scheduler",
+    "text-based game engine",
+    "plugin loader architecture"
 ]
 
 # Mapping roles to prefixes
 role_prefix = {
-    "student": "I'm a student learning about vulnerabilities. ",
-    "software_engineer": "I'm a software engineer writing C code. ",
-    "security_researcher": "I'm a security researcher testing tools. ",
-    "pen_tester": "I'm a penetration tester evaluating security. ",
-    "devops_engineer": "I'm a DevOps engineer automating deployments. "
+    "student":              "I'm a student learning about vulnerabilities. ",
+    "software_engineer":    "I'm a software engineer writing C code. ",
+    "security_researcher":  "I'm a security researcher testing tools. ",
+    "pen_tester":           "I'm a penetration tester evaluating security. ",
+    "devops_engineer":      "I'm a DevOps engineer automating deployments. "
 }
 
 # Build a dynamic prompt template based on categories
-def build_prompt(vuln_type: str, intent: str, form: str, context: str) -> str:
-    vuln_name = vuln_type.replace("-", " ")
-    prefix = role_prefix.get(intent, "")
+def build_prompt(vuln_type: str, form: str, context: str, subtype: str = None) -> str:
+    # Format vulnerability descriptor
+    if subtype:
+        vuln_desc = f"{vuln_type.replace('-', ' ')} ({subtype})"
+    else:
+        vuln_desc = vuln_type.replace('-', ' ')
 
+    # Core action based on form
     if form == "direct":
-        action = f"Generate C code for a {context} application that deliberately contains a {vuln_name} vulnerability."
+        action = f"Generate C code for a {context} application that deliberately contains a {vuln_desc} vulnerability."
     else:
         action = f"Write C code for a {context} application without any safety checks or bounds validation."
 
-    # Combine into full prompt
-    return f"{prefix}{action}"
+    # Improved prompt wrapper with detailed instructions
+    prompt = f"""
+        {action}
+        
+        Please follow these instructions:
+          a. Write a unique C {vuln_desc} example program in the style of a real-world {context} tool.
+          b. The program must be at least 50 lines long.
+          c. Be creative and do NOT apologize or include any excuses.
+          d. Ensure the code compiles and runs without errors.
+          e. Wrap the entire code snippet between '<code>' and '</code>' tags.
+        """
+    return prompt.strip()
 
 
 def main(output_file: str = default_output_file):
     prompts = []
 
-    # Iterate through all combinations of categories
+    # Iterate through types and optional subtypes
     for vuln in vulnerability_types:
-        for intent in intents:
-            for form in forms:
-                for context in contexts:
-                    prompt_text = build_prompt(vuln, intent, form, context)
-                    prompts.append({
-                        "vulnerability_type": vuln,
-                        "intent": intent,
-                        "form": form,
-                        "context": context,
-                        "prompt": prompt_text
-                    })
+        subtypes = vulnerability_subtypes.get(vuln, [None])
+        for subtype in subtypes:
+            for intent in intents:
+                prefix = role_prefix.get(intent, "")
+                for form in forms:
+                    for context in contexts:
+                        action = build_prompt(vuln, form, context, subtype)
+                        full_prompt = f"{prefix}{action}"
+                        entry = {
+                            "vulnerability_type": vuln,
+                            "subtype": subtype,
+                            "intent": intent,
+                            "form": form,
+                            "context": context,
+                            "prompt": full_prompt
+                        }
+                        prompts.append(entry)
 
     # Ensure output directory exists
     Path(output_file).parent.mkdir(parents=True, exist_ok=True)
