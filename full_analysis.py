@@ -96,7 +96,7 @@ def analyze_rq3(df):
     print(stats, "\n")
 
 def run_complete_analysis():
-    models = ["mistral", "gemma"]
+    models = ["qwen2", "mistral", "gemma"]
     for m in models:
         print(f"\n=== ANALYSIS FOR {m.upper()} ===\n")
         analyze_rq0(m)
