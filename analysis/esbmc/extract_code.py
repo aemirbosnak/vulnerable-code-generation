@@ -4,8 +4,8 @@ import subprocess
 import re
 
 BASE_DIR    = os.path.dirname(os.path.abspath(__file__))
-OUTPUTS_DIR = os.path.join(BASE_DIR, 'llm_outputs')
-EXTRACT_DIR = os.path.join(BASE_DIR, 'compilable_c_code')
+OUTPUTS_DIR = os.path.join(BASE_DIR, '../../model-outputs/dynamic')
+EXTRACT_DIR = os.path.join(BASE_DIR, '../../c-code/dynamic')
 
 # Common headers to inject if missing
 COMMON_HEADERS = [

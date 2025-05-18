@@ -2,15 +2,13 @@ import os
 import json
 import pandas as pd
 
+SUMMARY_DIR = "vuln-analysis-summary"
+
 def load_detailed_summary(model_name):
-    """
-    Load the JSON detailed summary for a given model into a DataFrame.
-    Expects files like <model>_detailed_summary.json in summary_dir.
-    """
     if "temp" in model_name:
-        path = f"vulnerability-analysis/summary/{model_name}_detailed_summary.json"
+        path = os.path.join(SUMMARY_DIR, f"{model_name}_detailed_summary.json")
     else:
-        path = f"vulnerability-analysis/summary/{model_name}_dynamic_prompt_detailed_summary.json"
+        path = os.path.join(SUMMARY_DIR, f"{model_name}_dynamic_prompt_detailed_summary.json")
     with open(path, 'r') as f:
         data = json.load(f)
 
@@ -55,13 +53,13 @@ def prepare_dataframe(df):
 
 def analyze_rq0(model_name):
     if "temp" in model_name:
-        path = f"vulnerability-analysis/summary/{model_name}_executive_summary.json"
+        path = os.path.join(SUMMARY_DIR, f"{model_name}_executive_summary.json")
     else:
-        path = f"vulnerability-analysis/summary/{model_name}_dynamic_prompt_executive_summary.json"
+        path = os.path.join(SUMMARY_DIR, f"{model_name}_dynamic_prompt_executive_summary.json")
     with open(path, "r") as f:
         summary = json.load(f)
 
-    print("RQ0: Absolute counts (from executive summary)")
+    print("RQ0: Absolute counts (from executive vuln-analysis-summary)")
     print(f" Total prompts:    {summary['total_prompts']}")
     print(f" Code generated:   {summary.get('code_generated', 'N/A')}")
     print(f" Compilable code:  {summary.get('compilable_code', 'N/A')}\n")

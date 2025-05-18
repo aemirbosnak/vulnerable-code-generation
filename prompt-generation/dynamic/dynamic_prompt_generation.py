@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-default_output_file = "/home/emir/senior-research/prompt-generation/dynamic_prompts.json"
+default_output_file = "/prompt-generation/dynamic/dynamic_prompts.json"
 
 vulnerability_types = [
     "dereference-failure",

@@ -4,11 +4,11 @@ import subprocess
 from multiprocessing import Pool
 from collections import Counter, OrderedDict
 
-BASE_DIR    = os.path.dirname(os.path.abspath(__file__))
-OUTPUTS_DIR = os.path.join(BASE_DIR, 'llm_outputs')
-EXTRACT_DIR = os.path.join(BASE_DIR, 'compilable_c_code')
-REPORTS_DIR = os.path.join(BASE_DIR, 'reports')
-SUMMARY_DIR = os.path.join(BASE_DIR, 'summary')
+BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
+OUTPUTS_DIR  = os.path.join(BASE_DIR, '../../model-outputs/dynamic')
+EXTRACT_DIR  = os.path.join(BASE_DIR, '../../c-code/dynamic')
+REPORTS_DIR  = os.path.join(BASE_DIR, '../esbmc-reports')
+SUMMARY_DIR  = os.path.join(BASE_DIR, '../vuln-analysis-summary')
 
 for d in (REPORTS_DIR, SUMMARY_DIR):
     os.makedirs(d, exist_ok=True)
@@ -111,7 +111,7 @@ def esbmc_worker(args):
 def analyze_with_esbmc(model_name, c_dir, entries):
     """
     Run ESBMC in parallel on every .c file in c_dir, merging in metadata.
-    Writes both a detailed-summary JSON and an executive-summary JSON.
+    Writes both a detailed-vuln-analysis-summary JSON and an executive-vuln-analysis-summary JSON.
     """
     c_files = [f for f in os.listdir(c_dir) if f.endswith('.c')]
     pool_size = min(8, len(c_files))
@@ -129,7 +129,7 @@ def analyze_with_esbmc(model_name, c_dir, entries):
     det_path = os.path.join(SUMMARY_DIR, f"{model_name}_detailed_summary.json")
     with open(det_path, 'w') as f:
         json.dump(ordered, f, indent=2)
-    print(f"[analyze] Detailed summary written to {det_path}")
+    print(f"[analyze] Detailed vuln-analysis-summary written to {det_path}")
 
     counts = Counter()
     parsing_breakdown = Counter()
@@ -164,7 +164,7 @@ def analyze_with_esbmc(model_name, c_dir, entries):
     exec_path = os.path.join(SUMMARY_DIR, f"{model_name}_executive_summary.json")
     with open(exec_path, 'w') as f:
         json.dump(executive, f, indent=2)
-    print(f"[analyze] Executive summary written to {exec_path}")
+    print(f"[analyze] Executive vuln-analysis-summary written to {exec_path}")
 
 
 def main():
