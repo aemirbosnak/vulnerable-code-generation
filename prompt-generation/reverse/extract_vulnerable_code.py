@@ -4,7 +4,7 @@ from pathlib import Path
 
 BASE_DIR    = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH   = "../../FormAI-v2/FormAI-v2.json"
-OUTPUT_ROOT = "sample_vulnerable_code"
+OUTPUT_ROOT = "formai_all_vulnerable_code"
 
 # Basic bucket rules
 cc_buckets = {
