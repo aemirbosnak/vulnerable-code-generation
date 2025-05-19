@@ -46,39 +46,123 @@ Average CC (correct vulnerability): 14.07
 
 Vulnerable Code by Cyclomatic Complexity Buckets:
 
-                       total_samples  ...  correct_rate (%)
-cyclomatic_complexity                 ...                  
-(-0.001, 5.0]                    264  ...             37.50
-(5.0, 10.0]                      119  ...             20.17
-(10.0, 15.0]                     268  ...             29.85
-(15.0, 20.0]                      35  ...             60.00
-(20.0, 25.0]                     112  ...             41.96
-(25.0, 30.0]                      45  ...             73.33
-(30.0, 35.0]                      45  ...             20.00
-(35.0, 40.0]                      18  ...             33.33
-(40.0, 45.0]                       2  ...              0.00
-(45.0, 50.0]                       9  ...             44.44
-(50.0, 100.0]                      0  ...               NaN
+                       total_samples  vuln_code_count  correct_vuln_count  \
+cyclomatic_complexity                                                       
+[0, 5)                           236              153                  95   
+[5, 10)                          119               66                  25   
+[10, 15)                         278              174                  80   
+[15, 20)                          51               39                  22   
+[20, 25)                         114               63                  49   
+[25, 30)                          45               41                  33   
+[30, 35)                          36                5                   3   
+[35, 40)                          27               13                  12   
+[40, 45)                           2                2                   0   
+[45, 50)                           3                1                   0   
+[50, 100)                          6                4                   4   
 
-[11 rows x 5 columns]
+                       vuln_rate (%)  correct_rate (%)  
+cyclomatic_complexity                                   
+[0, 5)                         64.83             40.25  
+[5, 10)                        55.46             21.01  
+[10, 15)                       62.59             28.78  
+[15, 20)                       76.47             43.14  
+[20, 25)                       55.26             42.98  
+[25, 30)                       91.11             73.33  
+[30, 35)                       13.89              8.33  
+[35, 40)                       48.15             44.44  
+[40, 45)                      100.00              0.00  
+[45, 50)                       33.33              0.00  
+[50, 100)                      66.67             66.67  
 
 Vulnerability Breakdown by Type and CC Bucket (only vulnerable code):
 
-vulnerability_type  buffer-overflow  ...  use-after-free
-cc_bin                               ...                
-(-0.001, 5.0]                    96  ...              23
-(5.0, 10.0]                      17  ...               7
-(10.0, 15.0]                     78  ...               3
-(15.0, 20.0]                     24  ...               0
-(20.0, 25.0]                     41  ...               0
-(25.0, 30.0]                     29  ...               0
-(30.0, 35.0]                      7  ...               0
-(35.0, 40.0]                      5  ...               0
-(40.0, 45.0]                      0  ...               0
-(45.0, 50.0]                      4  ...               0
-(50.0, 100.0]                     0  ...               0
+vulnerability_type  buffer-overflow  dereference-failure  integer-overflow  \
+cc_bin                                                                       
+[0, 5)                           93                   11                30   
+[5, 10)                          20                    0                29   
+[10, 15)                         75                   26                36   
+[15, 20)                         25                    0                14   
+[20, 25)                         43                    9                 8   
+[25, 30)                         29                    5                 4   
+[30, 35)                          1                    0                 4   
+[35, 40)                         11                    0                 2   
+[40, 45)                          0                    0                 2   
+[45, 50)                          0                    0                 0   
+[50, 100)                         4                    0                 0   
 
-[11 rows x 5 columns]
+vulnerability_type  out-of-bounds  use-after-free  
+cc_bin                                             
+[0, 5)                          3              16  
+[5, 10)                         3              14  
+[10, 15)                       34               3  
+[15, 20)                        0               0  
+[20, 25)                        3               0  
+[25, 30)                        3               0  
+[30, 35)                        0               0  
+[35, 40)                        0               0  
+[40, 45)                        0               0  
+[45, 50)                        1               0  
+[50, 100)                       0               0  
+
+RQ4: Incorrect Vulnerability Generation Patterns
+
+Top Unexpected Vulnerability Mappings (Expected → Violated):
+
+                                     expected                                                 violated  count
+                  arithmetic overflow integer                                 buffer overflow on scanf     57
+           arithmetic overflow floating point                                 buffer overflow on scanf     48
+                        array bounds violated                                 buffer overflow on scanf     15
+                          dereference failure                                 buffer overflow on scanf     15
+                    buffer overflow on sscanf                        dereference failure: null pointer     12
+operand of free must have zero pointer offset                        dereference failure: null pointer     10
+                          dereference failure                                buffer overflow on fscanf     10
+operand of free must have zero pointer offset          dereference failure: invalidated dynamic object      9
+                        array bounds violated                               arithmetic overflow on mul      9
+                        array bounds violated                        dereference failure: null pointer      8
+operand of free must have zero pointer offset                                 buffer overflow on scanf      6
+                        array bounds violated                                buffer overflow on fscanf      4
+                    buffer overflow on sscanf               dereference failure: array bounds violated      3
+           arithmetic overflow floating point                        dereference failure: null pointer      2
+           arithmetic overflow floating point                     dereference failure: invalid pointer      2
+                          dereference failure        array bounds violated: array `buffer' upper bound      2
+                    buffer overflow on fscanf                               arithmetic overflow on mul      2
+                  arithmetic overflow integer               dereference failure: array bounds violated      1
+                  arithmetic overflow integer     dereference failure: write access to string constant      1
+                        array bounds violated dereference failure: structure pointer pointed at scalar      1
+                        array bounds violated        dereference failure: free() of non-dynamic memory      1
+operand of free must have zero pointer offset     dereference failure: write access to string constant      1
+           arithmetic overflow floating point                                buffer overflow on fscanf      1
+           arithmetic overflow floating point        array bounds violated: array `header' upper bound      1
+           arithmetic overflow floating point                                         division by zero      1
+                        array bounds violated                                buffer overflow on sscanf      1
+                    buffer overflow on sscanf     vla array size in bytes overflows address space size      1
+                    buffer overflow on sscanf                               arithmetic overflow on shl      1
+                    buffer overflow on sscanf                                   source pointer is null      1
+                      buffer overflow on gets                        dereference failure: null pointer      1
+                      buffer overflow on gets                                   source pointer is null      1
+                    buffer overflow on fscanf                               arithmetic overflow on add      1
+                      buffer overflow on gets     array bounds violated: array `neg_words' upper bound      1
+                    buffer overflow on fscanf               dereference failure: array bounds violated      1
+                    buffer overflow on fscanf           arithmetic overflow on floating-point ieee_add      1
+                     buffer overflow on scanf                               arithmetic overflow on mul      1
+                     buffer overflow on scanf        array bounds violated: array `subnet' upper bound      1
+                  arithmetic overflow integer                     dereference failure: invalid pointer      1
+                  arithmetic overflow integer         array bounds violated: array `count' lower bound      1
+                  arithmetic overflow integer                                         division by zero      1
+                  arithmetic overflow integer                                buffer overflow on sscanf      1
+
+Top 10 Most Common Violated Vulnerabilities When Incorrectly Generated:
+
+ buffer overflow on scanf                                       141
+ dereference failure: null pointer                               33
+ buffer overflow on fscanf                                       15
+ arithmetic overflow on mul                                      12
+ dereference failure: invalidated dynamic object                  9
+ dereference failure: array bounds violated                       5
+ dereference failure: invalid pointer                             3
+ dereference failure: write access to string constant             2
+ division by zero                                                 2
+ buffer overflow on sscanf                                        2
 
 
 === ANALYSIS FOR MISTRAL ===
@@ -129,39 +213,126 @@ Average CC (correct vulnerability): 11.37
 
 Vulnerable Code by Cyclomatic Complexity Buckets:
 
-                       total_samples  ...  correct_rate (%)
-cyclomatic_complexity                 ...                  
-(-0.001, 5.0]                    165  ...             35.15
-(5.0, 10.0]                       59  ...             13.56
-(10.0, 15.0]                     105  ...             22.86
-(15.0, 20.0]                       6  ...             83.33
-(20.0, 25.0]                      42  ...             33.33
-(25.0, 30.0]                       8  ...             75.00
-(30.0, 35.0]                      14  ...              7.14
-(35.0, 40.0]                       5  ...             40.00
-(40.0, 45.0]                       0  ...               NaN
-(45.0, 50.0]                       3  ...            100.00
-(50.0, 100.0]                      0  ...               NaN
+                       total_samples  vuln_code_count  correct_vuln_count  \
+cyclomatic_complexity                                                       
+[0, 5)                           147              105                  57   
+[5, 10)                           68               46                   6   
+[10, 15)                         101               62                  26   
+[15, 20)                          18                9                   5   
+[20, 25)                          43               20                  15   
+[25, 30)                           8                7                   6   
+[30, 35)                           9                2                   0   
+[35, 40)                          10                7                   3   
+[40, 45)                           0                0                   0   
+[45, 50)                           0                0                   0   
+[50, 100)                          3                3                   3   
 
-[11 rows x 5 columns]
+                       vuln_rate (%)  correct_rate (%)  
+cyclomatic_complexity                                   
+[0, 5)                         71.43             38.78  
+[5, 10)                        67.65              8.82  
+[10, 15)                       61.39             25.74  
+[15, 20)                       50.00             27.78  
+[20, 25)                       46.51             34.88  
+[25, 30)                       87.50             75.00  
+[30, 35)                       22.22              0.00  
+[35, 40)                       70.00             30.00  
+[40, 45)                         NaN               NaN  
+[45, 50)                         NaN               NaN  
+[50, 100)                     100.00            100.00  
 
 Vulnerability Breakdown by Type and CC Bucket (only vulnerable code):
 
-vulnerability_type  buffer-overflow  ...  use-after-free
-cc_bin                               ...                
-(-0.001, 5.0]                    62  ...              24
-(5.0, 10.0]                       6  ...               7
-(10.0, 15.0]                     25  ...               0
-(15.0, 20.0]                      5  ...               0
-(20.0, 25.0]                     17  ...               0
-(25.0, 30.0]                      7  ...               0
-(30.0, 35.0]                      5  ...               0
-(35.0, 40.0]                      2  ...               0
-(40.0, 45.0]                      0  ...               0
-(45.0, 50.0]                      3  ...               0
-(50.0, 100.0]                     0  ...               0
+vulnerability_type  buffer-overflow  dereference-failure  integer-overflow  \
+cc_bin                                                                       
+[0, 5)                           61                    6                13   
+[5, 10)                           7                    0                23   
+[10, 15)                         24                   11                12   
+[15, 20)                          5                    0                 4   
+[20, 25)                         18                    0                 2   
+[25, 30)                          7                    0                 0   
+[30, 35)                          1                    0                 1   
+[35, 40)                          6                    0                 1   
+[40, 45)                          0                    0                 0   
+[45, 50)                          0                    0                 0   
+[50, 100)                         3                    0                 0   
 
-[11 rows x 5 columns]
+vulnerability_type  out-of-bounds  use-after-free  
+cc_bin                                             
+[0, 5)                          6              19  
+[5, 10)                         4              12  
+[10, 15)                       15               0  
+[15, 20)                        0               0  
+[20, 25)                        0               0  
+[25, 30)                        0               0  
+[30, 35)                        0               0  
+[35, 40)                        0               0  
+[40, 45)                        0               0  
+[45, 50)                        0               0  
+[50, 100)                       0               0  
+
+RQ4: Incorrect Vulnerability Generation Patterns
+
+Top Unexpected Vulnerability Mappings (Expected → Violated):
+
+                                     expected                                                 violated  count
+                  arithmetic overflow integer                                 buffer overflow on scanf     24
+operand of free must have zero pointer offset                        dereference failure: null pointer     20
+           arithmetic overflow floating point                                 buffer overflow on scanf     12
+                        array bounds violated                                 buffer overflow on scanf     11
+                        array bounds violated                        dereference failure: null pointer      7
+                          dereference failure                                 buffer overflow on scanf      5
+operand of free must have zero pointer offset                                 buffer overflow on scanf      5
+           arithmetic overflow floating point                        dereference failure: null pointer      4
+operand of free must have zero pointer offset          dereference failure: invalidated dynamic object      3
+                     buffer overflow on scanf               dereference failure: array bounds violated      3
+                    buffer overflow on sscanf                        dereference failure: null pointer      3
+                    buffer overflow on sscanf                                   source pointer is null      3
+                  arithmetic overflow integer                                         division by zero      2
+                    buffer overflow on fscanf                                   source pointer is null      2
+                          dereference failure                                buffer overflow on fscanf      2
+                    buffer overflow on fscanf    the pointer to a file object must be a valid argument      2
+                    buffer overflow on sscanf                               arithmetic overflow on shl      2
+                  arithmetic overflow integer                                   source pointer is null      2
+                        array bounds violated                               arithmetic overflow on add      2
+                  arithmetic overflow integer                        dereference failure: null pointer      2
+           arithmetic overflow floating point       array bounds violated: array `words'[] upper bound      1
+           arithmetic overflow floating point                                buffer overflow on sscanf      1
+           arithmetic overflow floating point                     dereference failure: invalid pointer      1
+                        array bounds violated                                buffer overflow on fscanf      1
+                        array bounds violated                                   source pointer is null      1
+                          dereference failure    the pointer to a file object must be a valid argument      1
+operand of free must have zero pointer offset                                    same object violation      1
+operand of free must have zero pointer offset               dereference failure: array bounds violated      1
+                    buffer overflow on sscanf         array bounds violated: array `input' lower bound      1
+                    buffer overflow on sscanf    the pointer to a file object must be a valid argument      1
+                    buffer overflow on sscanf dereference failure: structure pointer pointed at scalar      1
+                    buffer overflow on sscanf                               arithmetic overflow on mul      1
+                          dereference failure                                buffer overflow on sscanf      1
+                      buffer overflow on gets                                         division by zero      1
+                      buffer overflow on gets         array bounds violated: array `input' lower bound      1
+                      buffer overflow on gets                               arithmetic overflow on add      1
+                    buffer overflow on fscanf               dereference failure: array bounds violated      1
+                    buffer overflow on fscanf                               arithmetic overflow on mul      1
+                      buffer overflow on gets                                   source pointer is null      1
+                      buffer overflow on gets               dereference failure: array bounds violated      1
+                     buffer overflow on scanf                        dereference failure: null pointer      1
+                    buffer overflow on fscanf                               arithmetic overflow on add      1
+                  arithmetic overflow integer                     dereference failure: invalid pointer      1
+                  arithmetic overflow integer                                buffer overflow on sscanf      1
+
+Top 10 Most Common Violated Vulnerabilities When Incorrectly Generated:
+
+ buffer overflow on scanf                                        57
+ dereference failure: null pointer                               37
+ source pointer is null                                           9
+ dereference failure: array bounds violated                       6
+ arithmetic overflow on add                                       4
+ the pointer to a file object must be a valid argument            4
+ buffer overflow on fscanf                                        3
+ buffer overflow on sscanf                                        3
+ dereference failure: invalidated dynamic object                  3
+ division by zero                                                 3
 
 
 === ANALYSIS FOR GEMMA ===
@@ -212,37 +383,102 @@ Average CC (correct vulnerability): 14.59
 
 Vulnerable Code by Cyclomatic Complexity Buckets:
 
-                       total_samples  ...  correct_rate (%)
-cyclomatic_complexity                 ...                  
-(-0.001, 5.0]                    205  ...             38.05
-(5.0, 10.0]                       88  ...             27.27
-(10.0, 15.0]                     186  ...             35.48
-(15.0, 20.0]                      38  ...             65.79
-(20.0, 25.0]                      66  ...             39.39
-(25.0, 30.0]                      36  ...             61.11
-(30.0, 35.0]                      42  ...             28.57
-(35.0, 40.0]                      14  ...             42.86
-(40.0, 45.0]                       3  ...              0.00
-(45.0, 50.0]                      12  ...             58.33
-(50.0, 100.0]                      0  ...               NaN
+                       total_samples  vuln_code_count  correct_vuln_count  \
+cyclomatic_complexity                                                       
+[0, 5)                           172              117                  72   
+[5, 10)                          105               63                  22   
+[10, 15)                         191              132                  72   
+[15, 20)                          46               32                  24   
+[20, 25)                          69               35                  29   
+[25, 30)                          36               25                  22   
+[30, 35)                          34                9                   4   
+[35, 40)                          21               14                  14   
+[40, 45)                           4                3                   0   
+[45, 50)                           5                4                   0   
+[50, 100)                          7                7                   7   
 
-[11 rows x 5 columns]
+                       vuln_rate (%)  correct_rate (%)  
+cyclomatic_complexity                                   
+[0, 5)                         68.02             41.86  
+[5, 10)                        60.00             20.95  
+[10, 15)                       69.11             37.70  
+[15, 20)                       69.57             52.17  
+[20, 25)                       50.72             42.03  
+[25, 30)                       69.44             61.11  
+[30, 35)                       26.47             11.76  
+[35, 40)                       66.67             66.67  
+[40, 45)                       75.00              0.00  
+[45, 50)                       80.00              0.00  
+[50, 100)                     100.00            100.00  
 
 Vulnerability Breakdown by Type and CC Bucket (only vulnerable code):
 
-vulnerability_type  buffer-overflow  ...  use-after-free
-cc_bin                               ...                
-(-0.001, 5.0]                    71  ...              22
-(5.0, 10.0]                      14  ...               3
-(10.0, 15.0]                     61  ...               3
-(15.0, 20.0]                     24  ...               0
-(20.0, 25.0]                     27  ...               0
-(25.0, 30.0]                     22  ...               0
-(30.0, 35.0]                     11  ...               0
-(35.0, 40.0]                      6  ...               0
-(40.0, 45.0]                      0  ...               0
-(45.0, 50.0]                      7  ...               0
-(50.0, 100.0]                     0  ...               0
+vulnerability_type  buffer-overflow  dereference-failure  integer-overflow  \
+cc_bin                                                                       
+[0, 5)                           65                    9                24   
+[5, 10)                          20                    0                32   
+[10, 15)                         59                   27                28   
+[15, 20)                         23                    0                 9   
+[20, 25)                         30                    0                 5   
+[25, 30)                         22                    1                 1   
+[30, 35)                          3                    1                 5   
+[35, 40)                         14                    0                 0   
+[40, 45)                          0                    0                 3   
+[45, 50)                          0                    0                 0   
+[50, 100)                         7                    0                 0   
 
-[11 rows x 5 columns]
+vulnerability_type  out-of-bounds  use-after-free  
+cc_bin                                             
+[0, 5)                          5              14  
+[5, 10)                         0              11  
+[10, 15)                       15               3  
+[15, 20)                        0               0  
+[20, 25)                        0               0  
+[25, 30)                        1               0  
+[30, 35)                        0               0  
+[35, 40)                        0               0  
+[40, 45)                        0               0  
+[45, 50)                        4               0  
+[50, 100)                       0               0  
+
+RQ4: Incorrect Vulnerability Generation Patterns
+
+Top Unexpected Vulnerability Mappings (Expected → Violated):
+
+                                     expected                                              violated  count
+           arithmetic overflow floating point                              buffer overflow on scanf     53
+                  arithmetic overflow integer                              buffer overflow on scanf     38
+                        array bounds violated                              buffer overflow on scanf     18
+                          dereference failure                              buffer overflow on scanf     15
+operand of free must have zero pointer offset                     dereference failure: null pointer      9
+operand of free must have zero pointer offset       dereference failure: invalidated dynamic object      8
+operand of free must have zero pointer offset                              buffer overflow on scanf      6
+                  arithmetic overflow integer                     dereference failure: null pointer      5
+                        array bounds violated                             buffer overflow on fscanf      3
+                          dereference failure                             buffer overflow on fscanf      3
+                    buffer overflow on sscanf                     dereference failure: null pointer      3
+                        array bounds violated                     dereference failure: null pointer      2
+                  arithmetic overflow integer    array bounds violated: array `summary' upper bound      2
+                    buffer overflow on fscanf                     dereference failure: null pointer      2
+                        array bounds violated                             buffer overflow on sscanf      1
+           arithmetic overflow floating point                             buffer overflow on fscanf      1
+                    buffer overflow on sscanf                            arithmetic overflow on shl      1
+                          dereference failure the pointer to a file object must be a valid argument      1
+                    buffer overflow on sscanf the pointer to a file object must be a valid argument      1
+                      buffer overflow on gets     dereference failure: free() of non-dynamic memory      1
+                    buffer overflow on fscanf     array bounds violated: array `buffer' upper bound      1
+                    buffer overflow on fscanf the pointer to a file object must be a valid argument      1
+
+Top 10 Most Common Violated Vulnerabilities When Incorrectly Generated:
+
+ buffer overflow on scanf                                       130
+ dereference failure: null pointer                               21
+ dereference failure: invalidated dynamic object                  8
+ buffer overflow on fscanf                                        7
+ the pointer to a file object must be a valid argument            3
+ array bounds violated: array `summary' upper bound               2
+ buffer overflow on sscanf                                        1
+ arithmetic overflow on shl                                       1
+ dereference failure: free() of non-dynamic memory                1
+ array bounds violated: array `buffer' upper bound                1
 

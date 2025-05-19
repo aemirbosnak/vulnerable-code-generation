@@ -1,3 +1,4 @@
+
 === ANALYSIS FOR QWEN2 ===
 
 RQ0: Absolute counts (from executive vuln-analysis-summary)
@@ -37,6 +38,72 @@ RQ3: By form (absolute counts)
 form                                    
 direct           533                 387
 indirect         536                 413
+
+RQ4: Incorrect Vulnerability Generation Patterns
+
+Top Unexpected Vulnerability Mappings (Expected → Violated):
+
+             expected                                                 violated  count
+       use after free                        dereference failure: null pointer     53
+     overflow on gets               dereference failure: array bounds violated     19
+     integer overflow                        dereference failure: null pointer     18
+                write                        dereference failure: null pointer     16
+                write                                buffer overflow on sscanf     10
+                 read                                buffer overflow on sscanf     10
+    overflow on scanf               dereference failure: array bounds violated     10
+   overflow on sscanf                                         division by zero      8
+     integer overflow                                buffer overflow on sscanf      7
+array bounds violated                                 buffer overflow on scanf      7
+     integer overflow                                 buffer overflow on scanf      7
+                 read                        dereference failure: null pointer      7
+array bounds violated                                buffer overflow on fscanf      7
+array bounds violated                                buffer overflow on sscanf      6
+     integer overflow               dereference failure: array bounds violated      6
+                write                                   source pointer is null      5
+                 read                                 buffer overflow on scanf      5
+                 read                                buffer overflow on fscanf      5
+                write                                 buffer overflow on scanf      5
+       use after free                                 buffer overflow on scanf      4
+                 read        dereference failure: free() of non-dynamic memory      4
+                write      dereference failure: access to object out of bounds      4
+     forgotten memory                               arithmetic overflow on mul      3
+   overflow on sscanf                                   source pointer is null      3
+     forgotten memory                                 buffer overflow on scanf      3
+    overflow on scanf                                   source pointer is null      3
+      invalid pointer                               arithmetic overflow on mul      3
+       use after free               dereference failure: array bounds violated      3
+     overflow on gets                        dereference failure: null pointer      3
+   overflow on sscanf                        dereference failure: null pointer      2
+         null pointer                                 buffer overflow on scanf      2
+   overflow on sscanf        dereference failure: free() of non-dynamic memory      2
+       use after free          dereference failure: invalidated dynamic object      2
+       use after free        array bounds violated: array `buffer' lower bound      2
+     overflow on gets                               arithmetic overflow on shl      2
+     integer overflow      dereference failure: access to object out of bounds      2
+                 read dereference failure: data object accessed with code type      1
+         null pointer                               arithmetic overflow on mul      1
+     overflow on gets        dereference failure: free() of non-dynamic memory      1
+       use after free     dereference failure: write access to string constant      1
+                write                     dereference failure: invalid pointer      1
+                 read                               arithmetic overflow on mul      1
+                write                                buffer overflow on fscanf      1
+     forgotten memory                                   source pointer is null      1
+      invalid pointer      array bounds violated: array `messages' upper bound      1
+     integer overflow                                buffer overflow on fscanf      1
+    overflow on scanf                        dereference failure: null pointer      1
+
+Top 10 Most Common Violated Vulnerabilities When Incorrectly Generated:
+
+ dereference failure: null pointer                              100
+ dereference failure: array bounds violated                      38
+ buffer overflow on scanf                                        33
+ buffer overflow on sscanf                                       33
+ buffer overflow on fscanf                                       14
+ source pointer is null                                          12
+ division by zero                                                 8
+ arithmetic overflow on mul                                       8
+ dereference failure: free() of non-dynamic memory                7
+ dereference failure: access to object out of bounds              6
 
 
 === ANALYSIS FOR MISTRAL ===
@@ -79,6 +146,101 @@ form
 direct           327                 190
 indirect         388                 235
 
+RQ4: Incorrect Vulnerability Generation Patterns
+
+Top Unexpected Vulnerability Mappings (Expected → Violated):
+
+             expected                                                 violated  count
+       use after free                        dereference failure: null pointer     44
+                write                        dereference failure: null pointer     21
+                 read                        dereference failure: null pointer     20
+     integer overflow                        dereference failure: null pointer     16
+                 read                                 buffer overflow on scanf     13
+    overflow on scanf                        dereference failure: null pointer     10
+                write                                   source pointer is null      8
+array bounds violated                                 buffer overflow on scanf      8
+   overflow on fscanf                        dereference failure: null pointer      8
+   overflow on sscanf                        dereference failure: null pointer      7
+      invalid pointer                                 buffer overflow on scanf      7
+                write                                 buffer overflow on scanf      7
+     integer overflow                                 buffer overflow on scanf      7
+     overflow on gets                        dereference failure: null pointer      5
+   overflow on sscanf               dereference failure: array bounds violated      4
+     integer overflow                                   source pointer is null      4
+     forgotten memory                                 buffer overflow on scanf      4
+array bounds violated                                   source pointer is null      4
+    overflow on scanf                                   source pointer is null      4
+   overflow on sscanf                                   source pointer is null      4
+   overflow on fscanf                                   source pointer is null      4
+     forgotten memory                                   source pointer is null      3
+     overflow on gets               dereference failure: array bounds violated      3
+                 read                                   source pointer is null      3
+    overflow on scanf    the pointer to a file object must be a valid argument      3
+array bounds violated    the pointer to a file object must be a valid argument      3
+         null pointer                                 buffer overflow on scanf      3
+     overflow on gets                                   source pointer is null      3
+array bounds violated                                buffer overflow on fscanf      2
+     integer overflow                                buffer overflow on sscanf      2
+      invalid pointer                                   source pointer is null      2
+     forgotten memory                                buffer overflow on fscanf      2
+                 read                                buffer overflow on sscanf      2
+         null pointer    the pointer to a file object must be a valid argument      2
+   overflow on fscanf               dereference failure: array bounds violated      2
+    overflow on scanf               dereference failure: array bounds violated      2
+       use after free                                 buffer overflow on scanf      2
+                write                                buffer overflow on fscanf      2
+       use after free                                buffer overflow on fscanf      2
+     integer overflow               dereference failure: array bounds violated      2
+         null pointer                                buffer overflow on fscanf      1
+   overflow on sscanf    the pointer to a file object must be a valid argument      1
+   overflow on fscanf          array bounds violated: array `pool' lower bound      1
+   overflow on fscanf        dereference failure: free() of non-dynamic memory      1
+   overflow on sscanf      dereference failure: access to object out of bounds      1
+     integer overflow dereference failure: data object accessed with code type      1
+     integer overflow                 array bounds violated: array upper bound      1
+                write      dereference failure: access to object out of bounds      1
+       use after free                                   source pointer is null      1
+       use after free          dereference failure: invalidated dynamic object      1
+     integer overflow                                buffer overflow on fscanf      1
+       use after free               dereference failure: array bounds violated      1
+                 read                                buffer overflow on fscanf      1
+                 read    the pointer to a file object must be a valid argument      1
+                 read        dereference failure: free() of non-dynamic memory      1
+     overflow on gets    the pointer to a file object must be a valid argument      1
+                write                     dereference failure: invalid pointer      1
+                write                                buffer overflow on sscanf      1
+      invalid pointer    the pointer to a file object must be a valid argument      1
+     integer overflow      dereference failure: access to object out of bounds      1
+     forgotten memory                                buffer overflow on sscanf      1
+     forgotten memory        array bounds violated: array `buffer' lower bound      1
+      invalid pointer                                buffer overflow on fscanf      1
+     integer overflow        array bounds violated: array `buffer' lower bound      1
+     integer overflow                     dereference failure: invalid pointer      1
+      invalid pointer         array bounds violated: array `lines' lower bound      1
+      invalid pointer          array bounds violated: array `jobs' upper bound      1
+      invalid pointer        array bounds violated: array `buffer' upper bound      1
+    overflow on scanf        array bounds violated: array `buffer' upper bound      1
+array bounds violated                                buffer overflow on sscanf      1
+   overflow on fscanf                               arithmetic overflow on add      1
+    overflow on scanf dereference failure: data object accessed with code type      1
+   overflow on fscanf    array bounds violated: array `compressed' upper bound      1
+   overflow on fscanf    the pointer to a file object must be a valid argument      1
+   overflow on fscanf        array bounds violated: array `buffer' lower bound      1
+   overflow on fscanf         array bounds violated: array `count' lower bound      1
+
+Top 10 Most Common Violated Vulnerabilities When Incorrectly Generated:
+
+ dereference failure: null pointer                              131
+ buffer overflow on scanf                                        51
+ source pointer is null                                          40
+ dereference failure: array bounds violated                      14
+ the pointer to a file object must be a valid argument           13
+ buffer overflow on fscanf                                       12
+ buffer overflow on sscanf                                        7
+ dereference failure: access to object out of bounds              3
+ array bounds violated: array `buffer' lower bound                3
+ dereference failure: free() of non-dynamic memory                2
+
 
 === ANALYSIS FOR GEMMA ===
 
@@ -119,6 +281,58 @@ RQ3: By form (absolute counts)
 form                                    
 direct           644                 504
 indirect         563                 458
+
+RQ4: Incorrect Vulnerability Generation Patterns
+
+Top Unexpected Vulnerability Mappings (Expected → Violated):
+
+             expected                                             violated  count
+                write                    dereference failure: null pointer     63
+                 read                    dereference failure: null pointer     40
+       use after free                    dereference failure: null pointer     33
+       use after free      dereference failure: invalidated dynamic object     24
+     integer overflow                             buffer overflow on scanf     17
+                 read                             buffer overflow on scanf     11
+     integer overflow                    dereference failure: null pointer     10
+       use after free                             buffer overflow on scanf      9
+                 read dereference failure: write access to string constant      4
+     forgotten memory                             buffer overflow on scanf      3
+                write                             buffer overflow on scanf      3
+    overflow on scanf           dereference failure: array bounds violated      2
+      invalid pointer                             buffer overflow on scanf      2
+array bounds violated                             buffer overflow on scanf      2
+      invalid pointer                           arithmetic overflow on sub      2
+                 read                           arithmetic overflow on add      2
+                 read                            buffer overflow on fscanf      2
+   overflow on sscanf                           arithmetic overflow on mul      1
+                write                           arithmetic overflow on sub      1
+                 read                 dereference failure: invalid pointer      1
+                 read        operand of free must have zero pointer offset      1
+     overflow on gets           dereference failure: array bounds violated      1
+     overflow on gets                    dereference failure: null pointer      1
+         null pointer                             buffer overflow on scanf      1
+                 read                           arithmetic overflow on sub      1
+                write        operand of free must have zero pointer offset      1
+     integer overflow                                     division by zero      1
+       use after free                           arithmetic overflow on mul      1
+       use after free                            buffer overflow on fscanf      1
+     forgotten memory        operand of free must have zero pointer offset      1
+     forgotten memory                           arithmetic overflow on add      1
+      invalid pointer        operand of free must have zero pointer offset      1
+    overflow on scanf                    dereference failure: null pointer      1
+
+Top 10 Most Common Violated Vulnerabilities When Incorrectly Generated:
+
+ dereference failure: null pointer                              148
+ buffer overflow on scanf                                        48
+ dereference failure: invalidated dynamic object                 24
+ arithmetic overflow on sub                                       4
+ dereference failure: write access to string constant             4
+ operand of free must have zero pointer offset                    4
+ dereference failure: array bounds violated                       3
+ buffer overflow on fscanf                                        3
+ arithmetic overflow on add                                       3
+ arithmetic overflow on mul                                       2
 
 
 === ANALYSIS FOR QWEN2_TEMP_SAMPLE ===
@@ -245,6 +459,49 @@ form
 direct            26                  17
 indirect          23                  17
 
+RQ4: Incorrect Vulnerability Generation Patterns
+
+Top Unexpected Vulnerability Mappings (Expected → Violated):
+
+         expected                                            violated  count
+   use after free                   dereference failure: null pointer      8
+             read                   dereference failure: null pointer      5
+ integer overflow                   dereference failure: null pointer      4
+   use after free     dereference failure: invalidated dynamic object      3
+overflow on scanf          dereference failure: array bounds violated      2
+ integer overflow          dereference failure: array bounds violated      2
+             read                           buffer overflow on fscanf      2
+ overflow on gets                   dereference failure: null pointer      2
+ overflow on gets                              source pointer is null      2
+ overflow on gets          dereference failure: array bounds violated      2
+            write                            buffer overflow on scanf      1
+             read                          arithmetic overflow on sub      1
+   use after free                dereference failure: invalid pointer      1
+             read                            buffer overflow on scanf      1
+  invalid pointer                           buffer overflow on sscanf      1
+overflow on scanf                   dereference failure: null pointer      1
+   use after free dereference failure: access to object out of bounds      1
+             read                dereference failure: invalid pointer      1
+             read dereference failure: access to object out of bounds      1
+ integer overflow                            buffer overflow on scanf      1
+            write                   dereference failure: null pointer      1
+ integer overflow                                    division by zero      1
+            write                           buffer overflow on fscanf      1
+  invalid pointer                            buffer overflow on scanf      1
+
+Top 10 Most Common Violated Vulnerabilities When Incorrectly Generated:
+
+ dereference failure: null pointer                               21
+ dereference failure: array bounds violated                       6
+ buffer overflow on scanf                                         4
+ buffer overflow on fscanf                                        3
+ dereference failure: invalidated dynamic object                  3
+ dereference failure: invalid pointer                             2
+ dereference failure: access to object out of bounds              2
+ source pointer is null                                           2
+ arithmetic overflow on sub                                       1
+ buffer overflow on sscanf                                        1
+
 
 === ANALYSIS FOR MISTRAL_TEMP_SAMPLE ===
 
@@ -365,6 +622,57 @@ indirect          23                  13
 form                                    
 direct            20                  11
 indirect          18                  12
+
+RQ4: Incorrect Vulnerability Generation Patterns
+
+Top Unexpected Vulnerability Mappings (Expected → Violated):
+
+             expected                                                        violated  count
+                write                               dereference failure: null pointer      6
+                 read                                        buffer overflow on scanf      6
+       use after free                               dereference failure: null pointer      5
+                 read                               dereference failure: null pointer      3
+                 read                                          source pointer is null      3
+     overflow on gets                                          source pointer is null      3
+                write                                          source pointer is null      3
+     integer overflow                               dereference failure: null pointer      2
+                write           the pointer to a file object must be a valid argument      2
+      invalid pointer                                        buffer overflow on scanf      2
+         null pointer                                          source pointer is null      2
+    overflow on scanf                               dereference failure: null pointer      2
+     integer overflow                      dereference failure: array bounds violated      2
+   overflow on sscanf                               dereference failure: null pointer      2
+array bounds violated                                        buffer overflow on scanf      1
+   overflow on fscanf           the pointer to a file object must be a valid argument      1
+                 read           the pointer to a file object must be a valid argument      1
+    overflow on scanf           the pointer to a file object must be a valid argument      1
+     integer overflow                            dereference failure: invalid pointer      1
+       use after free                                      arithmetic overflow on mul      1
+   overflow on sscanf                                          source pointer is null      1
+      invalid pointer                                       buffer overflow on fscanf      1
+      invalid pointer                                          source pointer is null      1
+   overflow on fscanf                               dereference failure: null pointer      1
+     overflow on gets            dereference failure: write access to string constant      1
+      invalid pointer               array bounds violated: array `buffer' upper bound      1
+      invalid pointer                                       buffer overflow on sscanf      1
+                write                                        buffer overflow on scanf      1
+   overflow on fscanf                      dereference failure: array bounds violated      1
+     overflow on gets                               dereference failure: null pointer      1
+                 read                                       buffer overflow on sscanf      1
+                 read dereference failure: accessed expired variable pointer `plugin'      1
+
+Top 10 Most Common Violated Vulnerabilities When Incorrectly Generated:
+
+ dereference failure: null pointer                               22
+ source pointer is null                                          13
+ buffer overflow on scanf                                        10
+ the pointer to a file object must be a valid argument            5
+ dereference failure: array bounds violated                       3
+ buffer overflow on sscanf                                        2
+ dereference failure: invalid pointer                             1
+ arithmetic overflow on mul                                       1
+ buffer overflow on fscanf                                        1
+ dereference failure: write access to string constant             1
 
 
 === ANALYSIS FOR GEMMA_TEMP_SAMPLE ===
@@ -490,4 +798,33 @@ indirect          27                  22
 form                                    
 direct            35                  27
 indirect          23                  16
+
+RQ4: Incorrect Vulnerability Generation Patterns
+
+Top Unexpected Vulnerability Mappings (Expected → Violated):
+
+             expected                                             violated  count
+                write                    dereference failure: null pointer     16
+                 read                    dereference failure: null pointer     15
+       use after free                    dereference failure: null pointer      7
+       use after free      dereference failure: invalidated dynamic object      5
+      invalid pointer                             buffer overflow on scanf      3
+     integer overflow                             buffer overflow on scanf      2
+                 read                             buffer overflow on scanf      1
+                 read dereference failure: write access to string constant      1
+     forgotten memory                             buffer overflow on scanf      1
+     forgotten memory                            buffer overflow on fscanf      1
+         null pointer                             buffer overflow on scanf      1
+array bounds violated        operand of free must have zero pointer offset      1
+      invalid pointer                            buffer overflow on fscanf      1
+     integer overflow                    dereference failure: null pointer      1
+
+Top 10 Most Common Violated Vulnerabilities When Incorrectly Generated:
+
+ dereference failure: null pointer                               39
+ buffer overflow on scanf                                         8
+ dereference failure: invalidated dynamic object                  5
+ buffer overflow on fscanf                                        2
+ dereference failure: write access to string constant             1
+ operand of free must have zero pointer offset                    1
 

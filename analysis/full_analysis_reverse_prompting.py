@@ -1,8 +1,12 @@
 import os
 import json
+import sys
+
 import pandas as pd
+from collections import Counter
 
 SUMMARY_DIR = "vuln-analysis-summary/reverse"
+OUTPUT_PATH = "../final-summary/reverse_prompting_full_analysis.txt"
 
 def load_detailed_summary(model_name):
     path = os.path.join(SUMMARY_DIR, f"{model_name}_reverse_prompt_detailed_summary.json")
@@ -131,7 +135,8 @@ def analyze_cc_distribution(df):
     buckets = pd.cut(
         df["cyclomatic_complexity"],
         bins=[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 100],
-        include_lowest=True
+        include_lowest=True,
+        right=False,
     )
     grouped = df.groupby(buckets, observed=False).agg(
         total_samples=("file_name", "count"),
@@ -149,7 +154,8 @@ def analyze_cc_distribution(df):
     vuln_df["cc_bin"] = pd.cut(
         vuln_df["cyclomatic_complexity"],
         bins=[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 100],
-        include_lowest=True
+        include_lowest=True,
+        right=False,
     )
 
     pivot = pd.pivot_table(
@@ -164,17 +170,63 @@ def analyze_cc_distribution(df):
     print(pivot)
     print()
 
+def analyze_incorrect_vulnerabilities(df, top_n=10):
+    """
+    When the model generates *some* vulnerability but not the one requested,
+    what types of violations were actually produced?
+    This function analyzes the mapping: expected subtype/type → actual violated_property.
+    """
+    print("RQ4: Incorrect Vulnerability Generation Patterns\n")
+
+    mismatch_counter = Counter()
+    violated_counter = Counter()
+
+    for _, row in df.iterrows():
+        if row["vulnerable_code"] == 1 and row["correct_vulnerability"] == 0:
+            expected = (row["subtype"] or row["vulnerability_type"] or "unknown").replace("-", " ").lower()
+            violated = (row["violated_property"] or "unknown").lower().strip()
+            mismatch_counter[(expected, violated)] += 1
+            violated_counter[violated] += 1
+
+    if not mismatch_counter:
+        print("No mismatches found.\n")
+        return
+
+    # ——— Top Expected → Violated Mappings ———
+    mismatch_df = pd.DataFrame([
+        {"expected": e, "violated": v, "count": c}
+        for (e, v), c in mismatch_counter.items()
+    ])
+    mismatch_df = mismatch_df.sort_values(by="count", ascending=False)
+
+    print("Top Unexpected Vulnerability Mappings (Expected → Violated):\n")
+    print(mismatch_df.to_string(index=False))
+    print()
+
+    # ——— Summary of Most Frequently Generated Violated Properties ———
+    top_violated = violated_counter.most_common(top_n)
+    print(f"Top {top_n} Most Common Violated Vulnerabilities When Incorrectly Generated:\n")
+    for violated, count in top_violated:
+        print(f" {violated:<60} {count:>5}")
+    print()
+
 def run_complete_analysis():
     models = ["qwen2", "mistral", "gemma"]
-    for m in models:
-        print(f"\n=== ANALYSIS FOR {m.upper()} (REVERSE PROMPTING) ===\n")
-        analyze_rq0(m)
-        df = load_detailed_summary(m)
-        df = prepare_dataframe(df)
-        analyze_rq1(df)
-        analyze_rq2(df)
-        analyze_rq3(df)
-        analyze_cc_distribution(df)
+    pd.set_option("display.max_columns", None)
+
+    with open(OUTPUT_PATH, "w") as f:
+        sys.stdout = f
+        for m in models:
+            print(f"\n=== ANALYSIS FOR {m.upper()} ===\n")
+            analyze_rq0(m)
+            df = load_detailed_summary(m)
+            df = prepare_dataframe(df)
+            analyze_rq1(df)
+            analyze_rq2(df)
+            analyze_rq3(df)
+            analyze_cc_distribution(df)
+            analyze_incorrect_vulnerabilities(df)
+        sys.stdout = sys.__stdout__  # reset stdout
 
 if __name__ == "__main__":
     run_complete_analysis()
