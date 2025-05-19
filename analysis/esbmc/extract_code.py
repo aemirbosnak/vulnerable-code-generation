@@ -2,10 +2,7 @@ import os
 import json
 import subprocess
 import re
-
-BASE_DIR    = os.path.dirname(os.path.abspath(__file__))
-OUTPUTS_DIR = os.path.join(BASE_DIR, '../../model-outputs/dynamic')
-EXTRACT_DIR = os.path.join(BASE_DIR, '../../c-code/dynamic')
+from pathlib import Path
 
 # Common headers to inject if missing
 COMMON_HEADERS = [
@@ -16,8 +13,6 @@ COMMON_HEADERS = [
     '<stddef.h>',
     '<stdbool.h>'
 ]
-
-os.makedirs(EXTRACT_DIR, exist_ok=True)
 
 def slugify(text: str) -> str:
     """
@@ -130,31 +125,43 @@ def compile_c_files(c_dir):
 def main():
     print("[main] Starting code extraction")
 
-    filename = input("Enter the model result filename: ").strip()
-    model    = filename[:-len('_results.json')]
-    json_path= os.path.join(OUTPUTS_DIR, filename)
-    c_out_dir= os.path.join(EXTRACT_DIR, model)
+    filename = input("Enter the model result filename (e.g., reverse/qwen2/qwen2_reverse_prompting_full.json): ").strip()
+    path_parts = Path(filename).parts
 
-    if not os.path.exists(json_path):
-        print(f"[error] File not found: {json_path}")
+    if len(path_parts) < 2:
+        print("[error] Expected format: <mode>/<model>/<file.json>")
         return
 
-    prompts_map, skipped, total = extract_c_files(json_path, c_out_dir)
+    mode, model = path_parts[0], path_parts[1]
+    if mode not in {"dynamic", "reverse"}:
+        print(f"[error] Invalid mode: {mode}. Must be 'dynamic' or 'reverse'.")
+        return
+
+    file_path = Path(__file__).resolve().parent / f"../../model-outputs/{mode}" / model / path_parts[2]
+    c_out_dir = Path(__file__).resolve().parent / f"../../c-code/{mode}" / model
+
+    if not file_path.exists():
+        print(f"[error] File not found: {file_path}")
+        return
+
+    os.makedirs(c_out_dir, exist_ok=True)
+
+    prompts_map, skipped, total = extract_c_files(file_path, c_out_dir)
 
     print(f"[compile] Checking compilability in {c_out_dir}")
     comp_results = compile_c_files(c_out_dir)
-    succ = sum(1 for ok,_ in comp_results.values() if ok)
+    succ = sum(1 for ok, _ in comp_results.values() if ok)
     fail = len(comp_results) - succ
 
-    # remove failed sources
-    for fname,(ok,_) in comp_results.items():
+    for fname, (ok, _) in comp_results.items():
         if not ok:
             os.remove(os.path.join(c_out_dir, fname))
             print(f"[cleanup] Removed non-compilable source: {fname}")
 
     print(f"[compile] {succ}/{succ+fail} files compiled successfully, {fail} failed")
-    print(f"[summary] Model {model}: without code: {skipped}, compilable: {succ}, non-compilable: {fail}")
+    print(f"[summary] Mode={mode}, Model={model}: no code: {skipped}, compilable: {succ}, non-compilable: {fail}")
     print("[main] All code processed.")
+
 
 
 if __name__ == '__main__':

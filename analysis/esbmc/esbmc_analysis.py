@@ -3,15 +3,7 @@ import json
 import subprocess
 from multiprocessing import Pool
 from collections import Counter, OrderedDict
-
-BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
-OUTPUTS_DIR  = os.path.join(BASE_DIR, '../../model-outputs/dynamic')
-EXTRACT_DIR  = os.path.join(BASE_DIR, '../../c-code/dynamic')
-REPORTS_DIR  = os.path.join(BASE_DIR, '../esbmc-reports')
-SUMMARY_DIR  = os.path.join(BASE_DIR, '../vuln-analysis-summary')
-
-for d in (REPORTS_DIR, SUMMARY_DIR):
-    os.makedirs(d, exist_ok=True)
+from pathlib import Path
 
 
 def load_entries(json_path):
@@ -97,6 +89,9 @@ def esbmc_worker(args):
     if 'temperature' in entry:
         metadata['temperature'] = entry['temperature']
 
+    if 'cyclomatic_complexity' in entry:
+        metadata['cyclomatic_complexity'] = entry['cyclomatic_complexity']
+
     result = {
         **metadata,
         'esbmc_output':      status,
@@ -169,18 +164,41 @@ def analyze_with_esbmc(model_name, c_dir, entries):
 
 def main():
     print("[main] Starting ESBMC analysis")
-    filename = input("Enter the model result filename (e.g. gemma_results.json): ").strip()
-    model = filename[:-len('_results.json')]
-    json_path = os.path.join(OUTPUTS_DIR, filename)
-    c_out_dir = os.path.join(EXTRACT_DIR, model)
+    filename = input("Enter the model result filename (e.g. reverse/qwen2/qwen2_reverse_prompting_sample.json): ").strip()
+    path_parts = Path(filename).parts
 
-    if not os.path.exists(json_path):
+    if len(path_parts) < 3:
+        print("[error] Expected format: <mode>/<model>/<filename>")
+        return
+
+    mode, model, file = path_parts[0], path_parts[1], path_parts[2]
+    if mode not in {"dynamic", "reverse"}:
+        print(f"[error] Invalid mode: {mode}. Must be 'dynamic' or 'reverse'.")
+        return
+
+    # Update all paths accordingly
+    base_dir = Path(__file__).resolve().parent
+    json_path = base_dir / f"../../model-outputs/{mode}/{model}/{file}"
+    c_out_dir = base_dir / f"../../c-code/{mode}/{model}"
+    report_dir = base_dir / f"../esbmc-reports/{mode}"
+    summary_dir = base_dir / f"../vuln-analysis-summary/{mode}"
+    summary_prefix = f"{model}_{file.replace('.json', '')}"
+
+    for d in (report_dir, summary_dir):
+        d.mkdir(parents=True, exist_ok=True)
+
+    if not json_path.exists():
         print(f"[error] File not found: {json_path}")
         return
 
     entries = load_entries(json_path)
 
-    analyze_with_esbmc(model, c_out_dir, entries)
+    # Patch global variables for this run
+    global REPORTS_DIR, SUMMARY_DIR
+    REPORTS_DIR = str(report_dir)
+    SUMMARY_DIR = str(summary_dir)
+
+    analyze_with_esbmc(summary_prefix, str(c_out_dir), entries)
     print("[main] Analysis complete")
 
 

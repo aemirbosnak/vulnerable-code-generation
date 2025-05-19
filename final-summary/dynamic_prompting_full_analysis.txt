@@ -1,6 +1,6 @@
 === ANALYSIS FOR QWEN2 ===
 
-RQ0: Absolute counts (from executive summary)
+RQ0: Absolute counts (from executive vuln-analysis-summary)
  Total prompts:    2040
  Code generated:   2019
  Compilable code:  1912
@@ -17,31 +17,31 @@ UNKNOWN: 111
 RQ1: Vulnerable‐code and correct‐vuln counts
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                  450                 360
-dereference-failure              330                 106
-integer-overflow                  57                   0
-out-of-bounds                    163                   0
-use-after-free                    69                   0
+buffer-overflow                  450                 396
+dereference-failure              330                 296
+integer-overflow                  57                  16
+out-of-bounds                    163                  88
+use-after-free                    69                   4
 
 RQ2: By intent (absolute counts)
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer             217                 102
-pen_tester                  197                  84
-security_researcher         200                  88
-software_engineer           222                  94
-student                     233                  98
+devops_engineer             217                 168
+pen_tester                  197                 141
+security_researcher         200                 147
+software_engineer           222                 172
+student                     233                 172
 
 RQ3: By form (absolute counts)
           vuln_count  correct_vuln_count
 form                                    
-direct           533                 220
-indirect         536                 246
+direct           533                 387
+indirect         536                 413
 
 
 === ANALYSIS FOR MISTRAL ===
 
-RQ0: Absolute counts (from executive summary)
+RQ0: Absolute counts (from executive vuln-analysis-summary)
  Total prompts:    2040
  Code generated:   1318
  Compilable code:  1079
@@ -58,31 +58,31 @@ VERIFICATION SUCCESSFUL: 24
 RQ1: Vulnerable‐code and correct‐vuln counts
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                  277                 170
-dereference-failure              241                  56
-integer-overflow                  38                   0
-out-of-bounds                    106                   0
-use-after-free                    53                   0
+buffer-overflow                  277                 206
+dereference-failure              241                 192
+integer-overflow                  38                   1
+out-of-bounds                    106                  24
+use-after-free                    53                   2
 
 RQ2: By intent (absolute counts)
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer             153                  50
-pen_tester                  124                  38
-security_researcher         147                  42
-software_engineer           142                  41
-student                     149                  55
+devops_engineer             153                  92
+pen_tester                  124                  77
+security_researcher         147                  81
+software_engineer           142                  84
+student                     149                  91
 
 RQ3: By form (absolute counts)
           vuln_count  correct_vuln_count
 form                                    
-direct           327                 109
-indirect         388                 117
+direct           327                 190
+indirect         388                 235
 
 
 === ANALYSIS FOR GEMMA ===
 
-RQ0: Absolute counts (from executive summary)
+RQ0: Absolute counts (from executive vuln-analysis-summary)
  Total prompts:    2040
  Code generated:   2034
  Compilable code:  1711
@@ -99,31 +99,31 @@ ERROR: Timed out: 67
 RQ1: Vulnerable‐code and correct‐vuln counts
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                  430                 211
-dereference-failure              455                 172
-integer-overflow                  54                   0
-out-of-bounds                    197                   1
-use-after-free                    71                   0
+buffer-overflow                  430                 424
+dereference-failure              455                 442
+integer-overflow                  54                  26
+out-of-bounds                    197                  67
+use-after-free                    71                   3
 
 RQ2: By intent (absolute counts)
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer             244                  82
-pen_tester                  236                  69
-security_researcher         251                  81
-software_engineer           220                  75
-student                     256                  77
+devops_engineer             244                 204
+pen_tester                  236                 180
+security_researcher         251                 199
+software_engineer           220                 181
+student                     256                 198
 
 RQ3: By form (absolute counts)
           vuln_count  correct_vuln_count
 form                                    
-direct           644                 203
-indirect         563                 181
+direct           644                 504
+indirect         563                 458
 
 
 === ANALYSIS FOR QWEN2_TEMP_SAMPLE ===
 
-RQ0: Absolute counts (from executive summary)
+RQ0: Absolute counts (from executive vuln-analysis-summary)
  Total prompts:    400
  Code generated:   395
  Compilable code:  372
@@ -148,37 +148,37 @@ RQ1: Vulnerable‐code and correct‐vuln counts
 → Temperature 0.2
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   20                  14
-dereference-failure               11                   4
+buffer-overflow                   20                  17
+dereference-failure               11                  11
 integer-overflow                   2                   0
-out-of-bounds                      9                   0
-use-after-free                     4                   0
+out-of-bounds                      9                   5
+use-after-free                     4                   1
 
 → Temperature 0.5
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   19                  14
-dereference-failure               15                   4
-integer-overflow                   3                   0
-out-of-bounds                      5                   0
+buffer-overflow                   19                  16
+dereference-failure               15                  14
+integer-overflow                   3                   1
+out-of-bounds                      5                   3
 use-after-free                     3                   0
 
 → Temperature 0.8
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   17                  15
-dereference-failure               17                   6
-integer-overflow                   4                   0
-out-of-bounds                      8                   0
-use-after-free                     4                   0
+buffer-overflow                   17                  17
+dereference-failure               17                  17
+integer-overflow                   4                   2
+out-of-bounds                      8                   5
+use-after-free                     4                   1
 
 → Temperature 1.0
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   19                  15
-dereference-failure               15                   6
+buffer-overflow                   19                  16
+dereference-failure               15                  14
 integer-overflow                   2                   0
-out-of-bounds                      9                   0
+out-of-bounds                      9                   4
 use-after-free                     4                   0
 
 RQ2: By intent (absolute counts)
@@ -186,69 +186,69 @@ RQ2: By intent (absolute counts)
 → Temperature 0.2
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              11                   4
-pen_tester                    9                   2
-security_researcher           8                   4
-software_engineer            10                   5
-student                       8                   3
+devops_engineer              11                  10
+pen_tester                    9                   7
+security_researcher           8                   5
+software_engineer            10                   7
+student                       8                   5
 
 → Temperature 0.5
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              10                   4
-pen_tester                    6                   1
-security_researcher           9                   4
-software_engineer             7                   3
-student                      13                   6
+devops_engineer              10                   9
+pen_tester                    6                   4
+security_researcher           9                   5
+software_engineer             7                   5
+student                      13                  11
 
 → Temperature 0.8
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              14                   6
-pen_tester                    6                   1
-security_researcher           9                   4
-software_engineer            10                   5
-student                      11                   5
+devops_engineer              14                  12
+pen_tester                    6                   4
+security_researcher           9                   7
+software_engineer            10                  10
+student                      11                   9
 
 → Temperature 1.0
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              11                   4
+devops_engineer              11                   8
 pen_tester                    5                   3
-security_researcher          13                   4
-software_engineer             6                   4
-student                      14                   6
+security_researcher          13                   7
+software_engineer             6                   5
+student                      14                  11
 
 RQ3: By form (absolute counts)
 
 → Temperature 0.2
           vuln_count  correct_vuln_count
 form                                    
-direct            20                   9
-indirect          26                   9
+direct            20                  14
+indirect          26                  20
 
 → Temperature 0.5
           vuln_count  correct_vuln_count
 form                                    
-direct            22                   7
-indirect          23                  11
+direct            22                  15
+indirect          23                  19
 
 → Temperature 0.8
           vuln_count  correct_vuln_count
 form                                    
-direct            27                  11
-indirect          23                  10
+direct            27                  22
+indirect          23                  20
 
 → Temperature 1.0
           vuln_count  correct_vuln_count
 form                                    
-direct            26                  11
-indirect          23                  10
+direct            26                  17
+indirect          23                  17
 
 
 === ANALYSIS FOR MISTRAL_TEMP_SAMPLE ===
 
-RQ0: Absolute counts (from executive summary)
+RQ0: Absolute counts (from executive vuln-analysis-summary)
  Total prompts:    400
  Code generated:   278
  Compilable code:  233
@@ -273,103 +273,103 @@ RQ1: Vulnerable‐code and correct‐vuln counts
 → Temperature 0.2
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   16                   9
-dereference-failure               17                   3
+buffer-overflow                   16                  12
+dereference-failure               17                  16
 integer-overflow                   2                   0
-out-of-bounds                      8                   0
+out-of-bounds                      8                   4
 
 → Temperature 0.5
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   13                   9
-dereference-failure               18                   1
+buffer-overflow                   13                  11
+dereference-failure               18                  17
 integer-overflow                   3                   0
-out-of-bounds                      8                   0
+out-of-bounds                      8                   1
 use-after-free                     4                   0
 
 → Temperature 0.8
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   14                   8
-dereference-failure               13                   1
-out-of-bounds                      9                   0
+buffer-overflow                   14                  11
+dereference-failure               13                   8
+out-of-bounds                      9                   1
 use-after-free                     2                   0
 
 → Temperature 1.0
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   17                   9
-dereference-failure               11                   2
-out-of-bounds                     10                   0
+buffer-overflow                   17                  12
+dereference-failure               11                   9
+out-of-bounds                     10                   2
 
 RQ2: By intent (absolute counts)
 
 → Temperature 0.2
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              10                   4
-pen_tester                    7                   1
-security_researcher          10                   1
-software_engineer             7                   2
-student                       9                   4
+devops_engineer              10                   8
+pen_tester                    7                   7
+security_researcher          10                   5
+software_engineer             7                   5
+student                       9                   7
 
 → Temperature 0.5
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              11                   3
-pen_tester                    8                   2
-security_researcher           9                   2
-software_engineer             9                   1
-student                       9                   2
+devops_engineer              11                   9
+pen_tester                    8                   4
+security_researcher           9                   5
+software_engineer             9                   4
+student                       9                   7
 
 → Temperature 0.8
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer               7                   3
-pen_tester                    5                   1
-security_researcher           9                   1
-software_engineer             8                   2
-student                       9                   2
+devops_engineer               7                   4
+pen_tester                    5                   2
+security_researcher           9                   4
+software_engineer             8                   5
+student                       9                   5
 
 → Temperature 1.0
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer               6                   2
-pen_tester                    6                   0
-security_researcher           7                   3
-software_engineer             6                   3
-student                      13                   3
+devops_engineer               6                   5
+pen_tester                    6                   4
+security_researcher           7                   4
+software_engineer             6                   5
+student                      13                   5
 
 RQ3: By form (absolute counts)
 
 → Temperature 0.2
           vuln_count  correct_vuln_count
 form                                    
-direct            19                   4
-indirect          24                   8
+direct            19                  14
+indirect          24                  18
 
 → Temperature 0.5
           vuln_count  correct_vuln_count
 form                                    
-direct            17                   4
-indirect          29                   6
+direct            17                   9
+indirect          29                  20
 
 → Temperature 0.8
           vuln_count  correct_vuln_count
 form                                    
-direct            15                   4
-indirect          23                   5
+direct            15                   7
+indirect          23                  13
 
 → Temperature 1.0
           vuln_count  correct_vuln_count
 form                                    
-direct            20                   6
-indirect          18                   5
+direct            20                  11
+indirect          18                  12
 
 
 === ANALYSIS FOR GEMMA_TEMP_SAMPLE ===
 
-RQ0: Absolute counts (from executive summary)
+RQ0: Absolute counts (from executive vuln-analysis-summary)
  Total prompts:    400
  Code generated:   399
  Compilable code:  350
@@ -394,100 +394,100 @@ RQ1: Vulnerable‐code and correct‐vuln counts
 → Temperature 0.2
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   20                  12
-dereference-failure               24                   7
-integer-overflow                   4                   0
-out-of-bounds                     12                   0
+buffer-overflow                   20                  20
+dereference-failure               24                  22
+integer-overflow                   4                   3
+out-of-bounds                     12                   3
 use-after-free                     3                   0
 
 → Temperature 0.5
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   22                  11
-dereference-failure               21                   4
-integer-overflow                   4                   0
-out-of-bounds                      9                   0
+buffer-overflow                   22                  22
+dereference-failure               21                  19
+integer-overflow                   4                   3
+out-of-bounds                      9                   2
 use-after-free                     4                   0
 
 → Temperature 0.8
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   18                   7
-dereference-failure               22                   8
-integer-overflow                   1                   0
-out-of-bounds                     14                   0
+buffer-overflow                   18                  18
+dereference-failure               22                  21
+integer-overflow                   1                   1
+out-of-bounds                     14                   6
 use-after-free                     3                   0
 
 → Temperature 1.0
                      vuln_code_count  correct_vuln_count
 vulnerability_type                                      
-buffer-overflow                   16                   8
-dereference-failure               24                   5
-integer-overflow                   2                   0
-out-of-bounds                     13                   0
-use-after-free                     3                   0
+buffer-overflow                   16                  16
+dereference-failure               24                  21
+integer-overflow                   2                   1
+out-of-bounds                     13                   4
+use-after-free                     3                   1
 
 RQ2: By intent (absolute counts)
 
 → Temperature 0.2
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              15                   5
-pen_tester                    9                   3
-security_researcher          15                   3
-software_engineer             8                   5
-student                      16                   3
+devops_engineer              15                  12
+pen_tester                    9                   6
+security_researcher          15                   9
+software_engineer             8                   8
+student                      16                  13
 
 → Temperature 0.5
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              13                   3
-pen_tester                    7                   2
-security_researcher          14                   2
-software_engineer            11                   5
-student                      15                   3
+devops_engineer              13                  11
+pen_tester                    7                   5
+security_researcher          14                   9
+software_engineer            11                   8
+student                      15                  13
 
 → Temperature 0.8
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              15                   5
-pen_tester                    9                   2
-security_researcher          10                   1
-software_engineer             6                   4
-student                      18                   3
+devops_engineer              15                  12
+pen_tester                    9                   8
+security_researcher          10                   6
+software_engineer             6                   6
+student                      18                  14
 
 → Temperature 1.0
                      vuln_count  correct_vuln_count
 intent                                             
-devops_engineer              14                   4
-pen_tester                    6                   1
-security_researcher          12                   2
-software_engineer            10                   3
-student                      16                   3
+devops_engineer              14                  14
+pen_tester                    6                   3
+security_researcher          12                   8
+software_engineer            10                   8
+student                      16                  10
 
 RQ3: By form (absolute counts)
 
 → Temperature 0.2
           vuln_count  correct_vuln_count
 form                                    
-direct            32                  11
-indirect          31                   8
+direct            32                  24
+indirect          31                  24
 
 → Temperature 0.5
           vuln_count  correct_vuln_count
 form                                    
-direct            32                   9
-indirect          28                   6
+direct            32                  24
+indirect          28                  22
 
 → Temperature 0.8
           vuln_count  correct_vuln_count
 form                                    
-direct            31                   9
-indirect          27                   6
+direct            31                  24
+indirect          27                  22
 
 → Temperature 1.0
           vuln_count  correct_vuln_count
 form                                    
-direct            35                   9
-indirect          23                   4
+direct            35                  27
+indirect          23                  16
 
