@@ -1,0 +1,248 @@
+=== ANALYSIS FOR QWEN2 ===
+
+RQ0: Absolute counts (from executive vuln-analysis-summary)
+ Total prompts:    1250
+ Code generated:   987
+ Compilable code:  917
+
+--- Status Breakdown ---
+ERROR: Timed out: 138
+VERIFICATION FAILED: 561
+ERROR: PARSING ERROR: 141
+  └── deprecated_gets: 91
+  └── other: 50
+UNKNOWN: 21
+VERIFICATION SUCCESSFUL: 56
+
+RQ1: Vulnerable‐code and correct‐vuln counts
+                     vuln_code_count  correct_vuln_count
+vulnerability_type                                      
+buffer-overflow                  301                 273
+dereference-failure               51                  24
+integer-overflow                 129                  11
+out-of-bounds                     47                   8
+use-after-free                    33                   7
+
+RQ2: By intent (absolute counts)
+                     vuln_count  correct_vuln_count
+intent                                             
+devops_engineer             107                  62
+pen_tester                  115                  67
+security_researcher         116                  72
+software_engineer           112                  64
+student                     111                  58
+
+RQ3: By form (absolute counts)
+          vuln_count  correct_vuln_count
+form                                    
+direct           308                 186
+indirect         253                 137
+
+RQ5: Cyclomatic Complexity Analysis
+
+Average CC (all samples):       13.32
+Average CC (vulnerable code):   12.79
+Average CC (correct vulnerability): 14.07
+
+Vulnerable Code by Cyclomatic Complexity Buckets:
+
+                       total_samples  ...  correct_rate (%)
+cyclomatic_complexity                 ...                  
+(-0.001, 5.0]                    264  ...             37.50
+(5.0, 10.0]                      119  ...             20.17
+(10.0, 15.0]                     268  ...             29.85
+(15.0, 20.0]                      35  ...             60.00
+(20.0, 25.0]                     112  ...             41.96
+(25.0, 30.0]                      45  ...             73.33
+(30.0, 35.0]                      45  ...             20.00
+(35.0, 40.0]                      18  ...             33.33
+(40.0, 45.0]                       2  ...              0.00
+(45.0, 50.0]                       9  ...             44.44
+(50.0, 100.0]                      0  ...               NaN
+
+[11 rows x 5 columns]
+
+Vulnerability Breakdown by Type and CC Bucket (only vulnerable code):
+
+vulnerability_type  buffer-overflow  ...  use-after-free
+cc_bin                               ...                
+(-0.001, 5.0]                    96  ...              23
+(5.0, 10.0]                      17  ...               7
+(10.0, 15.0]                     78  ...               3
+(15.0, 20.0]                     24  ...               0
+(20.0, 25.0]                     41  ...               0
+(25.0, 30.0]                     29  ...               0
+(30.0, 35.0]                      7  ...               0
+(35.0, 40.0]                      5  ...               0
+(40.0, 45.0]                      0  ...               0
+(45.0, 50.0]                      4  ...               0
+(50.0, 100.0]                     0  ...               0
+
+[11 rows x 5 columns]
+
+
+=== ANALYSIS FOR MISTRAL ===
+
+RQ0: Absolute counts (from executive vuln-analysis-summary)
+ Total prompts:    1250
+ Code generated:   493
+ Compilable code:  407
+
+--- Status Breakdown ---
+VERIFICATION FAILED: 261
+ERROR: Timed out: 49
+ERROR: PARSING ERROR: 80
+  └── other: 24
+  └── deprecated_gets: 56
+VERIFICATION SUCCESSFUL: 11
+UNKNOWN: 6
+
+RQ1: Vulnerable‐code and correct‐vuln counts
+                     vuln_code_count  correct_vuln_count
+vulnerability_type                                      
+buffer-overflow                  132                 104
+dereference-failure               17                   8
+integer-overflow                  56                   5
+out-of-bounds                     25                   3
+use-after-free                    31                   1
+
+RQ2: By intent (absolute counts)
+                     vuln_count  correct_vuln_count
+intent                                             
+devops_engineer              48                  20
+pen_tester                   54                  28
+security_researcher          60                  27
+software_engineer            50                  26
+student                      49                  20
+
+RQ3: By form (absolute counts)
+          vuln_count  correct_vuln_count
+form                                    
+direct           166                  85
+indirect          95                  36
+
+RQ5: Cyclomatic Complexity Analysis
+
+Average CC (all samples):       10.93
+Average CC (vulnerable code):   10.18
+Average CC (correct vulnerability): 11.37
+
+Vulnerable Code by Cyclomatic Complexity Buckets:
+
+                       total_samples  ...  correct_rate (%)
+cyclomatic_complexity                 ...                  
+(-0.001, 5.0]                    165  ...             35.15
+(5.0, 10.0]                       59  ...             13.56
+(10.0, 15.0]                     105  ...             22.86
+(15.0, 20.0]                       6  ...             83.33
+(20.0, 25.0]                      42  ...             33.33
+(25.0, 30.0]                       8  ...             75.00
+(30.0, 35.0]                      14  ...              7.14
+(35.0, 40.0]                       5  ...             40.00
+(40.0, 45.0]                       0  ...               NaN
+(45.0, 50.0]                       3  ...            100.00
+(50.0, 100.0]                      0  ...               NaN
+
+[11 rows x 5 columns]
+
+Vulnerability Breakdown by Type and CC Bucket (only vulnerable code):
+
+vulnerability_type  buffer-overflow  ...  use-after-free
+cc_bin                               ...                
+(-0.001, 5.0]                    62  ...              24
+(5.0, 10.0]                       6  ...               7
+(10.0, 15.0]                     25  ...               0
+(15.0, 20.0]                      5  ...               0
+(20.0, 25.0]                     17  ...               0
+(25.0, 30.0]                      7  ...               0
+(30.0, 35.0]                      5  ...               0
+(35.0, 40.0]                      2  ...               0
+(40.0, 45.0]                      0  ...               0
+(45.0, 50.0]                      3  ...               0
+(50.0, 100.0]                     0  ...               0
+
+[11 rows x 5 columns]
+
+
+=== ANALYSIS FOR GEMMA ===
+
+RQ0: Absolute counts (from executive vuln-analysis-summary)
+ Total prompts:    1250
+ Code generated:   1105
+ Compilable code:  690
+
+--- Status Breakdown ---
+ERROR: Timed out: 49
+VERIFICATION SUCCESSFUL: 26
+ERROR: PARSING ERROR: 162
+  └── other: 83
+  └── deprecated_gets: 79
+VERIFICATION FAILED: 441
+UNKNOWN: 12
+
+RQ1: Vulnerable‐code and correct‐vuln counts
+                     vuln_code_count  correct_vuln_count
+vulnerability_type                                      
+buffer-overflow                  243                 233
+dereference-failure               38                  19
+integer-overflow                 107                   8
+out-of-bounds                     25                   1
+use-after-free                    28                   5
+
+RQ2: By intent (absolute counts)
+                     vuln_count  correct_vuln_count
+intent                                             
+devops_engineer              82                  52
+pen_tester                  106                  63
+security_researcher         102                  58
+software_engineer            76                  47
+student                      75                  46
+
+RQ3: By form (absolute counts)
+          vuln_count  correct_vuln_count
+form                                    
+direct           246                 162
+indirect         195                 104
+
+RQ5: Cyclomatic Complexity Analysis
+
+Average CC (all samples):       13.79
+Average CC (vulnerable code):   13.26
+Average CC (correct vulnerability): 14.59
+
+Vulnerable Code by Cyclomatic Complexity Buckets:
+
+                       total_samples  ...  correct_rate (%)
+cyclomatic_complexity                 ...                  
+(-0.001, 5.0]                    205  ...             38.05
+(5.0, 10.0]                       88  ...             27.27
+(10.0, 15.0]                     186  ...             35.48
+(15.0, 20.0]                      38  ...             65.79
+(20.0, 25.0]                      66  ...             39.39
+(25.0, 30.0]                      36  ...             61.11
+(30.0, 35.0]                      42  ...             28.57
+(35.0, 40.0]                      14  ...             42.86
+(40.0, 45.0]                       3  ...              0.00
+(45.0, 50.0]                      12  ...             58.33
+(50.0, 100.0]                      0  ...               NaN
+
+[11 rows x 5 columns]
+
+Vulnerability Breakdown by Type and CC Bucket (only vulnerable code):
+
+vulnerability_type  buffer-overflow  ...  use-after-free
+cc_bin                               ...                
+(-0.001, 5.0]                    71  ...              22
+(5.0, 10.0]                      14  ...               3
+(10.0, 15.0]                     61  ...               3
+(15.0, 20.0]                     24  ...               0
+(20.0, 25.0]                     27  ...               0
+(25.0, 30.0]                     22  ...               0
+(30.0, 35.0]                     11  ...               0
+(35.0, 40.0]                      6  ...               0
+(40.0, 45.0]                      0  ...               0
+(45.0, 50.0]                      7  ...               0
+(50.0, 100.0]                     0  ...               0
+
+[11 rows x 5 columns]
+

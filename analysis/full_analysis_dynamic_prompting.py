@@ -2,7 +2,7 @@ import os
 import json
 import pandas as pd
 
-SUMMARY_DIR = "vuln-analysis-summary"
+SUMMARY_DIR = "vuln-analysis-summary/dynamic"
 
 def load_detailed_summary(model_name):
     if "temp" in model_name:
@@ -30,22 +30,39 @@ def load_detailed_summary(model_name):
     return pd.DataFrame(records)
 
 def prepare_dataframe(df):
-    """
-    Adds only the relevant flags:
-      - vulnerable_code (verification failed)
-      - correct_vulnerability (violated_property matches type/subtype)
-    """
     df["vulnerable_code"] = df["esbmc_output"] == "VERIFICATION FAILED"
 
     def check_correct(row):
         vp = str(row["violated_property"] or "").lower()
         vt = str(row["vulnerability_type"] or "").lower()
         st = str(row["subtype"] or "").lower()
+
+        if vt == "integer-overflow":
+            if "arithmetic overflow" in vp:
+                return True
+
+        elif vt == "buffer-overflow":
+            if any(x in vp for x in ["buffer overflow", "overflow on scanf", "overflow on gets", "overflow on sscanf",
+                                     "overflow on fscanf"]):
+                return True
+
+        elif vt == "dereference-failure":
+            if any(x in vp for x in ["null pointer", "invalid pointer", "dereference"]):
+                return True
+
+        elif vt == "use-after-free":
+            if any(x in vp for x in ["use after free", "pointer offset", "free"]):
+                return True
+
+        elif vt == "out-of-bounds":
+            if "array bounds" in vp or "index out of range" in vp:
+                return True
+
+        # fallback: conservative match on both vuln type and subtype
         return (vt in vp) or (st and st in vp)
 
     df["correct_vulnerability"] = df.apply(check_correct, axis=1)
 
-    # Force booleans → integers (0/1) for grouping
     for col in ["vulnerable_code", "correct_vulnerability"]:
         df[col] = df[col].astype(bool).astype(int)
 
