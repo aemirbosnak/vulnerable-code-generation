@@ -1,0 +1,20 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/019_out-of-bounds_array-bounds-violated.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/019_out-of-bounds_array-bounds-violated.c:20:10: warning: incompatible pointer types assigning to 'char **' from 'char *' [-Wincompatible-pointer-types]
+    args = strtok(buf, " ");
+         ^ ~~~~~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/019_out-of-bounds_array-bounds-violated.c:21:10: warning: incompatible pointer types assigning to 'char **' from 'char *' [-Wincompatible-pointer-types]
+    path = strchr(args[0], '/') ? args[0] : NULL;
+         ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/019_out-of-bounds_array-bounds-violated.c:25:15: warning: incompatible pointer types passing 'char **' to parameter of type 'const char *'; dereference with * [-Wincompatible-pointer-types]
+        execv(path, args);
+              ^~~~
+              *
+/usr/include/unistd.h:584:31: note: passing argument to parameter '__path' here
+extern int execv (const char *__path, char *const __argv[])
+                              ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/019_out-of-bounds_array-bounds-violated.c:27:15: error: call to undeclared function 'wait'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        pid = wait(NULL);
+              ^
+ERROR: PARSING ERROR

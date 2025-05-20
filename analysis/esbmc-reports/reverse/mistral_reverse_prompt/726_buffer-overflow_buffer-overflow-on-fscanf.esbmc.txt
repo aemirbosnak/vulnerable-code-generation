@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/726_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/726_buffer-overflow_buffer-overflow-on-fscanf.c:23:20: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Wint-conversion]
+            strcpy(array[i][j], buffer);
+                   ^~~~~~~~~~~
+/tmp/esbmc.52b8-7e80-08c8/headers/string.h:10:37: note: passing argument to parameter 'dst' here
+char *strcpy(char *__ESBMC_restrict dst, const char *__ESBMC_restrict src);
+                                    ^
+ERROR: PARSING ERROR

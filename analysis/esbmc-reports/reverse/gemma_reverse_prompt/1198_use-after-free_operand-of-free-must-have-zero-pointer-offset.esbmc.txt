@@ -1,0 +1,16 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:17:28: error: incompatible integer to pointer conversion assigning to 'char *' from 'char'; take the address with & [-Wint-conversion]
+      parens[parenCount++] = str[i];
+                           ^ ~~~~~~
+                             &
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:22:18: warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
+    printf("%c", parens[i]);
+            ~~   ^~~~~~~~~
+            %s
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:27:16: warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
+  printf("%c", parens[0]);
+          ~~   ^~~~~~~~~
+          %s
+ERROR: PARSING ERROR

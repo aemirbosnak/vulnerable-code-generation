@@ -1,0 +1,46 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1365_out-of-bounds_read_network-packet-sniffer.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.267s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function socket
+WARNING: no body for function perror
+WARNING: no body for function recvfrom
+WARNING: no body for function perror
+Not unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1365_out-of-bounds_read_network-packet-sniffer.c line 33 column 5 function main
+Symex completed in: 0.002s (47 assignments)
+Slicing time: 0.002s (removed 31 assignments)
+Generated 4 VCC(s), 3 remaining after simplification (16 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.019s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1365_out-of-bounds_read_network-packet-sniffer.c line 27 column 5 function main thread 0
+----------------------------------------------------
+  sockfd = -34 (11111111 11111111 11111111 11011110)
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1365_out-of-bounds_read_network-packet-sniffer.c line 34 column 9 function main thread 0
+----------------------------------------------------
+  bytes_received = -100670513 (11111001 11111111 11100011 11001111)
+
+State 5 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 275 column 5 function memcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 275 column 5 function memcpy
+  dereference failure: array bounds violated
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

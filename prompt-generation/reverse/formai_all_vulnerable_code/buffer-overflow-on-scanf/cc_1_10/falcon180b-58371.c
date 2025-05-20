@@ -1,0 +1,67 @@
+//Falcon-180B DATASET v1.0 Category: Expense Tracker ; Style: high level of detail
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_ITEMS 100
+#define MAX_NAME_LENGTH 50
+#define MAX_AMOUNT_LENGTH 10
+
+typedef struct {
+    char name[MAX_NAME_LENGTH];
+    char amount[MAX_AMOUNT_LENGTH];
+} item;
+
+int num_items = 0;
+item items[MAX_ITEMS];
+
+void add_item(char* name, char* amount) {
+    if (num_items >= MAX_ITEMS) {
+        printf("Error: Maximum number of items reached.\n");
+        return;
+    }
+
+    strncpy(items[num_items].name, name, MAX_NAME_LENGTH);
+    strncpy(items[num_items].amount, amount, MAX_AMOUNT_LENGTH);
+
+    num_items++;
+}
+
+void display_items() {
+    printf("Expense Tracker\n");
+    printf("---------------------\n");
+    printf("Item\tAmount\n");
+
+    for (int i = 0; i < num_items; i++) {
+        printf("%s\t$%s\n", items[i].name, items[i].amount);
+    }
+
+    printf("\nTotal Expenses: $%d\n", get_total_expenses());
+}
+
+int get_total_expenses() {
+    int total = 0;
+
+    for (int i = 0; i < num_items; i++) {
+        total += atoi(items[i].amount);
+    }
+
+    return total;
+}
+
+int main() {
+    char name[MAX_NAME_LENGTH];
+    char amount[MAX_AMOUNT_LENGTH];
+
+    printf("Enter item name: ");
+    scanf("%s", name);
+
+    printf("Enter item amount: $");
+    scanf("%s", amount);
+
+    add_item(name, amount);
+
+    display_items();
+
+    return 0;
+}

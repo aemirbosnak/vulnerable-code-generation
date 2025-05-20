@@ -1,0 +1,53 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/118_out-of-bounds_array-bounds-violated.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.257s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function socket
+WARNING: no body for function perror
+WARNING: no body for function inet_pton
+WARNING: no body for function perror
+WARNING: no body for function connect
+WARNING: no body for function perror
+WARNING: no body for function send
+WARNING: no body for function send
+WARNING: no body for function send
+WARNING: no body for function send
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function send
+WARNING: no body for function send
+WARNING: no body for function perror
+WARNING: no body for function recv
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/118_out-of-bounds_array-bounds-violated.c line 56 column 5 function main
+WARNING: no body for function close
+Symex completed in: 0.005s (102 assignments)
+Slicing time: 0.002s (removed 59 assignments)
+Generated 9 VCC(s), 8 remaining after simplification (43 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.125s
+Building error trace
+
+[Counterexample]
+
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/118_out-of-bounds_array-bounds-violated.c line 27 column 5 function main thread 0
+----------------------------------------------------
+  sockfd = 2147483647 (01111111 11111111 11111111 11111111)
+
+State 8 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

@@ -1,0 +1,59 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.567s
+GOTO program processing time: 0.025s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 22 column 9 function bmp_to_ascii
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 21 column 5 function bmp_to_ascii
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 31 column 9 function bmp_to_ascii
+Not unwinding loop 41 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 30 column 5 function bmp_to_ascii
+Symex completed in: 0.301s (128 assignments)
+Slicing time: 0.002s (removed 59 assignments)
+Generated 27 VCC(s), 21 remaining after simplification (69 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.045s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.760s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 13 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 16 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+  header = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 225, 111, 31, 171, 170, 170, 234, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 7 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 18 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+  width = 527425840 (00011111 01101111 11100001 00110000)
+
+State 8 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 18 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+  height = -357913941 (11101010 10101010 10101010 10101011)
+
+State 9 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 20 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+  pixels = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 10 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 20 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/358_buffer-overflow_buffer-overflow-on-sscanf.c line 20 column 5 function bmp_to_ascii
+  VLA array size in bytes overflows address space size
+  !overflow("*", (unsigned long int)tmp$2, (unsigned long int)tmp$3)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

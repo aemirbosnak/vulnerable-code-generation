@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/432_dereference-failure_forgotten-memory_audio-stream-decoder.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.234s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/432_dereference-failure_forgotten-memory_audio-stream-decoder.c line 14 column 5 function decode_audio
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/432_dereference-failure_forgotten-memory_audio-stream-decoder.c line 21 column 5 function decode_audio
+Symex completed in: 0.007s (115 assignments)
+Slicing time: 0.002s (removed 51 assignments)
+Generated 22 VCC(s), 20 remaining after simplification (64 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.248s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/432_dereference-failure_forgotten-memory_audio-stream-decoder.c line 34 column 5 function main thread 0
+----------------------------------------------------
+  fp = &dynamic_1_value
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/432_dereference-failure_forgotten-memory_audio-stream-decoder.c line 41 column 5 function main thread 0
+----------------------------------------------------
+  file_size = 0xFFFFFFFF80000001 (11111111 11111111 11111111 11111111 10000000 00000000 00000000 00000001)
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/432_dereference-failure_forgotten-memory_audio-stream-decoder.c line 42 column 5 function main thread 0
+----------------------------------------------------
+  data = 0
+
+State 12 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

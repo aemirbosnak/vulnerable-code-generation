@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1592_out-of-bounds_write_logging-service.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1592_out-of-bounds_write_logging-service.c:36:23: error: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char[20]' [-Wint-conversion]
+    LogEntry entry = {date, level, message};
+                      ^~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1592_out-of-bounds_write_logging-service.c:36:29: error: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char[10]' [-Wint-conversion]
+    LogEntry entry = {date, level, message};
+                            ^~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1592_out-of-bounds_write_logging-service.c:36:36: error: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char[1024]' [-Wint-conversion]
+    LogEntry entry = {date, level, message};
+                                   ^~~~~~~
+ERROR: PARSING ERROR

@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/470_dereference-failure_forgotten-memory_logging-service.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/470_dereference-failure_forgotten-memory_logging-service.c:37:31: error: call to undeclared function 'ctime'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        strcpy(log->log_time, ctime(&i));
+                              ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/470_dereference-failure_forgotten-memory_logging-service.c:37:31: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
+        strcpy(log->log_time, ctime(&i));
+                              ^~~~~~~~~
+/tmp/esbmc.b390-5780-c940/headers/string.h:10:71: note: passing argument to parameter 'src' here
+char *strcpy(char *__ESBMC_restrict dst, const char *__ESBMC_restrict src);
+                                                                      ^
+ERROR: PARSING ERROR

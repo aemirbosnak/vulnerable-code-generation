@@ -1,0 +1,1010 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c:53:5: warning: 'memcpy' will always overflow; destination buffer has size 8, but size argument is 12 [-Wfortify-source]
+    memcpy(dummy_buffer, "dummy_data", 12); // This will overwrite the stack
+    ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.286s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Not unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.006s (112 assignments)
+Slicing time: 0.002s (removed 63 assignments)
+Generated 15 VCC(s), 9 remaining after simplification (49 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.114s
+BMC program time: 0.123s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Not unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.006s (112 assignments)
+Slicing time: 0.000s (removed 63 assignments)
+Generated 18 VCC(s), 12 remaining after simplification (49 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.138s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.008s (157 assignments)
+Slicing time: 0.002s (removed 94 assignments)
+Generated 20 VCC(s), 9 remaining after simplification (63 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.159s
+BMC program time: 0.169s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.008s (157 assignments)
+Slicing time: 0.000s (removed 94 assignments)
+Generated 24 VCC(s), 13 remaining after simplification (63 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.157s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.012s (214 assignments)
+Slicing time: 0.002s (removed 135 assignments)
+Generated 27 VCC(s), 9 remaining after simplification (79 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.206s
+BMC program time: 0.220s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.011s (214 assignments)
+Slicing time: 0.002s (removed 135 assignments)
+Generated 32 VCC(s), 14 remaining after simplification (79 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.239s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.019s (283 assignments)
+Slicing time: 0.003s (removed 186 assignments)
+Generated 36 VCC(s), 9 remaining after simplification (97 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.282s
+BMC program time: 0.305s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.016s (283 assignments)
+Slicing time: 0.002s (removed 186 assignments)
+Generated 42 VCC(s), 15 remaining after simplification (97 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.214s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.022s (364 assignments)
+Slicing time: 0.003s (removed 247 assignments)
+Generated 47 VCC(s), 9 remaining after simplification (117 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.239s
+BMC program time: 0.264s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.022s (364 assignments)
+Slicing time: 0.003s (removed 247 assignments)
+Generated 54 VCC(s), 16 remaining after simplification (117 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.315s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.038s (457 assignments)
+Slicing time: 0.003s (removed 318 assignments)
+Generated 60 VCC(s), 9 remaining after simplification (139 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.280s
+BMC program time: 0.322s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.056s (457 assignments)
+Slicing time: 0.005s (removed 318 assignments)
+Generated 68 VCC(s), 17 remaining after simplification (139 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.313s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.042s (562 assignments)
+Slicing time: 0.004s (removed 399 assignments)
+Generated 75 VCC(s), 9 remaining after simplification (163 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.441s
+BMC program time: 0.489s
+No bug has been found in the base case
+Checking forward condition, k = 7
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.041s (562 assignments)
+Slicing time: 0.005s (removed 399 assignments)
+Generated 84 VCC(s), 18 remaining after simplification (163 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.288s
+The forward condition is unable to prove the property
+Checking base case, k = 8
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.049s (679 assignments)
+Slicing time: 0.005s (removed 490 assignments)
+Generated 92 VCC(s), 9 remaining after simplification (189 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.363s
+BMC program time: 0.422s
+No bug has been found in the base case
+Checking forward condition, k = 8
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.049s (679 assignments)
+Slicing time: 0.004s (removed 490 assignments)
+Generated 102 VCC(s), 19 remaining after simplification (189 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.375s
+The forward condition is unable to prove the property
+Checking base case, k = 9
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 28 column 5 function sync_files
+WARNING: no body for function perror
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 33 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.084s (809 assignments)
+Slicing time: 0.004s (removed 591 assignments)
+Generated 111 VCC(s), 10 remaining after simplification (218 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.537s
+Building error trace
+
+[Counterexample]
+
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 12 column 5 function sync_files thread 0
+----------------------------------------------------
+  src_file = &dynamic_801_value
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1509_out-of-bounds_read_file-synchronization-daemon.c line 18 column 5 function sync_files thread 0
+----------------------------------------------------
+  dest_file = 0
+
+State 9 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 275 column 5 function memcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 275 column 5 function memcpy
+  dereference failure: array bounds violated
+
+
+VERIFICATION FAILED
+
+Bug found (k = 9)

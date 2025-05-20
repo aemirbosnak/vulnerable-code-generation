@@ -1,0 +1,969 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1838_use-after-free_chat-message-buffer-manager.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.343s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.011s (93 assignments)
+Slicing time: 0.000s (removed 43 assignments)
+Generated 28 VCC(s), 20 remaining after simplification (50 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.742s
+BMC program time: 0.761s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.012s (89 assignments)
+Slicing time: 0.000s (removed 43 assignments)
+Generated 28 VCC(s), 20 remaining after simplification (46 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.345s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.021s (117 assignments)
+Slicing time: 0.002s (removed 51 assignments)
+Generated 52 VCC(s), 36 remaining after simplification (66 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.648s
+BMC program time: 0.678s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.017s (113 assignments)
+Slicing time: 0.000s (removed 51 assignments)
+Generated 52 VCC(s), 36 remaining after simplification (62 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.270s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.023s (141 assignments)
+Slicing time: 0.003s (removed 59 assignments)
+Generated 76 VCC(s), 52 remaining after simplification (82 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.658s
+BMC program time: 0.692s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.023s (137 assignments)
+Slicing time: 0.000s (removed 59 assignments)
+Generated 76 VCC(s), 52 remaining after simplification (78 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.291s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.035s (165 assignments)
+Slicing time: 0.002s (removed 67 assignments)
+Generated 100 VCC(s), 68 remaining after simplification (98 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.013s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.775s
+BMC program time: 0.823s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.031s (161 assignments)
+Slicing time: 0.002s (removed 67 assignments)
+Generated 100 VCC(s), 68 remaining after simplification (94 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.411s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.046s (189 assignments)
+Slicing time: 0.003s (removed 75 assignments)
+Generated 124 VCC(s), 84 remaining after simplification (114 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.010s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.646s
+BMC program time: 0.702s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.033s (185 assignments)
+Slicing time: 0.002s (removed 75 assignments)
+Generated 124 VCC(s), 84 remaining after simplification (110 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.264s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.048s (213 assignments)
+Slicing time: 0.002s (removed 83 assignments)
+Generated 148 VCC(s), 100 remaining after simplification (130 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.632s
+BMC program time: 0.690s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.040s (209 assignments)
+Slicing time: 0.000s (removed 83 assignments)
+Generated 148 VCC(s), 100 remaining after simplification (126 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.295s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.060s (237 assignments)
+Slicing time: 0.002s (removed 91 assignments)
+Generated 172 VCC(s), 116 remaining after simplification (146 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.010s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.625s
+BMC program time: 0.695s
+No bug has been found in the base case
+Checking forward condition, k = 7
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.058s (233 assignments)
+Slicing time: 0.002s (removed 91 assignments)
+Generated 172 VCC(s), 116 remaining after simplification (142 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.292s
+The forward condition is unable to prove the property
+Checking base case, k = 8
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.057s (261 assignments)
+Slicing time: 0.002s (removed 99 assignments)
+Generated 196 VCC(s), 132 remaining after simplification (162 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.612s
+BMC program time: 0.677s
+No bug has been found in the base case
+Checking forward condition, k = 8
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.064s (257 assignments)
+Slicing time: 0.003s (removed 99 assignments)
+Generated 196 VCC(s), 132 remaining after simplification (158 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.010s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.299s
+The forward condition is unable to prove the property
+Checking base case, k = 9
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.064s (285 assignments)
+Slicing time: 0.003s (removed 107 assignments)
+Generated 220 VCC(s), 148 remaining after simplification (178 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.800s
+BMC program time: 0.875s
+No bug has been found in the base case
+Checking forward condition, k = 9
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.090s (281 assignments)
+Slicing time: 0.003s (removed 107 assignments)
+Generated 220 VCC(s), 148 remaining after simplification (174 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.295s
+The forward condition is unable to prove the property
+Checking base case, k = 10
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.065s (309 assignments)
+Slicing time: 0.002s (removed 115 assignments)
+Generated 244 VCC(s), 164 remaining after simplification (194 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.753s
+BMC program time: 0.826s
+No bug has been found in the base case
+Checking forward condition, k = 10
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.289s (305 assignments)
+Slicing time: 0.012s (removed 115 assignments)
+Generated 244 VCC(s), 164 remaining after simplification (190 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.311s
+The forward condition is unable to prove the property
+Checking base case, k = 11
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.069s (333 assignments)
+Slicing time: 0.003s (removed 123 assignments)
+Generated 268 VCC(s), 180 remaining after simplification (210 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.013s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.809s
+BMC program time: 0.892s
+No bug has been found in the base case
+Checking forward condition, k = 11
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.110s (329 assignments)
+Slicing time: 0.004s (removed 123 assignments)
+Generated 268 VCC(s), 180 remaining after simplification (206 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.013s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.389s
+The forward condition is unable to prove the property
+Checking base case, k = 12
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.095s (357 assignments)
+Slicing time: 0.002s (removed 131 assignments)
+Generated 292 VCC(s), 196 remaining after simplification (226 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.012s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.659s
+BMC program time: 0.766s
+No bug has been found in the base case
+Checking forward condition, k = 12
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.088s (353 assignments)
+Slicing time: 0.002s (removed 131 assignments)
+Generated 292 VCC(s), 196 remaining after simplification (222 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.286s
+The forward condition is unable to prove the property
+Checking base case, k = 13
+Starting Bounded Model Checking
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.087s (381 assignments)
+Slicing time: 0.003s (removed 139 assignments)
+Generated 316 VCC(s), 212 remaining after simplification (242 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.019s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

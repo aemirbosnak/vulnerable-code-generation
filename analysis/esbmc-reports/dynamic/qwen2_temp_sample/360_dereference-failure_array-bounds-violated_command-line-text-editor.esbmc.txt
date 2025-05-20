@@ -1,0 +1,11 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/360_dereference-failure_array-bounds-violated_command-line-text-editor.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/360_dereference-failure_array-bounds-violated_command-line-text-editor.c:57:5: error: call to undeclared function 'ftruncate'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    ftruncate(fileno(file), strlen(buffer));
+    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/360_dereference-failure_array-bounds-violated_command-line-text-editor.c:57:5: note: did you mean 'strncat'?
+/tmp/esbmc.4a26-8d38-887c/headers/string.h:13:7: note: 'strncat' declared here
+char *strncat(char *__ESBMC_restrict dst, const char *__ESBMC_restrict src, size_t n);
+      ^
+ERROR: PARSING ERROR

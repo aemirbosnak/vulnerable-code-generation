@@ -1,0 +1,92 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.778s
+GOTO program processing time: 0.021s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 15 column 5 function decodeAudio
+Symex completed in: 0.019s (117 assignments)
+Slicing time: 0.003s (removed 50 assignments)
+Generated 25 VCC(s), 20 remaining after simplification (67 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.990s
+BMC program time: 1.019s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 15 column 5 function decodeAudio
+Symex completed in: 0.019s (117 assignments)
+Slicing time: 0.003s (removed 50 assignments)
+Generated 27 VCC(s), 22 remaining after simplification (67 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.816s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 25 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 15 column 5 function decodeAudio
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 15 column 5 function decodeAudio
+Symex completed in: 0.026s (134 assignments)
+Slicing time: 0.003s (removed 57 assignments)
+Generated 32 VCC(s), 27 remaining after simplification (77 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.010s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.453s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 28 column 5 function main thread 0
+----------------------------------------------------
+  file = &dynamic_29_value
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 35 column 5 function main thread 0
+----------------------------------------------------
+  fileSize = 1 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 36 column 5 function main thread 0
+----------------------------------------------------
+  buffer = &dynamic_33_array[0]
+
+State 13 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 44 column 5 function main thread 0
+----------------------------------------------------
+  bytesRead = 1 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001)
+
+State 14 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 12 column 5 function decodeAudio thread 0
+----------------------------------------------------
+  samples = (unsigned short int *)(&dynamic_33_array[0])
+
+State 17 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 16 column 9 function decodeAudio thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/228_dereference-failure_invalid-pointer_audio-stream-decoder.c line 16 column 9 function decodeAudio
+  dereference failure: array bounds violated
+
+
+VERIFICATION FAILED
+
+Bug found (k = 2)

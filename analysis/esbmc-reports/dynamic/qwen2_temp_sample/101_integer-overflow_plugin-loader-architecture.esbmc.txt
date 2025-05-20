@@ -1,0 +1,47 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/101_integer-overflow_plugin-loader-architecture.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.288s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/101_integer-overflow_plugin-loader-architecture.c line 43 column 5 function init_plugins
+Symex completed in: 0.004s (80 assignments)
+Slicing time: 0.000s (removed 36 assignments)
+Generated 16 VCC(s), 9 remaining after simplification (44 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.247s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/101_integer-overflow_plugin-loader-architecture.c line 26 column 5 function load_plugin thread 0
+----------------------------------------------------
+  fp = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/101_integer-overflow_plugin-loader-architecture.c line 32 column 5 function load_plugin thread 0
+----------------------------------------------------
+  new_plugin = { .name = { 0 } }
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/101_integer-overflow_plugin-loader-architecture.c line 38 column 5 function load_plugin thread 0
+----------------------------------------------------
+  plugins[1] = { .name = { 0 } }
+
+State 12 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/101_integer-overflow_plugin-loader-architecture.c line 44 column 9 function init_plugins thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/101_integer-overflow_plugin-loader-architecture.c line 44 column 9 function init_plugins
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

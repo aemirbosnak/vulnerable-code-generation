@@ -1,0 +1,50 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/310_dereference-failure_invalid-pointer_command-line-text-editor.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.311s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Symex completed in: 0.005s (101 assignments)
+Slicing time: 0.002s (removed 48 assignments)
+Generated 19 VCC(s), 16 remaining after simplification (53 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.213s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/310_dereference-failure_invalid-pointer_command-line-text-editor.c line 20 column 5 function main thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/310_dereference-failure_invalid-pointer_command-line-text-editor.c line 27 column 5 function main thread 0
+----------------------------------------------------
+  size = 81723145 (00000000 00000000 00000000 00000000 00000100 11011110 11111111 00001001)
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/310_dereference-failure_invalid-pointer_command-line-text-editor.c line 30 column 5 function main thread 0
+----------------------------------------------------
+  text = &dynamic_6_array[0]
+Original Text:
+
+
+
+State 15 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/310_dereference-failure_invalid-pointer_command-line-text-editor.c line 11 column 5 function edit_text thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/310_dereference-failure_invalid-pointer_command-line-text-editor.c line 11 column 5 function edit_text
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

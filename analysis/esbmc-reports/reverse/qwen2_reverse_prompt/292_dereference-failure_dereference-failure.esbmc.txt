@@ -1,0 +1,65 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/292_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/292_dereference-failure_dereference-failure.c:49:98: warning: result of comparison of constant -112 with expression of type 'unsigned char' is always false [-Wtautological-constant-out-of-range-compare]
+                } else if (buffer[0] == 'P' && buffer[1] == 'K' && buffer[2] == 'Z' && buffer[3] == '\x90') {
+                                                                                       ~~~~~~~~~ ^  ~~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.317s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+WARNING: no body for function lstat
+WARNING: no body for function perror
+Not unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding recursion traverse_directory iteration 1 (1 max)
+WARNING: no body for function perror
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/292_dereference-failure_dereference-failure.c line 23 column 5 function traverse_directory
+WARNING: no body for function closedir
+Symex completed in: 0.007s (150 assignments)
+Slicing time: 0.002s (removed 82 assignments)
+Generated 15 VCC(s), 11 remaining after simplification (68 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.202s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/292_dereference-failure_dereference-failure.c line 16 column 5 function traverse_directory thread 0
+----------------------------------------------------
+  file_stat = { .st_dev=0, .st_ino=0, .st_nlink=0, .st_mode=16384, .st_uid=0,
+    .st_gid=0, .__pad0=0, .st_rdev=0, .st_size=0,
+    .st_blksize=0, .st_blocks=0, .st_atim={ .tv_sec=nil, .tv_nsec=nil },
+    .st_mtim={ .tv_sec=nil, .tv_nsec=nil },
+    .st_ctim={ .tv_sec=nil, .tv_nsec=nil },
+    .__glibc_reserved={ 0, 0, 0 } }
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/292_dereference-failure_dereference-failure.c line 18 column 16 function traverse_directory thread 0
+----------------------------------------------------
+  dir = 0
+
+State 6 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/292_dereference-failure_dereference-failure.c line 23 column 5 function traverse_directory thread 0
+----------------------------------------------------
+  entry = invalid-object
+/
+
+State 9 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 103 column 5 function strcmp thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 103 column 5 function strcmp
+  dereference failure: invalid pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

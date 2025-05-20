@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/239_buffer-overflow_overflow-on-scanf_plugin-loader-architecture.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/239_buffer-overflow_overflow-on-scanf_plugin-loader-architecture.c:21:31: error: call to undeclared function 'dlsym'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    plugin_func = (void (*)())dlsym(NULL, "plugin_function");
+                              ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/239_buffer-overflow_overflow-on-scanf_plugin-loader-architecture.c:21:19: warning: cast to 'void (*)()' from smaller integer type 'int' [-Wint-to-pointer-cast]
+    plugin_func = (void (*)())dlsym(NULL, "plugin_function");
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ERROR: PARSING ERROR

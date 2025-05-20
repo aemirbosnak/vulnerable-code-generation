@@ -1,0 +1,1096 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.238s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Not unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.006s (150 assignments)
+Slicing time: 0.000s (removed 85 assignments)
+Generated 26 VCC(s), 12 remaining after simplification (65 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.022s
+BMC program time: 0.030s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Not unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.007s (149 assignments)
+Slicing time: 0.000s (removed 86 assignments)
+Generated 31 VCC(s), 17 remaining after simplification (63 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.305s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.023s (507 assignments)
+Slicing time: 0.003s (removed 279 assignments)
+Generated 94 VCC(s), 44 remaining after simplification (228 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.010s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.072s
+BMC program time: 0.106s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.024s (505 assignments)
+Slicing time: 0.003s (removed 281 assignments)
+Generated 101 VCC(s), 51 remaining after simplification (224 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.731s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.073s (1039 assignments)
+Slicing time: 0.006s (removed 577 assignments)
+Generated 194 VCC(s), 83 remaining after simplification (462 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.014s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.182s
+BMC program time: 0.272s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.095s (1036 assignments)
+Slicing time: 0.010s (removed 580 assignments)
+Generated 204 VCC(s), 93 remaining after simplification (456 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.018s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.340s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.125s (1765 assignments)
+Slicing time: 0.011s (removed 985 assignments)
+Generated 330 VCC(s), 134 remaining after simplification (780 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.019s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.206s
+BMC program time: 0.358s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.130s (1761 assignments)
+Slicing time: 0.017s (removed 989 assignments)
+Generated 343 VCC(s), 147 remaining after simplification (772 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.027s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 4.004s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.524s (2685 assignments)
+Slicing time: 0.036s (removed 1503 assignments)
+Generated 502 VCC(s), 197 remaining after simplification (1182 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.053s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.664s
+BMC program time: 1.275s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.539s (2680 assignments)
+Slicing time: 0.032s (removed 1508 assignments)
+Generated 518 VCC(s), 213 remaining after simplification (1172 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.053s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 3.512s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.308s (3811 assignments)
+Slicing time: 0.024s (removed 2119 assignments)
+Generated 710 VCC(s), 284 remaining after simplification (1692 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.039s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.518s
+BMC program time: 0.887s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 10 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 8 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 8 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 8 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1092_buffer-overflow_overflow-on-sscanf_command-line-text-editor.c line 28 column 5 function main
+Symex completed in: 0.509s (3805 assignments)
+Slicing time: 0.044s (removed 2125 assignments)
+Generated 729 VCC(s), 303 remaining after simplification (1680 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.062s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

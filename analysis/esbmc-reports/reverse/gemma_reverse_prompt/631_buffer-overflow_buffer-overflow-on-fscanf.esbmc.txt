@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/631_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/631_buffer-overflow_buffer-overflow-on-fscanf.c:54:41: error: incompatible function pointer types passing 'int (Word *, Word *)' (aka 'int (struct Word *, struct Word *)') to parameter of type 'int (*)(const void *, const void *)' [-Wincompatible-function-pointer-types]
+  qsort(words, wordCount, sizeof(Word), compareWords);
+                                        ^~~~~~~~~~~~
+/tmp/esbmc.5da9-4cde-f169/headers/stdlib.h:40:9: note: passing argument to parameter 'comparator' here
+                int (*comparator)(const void *, const void *));
+                      ^
+ERROR: PARSING ERROR

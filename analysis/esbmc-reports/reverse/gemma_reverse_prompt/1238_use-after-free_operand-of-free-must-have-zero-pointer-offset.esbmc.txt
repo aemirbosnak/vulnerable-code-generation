@@ -1,0 +1,32 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1238_use-after-free_operand-of-free-must-have-zero-pointer-offset.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.210s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (36 assignments)
+Slicing time: 0.000s (removed 19 assignments)
+Generated 10 VCC(s), 7 remaining after simplification (17 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.182s
+Building error trace
+
+[Counterexample]
+
+
+State 6 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1238_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 13 column 3 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1238_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 13 column 3 function main
+  dereference failure: invalidated dynamic object freed
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

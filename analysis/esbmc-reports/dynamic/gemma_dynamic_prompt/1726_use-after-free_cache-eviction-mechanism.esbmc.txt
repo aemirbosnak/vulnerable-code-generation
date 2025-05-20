@@ -1,0 +1,46 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1726_use-after-free_cache-eviction-mechanism.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.294s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1726_use-after-free_cache-eviction-mechanism.c line 31 column 3 function evict
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1726_use-after-free_cache-eviction-mechanism.c line 56 column 3 function main
+Symex completed in: 0.012s (168 assignments)
+Slicing time: 0.000s (removed 67 assignments)
+Generated 136 VCC(s), 47 remaining after simplification (101 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.404s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1726_use-after-free_cache-eviction-mechanism.c line 15 column 3 function insert thread 0
+----------------------------------------------------
+  newNode = ( struct Node *)(&dynamic_1_value)
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1726_use-after-free_cache-eviction-mechanism.c line 20 column 5 function insert thread 0
+----------------------------------------------------
+  *head = &dynamic_1_value
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1726_use-after-free_cache-eviction-mechanism.c line 15 column 3 function insert thread 0
+----------------------------------------------------
+  newNode = ( struct Node *)0
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1726_use-after-free_cache-eviction-mechanism.c line 16 column 3 function insert thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1726_use-after-free_cache-eviction-mechanism.c line 16 column 3 function insert
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

@@ -1,0 +1,90 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/085_out-of-bounds_write_audio-stream-decoder.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.284s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/085_out-of-bounds_write_audio-stream-decoder.c line 47 column 5 function main
+Symex completed in: 0.013s (166 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 39 VCC(s), 29 remaining after simplification (84 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.317s
+BMC program time: 0.335s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/085_out-of-bounds_write_audio-stream-decoder.c line 47 column 5 function main
+Symex completed in: 0.020s (166 assignments)
+Slicing time: 0.003s (removed 82 assignments)
+Generated 44 VCC(s), 34 remaining after simplification (84 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.366s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/085_out-of-bounds_write_audio-stream-decoder.c line 47 column 5 function main
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/085_out-of-bounds_write_audio-stream-decoder.c line 47 column 5 function main
+Symex completed in: 0.013s (234 assignments)
+Slicing time: 0.002s (removed 97 assignments)
+Generated 66 VCC(s), 56 remaining after simplification (137 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.681s
+Building error trace
+
+[Counterexample]
+
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/085_out-of-bounds_write_audio-stream-decoder.c line 25 column 5 function main thread 0
+----------------------------------------------------
+  header = { .id={ 0, 0, 0, 0 }, .version={ 0, 0, 0, 0 }, .flags={ 0, 0, 0, 0 },
+    .channels={ 0, 0 }, .sample_rate={ 0, 0, 0, 0 },
+    .bit_depth={ 76, 73, 25, -112 }, .data_size={ 53, -95, 95, -36, -35, -40, 60, 13 },
+    .extension={ 43, -97, -104, -69 } }
+
+State 20 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/085_out-of-bounds_write_audio-stream-decoder.c line 44 column 5 function main thread 0
+----------------------------------------------------
+  data = &dynamic_47_array[0]
+
+State 25 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/085_out-of-bounds_write_audio-stream-decoder.c line 48 column 9 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/085_out-of-bounds_write_audio-stream-decoder.c line 48 column 9 function main
+  dereference failure: array bounds violated
+  !overflow("*", (signed int)(data[(signed long int)(i + 18)]), 2)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 2)

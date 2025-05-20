@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/456_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.673s
+GOTO program processing time: 0.021s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/456_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 27 column 5 function main
+Symex completed in: 0.015s (68 assignments)
+Slicing time: 0.000s (removed 49 assignments)
+Generated 19 VCC(s), 5 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.277s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/456_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 25 column 5 function main thread 0
+----------------------------------------------------
+  jobs = { { .id = 0 }, { .id = 0 }, { .id = 0 }, { .id = 0 }, { .id = 0 }, { .id = 0 }, { .id = 0 }, { .id = 0 }, { .id = 0 }, { .id = 0 } }
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/456_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 28 column 9 function main thread 0
+----------------------------------------------------
+  jobs[(signed long int)i].id = 0 (00000000 00000000 00000000 00000000)
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/456_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 29 column 9 function main thread 0
+----------------------------------------------------
+  jobs[(signed long int)i].task = 0
+Task 0
+Executing job: 
+
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/456_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 19 column 5 function execute_job thread 1
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/456_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 19 column 5 function execute_job
+  dereference failure: free() of non-dynamic memory
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

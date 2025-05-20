@@ -1,0 +1,11 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/233_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/233_dereference-failure_dereference-failure.c:37:34: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+      if (strcmp(element_symbol, line[10]) != 0) {
+                                 ^~~~~~~~
+                                 &
+/tmp/esbmc.ec0b-9524-951f/headers/string.h:15:40: note: passing argument to parameter 'p2' here
+int strcmp(const char *p1, const char *p2);
+                                       ^
+ERROR: PARSING ERROR

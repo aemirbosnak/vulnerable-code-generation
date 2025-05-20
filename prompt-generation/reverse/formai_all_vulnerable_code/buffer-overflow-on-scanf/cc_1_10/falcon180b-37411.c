@@ -1,0 +1,74 @@
+//Falcon-180B DATASET v1.0 Category: Levenshtein Distance Calculator ; Style: modular
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define MAX_SIZE 1000
+
+void print_matrix(int **matrix, int size1, int size2) {
+    for (int i = 0; i < size1; i++) {
+        for (int j = 0; j < size2; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int min(int a, int b, int c) {
+    if (a < b && a < c) {
+        return a;
+    } else if (b < a && b < c) {
+        return b;
+    } else {
+        return c;
+    }
+}
+
+void levenshtein_distance(char *str1, char *str2) {
+    int size1 = strlen(str1);
+    int size2 = strlen(str2);
+
+    int **matrix = (int **)malloc(sizeof(int *) * size1);
+    for (int i = 0; i < size1; i++) {
+        matrix[i] = (int *)malloc(sizeof(int) * size2);
+    }
+
+    int i, j;
+
+    for (i = 0; i < size1; i++) {
+        matrix[i][0] = i;
+    }
+
+    for (j = 0; j < size2; j++) {
+        matrix[0][j] = j;
+    }
+
+    for (i = 1; i < size1; i++) {
+        for (j = 1; j < size2; j++) {
+            if (str1[i - 1] == str2[j - 1]) {
+                matrix[i][j] = matrix[i - 1][j - 1];
+            } else {
+                matrix[i][j] =
+                    min(matrix[i - 1][j], matrix[i][j - 1], matrix[i - 1][j - 1]) + 1;
+            }
+        }
+    }
+
+    printf("Levenshtein Distance: %d\n", matrix[size1 - 1][size2 - 1]);
+    print_matrix(matrix, size1, size2);
+}
+
+int main() {
+    char str1[MAX_SIZE];
+    char str2[MAX_SIZE];
+
+    printf("Enter first string: ");
+    scanf("%s", str1);
+
+    printf("Enter second string: ");
+    scanf("%s", str2);
+
+    levenshtein_distance(str1, str2);
+
+    return 0;
+}

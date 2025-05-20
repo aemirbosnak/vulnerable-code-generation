@@ -1,0 +1,98 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1600_out-of-bounds_write_chat-message-buffer-manager.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.338s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1600_out-of-bounds_write_chat-message-buffer-manager.c line 29 column 5 function main
+Symex completed in: 0.012s (96 assignments)
+Slicing time: 0.000s (removed 59 assignments)
+Generated 29 VCC(s), 9 remaining after simplification (37 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.071s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.003s
+BMC program time: 0.084s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1600_out-of-bounds_write_chat-message-buffer-manager.c line 29 column 5 function main
+Symex completed in: 0.013s (94 assignments)
+Slicing time: 0.002s (removed 60 assignments)
+Generated 32 VCC(s), 12 remaining after simplification (34 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.072s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.005s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Not unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1600_out-of-bounds_write_chat-message-buffer-manager.c line 29 column 5 function main
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Not unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1600_out-of-bounds_write_chat-message-buffer-manager.c line 29 column 5 function main
+Symex completed in: 0.032s (323 assignments)
+Slicing time: 0.002s (removed 174 assignments)
+Generated 88 VCC(s), 34 remaining after simplification (149 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.221s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 5.521s
+BMC program time: 5.773s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Not unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1600_out-of-bounds_write_chat-message-buffer-manager.c line 29 column 5 function main
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Not unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1600_out-of-bounds_write_chat-message-buffer-manager.c line 29 column 5 function main
+Symex completed in: 0.041s (319 assignments)
+Slicing time: 0.003s (removed 176 assignments)
+Generated 93 VCC(s), 39 remaining after simplification (143 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.281s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

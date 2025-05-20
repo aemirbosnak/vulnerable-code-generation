@@ -1,0 +1,34 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/677_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.405s
+GOTO program processing time: 0.013s
+Checking base case, k = 1
+Starting Bounded Model Checking
+No target candidate for function call *startdata.func
+No target candidate for function call *startdata.func
+Symex completed in: 0.006s (83 assignments)
+Slicing time: 0.000s (removed 67 assignments)
+Generated 6 VCC(s), 2 remaining after simplification (16 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.031s
+Building error trace
+
+[Counterexample]
+
+
+State 5 file /home/runner/work/esbmc/esbmc/src/c2goto/library/pthread_lib.c line 158 column 20 function pthread_trampoline thread 2
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/pthread_lib.c line 158 column 20 function pthread_trampoline
+  dereference failure: Data object accessed with code type
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

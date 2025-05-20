@@ -1,0 +1,36 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/449_dereference-failure_forgotten-memory_audio-stream-decoder.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.528s
+GOTO program processing time: 0.015s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (30 assignments)
+Slicing time: 0.000s (removed 14 assignments)
+Generated 9 VCC(s), 8 remaining after simplification (16 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.013s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/449_dereference-failure_forgotten-memory_audio-stream-decoder.c line 15 column 5 function main thread 0
+----------------------------------------------------
+  buffer = 0
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/449_dereference-failure_forgotten-memory_audio-stream-decoder.c line 18 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/449_dereference-failure_forgotten-memory_audio-stream-decoder.c line 18 column 5 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

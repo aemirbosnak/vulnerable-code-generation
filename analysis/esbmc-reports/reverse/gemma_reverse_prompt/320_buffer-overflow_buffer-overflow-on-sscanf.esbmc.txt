@@ -1,0 +1,14 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/320_buffer-overflow_buffer-overflow-on-sscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/320_buffer-overflow_buffer-overflow-on-sscanf.c:20:11: error: call to undeclared function 'read'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  nread = read(sockfd, buffer, sizeof(file_size));
+          ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/320_buffer-overflow_buffer-overflow-on-sscanf.c:20:11: note: did you mean 'fread'?
+/usr/include/stdio.h:738:15: note: 'fread' declared here
+extern size_t fread (void *__restrict __ptr, size_t __size,
+              ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/320_buffer-overflow_buffer-overflow-on-sscanf.c:26:3: error: call to undeclared function 'close'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  close(sockfd);
+  ^
+ERROR: PARSING ERROR

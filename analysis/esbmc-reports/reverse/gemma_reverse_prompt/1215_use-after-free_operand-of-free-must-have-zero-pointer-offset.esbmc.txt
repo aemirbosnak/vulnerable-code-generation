@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1215_use-after-free_operand-of-free-must-have-zero-pointer-offset.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.274s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (45 assignments)
+Slicing time: 0.002s (removed 20 assignments)
+Generated 9 VCC(s), 7 remaining after simplification (25 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.082s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1215_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 10 column 3 function my_malloc thread 0
+----------------------------------------------------
+  ptr = &dynamic_1_array[0]
+
+State 2 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1215_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 20 column 3 function main thread 0
+----------------------------------------------------
+  a = &dynamic_1_array[0]
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1215_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 10 column 3 function my_malloc thread 0
+----------------------------------------------------
+  ptr = 0
+
+State 6 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1215_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 22 column 3 function main thread 0
+----------------------------------------------------
+  b = 0
+
+State 9 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1215_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 23 column 3 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1215_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 23 column 3 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

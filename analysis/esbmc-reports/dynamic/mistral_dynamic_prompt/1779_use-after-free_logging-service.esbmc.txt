@@ -1,0 +1,53 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1779_use-after-free_logging-service.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.290s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1779_use-after-free_logging-service.c line 35 column 5 function free_log
+Symex completed in: 0.004s (75 assignments)
+Slicing time: 0.000s (removed 44 assignments)
+Generated 18 VCC(s), 10 remaining after simplification (31 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.652s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1779_use-after-free_logging-service.c line 46 column 5 function main thread 0
+----------------------------------------------------
+  dynamic_data = &dynamic_2_array[0]
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1779_use-after-free_logging-service.c line 21 column 5 function log_message thread 0
+----------------------------------------------------
+  new_entry = ( struct LogEntry *)(&dynamic_4_value)
+
+Initial log message.
+
+State 9 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1779_use-after-free_logging-service.c line 21 column 5 function log_message thread 0
+----------------------------------------------------
+  new_entry = ( struct LogEntry *)0
+
+Log message after freeing dynamic data.
+
+State 12 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1779_use-after-free_logging-service.c line 27 column 5 function log_message thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1779_use-after-free_logging-service.c line 27 column 5 function log_message
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

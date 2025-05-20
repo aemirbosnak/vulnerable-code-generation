@@ -1,0 +1,41 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/249_dereference-failure_invalid-pointer_database-migration-tool.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.298s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.004s (58 assignments)
+Slicing time: 0.000s (removed 29 assignments)
+Generated 7 VCC(s), 5 remaining after simplification (29 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.204s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/249_dereference-failure_invalid-pointer_database-migration-tool.c line 55 column 5 function main thread 0
+----------------------------------------------------
+  records = ( struct Record *)0
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/249_dereference-failure_invalid-pointer_database-migration-tool.c line 21 column 5 function read_data thread 0
+----------------------------------------------------
+  file = &dynamic_3_value
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/249_dereference-failure_invalid-pointer_database-migration-tool.c line 28 column 12 function read_data thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/249_dereference-failure_invalid-pointer_database-migration-tool.c line 28 column 12 function read_data
+  buffer overflow on fscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

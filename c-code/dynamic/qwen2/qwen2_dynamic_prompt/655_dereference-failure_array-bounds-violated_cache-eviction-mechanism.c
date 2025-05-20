@@ -1,0 +1,49 @@
+#include <string.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CACHE_SIZE 10
+
+typedef struct {
+    int key;
+    int value;
+} CacheEntry;
+
+CacheEntry cache[CACHE_SIZE];
+int cache_count = 0;
+
+void insert(int key, int value) {
+    if (cache_count >= CACHE_SIZE) {
+        // Evict the first entry to make space
+        cache_count--;
+    }
+    cache[cache_count].key = key;
+    cache[cache_count].value = value;
+    cache_count++;
+}
+
+int get(int key) {
+    for (int i = 0; i < cache_count; i++) {
+        if (cache[i].key == key) {
+            return cache[i].value;
+        }
+    }
+    return -1; // Key not found
+}
+
+int main() {
+    insert(1, 10);
+    insert(2, 20);
+    insert(3, 30);
+
+    printf("Value for key 2: %d\n", get(2));
+
+    // Intentional out-of-bounds access
+    cache[cache_count] = (CacheEntry){4, 40}; // This will cause an array bounds violation
+
+    return 0;
+}

@@ -1,0 +1,17 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2006_integer-overflow_http-request-parser.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2006_integer-overflow_http-request-parser.c:16:13: warning: incompatible pointer types passing 'char *' to parameter of type 'char **'; take the address with & [-Wincompatible-pointer-types]
+    getline(buf, 1024, stdin);
+            ^~~
+            &
+/usr/include/stdio.h:707:45: note: passing argument to parameter '__lineptr' here
+extern __ssize_t getline (char **__restrict __lineptr,
+                                            ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2006_integer-overflow_http-request-parser.c:16:18: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'size_t *' (aka 'unsigned long *') [-Wint-conversion]
+    getline(buf, 1024, stdin);
+                 ^~~~
+/usr/include/stdio.h:708:46: note: passing argument to parameter '__n' here
+                          size_t *__restrict __n,
+                                             ^
+ERROR: PARSING ERROR

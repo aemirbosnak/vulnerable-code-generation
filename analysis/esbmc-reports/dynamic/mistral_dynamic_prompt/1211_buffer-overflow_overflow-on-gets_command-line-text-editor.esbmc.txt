@@ -1,0 +1,22 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1211_buffer-overflow_overflow-on-gets_command-line-text-editor.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1211_buffer-overflow_overflow-on-gets_command-line-text-editor.c:24:9: error: call to undeclared function 'writeFile'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        writeFile(buf);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1211_buffer-overflow_overflow-on-gets_command-line-text-editor.c:26:9: error: call to undeclared function 'saveFile'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        saveFile(buf);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1211_buffer-overflow_overflow-on-gets_command-line-text-editor.c:41:6: error: conflicting types for 'writeFile'
+void writeFile(char* str) {
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1211_buffer-overflow_overflow-on-gets_command-line-text-editor.c:24:9: note: previous implicit declaration is here
+        writeFile(buf);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1211_buffer-overflow_overflow-on-gets_command-line-text-editor.c:47:6: error: conflicting types for 'saveFile'
+void saveFile(char* str) {
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1211_buffer-overflow_overflow-on-gets_command-line-text-editor.c:26:9: note: previous implicit declaration is here
+        saveFile(buf);
+        ^
+ERROR: PARSING ERROR

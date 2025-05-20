@@ -1,0 +1,22 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1170_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1170_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c:32:28: warning: incompatible pointer types passing 'void (**)(void *)' to parameter of type 'pthread_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+            pthread_create(&tasks[i].function, NULL, &run_task, &tasks[i]);
+                           ^~~~~~~~~~~~~~~~~~
+/tmp/esbmc.e4e0-c424-aaf8/headers/pthread.h:267:50: note: passing argument to parameter '__newthread' here
+extern int pthread_create (pthread_t *__restrict __newthread,
+                                                 ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1170_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c:32:54: error: incompatible function pointer types passing 'void (*)(void *)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+            pthread_create(&tasks[i].function, NULL, &run_task, &tasks[i]);
+                                                     ^~~~~~~~~
+/tmp/esbmc.e4e0-c424-aaf8/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1170_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c:49:23: error: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char[10]' [-Wint-conversion]
+        Task task = { buffer, NULL, NULL };
+                      ^~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1170_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c:50:34: warning: format specifies type 'int *' but the argument has type 'void (**)(void *)' [-Wformat]
+        sscanf(buffer, "%*s %d", &task.function); // Vulnerable sscanf with no checks on buffer size
+                            ~~   ^~~~~~~~~~~~~~
+ERROR: PARSING ERROR

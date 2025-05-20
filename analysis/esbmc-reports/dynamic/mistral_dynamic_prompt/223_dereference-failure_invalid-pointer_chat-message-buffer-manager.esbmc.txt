@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager.c:21:19: warning: incompatible pointer types assigning to 'struct Node *' from 'Node *' [-Wincompatible-pointer-types]
+    newNode->next = head;
+                  ^ ~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager.c:29:17: warning: incompatible pointer types assigning to 'Node *' from 'struct Node *' [-Wincompatible-pointer-types]
+        current = current->next;
+                ^ ~~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager.c:48:17: warning: incompatible pointer types assigning to 'Node *' from 'struct Node *' [-Wincompatible-pointer-types]
+        current = current->next;
+                ^ ~~~~~~~~~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.248s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager.c line 27 column 5 function displayMessages
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager.c line 46 column 5 function main
+Symex completed in: 0.008s (122 assignments)
+Slicing time: 0.000s (removed 57 assignments)
+Generated 62 VCC(s), 33 remaining after simplification (65 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.281s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager.c line 19 column 5 function addMessage thread 0
+----------------------------------------------------
+  newNode = ( struct __anon_typedef_Node_at_/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager_c__11_9 *)0
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager.c line 20 column 5 function addMessage thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/223_dereference-failure_invalid-pointer_chat-message-buffer-manager.c line 20 column 5 function addMessage
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

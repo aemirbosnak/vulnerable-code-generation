@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/296_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/296_dereference-failure_dereference-failure.c:13:22: error: call to undeclared function 'read_magic_number'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  int magic_number = read_magic_number(path);
+                     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/296_dereference-failure_dereference-failure.c:29:27: error: incompatible pointer to integer conversion passing 'FILE *' (aka 'struct _IO_FILE *') to parameter of type 'int' [-Wint-conversion]
+  int magic_number = read(fp, (char *) &magic_number, sizeof(int));
+                          ^~
+/usr/include/unistd.h:371:26: note: passing argument to parameter '__fd' here
+extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur
+                         ^
+ERROR: PARSING ERROR

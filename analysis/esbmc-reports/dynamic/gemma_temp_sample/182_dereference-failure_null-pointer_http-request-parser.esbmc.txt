@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/182_dereference-failure_null-pointer_http-request-parser.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/182_dereference-failure_null-pointer_http-request-parser.c:22:5: error: call to undeclared function 'parse_request'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    parse_request(url, headers, body);
+    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/182_dereference-failure_null-pointer_http-request-parser.c:30:6: error: conflicting types for 'parse_request'
+void parse_request(char *url, char **headers, char **body)
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/182_dereference-failure_null-pointer_http-request-parser.c:22:5: note: previous implicit declaration is here
+    parse_request(url, headers, body);
+    ^
+ERROR: PARSING ERROR

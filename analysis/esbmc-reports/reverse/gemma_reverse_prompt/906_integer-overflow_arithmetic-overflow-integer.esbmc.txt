@@ -1,0 +1,11 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/906_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/906_integer-overflow_arithmetic-overflow-integer.c:29:36: error: incompatible integer to pointer conversion passing 'time_t' (aka 'long') to parameter of type 'const time_t *' (aka 'const long *'); take the address with & [-Wint-conversion]
+  struct tm *result_tm = localtime(result_t);
+                                   ^~~~~~~~
+                                   &
+/usr/include/time.h:137:44: note: passing argument to parameter '__timer' here
+extern struct tm *localtime (const time_t *__timer) __THROW;
+                                           ^
+ERROR: PARSING ERROR

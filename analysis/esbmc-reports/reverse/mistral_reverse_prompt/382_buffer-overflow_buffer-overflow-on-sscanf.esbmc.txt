@@ -1,0 +1,46 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/382_buffer-overflow_buffer-overflow-on-sscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/382_buffer-overflow_buffer-overflow-on-sscanf.c:15:44: warning: format specifies type 'long *' but the argument has type 'char *' [-Wformat]
+        sscanf(buffer, "MemTotal: %ld kB", &buffer[0]);
+                                  ~~~      ^~~~~~~~~~
+                                  %s
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/382_buffer-overflow_buffer-overflow-on-sscanf.c:16:42: warning: format specifies type 'long' but the argument has type 'char' [-Wformat]
+        printf("Memory Total: %ld kB\n", buffer[0]);
+                              ~~~        ^~~~~~~~~
+                              %hhd
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.432s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Symex completed in: 0.004s (64 assignments)
+Slicing time: 0.002s (removed 43 assignments)
+Generated 10 VCC(s), 7 remaining after simplification (21 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.030s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/382_buffer-overflow_buffer-overflow-on-sscanf.c line 11 column 5 function main thread 0
+----------------------------------------------------
+  file = &dynamic_2_value
+
+State 7 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/382_buffer-overflow_buffer-overflow-on-sscanf.c line 15 column 9 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/382_buffer-overflow_buffer-overflow-on-sscanf.c line 15 column 9 function main
+  buffer overflow on sscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

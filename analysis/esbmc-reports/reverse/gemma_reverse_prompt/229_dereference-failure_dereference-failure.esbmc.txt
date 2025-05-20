@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/229_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/229_dereference-failure_dereference-failure.c:41:18: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'void *' [-Wint-conversion]
+            free(maze[i][j]);
+                 ^~~~~~~~~~
+/tmp/esbmc.76fa-eef4-ce26/headers/stdlib.h:29:17: note: passing argument to parameter 'p' here
+void free(void *p);
+                ^
+ERROR: PARSING ERROR

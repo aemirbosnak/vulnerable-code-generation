@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/130_dereference-failure_null-pointer_logging-service.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/130_dereference-failure_null-pointer_logging-service.c:14:5: error: unknown type name 'time_t'
+    time_t timestamp;
+    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/130_dereference-failure_null-pointer_logging-service.c:23:28: error: call to undeclared function 'time'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    new_entry->timestamp = time(NULL);
+                           ^
+ERROR: PARSING ERROR

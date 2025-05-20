@@ -1,0 +1,754 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.201s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.012s (270 assignments)
+Slicing time: 0.002s (removed 121 assignments)
+Generated 65 VCC(s), 37 remaining after simplification (149 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.791s
+BMC program time: 0.811s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.017s (266 assignments)
+Slicing time: 0.002s (removed 123 assignments)
+Generated 69 VCC(s), 41 remaining after simplification (143 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.666s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.023s (385 assignments)
+Slicing time: 0.004s (removed 163 assignments)
+Generated 108 VCC(s), 60 remaining after simplification (222 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.781s
+BMC program time: 0.817s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.029s (381 assignments)
+Slicing time: 0.002s (removed 165 assignments)
+Generated 112 VCC(s), 64 remaining after simplification (216 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.016s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.705s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.033s (478 assignments)
+Slicing time: 0.003s (removed 201 assignments)
+Generated 147 VCC(s), 79 remaining after simplification (277 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.012s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.950s
+BMC program time: 0.995s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.032s (474 assignments)
+Slicing time: 0.003s (removed 203 assignments)
+Generated 151 VCC(s), 83 remaining after simplification (271 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.014s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.942s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.066s (571 assignments)
+Slicing time: 0.006s (removed 239 assignments)
+Generated 186 VCC(s), 98 remaining after simplification (332 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.020s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.889s
+BMC program time: 0.979s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.047s (567 assignments)
+Slicing time: 0.003s (removed 241 assignments)
+Generated 190 VCC(s), 102 remaining after simplification (326 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.020s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.947s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.074s (664 assignments)
+Slicing time: 0.004s (removed 277 assignments)
+Generated 225 VCC(s), 117 remaining after simplification (387 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.022s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.908s
+BMC program time: 1.005s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.046s (660 assignments)
+Slicing time: 0.005s (removed 279 assignments)
+Generated 229 VCC(s), 121 remaining after simplification (381 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.017s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.979s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.090s (757 assignments)
+Slicing time: 0.007s (removed 315 assignments)
+Generated 264 VCC(s), 136 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.027s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.847s
+BMC program time: 0.969s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.065s (753 assignments)
+Slicing time: 0.005s (removed 317 assignments)
+Generated 268 VCC(s), 140 remaining after simplification (436 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.016s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.954s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.124s (850 assignments)
+Slicing time: 0.010s (removed 353 assignments)
+Generated 303 VCC(s), 155 remaining after simplification (497 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.028s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.111s
+BMC program time: 1.271s
+No bug has been found in the base case
+Checking forward condition, k = 7
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.092s (846 assignments)
+Slicing time: 0.006s (removed 355 assignments)
+Generated 307 VCC(s), 159 remaining after simplification (491 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.021s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.140s
+The forward condition is unable to prove the property
+Checking base case, k = 8
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 2 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+No target candidate for function call *plugins[(signed long int)i].init
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 44 column 5 function initialize_plugins
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Not unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1750_use-after-free_plugin-loader-architecture.c line 52 column 5 function unload_plugins
+Symex completed in: 0.155s (943 assignments)
+Slicing time: 0.012s (removed 391 assignments)
+Generated 342 VCC(s), 174 remaining after simplification (552 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.037s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

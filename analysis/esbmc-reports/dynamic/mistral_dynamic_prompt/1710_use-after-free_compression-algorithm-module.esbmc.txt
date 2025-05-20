@@ -1,0 +1,55 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1710_use-after-free_compression-algorithm-module.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1710_use-after-free_compression-algorithm-module.c:37:10: warning: attempt to call free on non-heap object 'input' [-Wfree-nonheap-object]
+    free(input);
+         ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.602s
+GOTO program processing time: 0.018s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Symex completed in: 0.028s (156 assignments)
+Slicing time: 0.002s (removed 84 assignments)
+Generated 48 VCC(s), 17 remaining after simplification (72 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.221s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1710_use-after-free_compression-algorithm-module.c line 29 column 5 function main thread 0
+----------------------------------------------------
+  data = { .data = 0 }
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1710_use-after-free_compression-algorithm-module.c line 30 column 5 function main thread 0
+----------------------------------------------------
+  input = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+Enter the data to compress:
+
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1710_use-after-free_compression-algorithm-module.c line 16 column 5 function compress thread 0
+----------------------------------------------------
+  compressed->data = &dynamic_4_array[0]
+
+State 11 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1710_use-after-free_compression-algorithm-module.c line 37 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1710_use-after-free_compression-algorithm-module.c line 37 column 5 function main
+  dereference failure: free() of non-dynamic memory
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

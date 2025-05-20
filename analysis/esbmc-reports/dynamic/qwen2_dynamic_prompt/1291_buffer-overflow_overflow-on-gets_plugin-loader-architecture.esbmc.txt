@@ -1,0 +1,347 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1291_buffer-overflow_overflow-on-gets_plugin-loader-architecture.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.250s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Symex completed in: 0.005s (88 assignments)
+Slicing time: 0.000s (removed 47 assignments)
+Generated 23 VCC(s), 13 remaining after simplification (41 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+BMC program time: 0.008s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Symex completed in: 0.005s (87 assignments)
+Slicing time: 0.002s (removed 48 assignments)
+Generated 25 VCC(s), 15 remaining after simplification (39 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.041s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.012s (179 assignments)
+Slicing time: 0.002s (removed 70 assignments)
+Generated 63 VCC(s), 39 remaining after simplification (109 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.353s
+BMC program time: 0.369s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.008s (178 assignments)
+Slicing time: 0.002s (removed 71 assignments)
+Generated 65 VCC(s), 41 remaining after simplification (107 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.258s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.011s (234 assignments)
+Slicing time: 0.003s (removed 89 assignments)
+Generated 81 VCC(s), 50 remaining after simplification (145 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.448s
+BMC program time: 0.464s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.010s (233 assignments)
+Slicing time: 0.002s (removed 90 assignments)
+Generated 83 VCC(s), 52 remaining after simplification (143 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.428s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.012s (289 assignments)
+Slicing time: 0.003s (removed 108 assignments)
+Generated 99 VCC(s), 61 remaining after simplification (181 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.834s
+BMC program time: 0.852s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.020s (288 assignments)
+Slicing time: 0.003s (removed 109 assignments)
+Generated 101 VCC(s), 63 remaining after simplification (179 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.993s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.025s (344 assignments)
+Slicing time: 0.005s (removed 127 assignments)
+Generated 117 VCC(s), 72 remaining after simplification (217 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.355s
+BMC program time: 1.394s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.022s (343 assignments)
+Slicing time: 0.005s (removed 128 assignments)
+Generated 119 VCC(s), 74 remaining after simplification (215 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.128s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.028s (399 assignments)
+Slicing time: 0.005s (removed 146 assignments)
+Generated 135 VCC(s), 83 remaining after simplification (253 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.013s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.481s
+BMC program time: 1.525s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.019s (398 assignments)
+Slicing time: 0.003s (removed 147 assignments)
+Generated 137 VCC(s), 85 remaining after simplification (251 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 2.321s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.037s (454 assignments)
+Slicing time: 0.007s (removed 165 assignments)
+Generated 153 VCC(s), 94 remaining after simplification (289 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 2.369s
+BMC program time: 2.422s
+No bug has been found in the base case
+Checking forward condition, k = 7
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 4 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+No target candidate for function call *plugin->execute
+Symex completed in: 0.050s (453 assignments)
+Slicing time: 0.010s (removed 166 assignments)
+Generated 155 VCC(s), 96 remaining after simplification (287 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.016s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

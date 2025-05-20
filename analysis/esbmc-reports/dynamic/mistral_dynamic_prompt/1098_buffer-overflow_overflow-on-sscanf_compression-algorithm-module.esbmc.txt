@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1098_buffer-overflow_overflow-on-sscanf_compression-algorithm-module.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1098_buffer-overflow_overflow-on-sscanf_compression-algorithm-module.c:46:16: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
+    if (sscanf(getchar(), "%s", buffer) == EOF) {
+               ^~~~~~~~~
+/usr/include/stdio.h:468:60: note: passing argument to parameter '__s' here
+extern int __REDIRECT_NTH (sscanf, (const char *__restrict __s,
+                                                           ^
+ERROR: PARSING ERROR

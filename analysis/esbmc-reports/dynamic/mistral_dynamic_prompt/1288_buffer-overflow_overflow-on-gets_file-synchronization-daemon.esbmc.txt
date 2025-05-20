@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1288_buffer-overflow_overflow-on-gets_file-synchronization-daemon.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1288_buffer-overflow_overflow-on-gets_file-synchronization-daemon.c:44:68: warning: passing 'int *' to parameter of type 'socklen_t *' (aka 'unsigned int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        new_sockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &addr_len);
+                                                                   ^~~~~~~~~
+/usr/include/x86_64-linux-gnu/sys/socket.h:307:28: note: passing argument to parameter '__addr_len' here
+                   socklen_t *__restrict __addr_len);
+                                         ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1288_buffer-overflow_overflow-on-gets_file-synchronization-daemon.c:47:9: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        gets(buffer);
+        ^
+ERROR: PARSING ERROR

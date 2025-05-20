@@ -1,0 +1,24 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/319_buffer-overflow_buffer-overflow-on-sscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/319_buffer-overflow_buffer-overflow-on-sscanf.c:29:3: error: call to undeclared function 'inet_pton'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  inet_pton(AF_INET, remote_host, &server_addr.sin_addr);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/319_buffer-overflow_buffer-overflow-on-sscanf.c:39:24: error: call to undeclared function 'read'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  while ((bytes_read = read(sockfd, buffer, 1024)) > 0) {
+                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/319_buffer-overflow_buffer-overflow-on-sscanf.c:39:24: note: did you mean 'fread'?
+/usr/include/stdio.h:738:15: note: 'fread' declared here
+extern size_t fread (void *__restrict __ptr, size_t __size,
+              ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/319_buffer-overflow_buffer-overflow-on-sscanf.c:40:5: error: call to undeclared function 'write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    write(sockfd, buffer, bytes_read);
+    ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/319_buffer-overflow_buffer-overflow-on-sscanf.c:40:5: note: did you mean 'fwrite'?
+/usr/include/stdio.h:745:15: note: 'fwrite' declared here
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+              ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/319_buffer-overflow_buffer-overflow-on-sscanf.c:43:3: error: call to undeclared function 'close'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  close(sockfd);
+  ^
+ERROR: PARSING ERROR

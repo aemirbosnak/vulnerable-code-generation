@@ -1,0 +1,14 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1208_buffer-overflow_overflow-on-gets_file-upload-handler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1208_buffer-overflow_overflow-on-gets_file-upload-handler.c:12:5: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    gets(buf);
+    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1208_buffer-overflow_overflow-on-gets_file-upload-handler.c:15:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+    fprintf(fp, buf);
+                ^~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1208_buffer-overflow_overflow-on-gets_file-upload-handler.c:15:17: note: treat the string as an argument to avoid this
+    fprintf(fp, buf);
+                ^
+                "%s", 
+ERROR: PARSING ERROR

@@ -1,0 +1,60 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/268_dereference-failure_dereference-failure.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.349s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function socket
+WARNING: no body for function perror
+WARNING: no body for function inet_pton
+WARNING: no body for function perror
+WARNING: no body for function close
+WARNING: no body for function connect
+WARNING: no body for function perror
+WARNING: no body for function close
+WARNING: no body for function send
+WARNING: no body for function recv
+WARNING: no body for function perror
+WARNING: no body for function send
+WARNING: no body for function recv
+WARNING: no body for function perror
+WARNING: no body for function send
+WARNING: no body for function recv
+WARNING: no body for function perror
+WARNING: no body for function send
+WARNING: no body for function close
+Symex completed in: 0.004s (77 assignments)
+Slicing time: 0.000s (removed 43 assignments)
+Generated 11 VCC(s), 11 remaining after simplification (34 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.367s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/268_dereference-failure_dereference-failure.c line 26 column 5 function main thread 0
+----------------------------------------------------
+  sock = -2 (11111111 11111111 11111111 11111110)
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/268_dereference-failure_dereference-failure.c line 15 column 5 function handle_response thread 0
+----------------------------------------------------
+  bytes_received = 1073742847 (01000000 00000000 00000011 11111111)
+
+State 7 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/268_dereference-failure_dereference-failure.c line 20 column 5 function handle_response thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/268_dereference-failure_dereference-failure.c line 20 column 5 function handle_response
+  array bounds violated: array `buffer' upper bound
+  (signed long int)bytes_received < 1024
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

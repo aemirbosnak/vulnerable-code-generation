@@ -1,0 +1,249 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:33:10: warning: attempt to call free on non-heap object 'stack' [-Wfree-nonheap-object]
+    free(stack);
+         ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.261s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.007s (24 assignments)
+Slicing time: 0.000s (removed 19 assignments)
+Generated 10 VCC(s), 3 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.008s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.007s (24 assignments)
+Slicing time: 0.000s (removed 19 assignments)
+Generated 11 VCC(s), 4 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.010s (29 assignments)
+Slicing time: 0.000s (removed 22 assignments)
+Generated 19 VCC(s), 5 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.011s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.011s (29 assignments)
+Slicing time: 0.000s (removed 22 assignments)
+Generated 20 VCC(s), 6 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.016s (34 assignments)
+Slicing time: 0.000s (removed 25 assignments)
+Generated 28 VCC(s), 7 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.016s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.016s (34 assignments)
+Slicing time: 0.000s (removed 25 assignments)
+Generated 29 VCC(s), 8 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.033s (45 assignments)
+Slicing time: 0.000s (removed 26 assignments)
+Generated 44 VCC(s), 10 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.034s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.031s (45 assignments)
+Slicing time: 0.000s (removed 26 assignments)
+Generated 45 VCC(s), 11 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.038s (57 assignments)
+Slicing time: 0.000s (removed 32 assignments)
+Generated 60 VCC(s), 13 remaining after simplification (25 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.040s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.035s (57 assignments)
+Slicing time: 0.000s (removed 32 assignments)
+Generated 61 VCC(s), 14 remaining after simplification (25 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.035s (69 assignments)
+Slicing time: 0.000s (removed 38 assignments)
+Generated 76 VCC(s), 16 remaining after simplification (31 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.037s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.049s (69 assignments)
+Slicing time: 0.000s (removed 38 assignments)
+Generated 77 VCC(s), 17 remaining after simplification (31 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 11 column 5 function parseString
+Symex completed in: 0.030s (75 assignments)
+Slicing time: 0.000s (removed 42 assignments)
+Generated 80 VCC(s), 18 remaining after simplification (33 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.022s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 10 column 5 function parseString thread 0
+----------------------------------------------------
+  stack = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 13 column 13 function parseString thread 0
+----------------------------------------------------
+  stack[0] = 40 (00000000 00000000 00000000 00101000)
+
+State 7 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 13 column 13 function parseString thread 0
+----------------------------------------------------
+  stack[1] = 123 (00000000 00000000 00000000 01111011)
+
+State 10 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 13 column 13 function parseString thread 0
+----------------------------------------------------
+  stack[2] = 91 (00000000 00000000 00000000 01011011)
+
+State 14 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 19 column 13 function parseString thread 0
+----------------------------------------------------
+  match = 91 (01011011)
+
+State 18 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 19 column 13 function parseString thread 0
+----------------------------------------------------
+  match = 123 (01111011)
+
+State 22 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 19 column 13 function parseString thread 0
+----------------------------------------------------
+  match = 40 (00101000)
+
+State 25 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 33 column 5 function parseString thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1198_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 33 column 5 function parseString
+  dereference failure: free() of non-dynamic memory
+
+
+VERIFICATION FAILED
+
+Bug found (k = 7)

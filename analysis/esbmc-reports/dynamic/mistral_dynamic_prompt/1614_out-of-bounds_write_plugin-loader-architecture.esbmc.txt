@@ -1,0 +1,51 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1614_out-of-bounds_write_plugin-loader-architecture.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1614_out-of-bounds_write_plugin-loader-architecture.c:34:1: warning: return type of 'main' is not 'int' [-Wmain-return-type]
+void main(int argc, char* argv[]) {
+^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1614_out-of-bounds_write_plugin-loader-architecture.c:34:1: note: change return type to 'int'
+void main(int argc, char* argv[]) {
+^~~~
+int
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.291s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+No target candidate for function call *(void (*)())plugin->function
+Symex completed in: 0.012s (150 assignments)
+Slicing time: 0.002s (removed 46 assignments)
+Generated 52 VCC(s), 37 remaining after simplification (104 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 4.281s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1614_out-of-bounds_write_plugin-loader-architecture.c line 16 column 5 function load_plugin thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1614_out-of-bounds_write_plugin-loader-architecture.c line 17 column 5 function load_plugin thread 0
+----------------------------------------------------
+  plugin = ( struct Plugin *)(&dynamic_3_value)
+
+State 14 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

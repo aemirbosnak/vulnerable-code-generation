@@ -1,0 +1,1242 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.329s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Symex completed in: 0.005s (75 assignments)
+Slicing time: 0.000s (removed 41 assignments)
+Generated 7 VCC(s), 4 remaining after simplification (34 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.075s
+BMC program time: 0.082s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Symex completed in: 0.004s (75 assignments)
+Slicing time: 0.000s (removed 41 assignments)
+Generated 9 VCC(s), 6 remaining after simplification (34 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.096s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.030s (315 assignments)
+Slicing time: 0.004s (removed 140 assignments)
+Generated 67 VCC(s), 44 remaining after simplification (175 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.010s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.289s
+BMC program time: 0.331s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.036s (315 assignments)
+Slicing time: 0.004s (removed 140 assignments)
+Generated 78 VCC(s), 55 remaining after simplification (175 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.010s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.275s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.051s (548 assignments)
+Slicing time: 0.008s (removed 233 assignments)
+Generated 128 VCC(s), 85 remaining after simplification (315 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.013s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.323s
+BMC program time: 0.392s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.068s (548 assignments)
+Slicing time: 0.010s (removed 233 assignments)
+Generated 143 VCC(s), 100 remaining after simplification (315 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.017s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.448s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.101s (855 assignments)
+Slicing time: 0.010s (removed 354 assignments)
+Generated 209 VCC(s), 140 remaining after simplification (501 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.019s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.533s
+BMC program time: 0.661s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.110s (855 assignments)
+Slicing time: 0.010s (removed 354 assignments)
+Generated 228 VCC(s), 159 remaining after simplification (501 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.017s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.677s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.184s (1241 assignments)
+Slicing time: 0.026s (removed 503 assignments)
+Generated 310 VCC(s), 214 remaining after simplification (738 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.069s
+BMC program time: 1.310s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.322s (1241 assignments)
+Slicing time: 0.037s (removed 503 assignments)
+Generated 333 VCC(s), 237 remaining after simplification (738 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.057s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.650s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.620s (1703 assignments)
+Slicing time: 0.066s (removed 680 assignments)
+Generated 431 VCC(s), 304 remaining after simplification (1023 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.071s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 4.131s
+BMC program time: 4.889s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.327s (1703 assignments)
+Slicing time: 0.038s (removed 680 assignments)
+Generated 458 VCC(s), 331 remaining after simplification (1023 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.057s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.770s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 3 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 4 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 4 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 5 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1367_out-of-bounds_read_audio-stream-decoder.c line 20 column 5 function decode_frame
+Symex completed in: 0.513s (2241 assignments)
+Slicing time: 0.056s (removed 885 assignments)
+Generated 572 VCC(s), 410 remaining after simplification (1356 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.050s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

@@ -1,0 +1,24 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/648_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/648_buffer-overflow_buffer-overflow-on-fscanf.c:12:36: warning: format specifies type 'int *' but the argument has type 'void *' [-Wformat]
+    fscanf(file, "PGM %d %d %d\n", NULL, NULL, NULL);
+                      ~~           ^~~~
+/tmp/esbmc-headers-8bc3-4745-d550/include/stddef.h:89:16: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+               ^~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/648_buffer-overflow_buffer-overflow-on-fscanf.c:12:42: warning: format specifies type 'int *' but the argument has type 'void *' [-Wformat]
+    fscanf(file, "PGM %d %d %d\n", NULL, NULL, NULL);
+                         ~~              ^~~~
+/tmp/esbmc-headers-8bc3-4745-d550/include/stddef.h:89:16: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+               ^~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/648_buffer-overflow_buffer-overflow-on-fscanf.c:12:48: warning: format specifies type 'int *' but the argument has type 'void *' [-Wformat]
+    fscanf(file, "PGM %d %d %d\n", NULL, NULL, NULL);
+                            ~~                 ^~~~
+/tmp/esbmc-headers-8bc3-4745-d550/include/stddef.h:89:16: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+               ^~~~~~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.295s

@@ -1,0 +1,36 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c:22:3: error: call to undeclared function 'quicksort'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  quicksort(arr, n);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c:36:6: error: conflicting types for 'quicksort'
+void quicksort(char **arr, int n) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c:22:3: note: previous implicit declaration is here
+  quicksort(arr, n);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c:37:3: error: call to undeclared function 'quicksort_recur'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  quicksort_recur(arr, 0, n - 1);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c:40:6: error: conflicting types for 'quicksort_recur'
+void quicksort_recur(char **arr, int low, int high) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c:37:3: note: previous implicit declaration is here
+  quicksort_recur(arr, 0, n - 1);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c:42:27: error: call to undeclared function 'partition'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    int partition_index = partition(arr, low, high);
+                          ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c:49:8: error: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char *'; dereference with * [-Wint-conversion]
+  char pivot_element = arr[high];
+       ^               ~~~~~~~~~
+                       *
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/982_integer-overflow_arithmetic-overflow-integer.c:52:24: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+    if (strcmp(arr[j], pivot_element) < 0) {
+                       ^~~~~~~~~~~~~
+                       &
+/tmp/esbmc.cd49-30ad-129d/headers/string.h:15:40: note: passing argument to parameter 'p2' here
+int strcmp(const char *p1, const char *p2);
+                                       ^
+ERROR: PARSING ERROR

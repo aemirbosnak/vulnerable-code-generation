@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1068_integer-overflow_arithmetic-overflow-floating-point.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1068_integer-overflow_arithmetic-overflow-floating-point.c:28:9: error: call to undeclared function 'sleep'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        sleep(1);
+        ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1068_integer-overflow_arithmetic-overflow-floating-point.c:26:25: warning: implicit conversion from 'int' to 'float' changes value from -999999999 to -1.0E+9 [-Wimplicit-const-int-float-conversion]
+            *temp_ptr = -999999999; // Intentional overflow
+                      ~ ^~~~~~~~~~
+ERROR: PARSING ERROR

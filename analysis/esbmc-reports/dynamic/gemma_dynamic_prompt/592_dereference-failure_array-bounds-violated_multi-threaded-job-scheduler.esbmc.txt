@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/592_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/592_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c:15:11: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+  int i = (int)arg;
+          ^~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/592_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c:24:16: error: incompatible pointer to integer conversion passing 'pthread_t[10]' (aka 'unsigned long[10]') to parameter of type 'pthread_t' (aka 'unsigned long') [-Wint-conversion]
+  pthread_join(threads, NULL);
+               ^~~~~~~
+/tmp/esbmc.88aa-cfe1-a01f/headers/pthread.h:284:36: note: passing argument to parameter '__th' here
+extern int pthread_join (pthread_t __th, void **__thread_return);
+                                   ^
+ERROR: PARSING ERROR

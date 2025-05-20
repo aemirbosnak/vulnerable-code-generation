@@ -1,0 +1,57 @@
+#include <string.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_ENTRY_LENGTH 256
+
+void addEntry() {
+    FILE *file = fopen("diary.txt", "a");
+    if (file == NULL) {
+        perror("Error opening file");
+        return;
+    }
+    char entry[MAX_ENTRY_LENGTH];
+    printf("Enter your diary entry: ");
+    fgets(entry, sizeof(entry), stdin);
+    fprintf(file, "%s", entry);
+    fclose(file);
+}
+
+void viewEntries() {
+    FILE *file = fopen("diary.txt", "r");
+    if (file == NULL) {
+        perror("Error opening file");
+        return;
+    }
+    char entry[MAX_ENTRY_LENGTH];
+    while (fgets(entry, sizeof(entry), file) != NULL) {
+        printf("%s", entry);
+    }
+    fclose(file);
+}
+
+int main() {
+    int choice;
+    while (1) {
+        printf("\nDigital Diary\n1. Add Entry\n2. View Entries\n3. Exit\n");
+        scanf("%d", &choice);
+        getchar(); // Consume newline character left by scanf
+        switch (choice) {
+            case 1:
+                addEntry();
+                break;
+            case 2:
+                viewEntries();
+                break;
+            case 3:
+                exit(0);
+            default:
+                printf("Invalid choice\n");
+        }
+    }
+    return 0;
+}

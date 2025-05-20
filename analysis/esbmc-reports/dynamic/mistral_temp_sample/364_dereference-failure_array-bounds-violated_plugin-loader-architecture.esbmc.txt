@@ -1,0 +1,47 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c:19:13: warning: address of stack memory associated with local variable 'plugin' returned [-Wreturn-stack-address]
+    return &plugin;
+            ^~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.235s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+No target candidate for function call *plugin->func
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c line 45 column 5 function main
+Symex completed in: 0.006s (84 assignments)
+Slicing time: 0.002s (removed 47 assignments)
+Generated 17 VCC(s), 7 remaining after simplification (37 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.117s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c line 15 column 5 function load_plugin thread 0
+----------------------------------------------------
+  fp = 0
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c line 15 column 5 function load_plugin thread 0
+----------------------------------------------------
+  fp = 0
+
+State 9 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c line 23 column 5 function run_plugin thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c line 23 column 5 function run_plugin
+  dereference failure: accessed expired variable pointer `plugin'
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

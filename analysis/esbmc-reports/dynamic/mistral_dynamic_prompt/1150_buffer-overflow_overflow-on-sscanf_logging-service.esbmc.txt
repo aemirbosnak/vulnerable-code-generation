@@ -1,0 +1,34 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1150_buffer-overflow_overflow-on-sscanf_logging-service.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.883s
+GOTO program processing time: 0.025s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.007s (40 assignments)
+Slicing time: 0.002s (removed 24 assignments)
+Generated 7 VCC(s), 6 remaining after simplification (16 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.186s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 30 column 3 function strcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 30 column 3 function strcpy
+  Source pointer is null
+  src != (signed char *)0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

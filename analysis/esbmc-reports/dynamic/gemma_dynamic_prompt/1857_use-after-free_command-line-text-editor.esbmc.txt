@@ -1,0 +1,49 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1857_use-after-free_command-line-text-editor.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.432s
+GOTO program processing time: 0.014s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1857_use-after-free_command-line-text-editor.c line 21 column 3 function main
+Symex completed in: 0.007s (75 assignments)
+Slicing time: 0.002s (removed 31 assignments)
+Generated 17 VCC(s), 13 remaining after simplification (44 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.511s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1857_use-after-free_command-line-text-editor.c line 15 column 3 function main thread 0
+----------------------------------------------------
+  buffer = 0
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1857_use-after-free_command-line-text-editor.c line 18 column 3 function main thread 0
+----------------------------------------------------
+  key = -99 (10011101)
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1857_use-after-free_command-line-text-editor.c line 25 column 7 function main thread 0
+----------------------------------------------------
+  buffer = &dynamic_8_array[0]
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1857_use-after-free_command-line-text-editor.c line 29 column 5 function main thread 0
+----------------------------------------------------
+  buffer = 0
+
+State 13 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1857_use-after-free_command-line-text-editor.c line 30 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1857_use-after-free_command-line-text-editor.c line 30 column 5 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

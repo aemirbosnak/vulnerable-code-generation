@@ -1,0 +1,60 @@
+//Falcon-180B DATASET v1.0 Category: Simple HTTP Proxy ; Style: intelligent
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+
+#define BUF_SIZE 1024
+
+void error(const char *msg) {
+    perror(msg);
+    exit(1);
+}
+
+int main(int argc, char **argv) {
+    if (argc!= 3) {
+        fprintf(stderr, "Usage: %s <port> <host>\n", argv[0]);
+        return 1;
+    }
+
+    int port = atoi(argv[1]);
+    char *host = argv[2];
+
+    int listen_socket = socket(AF_INET, SOCK_STREAM, 0);
+    if (listen_socket == -1)
+        error("socket");
+
+    struct sockaddr_in server_addr;
+    memset(&server_addr, 0, sizeof(server_addr));
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_port = htons(port);
+    inet_pton(AF_INET, host, &server_addr.sin_addr);
+
+    if (bind(listen_socket, (struct sockaddr *)&server_addr, sizeof(server_addr)) == -1)
+        error("bind");
+
+    if (listen(listen_socket, 5) == -1)
+        error("listen");
+
+    printf("Proxy server started on port %d\n", port);
+
+    while (1) {
+        int client_socket = accept(listen_socket, NULL, NULL);
+        if (client_socket == -1)
+            error("accept");
+
+        char buffer[BUF_SIZE];
+        int bytes_received = 0;
+
+        while ((bytes_received = recv(client_socket, buffer, BUF_SIZE, 0)) > 0) {
+            send(client_socket, buffer, bytes_received, 0);
+        }
+
+        close(client_socket);
+    }
+
+    return 0;
+}

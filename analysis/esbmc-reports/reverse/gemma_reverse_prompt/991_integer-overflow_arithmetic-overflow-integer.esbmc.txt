@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/991_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/991_integer-overflow_arithmetic-overflow-integer.c:41:56: error: incompatible pointer to integer conversion passing 'void *' to parameter of type 'int' [-Wint-conversion]
+    msgrcv(msg_id, &msg_packet, sizeof(msg_packet), 0, NULL);
+                                                       ^~~~
+/tmp/esbmc-headers-9fe7-f268-013c/include/stddef.h:89:16: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+               ^~~~~~~~~~
+/usr/include/x86_64-linux-gnu/sys/msg.h:81:33: note: passing argument to parameter '__msgflg' here
+                       long int __msgtyp, int __msgflg);
+                                              ^
+ERROR: PARSING ERROR

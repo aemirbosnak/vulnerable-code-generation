@@ -1,0 +1,111 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.303s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 24 column 9 function bmpToAscii
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 23 column 5 function bmpToAscii
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 31 column 9 function bmpToAscii
+Not unwinding loop 41 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 30 column 5 function bmpToAscii
+Symex completed in: 0.007s (109 assignments)
+Slicing time: 0.000s (removed 55 assignments)
+Generated 25 VCC(s), 13 remaining after simplification (54 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.185s
+BMC program time: 0.195s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 24 column 9 function bmpToAscii
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 23 column 5 function bmpToAscii
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 31 column 9 function bmpToAscii
+Not unwinding loop 41 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 30 column 5 function bmpToAscii
+Symex completed in: 0.007s (109 assignments)
+Slicing time: 0.000s (removed 55 assignments)
+Generated 30 VCC(s), 18 remaining after simplification (54 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.133s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 25 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 24 column 9 function bmpToAscii
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 24 column 9 function bmpToAscii
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 23 column 5 function bmpToAscii
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 24 column 9 function bmpToAscii
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 24 column 9 function bmpToAscii
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 23 column 5 function bmpToAscii
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 31 column 9 function bmpToAscii
+Not unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 31 column 9 function bmpToAscii
+Unwinding loop 41 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 30 column 5 function bmpToAscii
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 31 column 9 function bmpToAscii
+Not unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 31 column 9 function bmpToAscii
+Not unwinding loop 41 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 30 column 5 function bmpToAscii
+Symex completed in: 0.009s (197 assignments)
+Slicing time: 0.002s (removed 89 assignments)
+Generated 71 VCC(s), 34 remaining after simplification (108 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.140s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 13 column 5 function bmpToAscii thread 0
+----------------------------------------------------
+  file = &dynamic_25_value
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 16 column 5 function bmpToAscii thread 0
+----------------------------------------------------
+  header = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 7 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 18 column 5 function bmpToAscii thread 0
+----------------------------------------------------
+  width = 1 (00000000 00000000 00000000 00000001)
+
+State 8 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 19 column 5 function bmpToAscii thread 0
+----------------------------------------------------
+  height = 1 (00000000 00000000 00000000 00000001)
+
+State 9 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 21 column 5 function bmpToAscii thread 0
+----------------------------------------------------
+  imgData = { 0, 119, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 10 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 25 column 13 function bmpToAscii thread 0
+----------------------------------------------------
+  imgData[0][0] = 87 (01010111)
+
+State 13 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 32 column 13 function bmpToAscii thread 0
+----------------------------------------------------
+  grayScale = 87 (00000000 00000000 00000000 01010111)
+
+State 16 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 33 column 13 function bmpToAscii thread 0
+----------------------------------------------------
+  index = 23 (00000000 00000000 00000000 00010111)
+
+State 17 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 34 column 13 function bmpToAscii thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/054_out-of-bounds_array-bounds-violated.c line 34 column 13 function bmpToAscii
+  dereference failure: array bounds violated
+
+
+VERIFICATION FAILED
+
+Bug found (k = 2)

@@ -1,0 +1,45 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/381_out-of-bounds_read_image-processing-filter.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/381_out-of-bounds_read_image-processing-filter.c:16:15: warning: array index 10 is past the end of the array (that has type 'int[10]') [-Warray-bounds]
+  int pixel = image[10][10]; // This will lead to undefined behavior
+              ^         ~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/381_out-of-bounds_read_image-processing-filter.c:10:3: note: array 'image' declared here
+  int image[10][10] = {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+  ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/381_out-of-bounds_read_image-processing-filter.c:16:15: warning: array index 10 is past the end of the array (that has type 'int[10][10]') [-Warray-bounds]
+  int pixel = image[10][10]; // This will lead to undefined behavior
+              ^     ~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/381_out-of-bounds_read_image-processing-filter.c:10:3: note: array 'image' declared here
+  int image[10][10] = {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+  ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.261s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.000s (14 assignments)
+Slicing time: 0.000s (removed 12 assignments)
+Generated 1 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/381_out-of-bounds_read_image-processing-filter.c line 16 column 3 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/381_out-of-bounds_read_image-processing-filter.c line 16 column 3 function main
+  array bounds violated: array `image' upper bound
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

@@ -1,0 +1,96 @@
+//Gemma-7B DATASET v1.0 Category: Tic Tac Toe AI ; Style: immersive
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+#define BOARD_SIZE 3
+#define PLAYER_X 1
+#define PLAYER_O 2
+#define EMPTY_SPACE 0
+
+int main()
+{
+    int board[BOARD_SIZE][BOARD_SIZE] = {{EMPTY_SPACE, EMPTY_SPACE, EMPTY_SPACE},
+                                 {EMPTY_SPACE, EMPTY_SPACE, EMPTY_SPACE},
+                                 {EMPTY_SPACE, EMPTY_SPACE, EMPTY_SPACE}};
+
+    int game_state = 0;
+    int current_player = PLAYER_X;
+
+    // Seed the random number generator
+    srand(time(NULL));
+
+    // Game loop
+    while (!game_state)
+    {
+        // Get the player's move
+        int move_x = rand() % BOARD_SIZE;
+        int move_y = rand() % BOARD_SIZE;
+
+        // Check if the move is valid
+        if (board[move_x][move_y] == EMPTY_SPACE)
+        {
+            // Make the move
+            board[move_x][move_y] = current_player;
+
+            // Check if the player has won
+            game_state = check_win(board, current_player);
+
+            // If the player has not won, switch to the next player
+            if (!game_state)
+            {
+                current_player = (current_player == PLAYER_X) ? PLAYER_O : PLAYER_X;
+            }
+        }
+    }
+
+    // Print the winner or a draw
+    if (game_state == PLAYER_X)
+    {
+        printf("Player X has won!\n");
+    }
+    else if (game_state == PLAYER_O)
+    {
+        printf("Player O has won!\n");
+    }
+    else
+    {
+        printf("It's a draw!\n");
+    }
+
+    return 0;
+}
+
+int check_win(int **board, int player)
+{
+    // Check rows
+    for (int i = 0; i < BOARD_SIZE; i++)
+    {
+        if (board[0][i] == player && board[1][i] == player && board[2][i] == player)
+        {
+            return player;
+        }
+    }
+
+    // Check columns
+    for (int j = 0; j < BOARD_SIZE; j++)
+    {
+        if (board[j][0] == player && board[j][1] == player && board[j][2] == player)
+        {
+            return player;
+        }
+    }
+
+    // Check diagonals
+    if (board[0][0] == player && board[1][1] == player && board[2][2] == player)
+    {
+        return player;
+    }
+    else if (board[0][2] == player && board[1][1] == player && board[2][0] == player)
+    {
+        return player;
+    }
+
+    // If there has not been a win, return 0
+    return 0;
+}

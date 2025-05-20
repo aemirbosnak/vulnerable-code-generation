@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/168_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/168_dereference-failure_dereference-failure.c:60:30: warning: format specifies type 'char *' but the argument has type 'char' [-Wformat]
+    fprintf(fpw, "%s: %d\n", word[i], frequency[i]);
+                  ~~         ^~~~~~~
+                  %c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.303s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+WARNING: no body for function perror
+Symex completed in: 0.008s (67 assignments)
+Slicing time: 0.000s (removed 41 assignments)
+Generated 10 VCC(s), 7 remaining after simplification (26 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.147s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/168_dereference-failure_dereference-failure.c line 20 column 3 function main thread 0
+----------------------------------------------------
+  buffer = &dynamic_9_array[0]
+
+State 2 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/168_dereference-failure_dereference-failure.c line 27 column 3 function main thread 0
+----------------------------------------------------
+  word = &dynamic_12_array[0]
+
+State 3 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/168_dereference-failure_dereference-failure.c line 35 column 10 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/168_dereference-failure_dereference-failure.c line 35 column 10 function main
+  buffer overflow on fscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

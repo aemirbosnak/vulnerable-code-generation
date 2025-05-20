@@ -1,0 +1,45 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/388_dereference-failure_invalid-pointer_file-upload-handler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.299s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.003s (40 assignments)
+Slicing time: 0.000s (removed 27 assignments)
+Generated 5 VCC(s), 2 remaining after simplification (13 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.080s
+Building error trace
+
+[Counterexample]
+
+Enter the filename to upload: 
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/388_dereference-failure_invalid-pointer_file-upload-handler.c line 36 column 5 function main thread 0
+----------------------------------------------------
+  filename = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/388_dereference-failure_invalid-pointer_file-upload-handler.c line 12 column 5 function handleFileUpload thread 0
+----------------------------------------------------
+  file = &dynamic_3_value
+File content: 
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/388_dereference-failure_invalid-pointer_file-upload-handler.c line 24 column 12 function handleFileUpload thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/388_dereference-failure_invalid-pointer_file-upload-handler.c line 24 column 12 function handleFileUpload
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

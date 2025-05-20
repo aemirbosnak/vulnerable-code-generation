@@ -1,0 +1,45 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1222_use-after-free_operand-of-free-must-have-zero-pointer-offset.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.292s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.005s (70 assignments)
+Slicing time: 0.002s (removed 35 assignments)
+Generated 14 VCC(s), 10 remaining after simplification (35 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.580s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1222_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 19 column 9 function my_malloc thread 0
+----------------------------------------------------
+  heap = ( struct Block *)0
+
+State 2 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1222_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 41 column 5 function main thread 0
+----------------------------------------------------
+  str1 = 0
+
+State 6 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1222_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 25 column 9 function my_malloc thread 0
+----------------------------------------------------
+  heap = ( struct Block *)0
+
+State 11 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 36 column 5 function strcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 36 column 5 function strcpy
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

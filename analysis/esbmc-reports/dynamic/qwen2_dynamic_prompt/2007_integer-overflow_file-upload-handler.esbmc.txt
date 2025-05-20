@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/2007_integer-overflow_file-upload-handler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.314s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Symex completed in: 0.008s (111 assignments)
+Slicing time: 0.002s (removed 50 assignments)
+Generated 24 VCC(s), 19 remaining after simplification (61 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.229s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/2007_integer-overflow_file-upload-handler.c line 12 column 5 function handle_file_upload thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/2007_integer-overflow_file-upload-handler.c line 19 column 5 function handle_file_upload thread 0
+----------------------------------------------------
+  file_size = -1 (11111111 11111111 11111111 11111111 11111111 11111111 11111111 11111111)
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/2007_integer-overflow_file-upload-handler.c line 23 column 5 function handle_file_upload thread 0
+----------------------------------------------------
+  buffer = &dynamic_6_array[0]
+
+State 10 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread
+  dereference failure: array bounds violated
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

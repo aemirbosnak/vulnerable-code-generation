@@ -1,0 +1,54 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1389_out-of-bounds_read_encryption-library-interface.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1389_out-of-bounds_read_encryption-library-interface.c:27:28: warning: array index 20 is past the end of the array (that has type 'char[10]') [-Warray-bounds]
+    char outOfBoundsChar = buffer[20]; // This will read beyond the allocated buffer
+                           ^      ~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1389_out-of-bounds_read_encryption-library-interface.c:16:5: note: array 'buffer' declared here
+    char buffer[10];
+    ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.284s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1389_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Symex completed in: 0.008s (97 assignments)
+Slicing time: 0.002s (removed 61 assignments)
+Generated 23 VCC(s), 9 remaining after simplification (36 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.103s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1389_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function main thread 0
+----------------------------------------------------
+  buffer = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+Enter a string to encrypt: 
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1389_out-of-bounds_read_encryption-library-interface.c line 19 column 5 function main thread 0
+----------------------------------------------------
+  buffer[0] = 0 (00000000)
+Encrypted string: 
+
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1389_out-of-bounds_read_encryption-library-interface.c line 27 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1389_out-of-bounds_read_encryption-library-interface.c line 27 column 5 function main
+  array bounds violated: array `buffer' upper bound
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

@@ -1,0 +1,1809 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c:49:82: warning: format specifies type 'long' but the argument has type 'int' [-Wformat]
+            snprintf(old_backup, sizeof(old_backup), "backup_%s_%ld", base_name, i);
+                                                                ~~~              ^
+                                                                %d
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.272s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.003s (43 assignments)
+Slicing time: 0.000s (removed 34 assignments)
+Generated 4 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.003s (43 assignments)
+Slicing time: 0.000s (removed 34 assignments)
+Generated 6 VCC(s), 3 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.122s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.004s (46 assignments)
+Slicing time: 0.000s (removed 36 assignments)
+Generated 8 VCC(s), 2 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.004s (46 assignments)
+Slicing time: 0.000s (removed 36 assignments)
+Generated 10 VCC(s), 4 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.103s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.005s (49 assignments)
+Slicing time: 0.000s (removed 38 assignments)
+Generated 12 VCC(s), 3 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.004s (49 assignments)
+Slicing time: 0.000s (removed 38 assignments)
+Generated 14 VCC(s), 5 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.087s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.004s (52 assignments)
+Slicing time: 0.000s (removed 40 assignments)
+Generated 16 VCC(s), 4 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.005s (52 assignments)
+Slicing time: 0.000s (removed 40 assignments)
+Generated 18 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.086s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.005s (55 assignments)
+Slicing time: 0.000s (removed 42 assignments)
+Generated 20 VCC(s), 5 remaining after simplification (13 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.008s (55 assignments)
+Slicing time: 0.000s (removed 42 assignments)
+Generated 22 VCC(s), 7 remaining after simplification (13 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.093s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.005s (55 assignments)
+Slicing time: 0.000s (removed 43 assignments)
+Generated 21 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.007s (55 assignments)
+Slicing time: 0.000s (removed 43 assignments)
+Generated 22 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.071s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.005s (56 assignments)
+Slicing time: 0.000s (removed 44 assignments)
+Generated 22 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+No bug has been found in the base case
+Checking forward condition, k = 7
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.005s (56 assignments)
+Slicing time: 0.000s (removed 44 assignments)
+Generated 23 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.070s
+The forward condition is unable to prove the property
+Checking base case, k = 8
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.006s (57 assignments)
+Slicing time: 0.002s (removed 45 assignments)
+Generated 23 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.008s
+No bug has been found in the base case
+Checking forward condition, k = 8
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.010s (57 assignments)
+Slicing time: 0.000s (removed 45 assignments)
+Generated 24 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.120s
+The forward condition is unable to prove the property
+Checking base case, k = 9
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.009s (58 assignments)
+Slicing time: 0.000s (removed 46 assignments)
+Generated 24 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.010s
+No bug has been found in the base case
+Checking forward condition, k = 9
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.008s (58 assignments)
+Slicing time: 0.002s (removed 46 assignments)
+Generated 25 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.120s
+The forward condition is unable to prove the property
+Checking base case, k = 10
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.009s (59 assignments)
+Slicing time: 0.000s (removed 47 assignments)
+Generated 25 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.010s
+No bug has been found in the base case
+Checking forward condition, k = 10
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.009s (59 assignments)
+Slicing time: 0.000s (removed 47 assignments)
+Generated 26 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.121s
+The forward condition is unable to prove the property
+Checking base case, k = 11
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.010s (60 assignments)
+Slicing time: 0.000s (removed 48 assignments)
+Generated 26 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.012s
+No bug has been found in the base case
+Checking forward condition, k = 11
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.010s (60 assignments)
+Slicing time: 0.000s (removed 48 assignments)
+Generated 27 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.120s
+The forward condition is unable to prove the property
+Checking base case, k = 12
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.010s (61 assignments)
+Slicing time: 0.000s (removed 49 assignments)
+Generated 27 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.012s
+No bug has been found in the base case
+Checking forward condition, k = 12
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.010s (61 assignments)
+Slicing time: 0.002s (removed 49 assignments)
+Generated 28 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.120s
+The forward condition is unable to prove the property
+Checking base case, k = 13
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.012s (62 assignments)
+Slicing time: 0.000s (removed 50 assignments)
+Generated 28 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.013s
+No bug has been found in the base case
+Checking forward condition, k = 13
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.012s (62 assignments)
+Slicing time: 0.000s (removed 50 assignments)
+Generated 29 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.094s
+The forward condition is unable to prove the property
+Checking base case, k = 14
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.008s (63 assignments)
+Slicing time: 0.000s (removed 51 assignments)
+Generated 29 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.009s
+No bug has been found in the base case
+Checking forward condition, k = 14
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function closedir
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.012s (63 assignments)
+Slicing time: 0.000s (removed 51 assignments)
+Generated 30 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.119s
+The forward condition is unable to prove the property
+Checking base case, k = 15
+Starting Bounded Model Checking
+WARNING: no body for function localtime
+WARNING: no body for function strftime
+WARNING: no body for function rename
+WARNING: no body for function perror
+WARNING: no body for function opendir
+WARNING: no body for function perror
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 9   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 10   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 11   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 12   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 13   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 14   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function readdir
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 23 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 23 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 15   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 12   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 13   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 21 iteration 14   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 15   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups
+WARNING: no body for function closedir
+WARNING: no body for function remove
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+WARNING: no body for function remove
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+WARNING: no body for function remove
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+WARNING: no body for function remove
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+WARNING: no body for function remove
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 46 column 5 function clean_backups
+Symex completed in: 0.610s (6720 assignments)
+Slicing time: 0.044s (removed 4200 assignments)
+Generated 1365 VCC(s), 695 remaining after simplification (2520 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.064s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.153s
+Building error trace
+
+[Counterexample]
+
+backup_example.txt_
+
+State 2 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 32 column 11 function clean_backups thread 0
+----------------------------------------------------
+  dir = 0
+
+State 3 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 38 column 5 function clean_backups thread 0
+----------------------------------------------------
+  entry = &"example.txt"[0x8000000000000000]
+
+State 19 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 40 column 13 function clean_backups thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/917_integer-overflow_arithmetic-overflow-integer.c line 40 column 13 function clean_backups
+  array bounds violated: array `count' lower bound
+  (signed long int)(return_value$_strlen$1 - return_value$_strlen$2) >= 0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 15)

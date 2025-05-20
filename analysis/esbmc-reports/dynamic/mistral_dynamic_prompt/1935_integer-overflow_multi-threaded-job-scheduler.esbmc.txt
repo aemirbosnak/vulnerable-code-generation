@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1935_integer-overflow_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1935_integer-overflow_multi-threaded-job-scheduler.c:31:32: warning: overflow in expression; result is 1 with type 'int' [-Winteger-overflow]
+        jobs[i].job = RAND_MAX * RAND_MAX * RAND_MAX; // Set job size very large
+                               ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1935_integer-overflow_multi-threaded-job-scheduler.c:41:11: error: call to undeclared function 'time'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    srand(time(NULL));
+          ^
+ERROR: PARSING ERROR

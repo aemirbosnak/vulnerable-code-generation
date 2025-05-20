@@ -1,0 +1,461 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c:24:28: warning: incompatible pointer types passing 'char *' to parameter of type 'pthread_mutex_t *' [-Wincompatible-pointer-types]
+        pthread_mutex_lock(&jobs[i].data[jobs[i].size]);
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/esbmc.a922-a2cd-41f8/headers/pthread.h:470:49: note: passing argument to parameter '__mutex' here
+extern int pthread_mutex_lock (pthread_mutex_t *__mutex);
+                                                ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c:29:30: warning: incompatible pointer types passing 'char *' to parameter of type 'pthread_mutex_t *' [-Wincompatible-pointer-types]
+        pthread_mutex_unlock(&jobs[i].data[0]);
+                             ^~~~~~~~~~~~~~~~
+/tmp/esbmc.a922-a2cd-41f8/headers/pthread.h:480:51: note: passing argument to parameter '__mutex' here
+extern int pthread_mutex_unlock (pthread_mutex_t *__mutex);
+                                                  ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.746s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.002s (30 assignments)
+Slicing time: 0.000s (removed 28 assignments)
+Generated 2 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.002s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.000s (30 assignments)
+Slicing time: 0.000s (removed 28 assignments)
+Generated 3 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.002s (36 assignments)
+Slicing time: 0.000s (removed 34 assignments)
+Generated 4 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.002s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.002s (36 assignments)
+Slicing time: 0.000s (removed 34 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (42 assignments)
+Slicing time: 0.000s (removed 40 assignments)
+Generated 6 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.002s (42 assignments)
+Slicing time: 0.000s (removed 40 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (48 assignments)
+Slicing time: 0.000s (removed 46 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (48 assignments)
+Slicing time: 0.000s (removed 46 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (54 assignments)
+Slicing time: 0.000s (removed 52 assignments)
+Generated 10 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (54 assignments)
+Slicing time: 0.000s (removed 52 assignments)
+Generated 11 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (60 assignments)
+Slicing time: 0.000s (removed 58 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (60 assignments)
+Slicing time: 0.000s (removed 58 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (66 assignments)
+Slicing time: 0.000s (removed 64 assignments)
+Generated 14 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 7
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (66 assignments)
+Slicing time: 0.002s (removed 64 assignments)
+Generated 15 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 8
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (72 assignments)
+Slicing time: 0.000s (removed 70 assignments)
+Generated 16 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 8
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.004s (72 assignments)
+Slicing time: 0.000s (removed 70 assignments)
+Generated 17 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 9
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.004s (78 assignments)
+Slicing time: 0.000s (removed 76 assignments)
+Generated 18 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.004s
+No bug has been found in the base case
+Checking forward condition, k = 9
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.004s (78 assignments)
+Slicing time: 0.000s (removed 76 assignments)
+Generated 19 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 10
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.004s (84 assignments)
+Slicing time: 0.002s (removed 82 assignments)
+Generated 20 VCC(s), 0 remaining after simplification (2 assignments)
+BMC program time: 0.005s
+No bug has been found in the base case
+Checking forward condition, k = 10
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Not unwinding loop 39 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.004s (84 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 21 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 11
+Starting Bounded Model Checking
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 39 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 34 column 5 function main
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 16 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 38 iteration 11   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1391_out-of-bounds_read_multi-threaded-job-scheduler.c line 23 column 5 function worker
+Symex completed in: 9.437s (10083 assignments)
+Slicing time: 0.188s (removed 739 assignments)
+Generated 6941 VCC(s), 6809 remaining after simplification (9344 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.373s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

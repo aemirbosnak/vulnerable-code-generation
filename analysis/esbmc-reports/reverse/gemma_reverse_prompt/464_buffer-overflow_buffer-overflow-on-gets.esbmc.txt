@@ -1,0 +1,34 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:14:3: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  gets(msg);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:24:7: error: call to undeclared function 'encryptCaesar'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      encryptCaesar(msg);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:27:7: error: call to undeclared function 'encryptMultiplicative'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      encryptMultiplicative(msg);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:30:7: error: call to undeclared function 'encryptAffine'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      encryptAffine(msg);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:39:6: error: conflicting types for 'encryptCaesar'
+void encryptCaesar(char *msg) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:24:7: note: previous implicit declaration is here
+      encryptCaesar(msg);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:46:6: error: conflicting types for 'encryptMultiplicative'
+void encryptMultiplicative(char *msg) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:27:7: note: previous implicit declaration is here
+      encryptMultiplicative(msg);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:53:6: error: conflicting types for 'encryptAffine'
+void encryptAffine(char *msg) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/464_buffer-overflow_buffer-overflow-on-gets.c:30:7: note: previous implicit declaration is here
+      encryptAffine(msg);
+      ^
+ERROR: PARSING ERROR

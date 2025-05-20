@@ -1,0 +1,36 @@
+#include <string.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void compressData(char *data, int size) {
+    char *compressed = malloc(size); // Allocate memory for compressed data
+    if (!compressed) {
+        printf("Memory allocation failed\n");
+        return;
+    }
+
+    int j = 0;
+    for (int i = 0; i < size; i++) {
+        compressed[j++] = data[i];
+        while (i + 1 < size && data[i] == data[i + 1]) {
+            i++;
+        }
+    }
+
+    compressed[j] = '\0'; // Null-terminate the compressed string
+
+    printf("Original: %s\n", data);
+    printf("Compressed: %s\n", compressed);
+
+    free(compressed); // Free the allocated memory
+}
+
+int main() {
+    char data[] = "aaabbbcc";
+    compressData(data, sizeof(data));
+    return 0;
+}

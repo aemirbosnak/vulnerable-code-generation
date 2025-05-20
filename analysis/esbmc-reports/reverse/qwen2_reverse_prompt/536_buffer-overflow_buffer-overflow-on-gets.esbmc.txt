@@ -1,0 +1,17 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/536_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/536_buffer-overflow_buffer-overflow-on-gets.c:18:5: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    gets(sentence);
+    ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/536_buffer-overflow_buffer-overflow-on-gets.c:23:30: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
+            if (strcmp(word, word_count[i]) == 0) {
+                             ^~~~~~~~~~~~~
+/tmp/esbmc.0223-99ea-4748/headers/string.h:15:40: note: passing argument to parameter 'p2' here
+int strcmp(const char *p1, const char *p2);
+                                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/536_buffer-overflow_buffer-overflow-on-gets.c:33:32: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+            printf("%s: %d\n", word_count[i], word_count[i]);
+                    ~~         ^~~~~~~~~~~~~
+                    %d
+ERROR: PARSING ERROR

@@ -1,0 +1,54 @@
+//GEMINI-pro DATASET v1.0 Category: Prime Number Generator ; Style: satisfied
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+// Function to check if a number is prime
+bool is_prime(int num) {
+  if (num <= 1) {
+    return false;
+  }
+  for (int i = 2; i <= num / 2; ++i) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Function to generate a list of prime numbers
+int *generate_primes(int limit) {
+  int *primes = malloc(sizeof(int) * limit);
+  int count = 0;
+
+  for (int i = 2; count < limit; ++i) {
+    if (is_prime(i)) {
+      primes[count++] = i;
+    }
+  }
+
+  return primes;
+}
+
+// Function to print a list of prime numbers
+void print_primes(int *primes, int count) {
+  for (int i = 0; i < count; ++i) {
+    printf("%d ", primes[i]);
+  }
+  printf("\n");
+}
+
+int main() {
+  // Generate a list of prime numbers up to 100
+  int limit = 100;
+  int *primes = generate_primes(limit);
+
+  // Print the list of prime numbers
+  printf("The prime numbers up to %d are:\n", limit);
+  print_primes(primes, limit);
+
+  // Free the memory allocated for the list of prime numbers
+  free(primes);
+
+  return 0;
+}

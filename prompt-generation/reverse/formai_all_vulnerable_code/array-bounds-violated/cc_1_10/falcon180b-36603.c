@@ -1,0 +1,106 @@
+//Falcon-180B DATASET v1.0 Category: Tic Tac Toe AI ; Style: artistic
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+#define SIZE 3
+
+#define EMPTY '.'
+#define PLAYER_X 'X'
+#define PLAYER_O 'O'
+
+char board[SIZE][SIZE] = {
+    {EMPTY, EMPTY, EMPTY},
+    {EMPTY, EMPTY, EMPTY},
+    {EMPTY, EMPTY, EMPTY}
+};
+
+void drawBoard() {
+    int i, j;
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
+            printf("%c ", board[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int checkWin() {
+    int i, j;
+    for (i = 0; i < SIZE; i++) {
+        if ((board[i][0] == board[i][1] && board[i][1] == board[i][2]) ||
+            (board[0][j] == board[1][j] && board[1][j] == board[2][j])) {
+            return 1;
+        }
+    }
+    if (board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+        return 1;
+    }
+    if (board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
+        return 1;
+    }
+    return 0;
+}
+
+int checkTie() {
+    int i, j;
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
+            if (board[i][j] == EMPTY) {
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
+
+int chooseMove(char symbol) {
+    int i, j;
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
+            if (board[i][j] == EMPTY) {
+                board[i][j] = symbol;
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+
+int main() {
+    int player = 1;
+    int moves = 0;
+    srand(time(NULL));
+    drawBoard();
+
+    while (1) {
+        if (player % 2 == 1) {
+            printf("Player %d's turn (X)\n", player);
+        } else {
+            printf("Player %d's turn (O)\n", player);
+        }
+        int validMove = 0;
+        while (!validMove) {
+            int x, y;
+            printf("Enter your move (row col): ");
+            scanf("%d%d", &x, &y);
+            if (x >= 0 && x < SIZE && y >= 0 && y < SIZE && board[x][y] == EMPTY) {
+                board[x][y] = (player % 2 == 1)? PLAYER_X : PLAYER_O;
+                validMove = 1;
+                moves++;
+            } else {
+                printf("Invalid move, try again.\n");
+            }
+        }
+        drawBoard();
+        if (checkWin()) {
+            printf("Player %d wins!\n", player);
+            break;
+        } else if (checkTie()) {
+            printf("It's a tie!\n");
+            break;
+        }
+        player++;
+    }
+    return 0;
+}

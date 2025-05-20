@@ -1,0 +1,50 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/002_dereference-failure_null-pointer_chat-message-buffer-manager.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.263s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 22 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/002_dereference-failure_null-pointer_chat-message-buffer-manager.c line 37 column 5 function main
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/002_dereference-failure_null-pointer_chat-message-buffer-manager.c line 24 column 5 function print_messages
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/002_dereference-failure_null-pointer_chat-message-buffer-manager.c line 48 column 5 function main
+Symex completed in: 0.006s (121 assignments)
+Slicing time: 0.002s (removed 68 assignments)
+Generated 30 VCC(s), 17 remaining after simplification (53 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.079s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/002_dereference-failure_null-pointer_chat-message-buffer-manager.c line 32 column 5 function main thread 0
+----------------------------------------------------
+  input = { 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+Chat Message Buffer Manager
+
+Enter messages. Type 'END' to stop.
+
+
+State 11 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/002_dereference-failure_null-pointer_chat-message-buffer-manager.c line 17 column 5 function add_message thread 0
+----------------------------------------------------
+  new_message = ( struct ChatMessage *)0
+
+State 12 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/002_dereference-failure_null-pointer_chat-message-buffer-manager.c line 18 column 5 function add_message thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/002_dereference-failure_null-pointer_chat-message-buffer-manager.c line 18 column 5 function add_message
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

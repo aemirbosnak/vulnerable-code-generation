@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/117_out-of-bounds_array-bounds-violated.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/117_out-of-bounds_array-bounds-violated.c:30:33: error: call to undeclared function 'inet_addr'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+                                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/117_out-of-bounds_array-bounds-violated.c:47:24: warning: incompatible pointer types passing 'char[256]' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Wincompatible-pointer-types]
+  nread = write(fileno(filename), data, data_len);
+                       ^~~~~~~~
+/usr/include/stdio.h:883:26: note: passing argument to parameter '__stream' here
+extern int fileno (FILE *__stream) __THROW __wur __nonnull ((1));
+                         ^
+ERROR: PARSING ERROR

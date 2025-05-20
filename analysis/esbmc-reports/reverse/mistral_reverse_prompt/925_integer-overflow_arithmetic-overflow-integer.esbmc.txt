@@ -1,0 +1,39 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/925_integer-overflow_arithmetic-overflow-integer.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.477s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function strtoull
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/925_integer-overflow_arithmetic-overflow-integer.c line 15 column 5 function calculate
+Symex completed in: 0.003s (46 assignments)
+Slicing time: 0.002s (removed 34 assignments)
+Generated 6 VCC(s), 4 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.003s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/925_integer-overflow_arithmetic-overflow-integer.c line 13 column 5 function calculate thread 0
+----------------------------------------------------
+  operation = 47 (00101111)
+
+State 3 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/925_integer-overflow_arithmetic-overflow-integer.c line 25 column 27 function calculate thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/925_integer-overflow_arithmetic-overflow-integer.c line 25 column 27 function calculate
+  division by zero
+  num2 != 0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

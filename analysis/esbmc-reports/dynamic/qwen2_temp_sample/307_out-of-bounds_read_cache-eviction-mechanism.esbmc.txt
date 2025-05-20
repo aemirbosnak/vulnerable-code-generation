@@ -1,0 +1,152 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c:45:12: warning: array index -1 is before the beginning of the array [-Warray-bounds]
+    return cache[-1].value;
+           ^     ~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c:16:1: note: array 'cache' declared here
+CacheEntry cache[CACHE_SIZE];
+^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.457s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Symex completed in: 0.004s (56 assignments)
+Slicing time: 0.000s (removed 41 assignments)
+Generated 19 VCC(s), 5 remaining after simplification (15 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Symex completed in: 0.003s (56 assignments)
+Slicing time: 0.000s (removed 41 assignments)
+Generated 21 VCC(s), 7 remaining after simplification (15 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Symex completed in: 0.004s (72 assignments)
+Slicing time: 0.000s (removed 53 assignments)
+Generated 29 VCC(s), 7 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Symex completed in: 0.004s (72 assignments)
+Slicing time: 0.000s (removed 53 assignments)
+Generated 31 VCC(s), 9 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Symex completed in: 0.005s (86 assignments)
+Slicing time: 0.000s (removed 63 assignments)
+Generated 39 VCC(s), 9 remaining after simplification (23 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.007s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Not unwinding loop 40 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Symex completed in: 0.004s (86 assignments)
+Slicing time: 0.002s (removed 63 assignments)
+Generated 41 VCC(s), 11 remaining after simplification (23 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Unwinding loop 40 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 39 column 5 function get_from_cache
+Symex completed in: 0.005s (88 assignments)
+Slicing time: 0.000s (removed 63 assignments)
+Generated 43 VCC(s), 13 remaining after simplification (25 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 34 column 9 function add_to_cache thread 0
+----------------------------------------------------
+  cache[0] = { .key=1, .value=10 }
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 34 column 9 function add_to_cache thread 0
+----------------------------------------------------
+  cache[1] = { .key=2, .value=20 }
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 34 column 9 function add_to_cache thread 0
+----------------------------------------------------
+  cache[2] = { .key=3, .value=30 }
+Value for key 2: 0
+
+
+State 13 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 45 column 5 function get_from_cache thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/307_out-of-bounds_read_cache-eviction-mechanism.c line 45 column 5 function get_from_cache
+  array bounds violated: array `cache' lower bound
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 4)

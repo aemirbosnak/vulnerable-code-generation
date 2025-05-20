@@ -1,0 +1,49 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/346_out-of-bounds_read_command-line-text-editor.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/346_out-of-bounds_read_command-line-text-editor.c:19:11: warning: incompatible pointer types passing 'char *' to parameter of type 'char **'; take the address with & [-Wincompatible-pointer-types]
+  getline(buffer, &size, stdin);
+          ^~~~~~
+          &
+/usr/include/stdio.h:707:45: note: passing argument to parameter '__lineptr' here
+extern __ssize_t getline (char **__restrict __lineptr,
+                                            ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/346_out-of-bounds_read_command-line-text-editor.c:19:19: warning: incompatible pointer types passing 'int *' to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+  getline(buffer, &size, stdin);
+                  ^~~~~
+/usr/include/stdio.h:708:46: note: passing argument to parameter '__n' here
+                          size_t *__restrict __n,
+                                             ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.277s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function getline
+Symex completed in: 0.000s (24 assignments)
+Slicing time: 0.002s (removed 15 assignments)
+Generated 3 VCC(s), 2 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function getline
+Symex completed in: 0.002s (24 assignments)
+Slicing time: 0.000s (removed 15 assignments)
+Generated 3 VCC(s), 2 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+
+VERIFICATION SUCCESSFUL
+
+Solution found by the forward condition; all states are reachable (k = 1)

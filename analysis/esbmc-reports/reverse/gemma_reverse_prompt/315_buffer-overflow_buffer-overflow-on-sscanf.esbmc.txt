@@ -1,0 +1,42 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/315_buffer-overflow_buffer-overflow-on-sscanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.484s
+GOTO program processing time: 0.013s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 5 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+WARNING: no body for function socket
+WARNING: no body for function perror
+WARNING: no body for function bind
+WARNING: no body for function perror
+WARNING: no body for function accept
+WARNING: no body for function perror
+Not unwinding loop 38 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 239 column 3 function read
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/315_buffer-overflow_buffer-overflow-on-sscanf.c line 37 column 3 function main
+Symex completed in: 0.011s (110 assignments)
+Slicing time: 0.002s (removed 60 assignments)
+Generated 16 VCC(s), 15 remaining after simplification (50 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.266s
+Building error trace
+
+[Counterexample]
+
+
+State 5 file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

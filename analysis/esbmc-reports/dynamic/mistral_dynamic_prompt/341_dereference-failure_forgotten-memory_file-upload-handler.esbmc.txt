@@ -1,0 +1,82 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/341_dereference-failure_forgotten-memory_file-upload-handler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.393s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/341_dereference-failure_forgotten-memory_file-upload-handler.c line 25 column 5 function handle_file
+Symex completed in: 0.006s (95 assignments)
+Slicing time: 0.002s (removed 49 assignments)
+Generated 12 VCC(s), 8 remaining after simplification (46 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.140s
+BMC program time: 0.149s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/341_dereference-failure_forgotten-memory_file-upload-handler.c line 25 column 5 function handle_file
+Symex completed in: 0.007s (95 assignments)
+Slicing time: 0.002s (removed 49 assignments)
+Generated 15 VCC(s), 11 remaining after simplification (46 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.166s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/341_dereference-failure_forgotten-memory_file-upload-handler.c line 25 column 5 function handle_file
+Unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Unwinding loop 33 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 33 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 274 column 3 function memcpy
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/341_dereference-failure_forgotten-memory_file-upload-handler.c line 25 column 5 function handle_file
+Symex completed in: 0.019s (170 assignments)
+Slicing time: 0.002s (removed 96 assignments)
+Generated 27 VCC(s), 17 remaining after simplification (74 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.381s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/341_dereference-failure_forgotten-memory_file-upload-handler.c line 14 column 5 function handle_file thread 0
+----------------------------------------------------
+  file = &dynamic_21_value
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/341_dereference-failure_forgotten-memory_file-upload-handler.c line 17 column 5 function handle_file thread 0
+----------------------------------------------------
+  data = 0
+
+State 7 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 275 column 5 function memcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 275 column 5 function memcpy
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 2)

@@ -1,0 +1,40 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/300_dereference-failure_invalid-pointer_logging-service.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.662s
+GOTO program processing time: 0.017s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function perror
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+WARNING: no body for function open
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+WARNING: no body for function write
+WARNING: no body for function close
+WARNING: no body for function perror
+Symex completed in: 0.009s (88 assignments)
+Slicing time: 0.000s (removed 45 assignments)
+Generated 17 VCC(s), 15 remaining after simplification (43 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.073s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

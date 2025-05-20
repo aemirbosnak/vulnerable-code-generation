@@ -1,0 +1,118 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c:38:11: warning: incompatible pointer types initializing 'char *' with an expression of type 'PoolBlock *' (aka 'struct PoolBlock *') [-Wincompatible-pointer-types]
+    char* userInput = alloc(10);
+          ^           ~~~~~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.230s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Symex completed in: 0.143s (193 assignments)
+Slicing time: 0.002s (removed 89 assignments)
+Generated 41 VCC(s), 41 remaining after simplification (104 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.114s
+Building error trace
+
+[Counterexample]
+
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 18 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock = ( struct PoolBlock *)(&dynamic_1_array[0])
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->size = 10 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001010)
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->size = 10 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001010)
+
+State 9 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->size = 10 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001010)
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->size = 10 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001010)
+
+State 11 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->size = 10 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001010)
+
+State 12 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->size = 10 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001010)
+
+State 13 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->size = 10 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001010)
+
+State 14 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->size = 10 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001010)
+
+State 18 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 20 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->next = (unsigned long int)0
+
+State 19 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 20 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->next = (unsigned long int)0
+
+State 20 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 20 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->next = (unsigned long int)0
+
+State 21 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 20 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->next = (unsigned long int)0
+
+State 22 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 20 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->next = (unsigned long int)0
+
+State 23 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 20 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->next = (unsigned long int)0
+
+State 24 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 20 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->next = (unsigned long int)0
+
+State 25 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 20 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock->next = (unsigned long int)0
+
+State 26 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 38 column 5 function main thread 0
+----------------------------------------------------
+  userInput = (signed char *)(&dynamic_1_array[24])
+Enter a string (10 characters max): 
+
+State 40 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 32 column 5 function realloc_ thread 0
+----------------------------------------------------
+  block = ( struct PoolBlock *)(&dynamic_1_array[24] - 1)
+
+State 44 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 18 column 5 function alloc thread 0
+----------------------------------------------------
+  newBlock = ( struct PoolBlock *)0
+
+State 47 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/105_dereference-failure_null-pointer_dynamic-memory-pool-allocator.c line 19 column 5 function alloc
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

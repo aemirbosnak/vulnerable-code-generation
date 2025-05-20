@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/338_buffer-overflow_buffer-overflow-on-sscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/338_buffer-overflow_buffer-overflow-on-sscanf.c:14:3: error: call to undeclared function 'sendmail'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  sendmail(buffer);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/338_buffer-overflow_buffer-overflow-on-sscanf.c:18:6: error: conflicting types for 'sendmail'
+void sendmail(char *message) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/338_buffer-overflow_buffer-overflow-on-sscanf.c:14:3: note: previous implicit declaration is here
+  sendmail(buffer);
+  ^
+ERROR: PARSING ERROR

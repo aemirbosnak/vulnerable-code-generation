@@ -1,0 +1,120 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/203_dereference-failure_dereference-failure.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.243s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Unwinding recursion hanoi iteration 1 (1 max)
+Symex completed in: 0.002s (41 assignments)
+Slicing time: 0.000s (removed 19 assignments)
+Generated 16 VCC(s), 12 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Unwinding recursion hanoi iteration 1 (1 max)
+Symex completed in: 0.002s (41 assignments)
+Slicing time: 0.000s (removed 19 assignments)
+Generated 17 VCC(s), 13 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.026s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding recursion hanoi iteration 1 (2 max)
+Unwinding recursion hanoi iteration 2 (2 max)
+Symex completed in: 0.004s (68 assignments)
+Slicing time: 0.000s (removed 28 assignments)
+Generated 32 VCC(s), 24 remaining after simplification (40 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding recursion hanoi iteration 1 (2 max)
+Unwinding recursion hanoi iteration 2 (2 max)
+Symex completed in: 0.003s (68 assignments)
+Slicing time: 0.000s (removed 28 assignments)
+Generated 33 VCC(s), 25 remaining after simplification (40 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.068s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding recursion hanoi iteration 1 (3 max)
+Unwinding recursion hanoi iteration 2 (3 max)
+Unwinding recursion hanoi iteration 3 (3 max)
+Symex completed in: 0.003s (95 assignments)
+Slicing time: 0.000s (removed 37 assignments)
+Generated 48 VCC(s), 36 remaining after simplification (58 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding recursion hanoi iteration 1 (3 max)
+Unwinding recursion hanoi iteration 2 (3 max)
+Unwinding recursion hanoi iteration 3 (3 max)
+Symex completed in: 0.003s (95 assignments)
+Slicing time: 0.000s (removed 37 assignments)
+Generated 49 VCC(s), 37 remaining after simplification (58 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.167s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding recursion hanoi iteration 1 (4 max)
+Unwinding recursion hanoi iteration 2 (4 max)
+Unwinding recursion hanoi iteration 3 (4 max)
+Symex completed in: 0.004s (97 assignments)
+Slicing time: 0.000s (removed 40 assignments)
+Generated 48 VCC(s), 36 remaining after simplification (57 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.161s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/203_dereference-failure_dereference-failure.c line 23 column 3 function hanoi thread 0
+----------------------------------------------------
+  newNode = ( struct Node *)(&dynamic_25_value)
+
+State 9 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/203_dereference-failure_dereference-failure.c line 27 column 3 function hanoi thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/203_dereference-failure_dereference-failure.c line 27 column 3 function hanoi
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 4)

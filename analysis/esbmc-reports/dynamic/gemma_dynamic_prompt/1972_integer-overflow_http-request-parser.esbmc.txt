@@ -1,0 +1,39 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1972_integer-overflow_http-request-parser.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1972_integer-overflow_http-request-parser.c:18:41: warning: format specifies type 'char *' but the argument has type 'int *' [-Wformat]
+    printf("Content of the buffer: %s", buf);
+                                   ~~   ^~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.487s
+GOTO program processing time: 0.014s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (29 assignments)
+Slicing time: 0.000s (removed 16 assignments)
+Generated 6 VCC(s), 5 remaining after simplification (13 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.037s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1972_integer-overflow_http-request-parser.c line 12 column 5 function main thread 0
+----------------------------------------------------
+  buf = (signed int *)0
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1972_integer-overflow_http-request-parser.c line 15 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1972_integer-overflow_http-request-parser.c line 15 column 5 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

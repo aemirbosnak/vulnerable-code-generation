@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1952_integer-overflow_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1952_integer-overflow_multi-threaded-job-scheduler.c:31:38: error: incompatible function pointer types passing 'void (*)(void *)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+    pthread_create(&thread_id, NULL, job->function, job->argument);
+                                     ^~~~~~~~~~~~~
+/tmp/esbmc.3e03-7340-0c25/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1952_integer-overflow_multi-threaded-job-scheduler.c:42:26: error: incompatible function pointer types assigning to 'void (*)(void *)' from 'void (Job *)' (aka 'void (struct Job *)') [-Wincompatible-function-pointer-types]
+        jobs[i].function = run_job;
+                         ^ ~~~~~~~
+ERROR: PARSING ERROR

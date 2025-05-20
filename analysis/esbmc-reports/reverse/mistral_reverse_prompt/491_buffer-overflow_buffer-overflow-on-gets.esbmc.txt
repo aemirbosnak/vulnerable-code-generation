@@ -1,0 +1,126 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.264s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 42 column 5 function main
+Symex completed in: 0.004s (76 assignments)
+Slicing time: 0.000s (removed 50 assignments)
+Generated 16 VCC(s), 8 remaining after simplification (26 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 42 column 5 function main
+Symex completed in: 0.003s (75 assignments)
+Slicing time: 0.002s (removed 51 assignments)
+Generated 18 VCC(s), 10 remaining after simplification (24 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 19 column 5 function process_text
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 19 column 5 function process_text
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 42 column 5 function main
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 42 column 5 function main
+Symex completed in: 0.017s (203 assignments)
+Slicing time: 0.002s (removed 85 assignments)
+Generated 73 VCC(s), 56 remaining after simplification (118 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.026s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 2.486s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 34 column 5 function main thread 0
+----------------------------------------------------
+  input = { 81, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 2 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 35 column 5 function main thread 0
+----------------------------------------------------
+  freq = { { .letter=0, .anon_pad$1=0, .count=-306710821 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1227695253 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1073741825 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1112082725 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-16778241 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-606376083 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-306858278 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1226908805 }, 
+    { .letter=0, .anon_pad$1=0, .count=-524321 }, 
+    { .letter=0, .anon_pad$1=0, .count=-153355409 }, 
+    { .letter=-1, .anon_pad$1=16777215, .count=2147483647 }, 
+    { .letter=0, .anon_pad$1=0, .count=-268451841 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1212751909 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1514761510 }, 
+    { .letter=0, .anon_pad$1=0, .count=-153355409 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1531538725 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1 }, 
+    { .letter=0, .anon_pad$1=0, .count=-1231889589 }, 
+    { .letter=0, .anon_pad$1=0, .count=2147483647 }, 
+    { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter=0, .anon_pad$1=0, .count=262144 }, 
+    { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter=0, .anon_pad$1=0, .count=1073741824 }, 
+    { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter=0, .anon_pad$1=0, .count=536870912 }, 
+    { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 }, { .letter = 0 } }
+Enter text: 
+
+State 10 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 18 column 5 function process_text thread 0
+----------------------------------------------------
+  len = 1 (00000000 00000000 00000000 00000001)
+
+State 13 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 20 column 9 function process_text thread 0
+----------------------------------------------------
+  c = 113 (01110001)
+
+State 15 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 22 column 13 function process_text thread 0
+----------------------------------------------------
+  index = 16 (00000000 00000000 00000000 00010000)
+
+State 22 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 27 column 17 function process_text thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/491_buffer-overflow_buffer-overflow-on-gets.c line 27 column 17 function process_text
+  arithmetic overflow on add
+  !overflow("+", (freq + (signed long int)index)->count, 1)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 2)

@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1154_integer-overflow_arithmetic-overflow-floating-point.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1154_integer-overflow_arithmetic-overflow-floating-point.c:24:3: error: call to undeclared function 'dbscan'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  dbscan(arr, n, radius, minPts);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1154_integer-overflow_arithmetic-overflow-floating-point.c:29:6: error: conflicting types for 'dbscan'
+void dbscan(int **arr, int n, int radius, int minPts) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1154_integer-overflow_arithmetic-overflow-floating-point.c:24:3: note: previous implicit declaration is here
+  dbscan(arr, n, radius, minPts);
+  ^
+ERROR: PARSING ERROR

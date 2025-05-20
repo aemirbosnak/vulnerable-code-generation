@@ -1,0 +1,11 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/212_dereference-failure_invalid-pointer_database-migration-tool.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/212_dereference-failure_invalid-pointer_database-migration-tool.c:34:48: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+        strcpy(records[record_count - 1].name, strtok(line, ": ")[1]);
+                                               ^~~~~~~~~~~~~~~~~~~~~
+                                               &
+/tmp/esbmc.ed5b-18c0-47db/headers/string.h:10:71: note: passing argument to parameter 'src' here
+char *strcpy(char *__ESBMC_restrict dst, const char *__ESBMC_restrict src);
+                                                                      ^
+ERROR: PARSING ERROR

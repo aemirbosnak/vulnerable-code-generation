@@ -1,0 +1,45 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/897_buffer-overflow_buffer-overflow-on-scanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.211s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Symex completed in: 0.004s (65 assignments)
+Slicing time: 0.000s (removed 39 assignments)
+Generated 12 VCC(s), 7 remaining after simplification (26 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.022s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/897_buffer-overflow_buffer-overflow-on-scanf.c line 22 column 5 function main thread 0
+----------------------------------------------------
+  playerName = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+Enter your name: 
+
+Welcome, ! You find yourself at the entrance of a dark and eerie house.
+
+Do you enter through the front door (1) or the back door (2)?
+
+
+State 10 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/897_buffer-overflow_buffer-overflow-on-scanf.c line 29 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/897_buffer-overflow_buffer-overflow-on-scanf.c line 29 column 5 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

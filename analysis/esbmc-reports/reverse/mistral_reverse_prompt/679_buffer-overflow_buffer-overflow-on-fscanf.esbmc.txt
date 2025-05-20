@@ -1,0 +1,14 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/679_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/679_buffer-overflow_buffer-overflow-on-fscanf.c:29:35: error: call to undeclared library function 'toupper' with type 'int (int)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        fprintf(output, "%sAY\n", toupper(word[0]) == toupper(word[0]) ? word : (char *)toupper(word));
+                                  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/679_buffer-overflow_buffer-overflow-on-fscanf.c:29:35: note: include the header <ctype.h> or explicitly provide a declaration for 'toupper'
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/679_buffer-overflow_buffer-overflow-on-fscanf.c:29:97: error: incompatible pointer to integer conversion passing 'char[100]' to parameter of type 'int' [-Wint-conversion]
+        fprintf(output, "%sAY\n", toupper(word[0]) == toupper(word[0]) ? word : (char *)toupper(word));
+                                                                                                ^~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/679_buffer-overflow_buffer-overflow-on-fscanf.c:29:81: warning: cast to 'char *' from smaller integer type 'int' [-Wint-to-pointer-cast]
+        fprintf(output, "%sAY\n", toupper(word[0]) == toupper(word[0]) ? word : (char *)toupper(word));
+                                                                                ^~~~~~~~~~~~~~~~~~~~~
+ERROR: PARSING ERROR

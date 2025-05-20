@@ -1,0 +1,11 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1193_use-after-free_operand-of-free-must-have-zero-pointer-offset.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1193_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:21:28: error: incompatible integer to pointer conversion assigning to 'char *' from 'char'; take the address with & [-Wint-conversion]
+        stack[stackSize++] = currentChar;
+                           ^ ~~~~~~~~~~~
+                             &
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1193_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:30:34: warning: comparison between pointer and integer ('char *' and 'char') [-Wpointer-integer-compare]
+        if (stack[stackSize - 1] == currentChar) {
+            ~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~
+ERROR: PARSING ERROR

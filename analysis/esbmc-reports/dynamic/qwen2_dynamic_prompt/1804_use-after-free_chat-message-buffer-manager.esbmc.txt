@@ -1,0 +1,38 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1804_use-after-free_chat-message-buffer-manager.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.294s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Symex completed in: 0.006s (98 assignments)
+Slicing time: 0.000s (removed 25 assignments)
+Generated 62 VCC(s), 36 remaining after simplification (73 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.073s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1804_use-after-free_chat-message-buffer-manager.c line 16 column 5 function create_buffer thread 0
+----------------------------------------------------
+  buf = ( struct __anon_typedef_MessageBuffer_at_/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1804_use-after-free_chat-message-buffer-manager_c__11_9 *)0
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1804_use-after-free_chat-message-buffer-manager.c line 17 column 5 function create_buffer thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1804_use-after-free_chat-message-buffer-manager.c line 17 column 5 function create_buffer
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

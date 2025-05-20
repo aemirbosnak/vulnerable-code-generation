@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/544_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/544_buffer-overflow_buffer-overflow-on-gets.c:30:36: error: call to undeclared function 'min'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+                matrix[i][j] = 1 + min(matrix[i - 1][j], min(matrix[i][j - 1], matrix[i - 1][j - 1]));
+                                   ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/544_buffer-overflow_buffer-overflow-on-gets.c:43:5: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    gets(input1);
+    ^
+ERROR: PARSING ERROR

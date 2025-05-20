@@ -1,0 +1,42 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/334_dereference-failure_invalid-pointer_logging-service.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/334_dereference-failure_invalid-pointer_logging-service.c:22:31: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    char *event_type = strtok(event, " ");
+                              ^~~~~
+/tmp/esbmc.0fd2-3e3b-c68d/headers/string.h:23:37: note: passing argument to parameter 'str' here
+char *strtok(char *__ESBMC_restrict str, const char *__ESBMC_restrict delim);
+                                    ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.341s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+WARNING: no body for function perror
+Symex completed in: 0.008s (122 assignments)
+Slicing time: 0.002s (removed 64 assignments)
+Generated 20 VCC(s), 19 remaining after simplification (58 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.131s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

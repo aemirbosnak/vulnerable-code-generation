@@ -1,0 +1,2129 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c:22:18: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+    int car_id = (int)arg;
+                 ^~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c:41:48: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pthread_create(&threads[i], NULL, car, (void*)i);
+                                               ^~~~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.301s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Symex completed in: 0.002s (34 assignments)
+Slicing time: 0.000s (removed 31 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (3 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Symex completed in: 0.002s (34 assignments)
+Slicing time: 0.000s (removed 31 assignments)
+Generated 5 VCC(s), 2 remaining after simplification (3 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Not unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Symex completed in: 0.002s (42 assignments)
+Slicing time: 0.002s (removed 38 assignments)
+Generated 10 VCC(s), 2 remaining after simplification (4 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Not unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Symex completed in: 0.003s (42 assignments)
+Slicing time: 0.000s (removed 38 assignments)
+Generated 9 VCC(s), 3 remaining after simplification (4 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Not unwinding loop 40 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Symex completed in: 0.003s (50 assignments)
+Slicing time: 0.000s (removed 45 assignments)
+Generated 15 VCC(s), 3 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Not unwinding loop 40 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Symex completed in: 0.004s (50 assignments)
+Slicing time: 0.000s (removed 45 assignments)
+Generated 13 VCC(s), 4 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Unwinding loop 40 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Not unwinding loop 40 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Symex completed in: 0.004s (58 assignments)
+Slicing time: 0.000s (removed 52 assignments)
+Generated 20 VCC(s), 4 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Unwinding loop 40 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Not unwinding loop 40 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Symex completed in: 0.004s (58 assignments)
+Slicing time: 0.000s (removed 52 assignments)
+Generated 17 VCC(s), 5 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Unwinding loop 40 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+Unwinding loop 40 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Unwinding loop 41 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 40 column 5 function main
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Unwinding loop 41 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 40 column 5 function main
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Unwinding loop 41 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 40 column 5 function main
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Unwinding loop 41 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 40 column 5 function main
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 1.329s (1214 assignments)
+Slicing time: 0.018s (removed 267 assignments)
+Generated 532 VCC(s), 435 remaining after simplification (947 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.082s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.203s
+BMC program time: 1.629s
+Thread interleavings 2
+Unwinding loop 41 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 40 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.018s (741 assignments)
+Slicing time: 0.006s (removed 319 assignments)
+Generated 92 VCC(s), 1 remaining after simplification (422 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.030s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.059s
+Thread interleavings 3
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.017s (746 assignments)
+Slicing time: 0.007s (removed 309 assignments)
+Generated 94 VCC(s), 1 remaining after simplification (437 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.060s
+Thread interleavings 4
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.017s (751 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (440 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.060s
+Thread interleavings 5
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.017s (756 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (443 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.065s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.095s
+Thread interleavings 6
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (757 assignments)
+Slicing time: 0.013s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.043s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.071s
+Thread interleavings 7
+Unwinding loop 41 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 40 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.025s (749 assignments)
+Slicing time: 0.006s (removed 307 assignments)
+Generated 100 VCC(s), 9 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.061s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.021s
+BMC program time: 0.117s
+Thread interleavings 8
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.014s (748 assignments)
+Slicing time: 0.015s (removed 309 assignments)
+Generated 94 VCC(s), 1 remaining after simplification (439 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.078s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.116s
+Thread interleavings 9
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (753 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.057s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.076s
+Thread interleavings 10
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.012s (758 assignments)
+Slicing time: 0.007s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.041s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.065s
+Thread interleavings 11
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (759 assignments)
+Slicing time: 0.008s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.049s
+Thread interleavings 12
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.025s (754 assignments)
+Slicing time: 0.006s (removed 297 assignments)
+Generated 102 VCC(s), 9 remaining after simplification (457 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.082s
+Thread interleavings 13
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (753 assignments)
+Slicing time: 0.006s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.052s
+Thread interleavings 14
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (758 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.030s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.048s
+Thread interleavings 15
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (759 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.045s
+Thread interleavings 16
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.026s (759 assignments)
+Slicing time: 0.007s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (460 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.010s
+BMC program time: 0.078s
+Thread interleavings 17
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (758 assignments)
+Slicing time: 0.007s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.049s
+Thread interleavings 18
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (759 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.036s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.050s
+Thread interleavings 19
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.025s (764 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (463 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.036s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.015s
+BMC program time: 0.086s
+Thread interleavings 20
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (759 assignments)
+Slicing time: 0.009s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.050s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.070s
+Thread interleavings 21
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (746 assignments)
+Slicing time: 0.009s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.053s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.077s
+Thread interleavings 22
+Unwinding loop 41 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 40 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.030s (749 assignments)
+Slicing time: 0.007s (removed 307 assignments)
+Generated 100 VCC(s), 9 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.085s
+Thread interleavings 23
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.007s (748 assignments)
+Slicing time: 0.006s (removed 309 assignments)
+Generated 94 VCC(s), 1 remaining after simplification (439 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.052s
+Thread interleavings 24
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.007s (753 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.052s
+Thread interleavings 25
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.006s (758 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.049s
+Thread interleavings 26
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (759 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.048s
+Thread interleavings 27
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.016s (756 assignments)
+Slicing time: 0.006s (removed 297 assignments)
+Generated 102 VCC(s), 9 remaining after simplification (459 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.072s
+Thread interleavings 28
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (755 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (444 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.050s
+Thread interleavings 29
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (760 assignments)
+Slicing time: 0.007s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.051s
+Thread interleavings 30
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.007s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.049s
+Thread interleavings 31
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.016s (761 assignments)
+Slicing time: 0.016s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (462 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.037s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.013s
+BMC program time: 0.090s
+Thread interleavings 32
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (760 assignments)
+Slicing time: 0.007s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.044s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.062s
+Thread interleavings 33
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.049s
+Thread interleavings 34
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.016s (766 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.041s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.084s
+Thread interleavings 35
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.008s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.036s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.051s
+Thread interleavings 36
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (748 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.038s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.053s
+Thread interleavings 37
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.045s (754 assignments)
+Slicing time: 0.008s (removed 297 assignments)
+Generated 102 VCC(s), 9 remaining after simplification (457 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.038s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.107s
+Thread interleavings 38
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.007s (753 assignments)
+Slicing time: 0.006s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.052s
+Thread interleavings 39
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.009s (758 assignments)
+Slicing time: 0.007s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.042s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.061s
+Thread interleavings 40
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (759 assignments)
+Slicing time: 0.007s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.053s
+Thread interleavings 41
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.018s (761 assignments)
+Slicing time: 0.007s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (462 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.013s
+BMC program time: 0.076s
+Thread interleavings 42
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (760 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.051s
+Thread interleavings 43
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.050s
+Thread interleavings 44
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.016s (766 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.036s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.074s
+Thread interleavings 45
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.005s (761 assignments)
+Slicing time: 0.007s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.057s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.075s
+Thread interleavings 46
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (748 assignments)
+Slicing time: 0.010s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.053s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.078s
+Thread interleavings 47
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.056s (759 assignments)
+Slicing time: 0.011s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (460 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.054s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.017s
+BMC program time: 0.144s
+Thread interleavings 48
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.012s (758 assignments)
+Slicing time: 0.010s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.050s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.078s
+Thread interleavings 49
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (759 assignments)
+Slicing time: 0.010s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.049s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.072s
+Thread interleavings 50
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.030s (766 assignments)
+Slicing time: 0.011s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.050s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.018s
+BMC program time: 0.115s
+Thread interleavings 51
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (761 assignments)
+Slicing time: 0.011s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.048s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.069s
+Thread interleavings 52
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.005s (748 assignments)
+Slicing time: 0.010s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.048s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.070s
+Thread interleavings 53
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.050s (764 assignments)
+Slicing time: 0.010s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (463 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.053s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.017s
+BMC program time: 0.137s
+Thread interleavings 54
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (759 assignments)
+Slicing time: 0.010s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.050s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.071s
+Thread interleavings 55
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.009s (748 assignments)
+Slicing time: 0.010s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.049s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.075s
+Thread interleavings 56
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.008s (745 assignments)
+Slicing time: 0.010s (removed 300 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.051s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.076s
+Thread interleavings 57
+Unwinding loop 41 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 40 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.064s (749 assignments)
+Slicing time: 0.011s (removed 307 assignments)
+Generated 100 VCC(s), 9 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.049s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.010s
+BMC program time: 0.139s
+Thread interleavings 58
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.007s (748 assignments)
+Slicing time: 0.007s (removed 309 assignments)
+Generated 94 VCC(s), 1 remaining after simplification (439 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.051s
+Thread interleavings 59
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.007s (753 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.049s
+Thread interleavings 60
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.007s (758 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.049s
+Thread interleavings 61
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.003s (759 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.044s
+Thread interleavings 62
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.015s (756 assignments)
+Slicing time: 0.007s (removed 297 assignments)
+Generated 102 VCC(s), 9 remaining after simplification (459 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.010s
+BMC program time: 0.066s
+Thread interleavings 63
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.007s (755 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (444 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.048s
+Thread interleavings 64
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (760 assignments)
+Slicing time: 0.007s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.030s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.048s
+Thread interleavings 65
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.003s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.046s
+Thread interleavings 66
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.015s (761 assignments)
+Slicing time: 0.006s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (462 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.066s
+Thread interleavings 67
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (760 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.030s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.047s
+Thread interleavings 68
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.044s
+Thread interleavings 69
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.015s (766 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.071s
+Thread interleavings 70
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.045s
+Thread interleavings 71
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (748 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.046s
+Thread interleavings 72
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.023s (756 assignments)
+Slicing time: 0.007s (removed 297 assignments)
+Generated 102 VCC(s), 9 remaining after simplification (459 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.078s
+Thread interleavings 73
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (755 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (444 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.051s
+Thread interleavings 74
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (760 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.052s
+Thread interleavings 75
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.047s
+Thread interleavings 76
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.019s (763 assignments)
+Slicing time: 0.006s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (464 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.075s
+Thread interleavings 77
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (762 assignments)
+Slicing time: 0.007s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.049s
+Thread interleavings 78
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (763 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (451 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.046s
+Thread interleavings 79
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.016s (768 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (467 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.069s
+Thread interleavings 80
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (763 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (451 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.045s
+Thread interleavings 81
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.003s (750 assignments)
+Slicing time: 0.006s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.047s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.060s
+Thread interleavings 82
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.038s (761 assignments)
+Slicing time: 0.011s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (462 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.054s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.018s
+BMC program time: 0.127s
+Thread interleavings 83
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.012s (760 assignments)
+Slicing time: 0.010s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.049s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.076s
+Thread interleavings 84
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (761 assignments)
+Slicing time: 0.010s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.042s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.064s
+Thread interleavings 85
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.018s (768 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (467 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.074s
+Thread interleavings 86
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (763 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (451 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.044s
+Thread interleavings 87
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (750 assignments)
+Slicing time: 0.006s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.036s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.050s
+Thread interleavings 88
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.032s (766 assignments)
+Slicing time: 0.010s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.052s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.016s
+BMC program time: 0.117s
+Thread interleavings 89
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (761 assignments)
+Slicing time: 0.009s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.046s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.068s
+Thread interleavings 90
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.005s (750 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.030s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.046s
+Thread interleavings 91
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (747 assignments)
+Slicing time: 0.006s (removed 300 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.030s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.044s
+Thread interleavings 92
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.060s (754 assignments)
+Slicing time: 0.006s (removed 297 assignments)
+Generated 102 VCC(s), 9 remaining after simplification (457 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.114s
+Thread interleavings 93
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (753 assignments)
+Slicing time: 0.006s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.030s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.047s
+Thread interleavings 94
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (758 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.046s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.064s
+Thread interleavings 95
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (759 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.046s
+Thread interleavings 96
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.016s (761 assignments)
+Slicing time: 0.006s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (462 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.068s
+Thread interleavings 97
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.007s (760 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.030s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.046s
+Thread interleavings 98
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.003s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.030s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.043s
+Thread interleavings 99
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.015s (766 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.067s
+Thread interleavings 100
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.007s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.055s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.068s
+Thread interleavings 101
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (748 assignments)
+Slicing time: 0.011s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.050s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.073s
+Thread interleavings 102
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.048s (761 assignments)
+Slicing time: 0.011s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (462 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.053s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.017s
+BMC program time: 0.134s
+Thread interleavings 103
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.012s (760 assignments)
+Slicing time: 0.010s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.060s
+Thread interleavings 104
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.003s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.044s
+Thread interleavings 105
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.029s (768 assignments)
+Slicing time: 0.013s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (467 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.037s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.096s
+Thread interleavings 106
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.005s (763 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (451 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.032s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.046s
+Thread interleavings 107
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (750 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.047s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.064s
+Thread interleavings 108
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.038s (766 assignments)
+Slicing time: 0.010s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.038s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.103s
+Thread interleavings 109
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (761 assignments)
+Slicing time: 0.011s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.066s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.090s
+Thread interleavings 110
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.007s (750 assignments)
+Slicing time: 0.011s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.052s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.077s
+Thread interleavings 111
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.005s (747 assignments)
+Slicing time: 0.009s (removed 300 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.050s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.072s
+Thread interleavings 112
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.109s (759 assignments)
+Slicing time: 0.011s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (460 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.063s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.018s
+BMC program time: 0.211s
+Thread interleavings 113
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.012s (758 assignments)
+Slicing time: 0.010s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.039s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.066s
+Thread interleavings 114
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (759 assignments)
+Slicing time: 0.007s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.045s
+Thread interleavings 115
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.016s (766 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.072s
+Thread interleavings 116
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.044s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.058s
+Thread interleavings 117
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (748 assignments)
+Slicing time: 0.011s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.066s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.090s
+Thread interleavings 118
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.050s (766 assignments)
+Slicing time: 0.015s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.055s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.018s
+BMC program time: 0.147s
+Thread interleavings 119
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.007s (761 assignments)
+Slicing time: 0.010s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.051s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.074s
+Thread interleavings 120
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.007s (750 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.055s
+Thread interleavings 121
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (747 assignments)
+Slicing time: 0.007s (removed 300 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.051s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.069s
+Thread interleavings 122
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.068s (764 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (463 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.052s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.026s
+BMC program time: 0.159s
+Thread interleavings 123
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.005s (759 assignments)
+Slicing time: 0.008s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.055s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.076s
+Thread interleavings 124
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.007s (748 assignments)
+Slicing time: 0.011s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.065s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.092s
+Thread interleavings 125
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.013s (747 assignments)
+Slicing time: 0.010s (removed 300 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.053s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.085s
+Thread interleavings 126
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.016s (744 assignments)
+Slicing time: 0.011s (removed 299 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.054s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.089s
+Thread interleavings 127
+Unwinding loop 41 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 40 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.089s (750 assignments)
+Slicing time: 0.010s (removed 307 assignments)
+Generated 101 VCC(s), 10 remaining after simplification (443 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.054s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.018s
+BMC program time: 0.178s
+Thread interleavings 128
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.018s (748 assignments)
+Slicing time: 0.010s (removed 309 assignments)
+Generated 94 VCC(s), 1 remaining after simplification (439 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.053s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.090s
+Thread interleavings 129
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (753 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (442 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.037s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.057s
+Thread interleavings 130
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (758 assignments)
+Slicing time: 0.010s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (445 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.041s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.073s
+Thread interleavings 131
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (759 assignments)
+Slicing time: 0.007s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.036s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.051s
+Thread interleavings 132
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.027s (756 assignments)
+Slicing time: 0.007s (removed 297 assignments)
+Generated 102 VCC(s), 9 remaining after simplification (459 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.037s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.013s
+BMC program time: 0.089s
+Thread interleavings 133
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.012s (755 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (444 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.058s
+Thread interleavings 134
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.008s (760 assignments)
+Slicing time: 0.007s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.051s
+Thread interleavings 135
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.046s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+BMC program time: 0.061s
+Thread interleavings 136
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.021s (761 assignments)
+Slicing time: 0.007s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (462 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.056s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.020s
+BMC program time: 0.107s
+Thread interleavings 137
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.017s (760 assignments)
+Slicing time: 0.010s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.036s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.068s
+Thread interleavings 138
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (761 assignments)
+Slicing time: 0.007s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.037s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.053s
+Thread interleavings 139
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.018s (766 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.047s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.016s
+BMC program time: 0.091s
+Thread interleavings 140
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.005s (761 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.052s
+Thread interleavings 141
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (748 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.035s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.051s
+Thread interleavings 142
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.033s (756 assignments)
+Slicing time: 0.007s (removed 297 assignments)
+Generated 102 VCC(s), 9 remaining after simplification (459 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.036s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.092s
+Thread interleavings 143
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.011s (755 assignments)
+Slicing time: 0.007s (removed 311 assignments)
+Generated 96 VCC(s), 1 remaining after simplification (444 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.041s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.063s
+Thread interleavings 144
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.013s (760 assignments)
+Slicing time: 0.008s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.040s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.067s
+Thread interleavings 145
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (761 assignments)
+Slicing time: 0.012s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.040s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.073s
+Thread interleavings 146
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.026s (763 assignments)
+Slicing time: 0.008s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (464 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.084s
+Thread interleavings 147
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.011s (762 assignments)
+Slicing time: 0.006s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.056s
+Thread interleavings 148
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.004s (763 assignments)
+Slicing time: 0.007s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (451 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.033s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+BMC program time: 0.049s
+Thread interleavings 149
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.024s (768 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (467 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.039s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.013s
+BMC program time: 0.088s
+Thread interleavings 150
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.005s (763 assignments)
+Slicing time: 0.007s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (451 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.040s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.059s
+Thread interleavings 151
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.008s (750 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.040s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.064s
+Thread interleavings 152
+Unwinding loop 42 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.049s (761 assignments)
+Slicing time: 0.011s (removed 299 assignments)
+Generated 104 VCC(s), 9 remaining after simplification (462 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.056s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.020s
+BMC program time: 0.144s
+Thread interleavings 153
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.016s (760 assignments)
+Slicing time: 0.011s (removed 313 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.049s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.086s
+Thread interleavings 154
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.007s (761 assignments)
+Slicing time: 0.010s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.053s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.077s
+Thread interleavings 155
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.040s (768 assignments)
+Slicing time: 0.007s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (467 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.037s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.012s
+BMC program time: 0.101s
+Thread interleavings 156
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.006s (763 assignments)
+Slicing time: 0.006s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (451 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.038s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.054s
+Thread interleavings 157
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.005s (750 assignments)
+Slicing time: 0.006s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.051s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.067s
+Thread interleavings 158
+Unwinding loop 42 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+WARNING: no body for function usleep
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function car
+Symex completed in: 0.043s (766 assignments)
+Slicing time: 0.011s (removed 301 assignments)
+Generated 106 VCC(s), 9 remaining after simplification (465 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.052s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.018s
+BMC program time: 0.130s
+Thread interleavings 159
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.007s (761 assignments)
+Slicing time: 0.010s (removed 312 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.052s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.076s
+Thread interleavings 160
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.009s (750 assignments)
+Slicing time: 0.010s (removed 301 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (449 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.049s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.076s
+Thread interleavings 161
+Unwinding loop 42 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+Symex completed in: 0.008s (747 assignments)
+Slicing time: 0.006s (removed 300 assignments)
+Generated 98 VCC(s), 1 remaining after simplification (447 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.037s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.058s
+Thread interleavings 162
+Unwinding loop 42 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/994_integer-overflow_arithmetic-overflow-integer.c line 44 column 5 function main
+ERROR: Timed out

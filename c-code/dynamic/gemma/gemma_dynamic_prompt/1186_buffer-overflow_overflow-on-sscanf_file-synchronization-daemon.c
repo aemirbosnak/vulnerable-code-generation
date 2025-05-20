@@ -1,0 +1,15 @@
+#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  char buffer[1024];
+  scanf("%s", buffer);
+  buffer[1023] = 'a';
+  printf("%s", buffer);
+  return 0;
+}

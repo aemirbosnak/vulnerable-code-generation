@@ -1,0 +1,70 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.279s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 13 column 3 function vuln_func
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 18 column 3 function vuln_func
+Symex completed in: 0.028s (68 assignments)
+Slicing time: 0.000s (removed 44 assignments)
+Generated 17 VCC(s), 8 remaining after simplification (24 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.013s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.041s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 13 column 3 function vuln_func
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 18 column 3 function vuln_func
+Symex completed in: 0.042s (67 assignments)
+Slicing time: 0.002s (removed 45 assignments)
+Generated 19 VCC(s), 10 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 7.776s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 13 column 3 function vuln_func
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 13 column 3 function vuln_func
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 18 column 3 function vuln_func
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 18 column 3 function vuln_func
+Symex completed in: 0.038s (111 assignments)
+Slicing time: 0.002s (removed 60 assignments)
+Generated 32 VCC(s), 15 remaining after simplification (51 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.023s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.008s
+BMC program time: 0.069s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 13 column 3 function vuln_func
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 13 column 3 function vuln_func
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 18 column 3 function vuln_func
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/016_out-of-bounds_array-bounds-violated.c line 18 column 3 function vuln_func
+Symex completed in: 0.025s (110 assignments)
+Slicing time: 0.002s (removed 61 assignments)
+Generated 34 VCC(s), 17 remaining after simplification (49 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

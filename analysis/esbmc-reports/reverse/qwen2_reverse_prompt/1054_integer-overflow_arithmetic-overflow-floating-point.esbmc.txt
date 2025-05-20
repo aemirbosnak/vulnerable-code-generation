@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1054_integer-overflow_arithmetic-overflow-floating-point.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.258s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (24 assignments)
+Slicing time: 0.000s (removed 14 assignments)
+Generated 1 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+Unit Converter
+
+1. Celsius to Fahrenheit
+
+2. Fahrenheit to Celsius
+
+3. Kilometers to Miles
+
+4. Miles to Kilometers
+
+5. Pounds to Kilograms
+
+6. Kilograms to Pounds
+
+Enter your choice: 
+
+State 9 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1054_integer-overflow_arithmetic-overflow-floating-point.c line 21 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/1054_integer-overflow_arithmetic-overflow-floating-point.c line 21 column 5 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

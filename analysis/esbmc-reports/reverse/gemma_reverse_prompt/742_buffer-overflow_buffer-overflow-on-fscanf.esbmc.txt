@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/742_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/742_buffer-overflow_buffer-overflow-on-fscanf.c:18:3: error: call to undeclared function 'kmeans'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  kmeans(points, k);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/742_buffer-overflow_buffer-overflow-on-fscanf.c:23:6: error: conflicting types for 'kmeans'
+void kmeans(int *points, int k) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/742_buffer-overflow_buffer-overflow-on-fscanf.c:18:3: note: previous implicit declaration is here
+  kmeans(points, k);
+  ^
+ERROR: PARSING ERROR

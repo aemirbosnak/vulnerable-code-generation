@@ -1,0 +1,15 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1003_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1003_integer-overflow_arithmetic-overflow-integer.c:30:62: warning: format specifies type 'char *' but the argument has type 'char' [-Wformat]
+      snprintf(summary, BUFFER_SIZE - summary_length, "%s ", word);
+                                                       ~~    ^~~~
+                                                       %c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1003_integer-overflow_arithmetic-overflow-integer.c:31:32: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+      summary_length += strlen(word) + 1;
+                               ^~~~
+                               &
+/tmp/esbmc.5374-e4ad-467e/headers/string.h:14:27: note: passing argument to parameter 's' here
+size_t strlen(const char *s);
+                          ^
+ERROR: PARSING ERROR

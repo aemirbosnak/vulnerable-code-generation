@@ -1,0 +1,27 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/395_buffer-overflow_buffer-overflow-on-sscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/395_buffer-overflow_buffer-overflow-on-sscanf.c:13:12: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+    printf(buf);
+           ^~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/395_buffer-overflow_buffer-overflow-on-sscanf.c:13:12: note: treat the string as an argument to avoid this
+    printf(buf);
+           ^
+           "%s", 
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/395_buffer-overflow_buffer-overflow-on-sscanf.c:15:16: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+        printf(buf);
+               ^~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/395_buffer-overflow_buffer-overflow-on-sscanf.c:15:16: note: treat the string as an argument to avoid this
+        printf(buf);
+               ^
+               "%s", 
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/395_buffer-overflow_buffer-overflow-on-sscanf.c:35:52: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pthread_create(&threads[i], NULL, scanner, (void *)i);
+                                                   ^~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/395_buffer-overflow_buffer-overflow-on-sscanf.c:35:43: error: incompatible function pointer types passing 'void *(int)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+        pthread_create(&threads[i], NULL, scanner, (void *)i);
+                                          ^~~~~~~
+/tmp/esbmc.7294-d7bc-d67c/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+ERROR: PARSING ERROR

@@ -1,0 +1,922 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.379s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.018s (109 assignments)
+Slicing time: 0.000s (removed 68 assignments)
+Generated 28 VCC(s), 10 remaining after simplification (41 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+BMC program time: 0.022s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.011s (108 assignments)
+Slicing time: 0.002s (removed 69 assignments)
+Generated 32 VCC(s), 14 remaining after simplification (39 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.105s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.022s (187 assignments)
+Slicing time: 0.002s (removed 98 assignments)
+Generated 56 VCC(s), 23 remaining after simplification (89 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.011s
+BMC program time: 0.038s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.020s (186 assignments)
+Slicing time: 0.002s (removed 99 assignments)
+Generated 59 VCC(s), 26 remaining after simplification (87 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.139s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.034s (254 assignments)
+Slicing time: 0.003s (removed 130 assignments)
+Generated 80 VCC(s), 31 remaining after simplification (124 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.015s
+BMC program time: 0.056s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.028s (253 assignments)
+Slicing time: 0.003s (removed 131 assignments)
+Generated 83 VCC(s), 34 remaining after simplification (122 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.140s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.044s (321 assignments)
+Slicing time: 0.003s (removed 162 assignments)
+Generated 104 VCC(s), 39 remaining after simplification (159 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.018s
+BMC program time: 0.070s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.047s (320 assignments)
+Slicing time: 0.003s (removed 163 assignments)
+Generated 107 VCC(s), 42 remaining after simplification (157 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.204s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.070s (388 assignments)
+Slicing time: 0.004s (removed 194 assignments)
+Generated 128 VCC(s), 47 remaining after simplification (194 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.036s
+BMC program time: 0.118s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.059s (387 assignments)
+Slicing time: 0.004s (removed 195 assignments)
+Generated 131 VCC(s), 50 remaining after simplification (192 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.195s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.091s (455 assignments)
+Slicing time: 0.005s (removed 226 assignments)
+Generated 152 VCC(s), 55 remaining after simplification (229 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.014s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.038s
+BMC program time: 0.149s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.078s (454 assignments)
+Slicing time: 0.005s (removed 227 assignments)
+Generated 155 VCC(s), 58 remaining after simplification (227 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.010s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.232s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.114s (522 assignments)
+Slicing time: 0.007s (removed 258 assignments)
+Generated 176 VCC(s), 63 remaining after simplification (264 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.156s
+BMC program time: 0.287s
+No bug has been found in the base case
+Checking forward condition, k = 7
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.103s (521 assignments)
+Slicing time: 0.007s (removed 259 assignments)
+Generated 179 VCC(s), 66 remaining after simplification (262 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.015s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.253s
+The forward condition is unable to prove the property
+Checking base case, k = 8
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.089s (589 assignments)
+Slicing time: 0.007s (removed 290 assignments)
+Generated 200 VCC(s), 71 remaining after simplification (299 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.144s
+BMC program time: 0.247s
+No bug has been found in the base case
+Checking forward condition, k = 8
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.104s (588 assignments)
+Slicing time: 0.008s (removed 291 assignments)
+Generated 203 VCC(s), 74 remaining after simplification (297 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.014s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.263s
+The forward condition is unable to prove the property
+Checking base case, k = 9
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.093s (656 assignments)
+Slicing time: 0.005s (removed 322 assignments)
+Generated 224 VCC(s), 79 remaining after simplification (334 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.198s
+BMC program time: 0.306s
+No bug has been found in the base case
+Checking forward condition, k = 9
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.105s (655 assignments)
+Slicing time: 0.009s (removed 323 assignments)
+Generated 227 VCC(s), 82 remaining after simplification (332 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.013s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.298s
+The forward condition is unable to prove the property
+Checking base case, k = 10
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.148s (723 assignments)
+Slicing time: 0.009s (removed 354 assignments)
+Generated 248 VCC(s), 87 remaining after simplification (369 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.022s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.246s
+BMC program time: 0.424s
+No bug has been found in the base case
+Checking forward condition, k = 10
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.162s (722 assignments)
+Slicing time: 0.017s (removed 355 assignments)
+Generated 251 VCC(s), 90 remaining after simplification (367 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.018s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.342s
+The forward condition is unable to prove the property
+Checking base case, k = 11
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 11   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 11   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.165s (777 assignments)
+Slicing time: 0.011s (removed 354 assignments)
+Generated 268 VCC(s), 103 remaining after simplification (423 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.017s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.446s
+BMC program time: 0.637s
+No bug has been found in the base case
+Checking forward condition, k = 11
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Unwinding loop 28 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 138 column 3 function strchr
+Not unwinding loop 28 iteration 11   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 193 column 3 function strcspn
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 38 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Not unwinding loop 38 iteration 11   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 10 column 5 function encrypt
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Unwinding loop 39 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Not unwinding loop 39 iteration 11   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/052_out-of-bounds_read_encryption-library-interface.c line 16 column 5 function decrypt
+Symex completed in: 0.189s (776 assignments)
+Slicing time: 0.009s (removed 355 assignments)
+Generated 270 VCC(s), 105 remaining after simplification (421 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.016s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.395s
+BMC program time: 0.609s
+
+VERIFICATION SUCCESSFUL
+
+Solution found by the forward condition; all states are reachable (k = 11)

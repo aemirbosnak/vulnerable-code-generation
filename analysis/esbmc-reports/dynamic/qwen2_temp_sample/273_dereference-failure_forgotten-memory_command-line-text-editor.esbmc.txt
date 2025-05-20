@@ -1,0 +1,38 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/273_dereference-failure_forgotten-memory_command-line-text-editor.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.328s
+GOTO program processing time: 0.013s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/273_dereference-failure_forgotten-memory_command-line-text-editor.c line 36 column 5 function write_file
+Symex completed in: 0.008s (106 assignments)
+Slicing time: 0.002s (removed 57 assignments)
+Generated 20 VCC(s), 15 remaining after simplification (49 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.193s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/273_dereference-failure_forgotten-memory_command-line-text-editor.c line 15 column 5 function read_file thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 8 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 154 column 5 function fgets thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 154 column 5 function fgets
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

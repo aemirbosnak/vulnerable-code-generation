@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/890_buffer-overflow_overflow-on-fscanf_image-processing-filter.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/890_buffer-overflow_overflow-on-fscanf_image-processing-filter.c:23:43: warning: format specifies type 'unsigned char *' but the argument has type 'int *' [-Wformat]
+            fscanf(input, "%hhu%hhu%hhu", &rgb[x], &rgb[x+1], &rgb[x+2]);
+                           ~~~~           ^~~~~~~
+                           %u
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/890_buffer-overflow_overflow-on-fscanf_image-processing-filter.c:23:52: warning: format specifies type 'unsigned char *' but the argument has type 'int *' [-Wformat]
+            fscanf(input, "%hhu%hhu%hhu", &rgb[x], &rgb[x+1], &rgb[x+2]);
+                               ~~~~                ^~~~~~~~~
+                               %u
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/890_buffer-overflow_overflow-on-fscanf_image-processing-filter.c:23:63: warning: format specifies type 'unsigned char *' but the argument has type 'int *' [-Wformat]
+            fscanf(input, "%hhu%hhu%hhu", &rgb[x], &rgb[x+1], &rgb[x+2]);
+                                   ~~~~                       ^~~~~~~~~
+                                   %u
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.505s
+GOTO program processing time: 0.019s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Symex completed in: 0.026s (165 assignments)
+Slicing time: 0.003s (removed 84 assignments)
+Generated 31 VCC(s), 30 remaining after simplification (81 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.014s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.510s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

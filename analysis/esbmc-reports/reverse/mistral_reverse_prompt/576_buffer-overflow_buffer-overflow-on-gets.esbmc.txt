@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/576_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/576_buffer-overflow_buffer-overflow-on-gets.c:13:29: warning: initializer-string for char array is too long [-Wexcess-initializers]
+    char keywords[3][10] = {"advertising", "winning", "free"};
+                            ^~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/576_buffer-overflow_buffer-overflow-on-gets.c:17:9: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        gets(input);
+        ^
+ERROR: PARSING ERROR

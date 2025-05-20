@@ -1,0 +1,52 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:23:23: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+        while (strcmp(arr[i], pivot) < 0) i++;
+                      ^~~~~~
+                      &
+/tmp/esbmc.21a0-3dd4-f25f/headers/string.h:15:24: note: passing argument to parameter 'p1' here
+int strcmp(const char *p1, const char *p2);
+                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:23:31: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+        while (strcmp(arr[i], pivot) < 0) i++;
+                              ^~~~~
+                              &
+/tmp/esbmc.21a0-3dd4-f25f/headers/string.h:15:40: note: passing argument to parameter 'p2' here
+int strcmp(const char *p1, const char *p2);
+                                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:24:23: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+        while (strcmp(arr[j], pivot) > 0) j--;
+                      ^~~~~~
+                      &
+/tmp/esbmc.21a0-3dd4-f25f/headers/string.h:15:24: note: passing argument to parameter 'p1' here
+int strcmp(const char *p1, const char *p2);
+                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:24:31: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+        while (strcmp(arr[j], pivot) > 0) j--;
+                              ^~~~~
+                              &
+/tmp/esbmc.21a0-3dd4-f25f/headers/string.h:15:40: note: passing argument to parameter 'p2' here
+int strcmp(const char *p1, const char *p2);
+                                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:25:26: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'char *'; take the address with & [-Wint-conversion]
+        if (i <= j) swap(arr[i], arr[j], sizeof(arr[0]));
+                         ^~~~~~
+                         &
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:11:17: note: passing argument to parameter 'a' here
+void swap(char *a, char *b, int n) {
+                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:25:34: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'char *'; take the address with & [-Wint-conversion]
+        if (i <= j) swap(arr[i], arr[j], sizeof(arr[0]));
+                                 ^~~~~~
+                                 &
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:11:26: note: passing argument to parameter 'b' here
+void swap(char *a, char *b, int n) {
+                         ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:51:15: warning: incompatible pointer types passing 'char[100000][100]' to parameter of type 'char *' [-Wincompatible-pointer-types]
+    quicksort(arr, 0, n - 1);
+              ^~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/989_integer-overflow_arithmetic-overflow-integer.c:31:22: note: passing argument to parameter 'arr' here
+void quicksort(char *arr, int low, int high) {
+                     ^
+ERROR: PARSING ERROR

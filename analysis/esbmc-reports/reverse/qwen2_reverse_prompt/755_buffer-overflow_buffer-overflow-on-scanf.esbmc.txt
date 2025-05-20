@@ -1,0 +1,926 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 1.283s
+GOTO program processing time: 0.025s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.046s (240 assignments)
+Slicing time: 0.003s (removed 114 assignments)
+Generated 59 VCC(s), 36 remaining after simplification (126 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.021s
+BMC program time: 0.080s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.031s (238 assignments)
+Slicing time: 0.003s (removed 116 assignments)
+Generated 65 VCC(s), 42 remaining after simplification (122 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.016s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.257s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.071s (431 assignments)
+Slicing time: 0.004s (removed 160 assignments)
+Generated 111 VCC(s), 79 remaining after simplification (271 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.013s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.262s
+BMC program time: 0.347s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.056s (429 assignments)
+Slicing time: 0.004s (removed 162 assignments)
+Generated 117 VCC(s), 85 remaining after simplification (267 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.335s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.065s (585 assignments)
+Slicing time: 0.007s (removed 206 assignments)
+Generated 155 VCC(s), 108 remaining after simplification (379 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.027s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.320s
+BMC program time: 0.419s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.120s (583 assignments)
+Slicing time: 0.011s (removed 208 assignments)
+Generated 161 VCC(s), 114 remaining after simplification (375 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.015s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.463s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.089s (739 assignments)
+Slicing time: 0.009s (removed 252 assignments)
+Generated 199 VCC(s), 137 remaining after simplification (487 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.019s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.570s
+BMC program time: 0.686s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.115s (737 assignments)
+Slicing time: 0.009s (removed 254 assignments)
+Generated 205 VCC(s), 143 remaining after simplification (483 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.564s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.250s (893 assignments)
+Slicing time: 0.013s (removed 298 assignments)
+Generated 243 VCC(s), 166 remaining after simplification (595 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.031s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.479s
+BMC program time: 0.774s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.121s (891 assignments)
+Slicing time: 0.012s (removed 300 assignments)
+Generated 249 VCC(s), 172 remaining after simplification (591 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.022s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.510s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.116s (1047 assignments)
+Slicing time: 0.010s (removed 344 assignments)
+Generated 287 VCC(s), 195 remaining after simplification (703 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.020s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.406s
+BMC program time: 0.550s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.157s (1045 assignments)
+Slicing time: 0.013s (removed 346 assignments)
+Generated 293 VCC(s), 201 remaining after simplification (699 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.040s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.529s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.101s (1201 assignments)
+Slicing time: 0.011s (removed 390 assignments)
+Generated 331 VCC(s), 224 remaining after simplification (811 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.026s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.440s
+BMC program time: 0.576s
+No bug has been found in the base case
+Checking forward condition, k = 7
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.104s (1199 assignments)
+Slicing time: 0.010s (removed 392 assignments)
+Generated 337 VCC(s), 230 remaining after simplification (807 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.017s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.578s
+The forward condition is unable to prove the property
+Checking base case, k = 8
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 8   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.113s (1355 assignments)
+Slicing time: 0.015s (removed 436 assignments)
+Generated 375 VCC(s), 253 remaining after simplification (919 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.021s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.954s
+BMC program time: 1.102s
+No bug has been found in the base case
+Checking forward condition, k = 8
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 8   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.089s (1353 assignments)
+Slicing time: 0.011s (removed 438 assignments)
+Generated 381 VCC(s), 259 remaining after simplification (915 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.016s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.650s
+The forward condition is unable to prove the property
+Checking base case, k = 9
+Starting Bounded Model Checking
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 16 column 5 function hex_to_dec
+Unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 24 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 24 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 7 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 7 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 7 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 26 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 26 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 27 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Not unwinding loop 39 iteration 9   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 37 column 5 function dec_to_hex
+Symex completed in: 0.099s (1509 assignments)
+Slicing time: 0.013s (removed 482 assignments)
+Generated 419 VCC(s), 282 remaining after simplification (1027 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.019s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.160s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 45 column 5 function main thread 0
+----------------------------------------------------
+  input = { 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+Enter a hexadecimal number: 
+
+State 30 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 50 column 5 function main thread 0
+----------------------------------------------------
+  len = 8 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001000)
+
+State 43 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 25 column 13 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 15 (00000000 00000000 00000000 00001111)
+
+State 49 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 21 column 9 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 240 (00000000 00000000 00000000 11110000)
+
+State 55 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 25 column 13 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 255 (00000000 00000000 00000000 11111111)
+
+State 57 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 21 column 9 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 4080 (00000000 00000000 00001111 11110000)
+
+State 60 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 23 column 13 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 4080 (00000000 00000000 00001111 11110000)
+
+State 66 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 21 column 9 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 65280 (00000000 00000000 11111111 00000000)
+
+State 72 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 25 column 13 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 65293 (00000000 00000000 11111111 00001101)
+
+State 74 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 21 column 9 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 1044688 (00000000 00001111 11110000 11010000)
+
+State 77 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 23 column 13 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 1044693 (00000000 00001111 11110000 11010101)
+
+State 79 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 21 column 9 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 16715088 (00000000 11111111 00001101 01010000)
+
+State 82 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 23 column 13 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 16715096 (00000000 11111111 00001101 01011000)
+
+State 84 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 21 column 9 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 267441536 (00001111 11110000 11010101 10000000)
+
+State 87 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 23 column 13 function hex_to_dec thread 0
+----------------------------------------------------
+  dec = 267441544 (00001111 11110000 11010101 10001000)
+
+State 88 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 21 column 9 function hex_to_dec thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/755_buffer-overflow_buffer-overflow-on-scanf.c line 21 column 9 function hex_to_dec
+  arithmetic overflow on mul
+  !overflow("*", dec, 16)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 9)

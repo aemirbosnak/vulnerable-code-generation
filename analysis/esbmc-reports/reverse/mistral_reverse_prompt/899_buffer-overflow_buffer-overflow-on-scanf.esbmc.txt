@@ -1,0 +1,30 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:14:9: error: call to undeclared function 'room2'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        room2();
+        ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:14:9: note: did you mean 'room1'?
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:9:6: note: 'room1' declared here
+void room1() {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:16:9: error: call to undeclared function 'room3'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        room3();
+        ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:16:9: note: did you mean 'room1'?
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:9:6: note: 'room1' declared here
+void room1() {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:23:6: error: conflicting types for 'room2'
+void room2() {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:14:9: note: previous implicit declaration is here
+        room2();
+        ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:39:6: error: conflicting types for 'room3'
+void room3() {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/899_buffer-overflow_buffer-overflow-on-scanf.c:16:9: note: previous implicit declaration is here
+        room3();
+        ^
+ERROR: PARSING ERROR

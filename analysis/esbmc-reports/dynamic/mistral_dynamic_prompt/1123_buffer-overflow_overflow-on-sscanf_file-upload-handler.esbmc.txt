@@ -1,0 +1,23 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1123_buffer-overflow_overflow-on-sscanf_file-upload-handler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1123_buffer-overflow_overflow-on-sscanf_file-upload-handler.c:24:9: error: call to undeclared function 'process_line'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        process_line(line);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1123_buffer-overflow_overflow-on-sscanf_file-upload-handler.c:24:9: note: did you mean 'process_file'?
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1123_buffer-overflow_overflow-on-sscanf_file-upload-handler.c:12:6: note: 'process_file' declared here
+void process_file(char *filename) {
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1123_buffer-overflow_overflow-on-sscanf_file-upload-handler.c:30:6: error: conflicting types for 'process_line'
+void process_line(char *line) {
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1123_buffer-overflow_overflow-on-sscanf_file-upload-handler.c:24:9: note: previous implicit declaration is here
+        process_line(line);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1123_buffer-overflow_overflow-on-sscanf_file-upload-handler.c:34:39: warning: format specifies type 'char *' but the argument has type 'void *' [-Wformat]
+    sscanf(line, "%s %s", user_input, NULL);
+                     ~~               ^~~~
+/tmp/esbmc-headers-e6ab-47fd-816b/include/stddef.h:89:16: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+               ^~~~~~~~~~
+ERROR: PARSING ERROR

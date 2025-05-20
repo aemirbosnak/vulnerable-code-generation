@@ -1,0 +1,133 @@
+//GPT-4o-mini DATASET v1.0 Category: Digital Auction System ; Style: multivariable
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_AUCTIONS 100
+#define MAX_BID_HISTORY 100
+#define MAX_BIDDERS 100
+#define MAX_LENGTH 50
+
+typedef struct {
+    char name[MAX_LENGTH];
+    float bidAmount;
+} Bid;
+
+typedef struct {
+    char itemName[MAX_LENGTH];
+    char auctioneer[MAX_LENGTH];
+    float startingPrice;
+    float currentPrice;
+    int bidCount;
+    Bid bidHistory[MAX_BID_HISTORY];
+} Auction;
+
+Auction auctions[MAX_AUCTIONS];
+int auctionCount = 0;
+
+void createAuction() {
+    if (auctionCount >= MAX_AUCTIONS) {
+        printf("Max auctions reached!\n");
+        return;
+    }
+    Auction newAuction;
+
+    printf("Enter item name: ");
+    scanf("%s", newAuction.itemName);
+    printf("Enter auctioneer name: ");
+    scanf("%s", newAuction.auctioneer);
+    printf("Enter starting price: ");
+    scanf("%f", &newAuction.startingPrice);
+
+    newAuction.currentPrice = newAuction.startingPrice;
+    newAuction.bidCount = 0;
+    auctions[auctionCount++] = newAuction;
+
+    printf("Auction for %s created successfully!\n", newAuction.itemName);
+}
+
+void placeBid() {
+    char itemName[MAX_LENGTH];
+    printf("Enter the item name you wish to bid on: ");
+    scanf("%s", itemName);
+
+    for (int i = 0; i < auctionCount; i++) {
+        if (strcmp(auctions[i].itemName, itemName) == 0) {
+            float bidAmount;
+            printf("Current highest bid: $%.2f\n", auctions[i].currentPrice);
+            printf("Enter your bid amount: ");
+            scanf("%f", &bidAmount);
+
+            if (bidAmount > auctions[i].currentPrice) {
+                printf("Bid accepted!\n");
+                strcpy(auctions[i].bidHistory[auctions[i].bidCount].name, "Anonymous Bidder");
+                auctions[i].bidHistory[auctions[i].bidCount].bidAmount = bidAmount;
+                auctions[i].currentPrice = bidAmount;
+                auctions[i].bidCount++;
+            } else {
+                printf("Bid must be higher than the current bid.\n");
+            }
+            return;
+        }
+    }
+    printf("Auction not found.\n");
+}
+
+void viewAuctionDetails() {
+    char itemName[MAX_LENGTH];
+    printf("Enter the item name whose details you want to view: ");
+    scanf("%s", itemName);
+
+    for (int i = 0; i < auctionCount; i++) {
+        if (strcmp(auctions[i].itemName, itemName) == 0) {
+            printf("Item Name: %s\n", auctions[i].itemName);
+            printf("Auctioneer: %s\n", auctions[i].auctioneer);
+            printf("Starting Price: $%.2f\n", auctions[i].startingPrice);
+            printf("Current Price: $%.2f\n", auctions[i].currentPrice);
+            printf("Number of bids: %d\n", auctions[i].bidCount);
+            printf("Bid History:\n");
+            for (int j = 0; j < auctions[i].bidCount; j++) {
+                printf("Bidder %d: $%.2f\n", j + 1, auctions[i].bidHistory[j].bidAmount);
+            }
+            return;
+        }
+    }
+    printf("Auction not found.\n");
+}
+
+void showMenu() {
+    printf("\nDigital Auction System\n");
+    printf("1. Create Auction\n");
+    printf("2. Place Bid\n");
+    printf("3. View Auction Details\n");
+    printf("4. Exit\n");
+    printf("Choose an option: ");
+}
+
+int main() {
+    int choice;
+
+    while (1) {
+        showMenu();
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                createAuction();
+                break;
+            case 2:
+                placeBid();
+                break;
+            case 3:
+                viewAuctionDetails();
+                break;
+            case 4:
+                printf("Exiting the system...\n");
+                exit(0);
+            default:
+                printf("Invalid choice, please try again.\n");
+        }
+    }
+
+    return 0;
+}

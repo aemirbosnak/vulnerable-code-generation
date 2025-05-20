@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/049_dereference-failure_null-pointer_text-based-game-engine.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/049_dereference-failure_null-pointer_text-based-game-engine.c:12:8: error: incompatible integer to pointer conversion assigning to 'void *' from 'int' [-Wint-conversion]
+  *ptr = 10;
+       ^ ~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/049_dereference-failure_null-pointer_text-based-game-engine.c:13:16: warning: format specifies type 'int' but the argument has type 'void *' [-Wformat]
+  printf("%d", *ptr);
+          ~~   ^~~~
+ERROR: PARSING ERROR

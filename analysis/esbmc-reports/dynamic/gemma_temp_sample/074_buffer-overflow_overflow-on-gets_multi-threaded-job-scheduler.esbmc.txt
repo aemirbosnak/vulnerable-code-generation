@@ -1,0 +1,14 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/074_buffer-overflow_overflow-on-gets_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/074_buffer-overflow_overflow-on-gets_multi-threaded-job-scheduler.c:12:3: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  gets(buffer);
+  ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/074_buffer-overflow_overflow-on-gets_multi-threaded-job-scheduler.c:20:72: warning: adding 'int' to a string does not append to the string [-Wstring-plus-int]
+    pthread_create(&threads[i], NULL, thread_func, (void *)("Thread #" + i));
+                                                            ~~~~~~~~~~~^~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/074_buffer-overflow_overflow-on-gets_multi-threaded-job-scheduler.c:20:72: note: use array indexing to silence this warning
+    pthread_create(&threads[i], NULL, thread_func, (void *)("Thread #" + i));
+                                                                       ^
+                                                            &          [  ]
+ERROR: PARSING ERROR

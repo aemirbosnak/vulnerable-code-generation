@@ -1,0 +1,41 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1667_out-of-bounds_write_file-upload-handler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.302s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.004s (47 assignments)
+Slicing time: 0.000s (removed 23 assignments)
+Generated 9 VCC(s), 7 remaining after simplification (24 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.095s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1667_out-of-bounds_write_file-upload-handler.c line 12 column 3 function main thread 0
+----------------------------------------------------
+  fp = &dynamic_1_value
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1667_out-of-bounds_write_file-upload-handler.c line 19 column 3 function main thread 0
+----------------------------------------------------
+  buf = &dynamic_3_array[0]
+This is the data that will be written to the file.
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1667_out-of-bounds_write_file-upload-handler.c line 25 column 3 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1667_out-of-bounds_write_file-upload-handler.c line 25 column 3 function main
+  dereference failure: array bounds violated
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

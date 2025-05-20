@@ -1,0 +1,44 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/137_dereference-failure_null-pointer_file-upload-handler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.383s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (45 assignments)
+Slicing time: 0.002s (removed 21 assignments)
+Generated 6 VCC(s), 5 remaining after simplification (24 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.092s
+Building error trace
+
+[Counterexample]
+
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/137_dereference-failure_null-pointer_file-upload-handler.c line 48 column 5 function main thread 0
+----------------------------------------------------
+  req = { .filename=&dynamic_2_array[0], .data={ .pointer_object=nil, .pointer_offset=nil }, .size=0 }
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/137_dereference-failure_null-pointer_file-upload-handler.c line 49 column 5 function main thread 0
+----------------------------------------------------
+  req.data = &dynamic_2_array[0]
+Invalid request format.
+
+
+
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/137_dereference-failure_null-pointer_file-upload-handler.c line 56 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/137_dereference-failure_null-pointer_file-upload-handler.c line 56 column 5 function main
+  dereference failure: invalid pointer freed
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

@@ -1,0 +1,41 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/356_out-of-bounds_read_file-upload-handler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.358s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Symex completed in: 0.006s (63 assignments)
+Slicing time: 0.002s (removed 28 assignments)
+Generated 12 VCC(s), 10 remaining after simplification (35 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.174s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/356_out-of-bounds_read_file-upload-handler.c line 15 column 5 function main thread 0
+----------------------------------------------------
+  buf = 0
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/356_out-of-bounds_read_file-upload-handler.c line 18 column 5 function main thread 0
+----------------------------------------------------
+  fp = &dynamic_3_value
+
+State 6 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

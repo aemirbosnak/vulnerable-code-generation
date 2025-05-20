@@ -1,0 +1,34 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/692_buffer-overflow_buffer-overflow-on-fscanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.247s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Symex completed in: 0.002s (40 assignments)
+Slicing time: 0.000s (removed 25 assignments)
+Generated 3 VCC(s), 3 remaining after simplification (15 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.074s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/692_buffer-overflow_buffer-overflow-on-fscanf.c line 26 column 12 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/692_buffer-overflow_buffer-overflow-on-fscanf.c line 26 column 12 function main
+  buffer overflow on fscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

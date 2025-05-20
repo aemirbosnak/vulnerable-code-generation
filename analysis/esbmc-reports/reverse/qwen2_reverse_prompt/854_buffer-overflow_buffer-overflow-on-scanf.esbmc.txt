@@ -1,0 +1,64 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:25:22: warning: multi-character character constant [-Wmultichar]
+                case 'cm': value *= 100; break;
+                     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:26:22: warning: multi-character character constant [-Wmultichar]
+                case 'in': value *= 39.37; break;
+                     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:26:22: warning: overflow converting case value to switch condition type (26990 to 110) [-Wswitch]
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:25:22: warning: overflow converting case value to switch condition type (25453 to 109) [-Wswitch]
+                case 'cm': value *= 100; break;
+                     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:30:14: warning: multi-character character constant [-Wmultichar]
+        case 'cm':
+             ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:33:22: warning: multi-character character constant [-Wmultichar]
+                case 'in': value /= 2.54; break;
+                     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:33:22: warning: overflow converting case value to switch condition type (26990 to 110) [-Wswitch]
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:37:14: warning: multi-character character constant [-Wmultichar]
+        case 'in':
+             ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:40:22: warning: multi-character character constant [-Wmultichar]
+                case 'cm': value *= 2.54; break;
+                     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:40:22: warning: overflow converting case value to switch condition type (25453 to 109) [-Wswitch]
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:37:14: warning: overflow converting case value to switch condition type (26990 to 110) [-Wswitch]
+        case 'in':
+             ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c:30:14: warning: overflow converting case value to switch condition type (25453 to 109) [-Wswitch]
+        case 'cm':
+             ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.254s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.000s (17 assignments)
+Slicing time: 0.000s (removed 14 assignments)
+Generated 1 VCC(s), 1 remaining after simplification (3 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+Enter the value: 
+
+State 2 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c line 14 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/854_buffer-overflow_buffer-overflow-on-scanf.c line 14 column 5 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

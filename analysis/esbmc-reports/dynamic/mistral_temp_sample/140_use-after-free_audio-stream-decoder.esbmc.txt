@@ -1,0 +1,43 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/140_use-after-free_audio-stream-decoder.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.348s
+GOTO program processing time: 0.013s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/140_use-after-free_audio-stream-decoder.c line 42 column 5 function process_audio_stream
+Symex completed in: 0.007s (124 assignments)
+Slicing time: 0.002s (removed 41 assignments)
+Generated 54 VCC(s), 35 remaining after simplification (83 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.818s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/140_use-after-free_audio-stream-decoder.c line 15 column 5 function load_audio_stream thread 0
+----------------------------------------------------
+  file = 0
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/140_use-after-free_audio-stream-decoder.c line 53 column 5 function main thread 0
+----------------------------------------------------
+  stream = 0
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/140_use-after-free_audio-stream-decoder.c line 42 column 5 function process_audio_stream thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/140_use-after-free_audio-stream-decoder.c line 42 column 5 function process_audio_stream
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

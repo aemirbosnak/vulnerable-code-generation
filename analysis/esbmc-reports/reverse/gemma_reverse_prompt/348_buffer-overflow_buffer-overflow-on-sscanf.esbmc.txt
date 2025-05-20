@@ -1,0 +1,58 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/348_buffer-overflow_buffer-overflow-on-sscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/348_buffer-overflow_buffer-overflow-on-sscanf.c:18:18: warning: incompatible pointer types passing 'FILE *' (aka 'struct _IO_FILE *') to parameter of type 'char **' [-Wincompatible-pointer-types]
+  while (getline(database, record, &record_size) != -1) {
+                 ^~~~~~~~
+/usr/include/stdio.h:707:45: note: passing argument to parameter '__lineptr' here
+extern __ssize_t getline (char **__restrict __lineptr,
+                                            ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/348_buffer-overflow_buffer-overflow-on-sscanf.c:18:28: warning: incompatible pointer types passing 'char *' to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+  while (getline(database, record, &record_size) != -1) {
+                           ^~~~~~
+/usr/include/stdio.h:708:46: note: passing argument to parameter '__n' here
+                          size_t *__restrict __n,
+                                             ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/348_buffer-overflow_buffer-overflow-on-sscanf.c:18:36: warning: incompatible pointer types passing 'int *' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Wincompatible-pointer-types]
+  while (getline(database, record, &record_size) != -1) {
+                                   ^~~~~~~~~~~~
+/usr/include/stdio.h:709:44: note: passing argument to parameter '__stream' here
+                          FILE *__restrict __stream) __wur __nonnull ((3));
+                                           ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.267s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function getline
+Not unwinding loop 31 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 231 column 5 function strstr
+Not unwinding loop 32 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 226 column 3 function strstr
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/348_buffer-overflow_buffer-overflow-on-sscanf.c line 18 column 3 function query_database
+Symex completed in: 0.003s (71 assignments)
+Slicing time: 0.002s (removed 42 assignments)
+Generated 18 VCC(s), 11 remaining after simplification (29 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.028s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/348_buffer-overflow_buffer-overflow-on-sscanf.c line 11 column 3 function query_database thread 0
+----------------------------------------------------
+  database = &dynamic_1_value
+
+State 3 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 226 column 3 function strstr thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 226 column 3 function strstr
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

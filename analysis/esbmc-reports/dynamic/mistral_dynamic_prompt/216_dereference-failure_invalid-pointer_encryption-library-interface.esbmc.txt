@@ -1,0 +1,35 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/216_dereference-failure_invalid-pointer_encryption-library-interface.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.245s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.000s (16 assignments)
+Slicing time: 0.000s (removed 13 assignments)
+Generated 1 VCC(s), 1 remaining after simplification (3 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+Building error trace
+
+[Counterexample]
+
+Enter a string to encrypt:
+
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/216_dereference-failure_invalid-pointer_encryption-library-interface.c line 24 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/216_dereference-failure_invalid-pointer_encryption-library-interface.c line 24 column 5 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

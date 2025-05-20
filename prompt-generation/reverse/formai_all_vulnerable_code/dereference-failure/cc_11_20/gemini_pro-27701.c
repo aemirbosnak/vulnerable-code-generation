@@ -1,0 +1,72 @@
+//GEMINI-pro DATASET v1.0 Category: File handling ; Style: Cryptic
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int**ar;
+char**s;
+int main(int c,char**v){
+  int i=0,j,k,l=c>1?c-1:0,f[l],g[l],h[l],m[l],n[l];
+  char*d[l];
+  FILE**fp=malloc(l*sizeof(FILE*));
+  while(i<l){
+    d[i]=v[i+1];
+    f[i]=g[i]=h[i]=0;
+    m[i]=n[i]=1;
+    fp[i]=fopen(d[i],"r");
+    fscanf(fp[i],"%d%d",&m[i],&n[i]);
+    h[i]=m[i]*n[i];
+    ar=realloc(ar,h[i]*sizeof(int*));
+    s=realloc(s,h[i]*sizeof(char*));
+    i++;
+  }
+  i=0;
+  while(i<l){
+    j=0;
+    while(j<h[i]){
+      ar[g[i]]=malloc(n[i]*sizeof(int));
+      s[g[i]]=malloc(m[i]*sizeof(char));
+      fscanf(fp[i],"%s",s[g[i]]);
+      k=0;
+      while(k<n[i]){
+        fscanf(fp[i],"%d",&ar[g[i]][k]);
+        k++;
+      }
+      g[i]++;
+      j++;
+    }
+    i++;
+  }
+  i=0;
+  while(i<l){
+    j=0;
+    while(j<h[i]){
+      k=0;
+      while(k<m[i]){
+        printf("%c",s[f[i]][k]);
+        k++;
+      }
+      k=0;
+      while(k<n[i]){
+        printf("%d ",ar[f[i]][k]);
+        k++;
+      }
+      f[i]++;
+      printf("\n");
+      j++;
+    }
+    i++;
+  }
+  i=0;
+  while(i<l){
+    j=0;
+    while(j<h[i]){
+      free(ar[j]);
+      free(s[j]);
+      j++;
+    }
+    i++;
+  }
+  free(ar);
+  free(s);
+  return 0;
+}

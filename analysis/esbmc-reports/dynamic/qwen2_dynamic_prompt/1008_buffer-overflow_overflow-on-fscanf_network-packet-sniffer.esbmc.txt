@@ -1,0 +1,43 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1008_buffer-overflow_overflow-on-fscanf_network-packet-sniffer.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1008_buffer-overflow_overflow-on-fscanf_network-packet-sniffer.c:14:12: warning: incompatible pointer types passing 'char *' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Wincompatible-pointer-types]
+    fscanf(packet, "%s", buffer); // Vulnerable to buffer overflow
+           ^~~~~~
+/usr/include/stdio.h:463:50: note: passing argument to parameter '__stream' here
+extern int __REDIRECT (fscanf, (FILE *__restrict __stream,
+                                                 ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.258s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 24 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Symex completed in: 0.003s (56 assignments)
+Slicing time: 0.002s (removed 39 assignments)
+Generated 10 VCC(s), 7 remaining after simplification (17 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.024s
+Building error trace
+
+[Counterexample]
+
+Enter a packet data: 
+Processing packet: 
+
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1008_buffer-overflow_overflow-on-fscanf_network-packet-sniffer.c line 14 column 5 function process_packet thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1008_buffer-overflow_overflow-on-fscanf_network-packet-sniffer.c line 14 column 5 function process_packet
+  buffer overflow on fscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

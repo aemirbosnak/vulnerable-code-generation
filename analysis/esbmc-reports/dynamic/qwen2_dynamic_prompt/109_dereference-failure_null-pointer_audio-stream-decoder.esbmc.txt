@@ -1,0 +1,44 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/109_dereference-failure_null-pointer_audio-stream-decoder.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.328s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Symex completed in: 0.010s (152 assignments)
+Slicing time: 0.003s (removed 51 assignments)
+Generated 68 VCC(s), 43 remaining after simplification (101 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 3.999s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/109_dereference-failure_null-pointer_audio-stream-decoder.c line 16 column 5 function load_audio_stream thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/109_dereference-failure_null-pointer_audio-stream-decoder.c line 19 column 5 function load_audio_stream thread 0
+----------------------------------------------------
+  stream = ( struct __anon_typedef_AudioStream_at_/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/109_dereference-failure_null-pointer_audio-stream-decoder_c__9_9 *)(&dynamic_3_value)
+
+State 9 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/109_dereference-failure_null-pointer_audio-stream-decoder.c line 25 column 5 function load_audio_stream thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/109_dereference-failure_null-pointer_audio-stream-decoder.c line 25 column 5 function load_audio_stream
+  arithmetic overflow on mul
+  !overflow("*", stream->sample_rate, stream->channels)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

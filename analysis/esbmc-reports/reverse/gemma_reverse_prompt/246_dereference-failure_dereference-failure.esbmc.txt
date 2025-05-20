@@ -1,0 +1,28 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/246_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/246_dereference-failure_dereference-failure.c:14:7: error: incompatible pointer to integer conversion initializing 'int' with an expression of type 'int *'; dereference with * [-Wint-conversion]
+  int client_socket_fd_local = (int *)thread_arg;
+      ^                        ~~~~~~~~~~~~~~~~~
+                               *
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/246_dereference-failure_dereference-failure.c:18:15: warning: cast to 'int *' from smaller integer type 'int' [-Wint-to-pointer-cast]
+  int data = *(int *)client_socket_fd_local;
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/246_dereference-failure_dereference-failure.c:22:3: error: call to undeclared function 'read'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  read(client_socket_fd_local, buffer, 1024);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/246_dereference-failure_dereference-failure.c:22:3: note: did you mean 'fread'?
+/usr/include/stdio.h:738:15: note: 'fread' declared here
+extern size_t fread (void *__restrict __ptr, size_t __size,
+              ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/246_dereference-failure_dereference-failure.c:23:3: error: call to undeclared function 'write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  write(client_socket_fd_local, buffer, 1024);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/246_dereference-failure_dereference-failure.c:23:3: note: did you mean 'fwrite'?
+/usr/include/stdio.h:745:15: note: 'fwrite' declared here
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+              ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/246_dereference-failure_dereference-failure.c:31:55: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+    pthread_create(&threads[i], NULL, thread_handler, (void *)client_socket_fd[i]);
+                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+ERROR: PARSING ERROR

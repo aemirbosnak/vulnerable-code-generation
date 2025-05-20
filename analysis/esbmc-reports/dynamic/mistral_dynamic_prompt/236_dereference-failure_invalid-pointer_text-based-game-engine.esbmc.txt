@@ -1,0 +1,16 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/236_dereference-failure_invalid-pointer_text-based-game-engine.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/236_dereference-failure_invalid-pointer_text-based-game-engine.c:35:15: warning: incompatible pointer types passing 'char *' to parameter of type 'GameObject *' (aka 'struct GameObject *') [-Wincompatible-pointer-types]
+    game_loop(ptr_player->name, ptr_enemy->attack); // Dereference error intentionally
+              ^~~~~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/236_dereference-failure_invalid-pointer_text-based-game-engine.c:15:28: note: passing argument to parameter 'player' here
+void game_loop(GameObject* player, GameObject* enemy) {
+                           ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/236_dereference-failure_invalid-pointer_text-based-game-engine.c:35:33: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'GameObject *' (aka 'struct GameObject *') [-Wint-conversion]
+    game_loop(ptr_player->name, ptr_enemy->attack); // Dereference error intentionally
+                                ^~~~~~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/236_dereference-failure_invalid-pointer_text-based-game-engine.c:15:48: note: passing argument to parameter 'enemy' here
+void game_loop(GameObject* player, GameObject* enemy) {
+                                               ^
+ERROR: PARSING ERROR

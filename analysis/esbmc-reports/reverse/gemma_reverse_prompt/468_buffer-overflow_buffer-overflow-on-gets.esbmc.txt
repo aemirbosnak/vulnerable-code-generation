@@ -1,0 +1,34 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:14:3: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  gets(message);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:24:7: error: call to undeclared function 'encrypt_caesar'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      encrypt_caesar(message, key);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:27:7: error: call to undeclared function 'encrypt_multiplicative'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      encrypt_multiplicative(message, key);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:30:7: error: call to undeclared function 'encrypt_affine'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      encrypt_affine(message, key);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:39:6: error: conflicting types for 'encrypt_caesar'
+void encrypt_caesar(char *message, int key) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:24:7: note: previous implicit declaration is here
+      encrypt_caesar(message, key);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:47:6: error: conflicting types for 'encrypt_multiplicative'
+void encrypt_multiplicative(char *message, int key) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:27:7: note: previous implicit declaration is here
+      encrypt_multiplicative(message, key);
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:55:6: error: conflicting types for 'encrypt_affine'
+void encrypt_affine(char *message, int key) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/468_buffer-overflow_buffer-overflow-on-gets.c:30:7: note: previous implicit declaration is here
+      encrypt_affine(message, key);
+      ^
+ERROR: PARSING ERROR

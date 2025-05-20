@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1707_use-after-free_audio-stream-decoder.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1707_use-after-free_audio-stream-decoder.c:41:5: error: call to undeclared function 'process_audio_data'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    process_audio_data(stream->data);
+    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1707_use-after-free_audio-stream-decoder.c:44:6: error: conflicting types for 'process_audio_data'
+void process_audio_data(void *data) {
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1707_use-after-free_audio-stream-decoder.c:41:5: note: previous implicit declaration is here
+    process_audio_data(stream->data);
+    ^
+ERROR: PARSING ERROR

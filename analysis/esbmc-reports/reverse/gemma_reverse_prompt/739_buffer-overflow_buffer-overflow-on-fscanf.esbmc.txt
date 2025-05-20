@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/739_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/739_buffer-overflow_buffer-overflow-on-fscanf.c:28:57: error: incompatible pointer to integer conversion passing 'char[2]' to parameter of type 'int' [-Wint-conversion]
+    char *cpu_usage_str = strchr(lines[lines_read - 1], "%");
+                                                        ^~~
+/tmp/esbmc.ea97-9fa8-ca5f/headers/string.h:17:33: note: passing argument to parameter 'ch' here
+char *strchr(const char *s, int ch);
+                                ^
+ERROR: PARSING ERROR

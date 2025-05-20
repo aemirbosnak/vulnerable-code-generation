@@ -1,0 +1,43 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/643_buffer-overflow_buffer-overflow-on-fscanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.528s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Symex completed in: 0.005s (66 assignments)
+Slicing time: 0.000s (removed 36 assignments)
+Generated 7 VCC(s), 5 remaining after simplification (30 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.234s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/643_buffer-overflow_buffer-overflow-on-fscanf.c line 13 column 5 function print_ascii_art thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/643_buffer-overflow_buffer-overflow-on-fscanf.c line 19 column 5 function print_ascii_art thread 0
+----------------------------------------------------
+  header = { 80, 53, 0 }
+
+State 7 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/643_buffer-overflow_buffer-overflow-on-fscanf.c line 28 column 5 function print_ascii_art thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/643_buffer-overflow_buffer-overflow-on-fscanf.c line 28 column 5 function print_ascii_art
+  buffer overflow on fscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

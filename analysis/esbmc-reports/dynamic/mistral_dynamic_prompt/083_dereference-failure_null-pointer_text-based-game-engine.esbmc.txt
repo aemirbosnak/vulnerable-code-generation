@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/083_dereference-failure_null-pointer_text-based-game-engine.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/083_dereference-failure_null-pointer_text-based-game-engine.c:52:9: error: call to undeclared function 'player_stats'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        player_stats(players[-1]);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/083_dereference-failure_null-pointer_text-based-game-engine.c:58:6: error: conflicting types for 'player_stats'
+void player_stats(Player *player) {
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/083_dereference-failure_null-pointer_text-based-game-engine.c:52:9: note: previous implicit declaration is here
+        player_stats(players[-1]);
+        ^
+ERROR: PARSING ERROR

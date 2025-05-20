@@ -1,0 +1,55 @@
+//Gemma-7B DATASET v1.0 Category: Word Frequency Counter ; Style: happy
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_WORDS 1000
+
+typedef struct WordNode {
+    char *word;
+    struct WordNode *next;
+} WordNode;
+
+void insertWord(WordNode **head, char *word) {
+    WordNode *newNode = malloc(sizeof(WordNode));
+    newNode->word = strdup(word);
+    newNode->next = NULL;
+
+    if (*head == NULL) {
+        *head = newNode;
+    } else {
+        (*head)->next = newNode;
+    }
+}
+
+int wordFrequency(WordNode *head, char *word) {
+    int frequency = 0;
+    WordNode *current = head;
+
+    while (current) {
+        if (strcmp(current->word, word) == 0) {
+            frequency++;
+        }
+        current = current->next;
+    }
+
+    return frequency;
+}
+
+int main() {
+    WordNode *head = NULL;
+    char *text = "The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.";
+
+    insertWord(&head, "quick");
+    insertWord(&head, "brown");
+    insertWord(&head, "fox");
+    insertWord(&head, "jumps");
+    insertWord(&head, "lazy");
+    insertWord(&head, "dog");
+
+    int frequency = wordFrequency(head, "quick");
+
+    printf("The word 'quick' appears %d times in the text.\n", frequency);
+
+    return 0;
+}

@@ -1,0 +1,11 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/722_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/722_buffer-overflow_buffer-overflow-on-fscanf.c:24:29: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+    data[num_data++] = atoi(buffer[i]);
+                            ^~~~~~~~~
+                            &
+/tmp/esbmc.ffa7-dc02-cd5d/headers/stdlib.h:70:23: note: passing argument to parameter 'str' here
+int atoi(const char * str);
+                      ^
+ERROR: PARSING ERROR

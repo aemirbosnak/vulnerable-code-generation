@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/037_out-of-bounds_array-bounds-violated.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/037_out-of-bounds_array-bounds-violated.c:59:50: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+    pthread_create(&threads[i], NULL, scan_port, (void *)i);
+                                                 ^~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/037_out-of-bounds_array-bounds-violated.c:59:39: error: incompatible function pointer types passing 'void *(int)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+    pthread_create(&threads[i], NULL, scan_port, (void *)i);
+                                      ^~~~~~~~~
+/tmp/esbmc.2ae4-6ef4-aebd/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+ERROR: PARSING ERROR

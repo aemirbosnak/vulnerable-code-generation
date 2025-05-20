@@ -1,0 +1,16 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/065_dereference-failure_null-pointer_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/065_dereference-failure_null-pointer_multi-threaded-job-scheduler.c:28:38: error: incompatible function pointer types passing 'void (*)(void *)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+    pthread_create(&thread_id, NULL, job.function, job.data);
+                                     ^~~~~~~~~~~~
+/tmp/esbmc.b3c0-1b47-43b4/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/065_dereference-failure_null-pointer_multi-threaded-job-scheduler.c:39:38: error: incompatible function pointer types passing 'void (*)(void *)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+    pthread_create(&thread_id, NULL, job.function, job.data);
+                                     ^~~~~~~~~~~~
+/tmp/esbmc.b3c0-1b47-43b4/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+ERROR: PARSING ERROR

@@ -1,0 +1,19 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/111_dereference-failure_null-pointer_cache-eviction-mechanism.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/111_dereference-failure_null-pointer_cache-eviction-mechanism.c:15:26: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
+    if (strcmp(cache[i], key) == 0) {
+                         ^~~
+/tmp/esbmc.00ea-4108-7bc7/headers/string.h:15:40: note: passing argument to parameter 'p2' here
+int strcmp(const char *p1, const char *p2);
+                                       ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/111_dereference-failure_null-pointer_cache-eviction-mechanism.c:23:20: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
+  strcpy(cache[i], key);
+                   ^~~
+/tmp/esbmc.00ea-4108-7bc7/headers/string.h:10:71: note: passing argument to parameter 'src' here
+char *strcpy(char *__ESBMC_restrict dst, const char *__ESBMC_restrict src);
+                                                                      ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/111_dereference-failure_null-pointer_cache-eviction-mechanism.c:29:7: error: incompatible pointer to integer conversion initializing 'int' with an expression of type 'char[4]' [-Wint-conversion]
+  int key = "foo";
+      ^     ~~~~~
+ERROR: PARSING ERROR

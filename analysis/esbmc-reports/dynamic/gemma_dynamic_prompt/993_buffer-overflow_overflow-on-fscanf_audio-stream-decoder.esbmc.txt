@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/993_buffer-overflow_overflow-on-fscanf_audio-stream-decoder.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/993_buffer-overflow_overflow-on-fscanf_audio-stream-decoder.c:14:3: error: call to undeclared function 'overflow_func'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  overflow_func(buffer);
+  ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/993_buffer-overflow_overflow-on-fscanf_audio-stream-decoder.c:19:6: error: conflicting types for 'overflow_func'
+void overflow_func(char *buffer)
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/993_buffer-overflow_overflow-on-fscanf_audio-stream-decoder.c:14:3: note: previous implicit declaration is here
+  overflow_func(buffer);
+  ^
+ERROR: PARSING ERROR

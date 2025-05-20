@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/133_out-of-bounds_array-bounds-violated.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/133_out-of-bounds_array-bounds-violated.c:57:20: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
+            system(printf("echo 'move %s' > /dev/ttyUSB0", direction));
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/esbmc.261e-9f48-a419/headers/stdlib.h:34:25: note: passing argument to parameter 'command' here
+int system(const char * command);
+                        ^
+ERROR: PARSING ERROR

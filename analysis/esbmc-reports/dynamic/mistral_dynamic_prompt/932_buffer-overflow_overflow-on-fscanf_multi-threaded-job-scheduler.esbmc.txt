@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/932_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/932_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c:27:53: error: incompatible function pointer types passing 'void (void *)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+    pthread_create(&thread_ids[task - tasks], NULL, job_function, task);
+                                                    ^~~~~~~~~~~~
+/tmp/esbmc.60c0-4c0b-e3c8/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+ERROR: PARSING ERROR

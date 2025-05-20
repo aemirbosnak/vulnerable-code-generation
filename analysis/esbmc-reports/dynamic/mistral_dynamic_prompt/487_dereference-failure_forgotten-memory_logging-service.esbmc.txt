@@ -1,0 +1,39 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/487_dereference-failure_forgotten-memory_logging-service.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.349s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+WARNING: no body for function ctime
+Symex completed in: 0.006s (93 assignments)
+Slicing time: 0.000s (removed 45 assignments)
+Generated 35 VCC(s), 25 remaining after simplification (48 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.103s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/487_dereference-failure_forgotten-memory_logging-service.c line 35 column 5 function main thread 0
+----------------------------------------------------
+  username = 0
+Enter username: 
+
+State 10 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 165 column 7 function fgets thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 165 column 7 function fgets
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

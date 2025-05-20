@@ -1,0 +1,60 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.282s
+ERROR: the format specifiers do not match with the arguments
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function popen
+WARNING: no body for function perror
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c line 33 column 5 function main
+WARNING: no body for function pclose
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c line 16 column 5 function display_graph
+Symex completed in: 0.004s (84 assignments)
+Slicing time: 0.000s (removed 48 assignments)
+Generated 15 VCC(s), 12 remaining after simplification (36 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.612s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c line 25 column 5 function main thread 0
+----------------------------------------------------
+  user_cpu = 3.081488e-33f (00001001 10000000 00000000 00000000)
+
+State 2 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c line 25 column 5 function main thread 0
+----------------------------------------------------
+  nice_cpu = -1.701412e+38f (11111111 00000000 00000000 00000000)
+
+State 3 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c line 25 column 5 function main thread 0
+----------------------------------------------------
+  system_cpu = 0.000000f (00000000 00000000 00000000 00000000)
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c line 27 column 10 function main thread 0
+----------------------------------------------------
+  fp = INVALID4294967295
+
+State 10 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c line 34 column 9 function main thread 0
+----------------------------------------------------
+  system_cpu = -1.701412e+38f (11111110 11111111 11111111 11111111)
+
+State 12 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c line 35 column 9 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/737_buffer-overflow_buffer-overflow-on-fscanf.c line 35 column 9 function main
+  arithmetic overflow on floating-point ieee_add
+  isinf(IEEE_ADD(user_cpu, nice_cpu)) || isinf(system_cpu) || !(isinf(IEEE_ADD(IEEE_ADD(user_cpu, nice_cpu), system_cpu)))
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

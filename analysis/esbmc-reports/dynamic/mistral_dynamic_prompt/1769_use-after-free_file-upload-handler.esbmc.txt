@@ -1,0 +1,54 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1769_use-after-free_file-upload-handler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.357s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function stat
+WARNING: no body for function perror
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1769_use-after-free_file-upload-handler.c line 20 column 9 function read_file
+WARNING: no body for function perror
+Symex completed in: 0.005s (98 assignments)
+Slicing time: 0.000s (removed 48 assignments)
+Generated 12 VCC(s), 10 remaining after simplification (50 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.211s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1769_use-after-free_file-upload-handler.c line 38 column 5 function main thread 0
+----------------------------------------------------
+  st = { .st_dev=0, .st_ino=0, .st_nlink=0, .st_mode=0, .st_uid=0,
+    .st_gid=0, .__pad0=0, .st_rdev=0, .st_size=-9223372036854267264,
+    .st_blksize=0, .st_blocks=0,
+    .st_atim={ .tv_sec=nil, .tv_nsec=nil }, .st_mtim={ .tv_sec=nil, .tv_nsec=nil },
+    .st_ctim={ .tv_sec=nil, .tv_nsec=nil },
+    .__glibc_reserved={ 0, 0, 0 } }
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1769_use-after-free_file-upload-handler.c line 15 column 5 function read_file thread 0
+----------------------------------------------------
+  file = &dynamic_2_value
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1769_use-after-free_file-upload-handler.c line 16 column 5 function read_file thread 0
+----------------------------------------------------
+  buffer = 0
+
+State 11 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

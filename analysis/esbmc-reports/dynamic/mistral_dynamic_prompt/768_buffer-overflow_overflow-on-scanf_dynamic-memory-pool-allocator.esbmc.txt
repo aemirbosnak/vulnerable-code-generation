@@ -1,0 +1,60 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c:35:18: warning: incompatible pointer types assigning to 'char *' from 'PoolBlock *' [-Wincompatible-pointer-types]
+            line = pool_allocate(1);
+                 ^ ~~~~~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c:42:23: warning: incompatible pointer types passing 'char *' to parameter of type 'PoolBlock *' [-Wincompatible-pointer-types]
+            pool_free(line);
+                      ^~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c:23:27: note: passing argument to parameter 'block' here
+void pool_free(PoolBlock *block) {
+                          ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c:64:19: warning: incompatible pointer types passing 'char *' to parameter of type 'PoolBlock *' [-Wincompatible-pointer-types]
+        pool_free(line);
+                  ^~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c:23:27: note: passing argument to parameter 'block' here
+void pool_free(PoolBlock *block) {
+                          ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.450s
+GOTO program processing time: 0.016s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c line 33 column 5 function pool_readline
+Symex completed in: 0.006s (82 assignments)
+Slicing time: 0.000s (removed 44 assignments)
+Generated 21 VCC(s), 12 remaining after simplification (38 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.326s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c line 56 column 5 function main thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c line 33 column 12 function pool_readline thread 0
+----------------------------------------------------
+  c = -65 (10111111)
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c line 16 column 5 function pool_allocate thread 0
+----------------------------------------------------
+  block = ( struct __anon_typedef_PoolBlock_at_/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator_c__9_9 *)0
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c line 17 column 5 function pool_allocate thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/768_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c line 17 column 5 function pool_allocate
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

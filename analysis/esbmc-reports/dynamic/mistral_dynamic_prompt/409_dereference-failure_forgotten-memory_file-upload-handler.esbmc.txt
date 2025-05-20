@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/409_dereference-failure_forgotten-memory_file-upload-handler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/409_dereference-failure_forgotten-memory_file-upload-handler.c:27:21: error: call to undeclared function 'recv'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    int bytesRead = recv(0, fileContent, atoi(argv[2]), 0); // Read from standard input
+                    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/409_dereference-failure_forgotten-memory_file-upload-handler.c:48:10: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'void *' [-Wint-conversion]
+    free(fileContent[bytesRead]);
+         ^~~~~~~~~~~~~~~~~~~~~~
+/tmp/esbmc.f955-9b20-d3d9/headers/stdlib.h:29:17: note: passing argument to parameter 'p' here
+void free(void *p);
+                ^
+ERROR: PARSING ERROR

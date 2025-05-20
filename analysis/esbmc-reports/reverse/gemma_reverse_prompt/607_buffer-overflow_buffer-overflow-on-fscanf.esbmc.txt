@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/607_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/607_buffer-overflow_buffer-overflow-on-fscanf.c:32:9: error: expected expression
+        char entry[200];
+        ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/607_buffer-overflow_buffer-overflow-on-fscanf.c:34:21: error: use of undeclared identifier 'entry'
+        scanf("%s", entry);
+                    ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/607_buffer-overflow_buffer-overflow-on-fscanf.c:40:40: error: use of undeclared identifier 'entry'
+        entries[numEntries++] = strdup(entry);
+                                       ^
+ERROR: PARSING ERROR

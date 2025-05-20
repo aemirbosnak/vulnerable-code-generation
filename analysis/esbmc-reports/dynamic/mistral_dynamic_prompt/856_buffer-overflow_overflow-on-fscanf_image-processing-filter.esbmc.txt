@@ -1,0 +1,67 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c:22:47: warning: format specifies type 'char *' but the argument has type 'int *' [-Wformat]
+    while ((r = fscanf(file, "%c%c%c%*[^\n]", &r, &g, &b)) == 3) {
+                              ~~              ^~
+                              %d
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c:22:51: warning: format specifies type 'char *' but the argument has type 'int *' [-Wformat]
+    while ((r = fscanf(file, "%c%c%c%*[^\n]", &r, &g, &b)) == 3) {
+                                ~~                ^~
+                                %d
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c:22:55: warning: format specifies type 'char *' but the argument has type 'int *' [-Wformat]
+    while ((r = fscanf(file, "%c%c%c%*[^\n]", &r, &g, &b)) == 3) {
+                                  ~~                  ^~
+                                  %d
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.398s
+ERROR: the format specifiers do not match with the arguments
+GOTO program processing time: 0.014s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c line 22 column 5 function process_image
+Symex completed in: 0.006s (74 assignments)
+Slicing time: 0.000s (removed 44 assignments)
+Generated 7 VCC(s), 6 remaining after simplification (30 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.163s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c line 13 column 5 function process_image thread 0
+----------------------------------------------------
+  g = 0 (00000000 00000000 00000000 00000000)
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c line 13 column 5 function process_image thread 0
+----------------------------------------------------
+  b = 0 (00000000 00000000 00000000 00000000)
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c line 22 column 5 function process_image thread 0
+----------------------------------------------------
+  r = 3 (00000000 00000000 00000000 00000011)
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c line 22 column 5 function process_image thread 0
+----------------------------------------------------
+  g = 2147483600 (01111111 11111111 11111111 11010000)
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c line 22 column 5 function process_image thread 0
+----------------------------------------------------
+  b = -2147483632 (10000000 00000000 00000000 00010000)
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c line 27 column 9 function process_image thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/856_buffer-overflow_overflow-on-fscanf_image-processing-filter.c line 27 column 9 function process_image
+  arithmetic overflow on add
+  !overflow("+", g, 50)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

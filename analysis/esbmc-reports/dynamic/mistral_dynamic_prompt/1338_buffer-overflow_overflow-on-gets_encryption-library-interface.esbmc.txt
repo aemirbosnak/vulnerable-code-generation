@@ -1,0 +1,29 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1338_buffer-overflow_overflow-on-gets_encryption-library-interface.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1338_buffer-overflow_overflow-on-gets_encryption-library-interface.c:31:34: warning: incompatible pointer types passing 'char (*)[1024]' to parameter of type 'char **' [-Wincompatible-pointer-types]
+    while ((bytes_read = getline(&buffer, BUFFER_SIZE, input)) != -1) {
+                                 ^~~~~~~
+/usr/include/stdio.h:707:45: note: passing argument to parameter '__lineptr' here
+extern __ssize_t getline (char **__restrict __lineptr,
+                                            ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1338_buffer-overflow_overflow-on-gets_encryption-library-interface.c:31:43: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'size_t *' (aka 'unsigned long *') [-Wint-conversion]
+    while ((bytes_read = getline(&buffer, BUFFER_SIZE, input)) != -1) {
+                                          ^~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1338_buffer-overflow_overflow-on-gets_encryption-library-interface.c:16:21: note: expanded from macro 'BUFFER_SIZE'
+#define BUFFER_SIZE 1024
+                    ^~~~
+/usr/include/stdio.h:708:46: note: passing argument to parameter '__n' here
+                          size_t *__restrict __n,
+                                             ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1338_buffer-overflow_overflow-on-gets_encryption-library-interface.c:34:9: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        gets(encrypted);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1338_buffer-overflow_overflow-on-gets_encryption-library-interface.c:38:25: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+        fprintf(output, encrypted);
+                        ^~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1338_buffer-overflow_overflow-on-gets_encryption-library-interface.c:38:25: note: treat the string as an argument to avoid this
+        fprintf(output, encrypted);
+                        ^
+                        "%s", 
+ERROR: PARSING ERROR

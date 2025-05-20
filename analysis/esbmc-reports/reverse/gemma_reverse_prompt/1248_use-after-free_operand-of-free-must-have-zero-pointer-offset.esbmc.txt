@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1248_use-after-free_operand-of-free-must-have-zero-pointer-offset.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1248_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:15:59: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+    for (int i = 0; i < MAX_ENTRIES && scanf("%s %[^\n]", entries[i][0], entries[i][1]) != EOF; i++) {}
+                                              ~~          ^~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1248_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:15:74: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+    for (int i = 0; i < MAX_ENTRIES && scanf("%s %[^\n]", entries[i][0], entries[i][1]) != EOF; i++) {}
+                                                 ~~~~                    ^~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1248_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:20:31: warning: format specifies type 'char *' but the argument has type 'char' [-Wformat]
+        printf("Title: %s\n", entries[i][0]);
+                       ~~     ^~~~~~~~~~~~~
+                       %c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1248_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:21:33: warning: format specifies type 'char *' but the argument has type 'char' [-Wformat]
+        printf("Content: %s\n", entries[i][1]);
+                         ~~     ^~~~~~~~~~~~~
+                         %c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.182s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1248_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 18 column 5 function main
+Symex completed in: 0.000s (29 assignments)
+Slicing time: 0.000s (removed 21 assignments)
+Generated 10 VCC(s), 4 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+
+State 3 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1248_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 15 column 40 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1248_use-after-free_operand-of-free-must-have-zero-pointer-offset.c line 15 column 40 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

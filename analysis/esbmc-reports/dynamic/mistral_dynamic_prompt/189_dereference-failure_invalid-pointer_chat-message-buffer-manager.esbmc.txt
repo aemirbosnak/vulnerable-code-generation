@@ -1,0 +1,46 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/189_dereference-failure_invalid-pointer_chat-message-buffer-manager.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/189_dereference-failure_invalid-pointer_chat-message-buffer-manager.c:28:23: warning: incompatible pointer types assigning to 'char *' from 'Message *' [-Wincompatible-pointer-types]
+        current->next = new_message;
+                      ^ ~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/189_dereference-failure_invalid-pointer_chat-message-buffer-manager.c:29:17: warning: incompatible pointer types assigning to 'Message *' from 'char *' [-Wincompatible-pointer-types]
+        current = current->next;
+                ^ ~~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/189_dereference-failure_invalid-pointer_chat-message-buffer-manager.c:37:14: warning: incompatible pointer types assigning to 'Message *' from 'char *' [-Wincompatible-pointer-types]
+        temp = temp->next;
+             ^ ~~~~~~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.397s
+GOTO program processing time: 0.016s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.006s (35 assignments)
+Slicing time: 0.000s (removed 23 assignments)
+Generated 7 VCC(s), 5 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.130s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/189_dereference-failure_invalid-pointer_chat-message-buffer-manager.c line 19 column 5 function add_message thread 0
+----------------------------------------------------
+  new_message = ( struct __anon_typedef_Message_at_/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/189_dereference-failure_invalid-pointer_chat-message-buffer-manager_c__9_9 *)0
+
+State 3 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 36 column 5 function strcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 36 column 5 function strcpy
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

@@ -1,0 +1,23 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/834_buffer-overflow_buffer-overflow-on-scanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/834_buffer-overflow_buffer-overflow-on-scanf.c:25:15: error: incompatible pointer to integer conversion assigning to 'int' from 'char[20]' [-Wint-conversion]
+      data[i] = item;
+              ^ ~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/834_buffer-overflow_buffer-overflow-on-scanf.c:31:26: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'const char *' [-Wint-conversion]
+        if (strcmp(item, data[i]) == 0) {
+                         ^~~~~~~
+/tmp/esbmc.8496-5883-b1f9/headers/string.h:15:40: note: passing argument to parameter 'p2' here
+int strcmp(const char *p1, const char *p2);
+                                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/834_buffer-overflow_buffer-overflow-on-scanf.c:32:19: error: incompatible pointer to integer conversion assigning to 'int' from 'void *' [-Wint-conversion]
+          data[i] = NULL;
+                  ^ ~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/834_buffer-overflow_buffer-overflow-on-scanf.c:38:27: warning: comparison between pointer and integer ('int' and 'void *') [-Wpointer-integer-compare]
+      for (i = 0; data[i] != NULL; i++) {
+                  ~~~~~~~ ^  ~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/834_buffer-overflow_buffer-overflow-on-scanf.c:39:24: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+        printf("%s\n", data[i]);
+                ~~     ^~~~~~~
+                %d
+ERROR: PARSING ERROR

@@ -1,0 +1,19 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/243_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/243_dereference-failure_dereference-failure.c:20:3: error: call to undeclared function 'close'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  close(sockfd);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/243_dereference-failure_dereference-failure.c:35:62: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+    pthread_create(&threads[client_fd], NULL, handle_client, (void *)client_fd);
+                                                             ^~~~~~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/243_dereference-failure_dereference-failure.c:35:47: error: incompatible function pointer types passing 'void *(int)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+    pthread_create(&threads[client_fd], NULL, handle_client, (void *)client_fd);
+                                              ^~~~~~~~~~~~~
+/tmp/esbmc.10e8-f358-2ec9/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/243_dereference-failure_dereference-failure.c:42:3: error: call to undeclared function 'close'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  close(listen_fd);
+  ^
+ERROR: PARSING ERROR

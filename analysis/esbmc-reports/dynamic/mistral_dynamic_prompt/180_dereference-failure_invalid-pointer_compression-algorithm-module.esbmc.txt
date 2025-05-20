@@ -1,0 +1,56 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/180_dereference-failure_invalid-pointer_compression-algorithm-module.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.494s
+GOTO program processing time: 0.013s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/180_dereference-failure_invalid-pointer_compression-algorithm-module.c line 59 column 5 function main
+Symex completed in: 0.006s (49 assignments)
+Slicing time: 0.000s (removed 17 assignments)
+Generated 22 VCC(s), 8 remaining after simplification (32 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.047s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/180_dereference-failure_invalid-pointer_compression-algorithm-module.c line 18 column 5 function create_compressor thread 0
+----------------------------------------------------
+  compressor = { .input_buffer={ .pointer_object=nil, .pointer_offset=nil }, .buffer_size=0,
+    .position=0 }
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/180_dereference-failure_invalid-pointer_compression-algorithm-module.c line 19 column 5 function create_compressor thread 0
+----------------------------------------------------
+  compressor.input_buffer = 0
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/180_dereference-failure_invalid-pointer_compression-algorithm-module.c line 21 column 5 function create_compressor thread 0
+----------------------------------------------------
+  compressor.position = 0 (00000000 00000000 00000000 00000000)
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/180_dereference-failure_invalid-pointer_compression-algorithm-module.c line 57 column 5 function main thread 0
+----------------------------------------------------
+  compressor = { .input_buffer=0, .buffer_size=4096, .position=0 }
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/180_dereference-failure_invalid-pointer_compression-algorithm-module.c line 35 column 5 function compress thread 0
+----------------------------------------------------
+  c = -1 (11111111)
+End of input reached.
+
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/180_dereference-failure_invalid-pointer_compression-algorithm-module.c line 63 column 9 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/180_dereference-failure_invalid-pointer_compression-algorithm-module.c line 63 column 9 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

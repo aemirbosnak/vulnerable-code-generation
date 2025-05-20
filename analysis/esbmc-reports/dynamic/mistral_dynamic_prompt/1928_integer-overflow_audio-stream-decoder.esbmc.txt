@@ -1,0 +1,43 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1928_integer-overflow_audio-stream-decoder.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.313s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1928_integer-overflow_audio-stream-decoder.c line 15 column 5 function process_audio_frame
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1928_integer-overflow_audio-stream-decoder.c line 19 column 5 function process_audio_frame
+Symex completed in: 0.005s (86 assignments)
+Slicing time: 0.000s (removed 36 assignments)
+Generated 28 VCC(s), 19 remaining after simplification (50 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.080s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1928_integer-overflow_audio-stream-decoder.c line 28 column 5 function main thread 0
+----------------------------------------------------
+  file = 0
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1928_integer-overflow_audio-stream-decoder.c line 32 column 25 function main thread 0
+----------------------------------------------------
+  frame = 0
+
+State 6 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

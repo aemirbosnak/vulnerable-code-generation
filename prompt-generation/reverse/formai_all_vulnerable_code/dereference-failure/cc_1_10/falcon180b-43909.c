@@ -1,0 +1,93 @@
+//Falcon-180B DATASET v1.0 Category: Searching algorithm ; Style: Alan Turing
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
+#define TRUE 1
+#define FALSE 0
+#define MAX_SIZE 1000
+
+typedef struct {
+    int data;
+    int index;
+} Element;
+
+void swap(Element* a, Element* b) {
+    int temp = a->data;
+    a->data = b->data;
+    b->data = temp;
+}
+
+int partition(Element arr[], int low, int high) {
+    Element pivot = arr[high];
+    int i = low - 1;
+
+    for (int j = low; j <= high - 1; j++) {
+        if (arr[j].data < pivot.data) {
+            i++;
+            swap(&arr[i], &arr[j]);
+        }
+    }
+    swap(&arr[i + 1], &arr[high]);
+
+    return i + 1;
+}
+
+void quickSort(Element arr[], int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+
+int binarySearch(Element arr[], int size, int target) {
+    int left = 0;
+    int right = size - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid].data == target) {
+            return mid;
+        } else if (arr[mid].data < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return -1;
+}
+
+int main() {
+    srand(time(NULL));
+
+    Element arr[MAX_SIZE];
+    int n;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        arr[i].data = rand() % 100;
+        arr[i].index = i;
+    }
+
+    quickSort(arr, 0, n - 1);
+
+    int target;
+    printf("Enter the target value: ");
+    scanf("%d", &target);
+
+    int result = binarySearch(arr, n, target);
+
+    if (result == -1)
+        printf("Element not found\n");
+    else
+        printf("Element found at index %d\n", result);
+
+    return 0;
+}

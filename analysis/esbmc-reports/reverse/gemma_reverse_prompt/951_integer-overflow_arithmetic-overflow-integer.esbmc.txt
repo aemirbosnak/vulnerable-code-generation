@@ -1,0 +1,16 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/951_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/951_integer-overflow_arithmetic-overflow-integer.c:15:3: error: call to undeclared function 'moveDisks'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  moveDisks(numDisks, 1, 2, 3, &moves);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/951_integer-overflow_arithmetic-overflow-integer.c:22:6: error: conflicting types for 'moveDisks'
+void moveDisks(int numDisks, int src, int dest, int aux, int *moves) {
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/951_integer-overflow_arithmetic-overflow-integer.c:15:3: note: previous implicit declaration is here
+  moveDisks(numDisks, 1, 2, 3, &moves);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/951_integer-overflow_arithmetic-overflow-integer.c:23:3: warning: expression result unused [-Wunused-value]
+  *moves++;
+  ^~~~~~~~
+ERROR: PARSING ERROR

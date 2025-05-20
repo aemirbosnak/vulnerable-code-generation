@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/503_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/503_buffer-overflow_buffer-overflow-on-gets.c:17:3: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  gets(name);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/503_buffer-overflow_buffer-overflow-on-gets.c:31:21: error: call to undeclared function 'calculate_invasion_probability'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  int probability = calculate_invasion_probability(name, date, secret_code, alien_type, alien_strength);
+                    ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/503_buffer-overflow_buffer-overflow-on-gets.c:33:70: warning: incomplete format specifier [-Wformat]
+  printf("Hello, %s. The probability of an alien invasion on %s is %d%.", name, date, probability);
+                                                                     ^~
+ERROR: PARSING ERROR

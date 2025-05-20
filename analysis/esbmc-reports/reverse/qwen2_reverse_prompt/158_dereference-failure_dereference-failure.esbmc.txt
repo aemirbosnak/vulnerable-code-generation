@@ -1,0 +1,22 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/158_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/158_dereference-failure_dereference-failure.c:35:9: error: call to undeclared function 'sem_wait_nocheck'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        sem_wait(semid);
+        ^
+<command line>:5:18: note: expanded from macro 'sem_wait'
+#define sem_wait sem_wait_nocheck
+                 ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/158_dereference-failure_dereference-failure.c:37:9: error: call to undeclared function 'sem_post'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        sem_post(semid);
+        ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/158_dereference-failure_dereference-failure.c:39:9: error: call to undeclared function 'sem_wait_nocheck'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        sem_wait(semid);
+        ^
+<command line>:5:18: note: expanded from macro 'sem_wait'
+#define sem_wait sem_wait_nocheck
+                 ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/158_dereference-failure_dereference-failure.c:41:9: error: call to undeclared function 'sem_post'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        sem_post(semid);
+        ^
+ERROR: PARSING ERROR

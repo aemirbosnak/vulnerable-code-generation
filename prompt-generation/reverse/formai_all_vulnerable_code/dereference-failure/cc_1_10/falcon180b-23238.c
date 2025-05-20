@@ -1,0 +1,57 @@
+//Falcon-180B DATASET v1.0 Category: Building a HTTP Client ; Style: Ada Lovelace
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <curl/curl.h>
+
+struct MemoryStruct {
+    char *memory;
+    size_t size;
+};
+
+size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp) {
+    struct MemoryStruct *mem = (struct MemoryStruct *)userp;
+    mem->memory = realloc(mem->memory, mem->size + size * nmemb);
+    if (mem->memory == NULL) {
+        fprintf(stderr, "Failed to realloc memory\n");
+        exit(1);
+    }
+    memcpy(&(mem->memory[mem->size]), contents, size * nmemb);
+    mem->size += size * nmemb;
+    return size * nmemb;
+}
+
+int main() {
+    CURL *curl;
+    CURLcode res;
+
+    curl_global_init(CURL_GLOBAL_DEFAULT);
+
+    curl = curl_easy_init();
+
+    if (curl) {
+        struct MemoryStruct chunk;
+        chunk.memory = malloc(1);
+        chunk.size = 0;
+
+        curl_easy_setopt(curl, CURLOPT_URL, "https://www.example.com");
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &chunk);
+
+        res = curl_easy_perform(curl);
+
+        if (res!= CURLE_OK) {
+            fprintf(stderr, "curl_easy_perform() failed: %s\n",
+                    curl_easy_strerror(res));
+        } else {
+            printf("Response:\n%s\n", chunk.memory);
+            free(chunk.memory);
+        }
+
+        curl_easy_cleanup(curl);
+    }
+
+    curl_global_cleanup();
+
+    return 0;
+}

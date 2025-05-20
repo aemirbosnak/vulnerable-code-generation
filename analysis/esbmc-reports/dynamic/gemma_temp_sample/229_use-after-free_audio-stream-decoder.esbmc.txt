@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/229_use-after-free_audio-stream-decoder.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/229_use-after-free_audio-stream-decoder.c:32:17: error: incompatible pointer to integer conversion passing 'FILE *' (aka 'struct _IO_FILE *') to parameter of type 'int' [-Wint-conversion]
+    size = read(fp, buffer, 1024);
+                ^~
+/usr/include/unistd.h:371:26: note: passing argument to parameter '__fd' here
+extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur
+                         ^
+ERROR: PARSING ERROR

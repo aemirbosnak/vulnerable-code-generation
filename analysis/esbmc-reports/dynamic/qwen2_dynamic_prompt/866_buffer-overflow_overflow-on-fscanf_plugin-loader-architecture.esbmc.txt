@@ -1,0 +1,36 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/866_buffer-overflow_overflow-on-fscanf_plugin-loader-architecture.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.294s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/866_buffer-overflow_overflow-on-fscanf_plugin-loader-architecture.c line 27 column 5 function main
+Symex completed in: 0.002s (23 assignments)
+Slicing time: 0.000s (removed 16 assignments)
+Generated 3 VCC(s), 3 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+Enter name for plugin 1: 
+Loading plugin: 
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/866_buffer-overflow_overflow-on-fscanf_plugin-loader-architecture.c line 17 column 9 function load_plugin thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/866_buffer-overflow_overflow-on-fscanf_plugin-loader-architecture.c line 17 column 9 function load_plugin
+  buffer overflow on fscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

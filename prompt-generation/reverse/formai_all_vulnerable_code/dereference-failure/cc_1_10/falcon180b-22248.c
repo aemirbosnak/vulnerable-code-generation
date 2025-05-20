@@ -1,0 +1,71 @@
+//Falcon-180B DATASET v1.0 Category: Encryption ; Style: artistic
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <time.h>
+
+#define MAX_KEY_LENGTH 100
+#define MAX_MESSAGE_LENGTH 1000
+
+void generate_key(char key[], int length) {
+    srand(time(NULL));
+    for (int i = 0; i < length; i++) {
+        key[i] = rand() % 26 + 'a';
+    }
+    key[length] = '\0';
+}
+
+void encrypt(char message[], char key[], char encrypted_message[]) {
+    int message_length = strlen(message);
+    int key_length = strlen(key);
+    int encrypted_message_length = message_length + 1;
+
+    encrypted_message[encrypted_message_length - 1] = '\0';
+
+    for (int i = 0; i < message_length; i++) {
+        message[i] = toupper(message[i]);
+    }
+
+    for (int i = 0; i < message_length; i++) {
+        encrypted_message[i] = 'a' + ((message[i] - 'A' + key[i % key_length] - 'a') % 26);
+    }
+}
+
+void decrypt(char encrypted_message[], char key[], char decrypted_message[]) {
+    int encrypted_message_length = strlen(encrypted_message);
+    int key_length = strlen(key);
+    int decrypted_message_length = encrypted_message_length - 1;
+
+    decrypted_message[decrypted_message_length] = '\0';
+
+    for (int i = 0; i < encrypted_message_length; i++) {
+        encrypted_message[i] = toupper(encrypted_message[i]);
+    }
+
+    for (int i = 0; i < encrypted_message_length; i++) {
+        decrypted_message[i] = 'A' + ((encrypted_message[i] - 'A' - key[i % key_length] + 26) % 26);
+    }
+}
+
+int main() {
+    char message[MAX_MESSAGE_LENGTH];
+    char key[MAX_KEY_LENGTH];
+    char encrypted_message[MAX_MESSAGE_LENGTH];
+    char decrypted_message[MAX_MESSAGE_LENGTH];
+
+    printf("Enter a message to encrypt: ");
+    fgets(message, MAX_MESSAGE_LENGTH, stdin);
+
+    generate_key(key, strlen(message));
+
+    encrypt(message, key, encrypted_message);
+
+    printf("Encrypted message: %s\n", encrypted_message);
+
+    decrypt(encrypted_message, key, decrypted_message);
+
+    printf("Decrypted message: %s\n", decrypted_message);
+
+    return 0;
+}

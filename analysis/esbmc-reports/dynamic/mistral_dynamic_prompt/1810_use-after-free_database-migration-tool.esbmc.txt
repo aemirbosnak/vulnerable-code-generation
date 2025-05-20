@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1810_use-after-free_database-migration-tool.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1810_use-after-free_database-migration-tool.c:27:9: error: call to undeclared function 'process_data'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        process_data(current->data); // Use after free vulnerability occurs here
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1810_use-after-free_database-migration-tool.c:36:6: error: conflicting types for 'process_data'
+void process_data(char *data) { // Vulnerable function
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1810_use-after-free_database-migration-tool.c:27:9: note: previous implicit declaration is here
+        process_data(current->data); // Use after free vulnerability occurs here
+        ^
+ERROR: PARSING ERROR

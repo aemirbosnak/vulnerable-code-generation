@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c:13:28: error: incompatible pointer to integer conversion assigning to 'char' from 'void *' [-Wint-conversion]
+        (*plugin_array)[i] = malloc(1024);
+                           ^ ~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/364_dereference-failure_array-bounds-violated_plugin-loader-architecture.c:18:14: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'void *' [-Wint-conversion]
+        free((*plugin_array)[i]);
+             ^~~~~~~~~~~~~~~~~~
+/tmp/esbmc.7594-b524-c413/headers/stdlib.h:29:17: note: passing argument to parameter 'p' here
+void free(void *p);
+                ^
+ERROR: PARSING ERROR

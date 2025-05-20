@@ -1,0 +1,46 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/660_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.262s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/660_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 23 column 5 function main
+Symex completed in: 0.004s (61 assignments)
+Slicing time: 0.000s (removed 50 assignments)
+Generated 9 VCC(s), 4 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/660_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 21 column 5 function main thread 0
+----------------------------------------------------
+  indices = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/660_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 24 column 9 function main thread 0
+----------------------------------------------------
+  indices[0] = 6 (00000000 00000000 00000000 00000110)
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/660_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 13 column 5 function thread_func thread 1
+----------------------------------------------------
+  index = 6 (00000000 00000000 00000000 00000110)
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/660_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 15 column 5 function thread_func thread 1
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/660_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 15 column 5 function thread_func
+  array bounds violated: array `array' upper bound
+  (signed long int)index < 5
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

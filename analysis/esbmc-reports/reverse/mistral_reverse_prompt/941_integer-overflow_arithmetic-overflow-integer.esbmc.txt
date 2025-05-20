@@ -1,0 +1,67 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c:32:37: warning: format specifies type 'double' but the argument has type '__clock_t' (aka 'long') [-Wformat]
+    printf("Elapsed Time: %.2fs\n", (clock() - car->start_time) / CLOCKS_PER_SEC);
+                          ~~~~      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                          %.2ld
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.275s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function clock
+WARNING: no body for function clock
+WARNING: no body for function clock
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c line 39 column 5 function main
+Symex completed in: 0.004s (59 assignments)
+Slicing time: 0.002s (removed 17 assignments)
+Generated 57 VCC(s), 13 remaining after simplification (42 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.010s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.555s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c line 36 column 5 function main thread 0
+----------------------------------------------------
+  car = { .speed=0, .direction=0, .distance=0, .anon_pad$3=0, .start_time=main::$tmp::return_value$_clock$1?1!0&0#1 }
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c line 45 column 17 function main thread 0
+----------------------------------------------------
+  car.speed = 9 (00000000 00000000 00000000 00001001)
+
+State 6 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c line 23 column 5 function update_distance thread 0
+----------------------------------------------------
+  current_time = -1126449661086913 (11111111 11111011 11111111 10000000 00000000 00010111 11110011 00111111)
+
+State 9 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c line 24 column 5 function update_distance thread 0
+----------------------------------------------------
+  elapsed_time = 1.000000 (00111111 11110000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+State 13 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c line 25 column 5 function update_distance thread 0
+----------------------------------------------------
+  car->distance = 0 (00000000 00000000 00000000 00000000)
+Speed: 9
+
+Direction: Reverse
+
+Distance: 0
+
+
+State 17 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c line 32 column 5 function print_car_state thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/941_integer-overflow_arithmetic-overflow-integer.c line 32 column 5 function print_car_state
+  arithmetic overflow on sub
+  !overflow("-", return_value$_clock$1, car->start_time)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

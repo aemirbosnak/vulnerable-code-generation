@@ -1,0 +1,40 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/553_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/553_buffer-overflow_buffer-overflow-on-gets.c:25:21: error: incompatible pointer to integer conversion passing 'char[6]' to parameter of type 'int' [-Wint-conversion]
+  if (strchr(input, "happy") || strchr(input, "joy") || strchr(input, "good")) {
+                    ^~~~~~~
+/tmp/esbmc.73b2-8581-d7ba/headers/string.h:17:33: note: passing argument to parameter 'ch' here
+char *strchr(const char *s, int ch);
+                                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/553_buffer-overflow_buffer-overflow-on-gets.c:25:47: error: incompatible pointer to integer conversion passing 'char[4]' to parameter of type 'int' [-Wint-conversion]
+  if (strchr(input, "happy") || strchr(input, "joy") || strchr(input, "good")) {
+                                              ^~~~~
+/tmp/esbmc.73b2-8581-d7ba/headers/string.h:17:33: note: passing argument to parameter 'ch' here
+char *strchr(const char *s, int ch);
+                                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/553_buffer-overflow_buffer-overflow-on-gets.c:25:71: error: incompatible pointer to integer conversion passing 'char[5]' to parameter of type 'int' [-Wint-conversion]
+  if (strchr(input, "happy") || strchr(input, "joy") || strchr(input, "good")) {
+                                                                      ^~~~~~
+/tmp/esbmc.73b2-8581-d7ba/headers/string.h:17:33: note: passing argument to parameter 'ch' here
+char *strchr(const char *s, int ch);
+                                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/553_buffer-overflow_buffer-overflow-on-gets.c:27:28: error: incompatible pointer to integer conversion passing 'char[4]' to parameter of type 'int' [-Wint-conversion]
+  } else if (strchr(input, "sad") || strchr(input, "blue") || strchr(input, "bad")) {
+                           ^~~~~
+/tmp/esbmc.73b2-8581-d7ba/headers/string.h:17:33: note: passing argument to parameter 'ch' here
+char *strchr(const char *s, int ch);
+                                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/553_buffer-overflow_buffer-overflow-on-gets.c:27:52: error: incompatible pointer to integer conversion passing 'char[5]' to parameter of type 'int' [-Wint-conversion]
+  } else if (strchr(input, "sad") || strchr(input, "blue") || strchr(input, "bad")) {
+                                                   ^~~~~~
+/tmp/esbmc.73b2-8581-d7ba/headers/string.h:17:33: note: passing argument to parameter 'ch' here
+char *strchr(const char *s, int ch);
+                                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/553_buffer-overflow_buffer-overflow-on-gets.c:27:77: error: incompatible pointer to integer conversion passing 'char[4]' to parameter of type 'int' [-Wint-conversion]
+  } else if (strchr(input, "sad") || strchr(input, "blue") || strchr(input, "bad")) {
+                                                                            ^~~~~
+/tmp/esbmc.73b2-8581-d7ba/headers/string.h:17:33: note: passing argument to parameter 'ch' here
+char *strchr(const char *s, int ch);
+                                ^
+ERROR: PARSING ERROR

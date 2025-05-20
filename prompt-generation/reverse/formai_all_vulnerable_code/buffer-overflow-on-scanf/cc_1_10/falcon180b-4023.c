@@ -1,0 +1,78 @@
+//Falcon-180B DATASET v1.0 Category: Drone Remote Control ; Style: grateful
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_COMMAND_LENGTH 100
+#define MAX_COMMANDS 10
+
+typedef struct {
+    char command[MAX_COMMAND_LENGTH];
+    void (*function)(void);
+} command_t;
+
+void fly(void) {
+    printf("Flying the drone...\n");
+}
+
+void land(void) {
+    printf("Landing the drone...\n");
+}
+
+void takeoff(void) {
+    printf("Taking off the drone...\n");
+}
+
+void forward(void) {
+    printf("Moving the drone forward...\n");
+}
+
+void backward(void) {
+    printf("Moving the drone backward...\n");
+}
+
+void left(void) {
+    printf("Moving the drone left...\n");
+}
+
+void right(void) {
+    printf("Moving the drone right...\n");
+}
+
+void up(void) {
+    printf("Moving the drone up...\n");
+}
+
+void down(void) {
+    printf("Moving the drone down...\n");
+}
+
+int main() {
+    command_t commands[MAX_COMMANDS] = {
+        {"fly", fly},
+        {"land", land},
+        {"takeoff", takeoff},
+        {"forward", forward},
+        {"backward", backward},
+        {"left", left},
+        {"right", right},
+        {"up", up},
+        {"down", down}
+    };
+
+    char input[MAX_COMMAND_LENGTH];
+    int i;
+
+    printf("Drone Remote Control\n");
+    printf("Enter command: ");
+    scanf("%s", input);
+
+    for (i = 0; i < MAX_COMMANDS; i++) {
+        if (strcmp(input, commands[i].command) == 0) {
+            (*commands[i].function)();
+            break;
+        }
+    }
+
+    return 0;
+}

@@ -1,0 +1,43 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1172_buffer-overflow_overflow-on-sscanf_plugin-loader-architecture.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.812s
+GOTO program processing time: 0.027s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+No target candidate for function call *plugin->init
+Symex completed in: 0.021s (118 assignments)
+Slicing time: 0.003s (removed 54 assignments)
+Generated 30 VCC(s), 21 remaining after simplification (64 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.020s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.085s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1172_buffer-overflow_overflow-on-sscanf_plugin-loader-architecture.c line 19 column 5 function load_plugin thread 0
+----------------------------------------------------
+  file = 0
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1172_buffer-overflow_overflow-on-sscanf_plugin-loader-architecture.c line 20 column 5 function load_plugin thread 0
+----------------------------------------------------
+  plugin = ( struct Plugin *)0
+
+State 7 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

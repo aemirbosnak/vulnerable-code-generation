@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/000_buffer-overflow_overflow-on-gets_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/000_buffer-overflow_overflow-on-gets_multi-threaded-job-scheduler.c:18:3: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  gets(command);
+  ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/000_buffer-overflow_overflow-on-gets_multi-threaded-job-scheduler.c:33:52: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+    pthread_create(&threads[i], NULL, thread_func, (void*)i);
+                                                   ^~~~~~~~
+ERROR: PARSING ERROR

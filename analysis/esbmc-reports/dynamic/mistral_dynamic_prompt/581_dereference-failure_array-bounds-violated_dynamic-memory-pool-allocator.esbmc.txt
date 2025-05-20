@@ -1,0 +1,45 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/581_dereference-failure_array-bounds-violated_dynamic-memory-pool-allocator.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 1.003s
+GOTO program processing time: 0.014s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.008s (68 assignments)
+Slicing time: 0.000s (removed 36 assignments)
+Generated 15 VCC(s), 13 remaining after simplification (32 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.215s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/581_dereference-failure_array-bounds-violated_dynamic-memory-pool-allocator.c line 21 column 5 function allocate thread 0
+----------------------------------------------------
+  newObject = ( struct PoolObject *)0
+Out of memory
+
+No available memory
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/581_dereference-failure_array-bounds-violated_dynamic-memory-pool-allocator.c line 55 column 5 function main thread 0
+----------------------------------------------------
+  buffer = 0
+
+State 6 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 36 column 5 function strcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 36 column 5 function strcpy
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

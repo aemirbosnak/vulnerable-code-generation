@@ -1,0 +1,16 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/561_dereference-failure_array-bounds-violated_http-request-parser.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/561_dereference-failure_array-bounds-violated_http-request-parser.c:23:46: error: incompatible pointer to integer conversion passing 'char[2]' to parameter of type 'int' [-Wint-conversion]
+    char *header_value = strchr(header_name, ";");
+                                             ^~~
+/tmp/esbmc.7b54-3203-ce03/headers/string.h:17:33: note: passing argument to parameter 'ch' here
+char *strchr(const char *s, int ch);
+                                ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/561_dereference-failure_array-bounds-violated_http-request-parser.c:32:42: error: incompatible pointer to integer conversion passing 'char[2]' to parameter of type 'int' [-Wint-conversion]
+      header_value = strchr(header_name, ";");
+                                         ^~~
+/tmp/esbmc.7b54-3203-ce03/headers/string.h:17:33: note: passing argument to parameter 'ch' here
+char *strchr(const char *s, int ch);
+                                ^
+ERROR: PARSING ERROR

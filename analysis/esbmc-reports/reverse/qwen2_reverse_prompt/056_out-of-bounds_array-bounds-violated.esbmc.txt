@@ -1,0 +1,55 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/056_out-of-bounds_array-bounds-violated.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.187s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+WARNING: no body for function perror
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/056_out-of-bounds_array-bounds-violated.c line 35 column 9 function bmp_to_ascii
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/056_out-of-bounds_array-bounds-violated.c line 34 column 5 function bmp_to_ascii
+Symex completed in: 0.007s (159 assignments)
+Slicing time: 0.000s (removed 53 assignments)
+Generated 51 VCC(s), 44 remaining after simplification (106 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.015s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 4.621s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/056_out-of-bounds_array-bounds-violated.c line 13 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/056_out-of-bounds_array-bounds-violated.c line 19 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+  header = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 195, 83, 245, 41, 71, 85, 10, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 7 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/056_out-of-bounds_array-bounds-violated.c line 21 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+  width = 703943619 (00101001 11110101 01010011 11000011)
+
+State 8 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/056_out-of-bounds_array-bounds-violated.c line 22 column 5 function bmp_to_ascii thread 0
+----------------------------------------------------
+  height = -1794484921 (10010101 00001010 01010101 01000111)
+
+State 9 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/056_out-of-bounds_array-bounds-violated.c line 24 column 45 function bmp_to_ascii thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/056_out-of-bounds_array-bounds-violated.c line 24 column 45 function bmp_to_ascii
+  arithmetic overflow on mul
+  !overflow("*", width, height)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

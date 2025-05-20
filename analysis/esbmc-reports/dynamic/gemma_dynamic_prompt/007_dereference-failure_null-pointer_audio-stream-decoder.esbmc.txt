@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/007_dereference-failure_null-pointer_audio-stream-decoder.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/007_dereference-failure_null-pointer_audio-stream-decoder.c:14:72: error: incompatible pointer to integer conversion initializing 'char' with an expression of type 'void *' [-Wint-conversion]
+  char data[] = { 0x12, 0x34, 0x56, 0x78, 0x9A, 0xBA, 0xDD, 0xFF, 0x0, NULL };
+                                                                       ^~~~
+/tmp/esbmc-headers-9534-b37b-39a6/include/stddef.h:89:16: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+               ^~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/007_dereference-failure_null-pointer_audio-stream-decoder.c:17:10: error: call to undeclared function 'decode_audio_stream'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  size = decode_audio_stream(data, buffer);
+         ^
+ERROR: PARSING ERROR

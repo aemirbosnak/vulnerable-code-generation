@@ -1,0 +1,74 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:25:17: warning: multi-character character constant [-Wmultichar]
+      unit_to = 'km';
+                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:27:10: warning: multi-character character constant [-Wmultichar]
+    case 'kg':
+         ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:31:17: warning: multi-character character constant [-Wmultichar]
+      unit_to = 'lb';
+                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:37:17: warning: multi-character character constant [-Wmultichar]
+      unit_to = 'min';
+                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:27:10: warning: overflow converting case value to switch condition type (27495 to 103) [-Wswitch]
+    case 'kg':
+         ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:42:10: warning: multi-character character constant [-Wmultichar]
+    case 'km':
+         ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:46:10: warning: multi-character character constant [-Wmultichar]
+    case 'lb':
+         ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:50:10: warning: multi-character character constant [-Wmultichar]
+    case 'min':
+         ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:50:10: warning: overflow converting case value to switch condition type (7170414 to 110) [-Wswitch]
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:46:10: warning: overflow converting case value to switch condition type (27746 to 98) [-Wswitch]
+    case 'lb':
+         ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:42:10: warning: overflow converting case value to switch condition type (27501 to 109) [-Wswitch]
+    case 'km':
+         ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:25:17: warning: implicit conversion from 'int' to 'char' changes value from 27501 to 109 [-Wconstant-conversion]
+      unit_to = 'km';
+              ~ ^~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:31:17: warning: implicit conversion from 'int' to 'char' changes value from 27746 to 98 [-Wconstant-conversion]
+      unit_to = 'lb';
+              ~ ^~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c:37:17: warning: implicit conversion from 'int' to 'char' changes value from 7170414 to 110 [-Wconstant-conversion]
+      unit_to = 'min';
+              ~ ^~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.884s
+GOTO program processing time: 0.125s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.018s (127 assignments)
+Slicing time: 0.000s (removed 123 assignments)
+Generated 19 VCC(s), 2 remaining after simplification (4 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+Enter the unit you want to convert from (m/kg/s): 
+
+State 3 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c line 15 column 3 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1051_integer-overflow_arithmetic-overflow-floating-point.c line 15 column 3 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

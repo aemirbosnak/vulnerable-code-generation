@@ -1,0 +1,16 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1468_out-of-bounds_read_image-processing-filter.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1468_out-of-bounds_read_image-processing-filter.c:54:10: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'void *' [-Wint-conversion]
+    free(img.width);
+         ^~~~~~~~~
+/tmp/esbmc.e752-9c3b-f7d8/headers/stdlib.h:29:17: note: passing argument to parameter 'p' here
+void free(void *p);
+                ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1468_out-of-bounds_read_image-processing-filter.c:55:10: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'void *' [-Wint-conversion]
+    free(img.height);
+         ^~~~~~~~~~
+/tmp/esbmc.e752-9c3b-f7d8/headers/stdlib.h:29:17: note: passing argument to parameter 'p' here
+void free(void *p);
+                ^
+ERROR: PARSING ERROR

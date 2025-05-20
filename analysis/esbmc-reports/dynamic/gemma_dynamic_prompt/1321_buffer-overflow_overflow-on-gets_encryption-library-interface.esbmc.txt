@@ -1,0 +1,19 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1321_buffer-overflow_overflow-on-gets_encryption-library-interface.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1321_buffer-overflow_overflow-on-gets_encryption-library-interface.c:11:3: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  gets(buffer);
+  ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1321_buffer-overflow_overflow-on-gets_encryption-library-interface.c:15:3: warning: array index 16 is past the end of the array (that has type 'char[16]') [-Warray-bounds]
+  buffer[16] = 'B';
+  ^      ~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1321_buffer-overflow_overflow-on-gets_encryption-library-interface.c:10:3: note: array 'buffer' declared here
+  char buffer[16];
+  ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1321_buffer-overflow_overflow-on-gets_encryption-library-interface.c:16:3: warning: array index 17 is past the end of the array (that has type 'char[16]') [-Warray-bounds]
+  buffer[17] = 'C';
+  ^      ~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1321_buffer-overflow_overflow-on-gets_encryption-library-interface.c:10:3: note: array 'buffer' declared here
+  char buffer[16];
+  ^
+ERROR: PARSING ERROR

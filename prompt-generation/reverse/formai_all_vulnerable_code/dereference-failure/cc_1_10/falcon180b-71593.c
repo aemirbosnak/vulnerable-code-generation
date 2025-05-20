@@ -1,0 +1,58 @@
+//Falcon-180B DATASET v1.0 Category: Drone Remote Control ; Style: innovative
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <errno.h>
+#include <termios.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
+
+#define BAUDRATE B115200
+#define DEVICE "/dev/ttyUSB0"
+
+int main()
+{
+    int fd;
+    struct termios options;
+
+    fd = open(DEVICE, O_RDWR | O_NOCTTY | O_NDELAY);
+    if (fd == -1)
+    {
+        printf("Error: %s\n", strerror(errno));
+        exit(1);
+    }
+
+    memset(&options, 0, sizeof(struct termios));
+    options.c_cflag = BAUDRATE | CS8 | CREAD | CLOCAL;
+    options.c_iflag = IGNPAR;
+    options.c_oflag = 0;
+    options.c_lflag = 0;
+    options.c_cc[VMIN] = 1;
+    options.c_cc[VTIME] = 10;
+
+    if (tcsetattr(fd, TCSANOW, &options)!= 0)
+    {
+        printf("Error: %s\n", strerror(errno));
+        exit(1);
+    }
+
+    char buffer[1024];
+    while (1)
+    {
+        int bytes_read = read(fd, buffer, sizeof(buffer));
+        if (bytes_read > 0)
+        {
+            buffer[bytes_read] = '\0';
+            printf("Received: %s\n", buffer);
+        }
+        else
+        {
+            printf("Error: %s\n", strerror(errno));
+            exit(1);
+        }
+    }
+
+    close(fd);
+    return 0;
+}

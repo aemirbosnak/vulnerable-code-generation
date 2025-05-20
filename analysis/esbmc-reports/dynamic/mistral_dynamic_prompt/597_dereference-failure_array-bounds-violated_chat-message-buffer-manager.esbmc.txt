@@ -1,0 +1,47 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/597_dereference-failure_array-bounds-violated_chat-message-buffer-manager.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/597_dereference-failure_array-bounds-violated_chat-message-buffer-manager.c:21:20: warning: incompatible pointer types assigning to 'struct node *' from 'node *' [-Wincompatible-pointer-types]
+    new_node->next = head;
+                   ^ ~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/597_dereference-failure_array-bounds-violated_chat-message-buffer-manager.c:29:14: warning: incompatible pointer types assigning to 'node *' from 'struct node *' [-Wincompatible-pointer-types]
+        temp = temp->next;
+             ^ ~~~~~~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.446s
+GOTO program processing time: 0.017s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/597_dereference-failure_array-bounds-violated_chat-message-buffer-manager.c line 27 column 5 function display_messages
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/597_dereference-failure_array-bounds-violated_chat-message-buffer-manager.c line 45 column 5 function main
+Symex completed in: 0.013s (97 assignments)
+Slicing time: 0.000s (removed 39 assignments)
+Generated 33 VCC(s), 27 remaining after simplification (58 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.458s
+Building error trace
+
+[Counterexample]
+
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/597_dereference-failure_array-bounds-violated_chat-message-buffer-manager.c line 18 column 5 function add_message thread 0
+----------------------------------------------------
+  new_node = ( struct __anon_typedef_node_at_/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/597_dereference-failure_array-bounds-violated_chat-message-buffer-manager_c__9_9 *)(&dynamic_1_value)
+
+State 6 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 30 column 3 function strcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 30 column 3 function strcpy
+  Source pointer is null
+  src != (signed char *)0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

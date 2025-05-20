@@ -1,0 +1,20 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1153_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1153_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c:26:9: error: call to undeclared function 'write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        write(1, buf, strlen(buf));
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1153_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c:26:9: note: did you mean 'fwrite'?
+/usr/include/stdio.h:745:15: note: 'fwrite' declared here
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+              ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1153_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c:23:37: warning: 'sscanf' may overflow; destination buffer in argument 3 has size 64, but the corresponding specifier may require size 65 [-Wfortify-source]
+        sscanf((char *)arg, "%64s", buf);
+                                    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1153_buffer-overflow_overflow-on-sscanf_multi-threaded-job-scheduler.c:33:38: error: incompatible function pointer types passing 'void (*)(void *)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+    pthread_create(&thread_id, NULL, job->func, job->args);
+                                     ^~~~~~~~~
+/tmp/esbmc.d2dc-2534-f480/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+ERROR: PARSING ERROR

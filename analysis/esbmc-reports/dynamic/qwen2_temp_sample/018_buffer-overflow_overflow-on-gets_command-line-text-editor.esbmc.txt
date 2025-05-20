@@ -1,0 +1,43 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/018_buffer-overflow_overflow-on-gets_command-line-text-editor.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.254s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function getline
+Not unwinding loop 9 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 131 column 12 function strncmp
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/018_buffer-overflow_overflow-on-gets_command-line-text-editor.c line 19 column 5 function edit_text
+Symex completed in: 0.003s (51 assignments)
+Slicing time: 0.000s (removed 32 assignments)
+Generated 4 VCC(s), 3 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.004s
+Building error trace
+
+[Counterexample]
+
+Welcome to the insecure text editor!
+
+Enter your text (type 'exit' to save and quit):
+
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/018_buffer-overflow_overflow-on-gets_command-line-text-editor.c line 19 column 5 function edit_text thread 0
+----------------------------------------------------
+  read = -4 (11111111 11111111 11111111 11111111 11111111 11111111 11111111 11111100)
+
+State 7 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 119 column 5 function strncmp thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 119 column 5 function strncmp
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

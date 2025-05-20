@@ -1,0 +1,36 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:19:18: warning: incompatible pointer types passing 'int *' to parameter of type 'int **'; take the address with & [-Wincompatible-pointer-types]
+    generateMaze(maze);
+                 ^~~~
+                 &
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:13:25: note: passing argument to parameter 'maze' here
+void generateMaze(int **maze);
+                        ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:20:15: warning: incompatible pointer types passing 'int *' to parameter of type 'int **'; take the address with & [-Wincompatible-pointer-types]
+    printMaze(maze);
+              ^~~~
+              &
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:14:22: note: passing argument to parameter 'maze' here
+void printMaze(int **maze);
+                     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:27:33: error: incompatible integer to pointer conversion assigning to 'int *' from 'int' [-Wint-conversion]
+            maze[y * WIDTH + x] = (rand() % 2);
+                                ^ ~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:29:37: error: incompatible integer to pointer conversion assigning to 'int *' from 'int' [-Wint-conversion]
+                maze[y * WIDTH + x] = 1;
+                                    ^ ~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:31:49: error: incompatible integer to pointer conversion assigning to 'int *' from 'int' [-Wint-conversion]
+                    maze[(y * WIDTH) + (x + 1)] = 1;
+                                                ^ ~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:34:37: error: incompatible integer to pointer conversion assigning to 'int *' from 'int' [-Wint-conversion]
+                maze[y * WIDTH + x] = 1;
+                                    ^ ~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:36:47: error: incompatible integer to pointer conversion assigning to 'int *' from 'int' [-Wint-conversion]
+                    maze[(y + 1) * WIDTH + x] = 1;
+                                              ^ ~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/222_dereference-failure_dereference-failure.c:45:27: warning: format specifies type 'int' but the argument has type 'int *' [-Wformat]
+            printf("%d ", maze[y * WIDTH + x]);
+                    ~~    ^~~~~~~~~~~~~~~~~~~
+ERROR: PARSING ERROR

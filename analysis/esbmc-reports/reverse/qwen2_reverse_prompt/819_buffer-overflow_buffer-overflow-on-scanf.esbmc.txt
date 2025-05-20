@@ -1,0 +1,44 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/819_buffer-overflow_buffer-overflow-on-scanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.508s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (20 assignments)
+Slicing time: 0.000s (removed 12 assignments)
+Generated 1 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+Smart Home System
+
+1. Control Lights
+
+2. Control Fan
+
+3. Control AC Unit
+
+4. Exit
+
+Enter your choice: 
+
+State 7 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/819_buffer-overflow_buffer-overflow-on-scanf.c line 18 column 9 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/819_buffer-overflow_buffer-overflow-on-scanf.c line 18 column 9 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

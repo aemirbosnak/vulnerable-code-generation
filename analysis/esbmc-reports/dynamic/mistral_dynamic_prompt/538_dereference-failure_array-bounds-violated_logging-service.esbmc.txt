@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/538_dereference-failure_array-bounds-violated_logging-service.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/538_dereference-failure_array-bounds-violated_logging-service.c:14:5: error: unknown type name 'time_t'
+    time_t timestamp;
+    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/538_dereference-failure_array-bounds-violated_logging-service.c:22:32: error: call to undeclared function 'time'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    logs[logIndex].timestamp = time(NULL);
+                               ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/538_dereference-failure_array-bounds-violated_logging-service.c:36:79: error: call to undeclared function 'ctime'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        printf("Log message '%s' saved at %s\n", logs[logIndex-1].logMessage, ctime(&(logs[logIndex-1].timestamp)));
+                                                                              ^
+ERROR: PARSING ERROR

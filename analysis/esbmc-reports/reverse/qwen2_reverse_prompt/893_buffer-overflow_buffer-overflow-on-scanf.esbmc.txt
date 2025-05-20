@@ -1,0 +1,51 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/893_buffer-overflow_buffer-overflow-on-scanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.381s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (25 assignments)
+Slicing time: 0.000s (removed 14 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+Building error trace
+
+[Counterexample]
+
+Welcome to the Haunted House Adventure!
+
+Health: 100
+
+Inventory: Empty
+
+
+You find yourself at a fork in the path.
+
+1. Go left into the dark room.
+
+2. Go right through the old door.
+
+3. Check your inventory.
+
+4. Exit the game.
+
+Choose an option: 
+
+State 10 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/893_buffer-overflow_buffer-overflow-on-scanf.c line 40 column 9 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/893_buffer-overflow_buffer-overflow-on-scanf.c line 40 column 9 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

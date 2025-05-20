@@ -1,0 +1,42 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/135_dereference-failure_array-bounds-violated_encryption-library-interface.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.300s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/135_dereference-failure_array-bounds-violated_encryption-library-interface.c line 16 column 5 function generate_key
+Symex completed in: 0.003s (32 assignments)
+Slicing time: 0.000s (removed 15 assignments)
+Generated 10 VCC(s), 6 remaining after simplification (17 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.174s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/135_dereference-failure_array-bounds-violated_encryption-library-interface.c line 33 column 5 function main thread 0
+----------------------------------------------------
+  key = { .key={ .pointer_object=nil, .pointer_offset=nil }, .key_len=0,
+    .anon_pad$2=0 }
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/135_dereference-failure_array-bounds-violated_encryption-library-interface.c line 15 column 5 function generate_key thread 0
+----------------------------------------------------
+  key->key = 0
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/135_dereference-failure_array-bounds-violated_encryption-library-interface.c line 17 column 9 function generate_key thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/135_dereference-failure_array-bounds-violated_encryption-library-interface.c line 17 column 9 function generate_key
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

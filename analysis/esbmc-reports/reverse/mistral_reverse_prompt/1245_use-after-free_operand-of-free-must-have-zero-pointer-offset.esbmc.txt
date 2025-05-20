@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1245_use-after-free_operand-of-free-must-have-zero-pointer-offset.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1245_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:14:5: error: unknown type name 'time_t'
+    time_t timestamp;
+    ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1245_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:30:42: error: call to undeclared function 'time'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        entries[num_entries].timestamp = time(NULL);
+                                         ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1245_use-after-free_operand-of-free-must-have-zero-pointer-offset.c:41:35: error: call to undeclared function 'ctime'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        printf("Timestamp: %s\n", ctime(&entries[i].timestamp));
+                                  ^
+ERROR: PARSING ERROR

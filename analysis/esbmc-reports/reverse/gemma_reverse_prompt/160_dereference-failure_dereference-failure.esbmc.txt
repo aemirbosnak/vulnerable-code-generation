@@ -1,0 +1,35 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/160_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/160_dereference-failure_dereference-failure.c:22:18: warning: incompatible pointer types passing 'FILE *' (aka 'struct _IO_FILE *') to parameter of type 'char **' [-Wincompatible-pointer-types]
+  while (getline(fp, line, 100) != -1) {
+                 ^~
+/usr/include/stdio.h:707:45: note: passing argument to parameter '__lineptr' here
+extern __ssize_t getline (char **__restrict __lineptr,
+                                            ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/160_dereference-failure_dereference-failure.c:22:22: warning: incompatible pointer types passing 'char *' to parameter of type 'size_t *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+  while (getline(fp, line, 100) != -1) {
+                     ^~~~
+/usr/include/stdio.h:708:46: note: passing argument to parameter '__n' here
+                          size_t *__restrict __n,
+                                             ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/160_dereference-failure_dereference-failure.c:22:28: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Wint-conversion]
+  while (getline(fp, line, 100) != -1) {
+                           ^~~
+/usr/include/stdio.h:709:44: note: passing argument to parameter '__stream' here
+                          FILE *__restrict __stream) __wur __nonnull ((3));
+                                           ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/160_dereference-failure_dereference-failure.c:42:11: error: incompatible pointer to integer conversion assigning to 'int' from 'char *' [-Wint-conversion]
+  maxFreq = wordFreq[0];
+          ^ ~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/160_dereference-failure_dereference-failure.c:44:21: warning: ordered comparison between pointer and integer ('char *' and 'int')
+    if (wordFreq[i] > maxFreq) {
+        ~~~~~~~~~~~ ^ ~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/160_dereference-failure_dereference-failure.c:45:15: error: incompatible pointer to integer conversion assigning to 'int' from 'char *' [-Wint-conversion]
+      maxFreq = wordFreq[i];
+              ^ ~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/160_dereference-failure_dereference-failure.c:52:43: warning: format specifies type 'int' but the argument has type 'char *' [-Wformat]
+    fprintf(fp2, "%s: %d\n", wordList[i], wordFreq[i]);
+                      ~~                  ^~~~~~~~~~~
+                      %s
+ERROR: PARSING ERROR

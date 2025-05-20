@@ -1,0 +1,32 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/555_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/555_buffer-overflow_buffer-overflow-on-gets.c:14:19: error: call to undeclared function 'analyze_sentiment'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  int sentiment = analyze_sentiment(text);
+                  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/555_buffer-overflow_buffer-overflow-on-gets.c:32:23: warning: multi-character character constant [-Wmultichar]
+  char emoticons[] = {':)', ':)', ':('};
+                      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/555_buffer-overflow_buffer-overflow-on-gets.c:32:29: warning: multi-character character constant [-Wmultichar]
+  char emoticons[] = {':)', ':)', ':('};
+                            ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/555_buffer-overflow_buffer-overflow-on-gets.c:32:35: warning: multi-character character constant [-Wmultichar]
+  char emoticons[] = {':)', ':)', ':('};
+                                  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/555_buffer-overflow_buffer-overflow-on-gets.c:36:22: error: incompatible integer to pointer conversion passing 'char' to parameter of type 'const char *'; take the address with & [-Wint-conversion]
+    if (strstr(text, emoticons[i]) != NULL) {
+                     ^~~~~~~~~~~~
+                     &
+/tmp/esbmc.ac9b-d488-7df4/headers/string.h:22:44: note: passing argument to parameter 'str2' here
+char *strstr(const char *str1, const char *str2);
+                                           ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/555_buffer-overflow_buffer-overflow-on-gets.c:32:35: warning: implicit conversion from 'int' to 'char' changes value from 14888 to 40 [-Wconstant-conversion]
+  char emoticons[] = {':)', ':)', ':('};
+                     ~            ^~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/555_buffer-overflow_buffer-overflow-on-gets.c:32:29: warning: implicit conversion from 'int' to 'char' changes value from 14889 to 41 [-Wconstant-conversion]
+  char emoticons[] = {':)', ':)', ':('};
+                     ~      ^~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/555_buffer-overflow_buffer-overflow-on-gets.c:32:23: warning: implicit conversion from 'int' to 'char' changes value from 14889 to 41 [-Wconstant-conversion]
+  char emoticons[] = {':)', ':)', ':('};
+                     ~^~~~
+ERROR: PARSING ERROR

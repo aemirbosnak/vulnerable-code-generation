@@ -1,0 +1,908 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.453s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.010s (84 assignments)
+Slicing time: 0.000s (removed 55 assignments)
+Generated 20 VCC(s), 10 remaining after simplification (29 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.012s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.011s (83 assignments)
+Slicing time: 0.002s (removed 56 assignments)
+Generated 21 VCC(s), 11 remaining after simplification (27 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.046s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.044s (186 assignments)
+Slicing time: 0.003s (removed 102 assignments)
+Generated 56 VCC(s), 36 remaining after simplification (84 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.015s
+BMC program time: 0.066s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.037s (185 assignments)
+Slicing time: 0.003s (removed 103 assignments)
+Generated 58 VCC(s), 38 remaining after simplification (82 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.154s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.058s (315 assignments)
+Slicing time: 0.006s (removed 165 assignments)
+Generated 108 VCC(s), 74 remaining after simplification (150 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.033s
+BMC program time: 0.104s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.072s (314 assignments)
+Slicing time: 0.005s (removed 166 assignments)
+Generated 111 VCC(s), 77 remaining after simplification (148 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.009s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.162s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.106s (480 assignments)
+Slicing time: 0.010s (removed 246 assignments)
+Generated 178 VCC(s), 126 remaining after simplification (234 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.013s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.047s
+BMC program time: 0.174s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.122s (479 assignments)
+Slicing time: 0.014s (removed 247 assignments)
+Generated 182 VCC(s), 130 remaining after simplification (232 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.018s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.219s
+The forward condition is unable to prove the property
+Checking base case, k = 5
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.175s (681 assignments)
+Slicing time: 0.018s (removed 345 assignments)
+Generated 266 VCC(s), 192 remaining after simplification (336 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.020s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.075s
+BMC program time: 0.286s
+No bug has been found in the base case
+Checking forward condition, k = 5
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.276s (680 assignments)
+Slicing time: 0.028s (removed 346 assignments)
+Generated 271 VCC(s), 197 remaining after simplification (334 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.027s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.496s
+The forward condition is unable to prove the property
+Checking base case, k = 6
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.352s (918 assignments)
+Slicing time: 0.053s (removed 462 assignments)
+Generated 372 VCC(s), 272 remaining after simplification (456 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.029s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.180s
+BMC program time: 0.613s
+No bug has been found in the base case
+Checking forward condition, k = 6
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.519s (917 assignments)
+Slicing time: 0.079s (removed 463 assignments)
+Generated 378 VCC(s), 278 remaining after simplification (454 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.067s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.767s
+The forward condition is unable to prove the property
+Checking base case, k = 7
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.887s (1191 assignments)
+Slicing time: 0.205s (removed 597 assignments)
+Generated 496 VCC(s), 366 remaining after simplification (594 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.063s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.357s
+BMC program time: 1.512s
+No bug has been found in the base case
+Checking forward condition, k = 7
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 1.028s (1190 assignments)
+Slicing time: 0.146s (removed 598 assignments)
+Generated 503 VCC(s), 373 remaining after simplification (592 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.082s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.926s
+The forward condition is unable to prove the property
+Checking base case, k = 8
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.474s (1500 assignments)
+Slicing time: 0.052s (removed 750 assignments)
+Generated 638 VCC(s), 474 remaining after simplification (750 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.034s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.246s
+BMC program time: 0.804s
+No bug has been found in the base case
+Checking forward condition, k = 8
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.335s (1499 assignments)
+Slicing time: 0.079s (removed 751 assignments)
+Generated 646 VCC(s), 482 remaining after simplification (748 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.037s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.830s
+The forward condition is unable to prove the property
+Checking base case, k = 9
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.949s (1845 assignments)
+Slicing time: 0.184s (removed 921 assignments)
+Generated 798 VCC(s), 596 remaining after simplification (924 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.081s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.516s
+BMC program time: 1.733s
+No bug has been found in the base case
+Checking forward condition, k = 9
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 39 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Symex completed in: 0.913s (1844 assignments)
+Slicing time: 0.172s (removed 922 assignments)
+Generated 807 VCC(s), 605 remaining after simplification (922 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.051s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.024s
+The forward condition is unable to prove the property
+Checking base case, k = 10
+Starting Bounded Model Checking
+Unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 5   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 6   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 7   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 8   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 14 iteration 9   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 14 iteration 10   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Not unwinding loop 38 iteration 10   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 14 column 5 function compress
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 5   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 6   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 7   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 8   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+Unwinding loop 38 iteration 9   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/843_buffer-overflow_overflow-on-scanf_compression-algorithm-module.c line 21 column 13 function compress
+ERROR: Timed out

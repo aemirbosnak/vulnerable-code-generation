@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1277_buffer-overflow_overflow-on-gets_chat-message-buffer-manager.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1277_buffer-overflow_overflow-on-gets_chat-message-buffer-manager.c:27:9: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        gets(input);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1277_buffer-overflow_overflow-on-gets_chat-message-buffer-manager.c:38:27: warning: incompatible pointer types passing 'char[10][100]' to parameter of type 'char **' [-Wincompatible-pointer-types]
+    display_chat_messages(messages);
+                          ^~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1277_buffer-overflow_overflow-on-gets_chat-message-buffer-manager.c:11:35: note: passing argument to parameter 'messages' here
+void display_chat_messages(char** messages) {
+                                  ^
+ERROR: PARSING ERROR

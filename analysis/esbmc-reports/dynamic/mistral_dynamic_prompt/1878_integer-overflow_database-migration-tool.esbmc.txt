@@ -1,0 +1,34 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1878_integer-overflow_database-migration-tool.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1878_integer-overflow_database-migration-tool.c:13:9: error: incompatible pointer to integer conversion initializing 'int' with an expression of type 'FILE *' (aka 'struct _IO_FILE *') [-Wint-conversion]
+    int file_input = fopen(input_file, "r");
+        ^            ~~~~~~~~~~~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1878_integer-overflow_database-migration-tool.c:14:9: error: incompatible pointer to integer conversion initializing 'int' with an expression of type 'FILE *' (aka 'struct _IO_FILE *') [-Wint-conversion]
+    int file_output = fopen(output_file, "w");
+        ^             ~~~~~~~~~~~~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1878_integer-overflow_database-migration-tool.c:17:31: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Wint-conversion]
+    while ((buffer[i] = fgetc(file_input)) != EOF) {
+                              ^~~~~~~~~~
+/usr/include/stdio.h:575:25: note: passing argument to parameter '__stream' here
+extern int fgetc (FILE *__stream) __nonnull ((1));
+                        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1878_integer-overflow_database-migration-tool.c:24:13: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Wint-conversion]
+    fprintf(file_output, "%s", buffer);
+            ^~~~~~~~~~~
+/usr/include/stdio.h:357:38: note: passing argument to parameter '__stream' here
+extern int fprintf (FILE *__restrict __stream,
+                                     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1878_integer-overflow_database-migration-tool.c:25:12: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Wint-conversion]
+    fclose(file_input);
+           ^~~~~~~~~~
+/usr/include/stdio.h:184:26: note: passing argument to parameter '__stream' here
+extern int fclose (FILE *__stream) __nonnull ((1));
+                         ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1878_integer-overflow_database-migration-tool.c:26:12: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'FILE *' (aka 'struct _IO_FILE *') [-Wint-conversion]
+    fclose(file_output);
+           ^~~~~~~~~~~
+/usr/include/stdio.h:184:26: note: passing argument to parameter '__stream' here
+extern int fclose (FILE *__stream) __nonnull ((1));
+                         ^
+ERROR: PARSING ERROR

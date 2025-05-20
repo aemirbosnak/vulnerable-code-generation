@@ -1,0 +1,18 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1894_integer-overflow_audio-stream-decoder.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1894_integer-overflow_audio-stream-decoder.c:15:17: error: call to undeclared function 'read'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    while ((i = read(0, buffer, BUFFER_SIZE)) != 0) {
+                ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1894_integer-overflow_audio-stream-decoder.c:15:17: note: did you mean 'fread'?
+/usr/include/stdio.h:738:15: note: 'fread' declared here
+extern size_t fread (void *__restrict __ptr, size_t __size,
+              ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1894_integer-overflow_audio-stream-decoder.c:20:9: error: call to undeclared function 'write'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        write(1, buffer, i);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1894_integer-overflow_audio-stream-decoder.c:20:9: note: did you mean 'fwrite'?
+/usr/include/stdio.h:745:15: note: 'fwrite' declared here
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+              ^
+ERROR: PARSING ERROR

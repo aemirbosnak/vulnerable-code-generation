@@ -1,0 +1,19 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2037_integer-overflow_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2037_integer-overflow_multi-threaded-job-scheduler.c:19:7: error: call to undeclared function 'sleep'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      sleep(rand() % 5);
+      ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2037_integer-overflow_multi-threaded-job-scheduler.c:23:7: error: call to undeclared function 'sleep'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      sleep(1);
+      ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2037_integer-overflow_multi-threaded-job-scheduler.c:36:24: warning: incompatible pointer types passing 'FILE *' (aka 'struct _IO_FILE *') to parameter of type 'const char *' [-Wincompatible-pointer-types]
+    int job_num = atoi(stdin);
+                       ^~~~~
+/usr/include/stdio.h:153:15: note: expanded from macro 'stdin'
+#define stdin stdin
+              ^~~~~
+/tmp/esbmc.d6f4-d768-b327/headers/stdlib.h:70:23: note: passing argument to parameter 'str' here
+int atoi(const char * str);
+                      ^
+ERROR: PARSING ERROR

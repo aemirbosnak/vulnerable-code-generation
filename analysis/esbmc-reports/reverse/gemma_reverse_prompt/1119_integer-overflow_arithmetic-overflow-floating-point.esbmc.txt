@@ -1,0 +1,24 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1119_integer-overflow_arithmetic-overflow-floating-point.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1119_integer-overflow_arithmetic-overflow-floating-point.c:12:7: error: expected expression
+      float f_temp = (temp * 1.8) + 32;
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1119_integer-overflow_arithmetic-overflow-floating-point.c:13:58: error: use of undeclared identifier 'f_temp'; did you mean 'temp'?
+      printf("The temperature in Fahrenheit is: %.2f\n", f_temp);
+                                                         ^~~~~~
+                                                         temp
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1119_integer-overflow_arithmetic-overflow-floating-point.c:9:37: note: 'temp' declared here
+void convert_temp(int choice, float temp) {
+                                    ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1119_integer-overflow_arithmetic-overflow-floating-point.c:16:7: error: expected expression
+      float c_temp = (temp - 32) * 5 / 9;
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1119_integer-overflow_arithmetic-overflow-floating-point.c:17:55: error: use of undeclared identifier 'c_temp'; did you mean 'temp'?
+      printf("The temperature in Celsius is: %.2f\n", c_temp);
+                                                      ^~~~~~
+                                                      temp
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1119_integer-overflow_arithmetic-overflow-floating-point.c:9:37: note: 'temp' declared here
+void convert_temp(int choice, float temp) {
+                                    ^
+ERROR: PARSING ERROR

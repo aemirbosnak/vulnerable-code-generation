@@ -1,0 +1,16 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/350_dereference-failure_forgotten-memory_compression-algorithm-module.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/350_dereference-failure_forgotten-memory_compression-algorithm-module.c:21:13: error: call to undeclared function 'compress_chunk'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+            compress_chunk(buffer, output);
+            ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/350_dereference-failure_forgotten-memory_compression-algorithm-module.c:27:9: error: call to undeclared function 'compress_chunk'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        compress_chunk(buffer, output);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/350_dereference-failure_forgotten-memory_compression-algorithm-module.c:33:6: error: conflicting types for 'compress_chunk'
+void compress_chunk(char *buffer, char *output) {
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/350_dereference-failure_forgotten-memory_compression-algorithm-module.c:21:13: note: previous implicit declaration is here
+            compress_chunk(buffer, output);
+            ^
+ERROR: PARSING ERROR

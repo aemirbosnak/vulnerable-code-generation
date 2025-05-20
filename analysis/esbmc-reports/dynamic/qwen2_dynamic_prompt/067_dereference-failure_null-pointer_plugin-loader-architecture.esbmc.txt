@@ -1,0 +1,47 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/067_dereference-failure_null-pointer_plugin-loader-architecture.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/067_dereference-failure_null-pointer_plugin-loader-architecture.c:55:10: warning: attempt to call free on non-heap object 'my_plugin.plugin_function' [-Wfree-nonheap-object]
+    free(my_plugin.plugin_function);
+         ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.409s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+No target candidate for function call *plugin->plugin_function
+Symex completed in: 0.006s (85 assignments)
+Slicing time: 0.000s (removed 34 assignments)
+Generated 29 VCC(s), 16 remaining after simplification (51 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.154s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/067_dereference-failure_null-pointer_plugin-loader-architecture.c line 46 column 5 function main thread 0
+----------------------------------------------------
+  my_plugin = { .plugin_function = 0 }
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/067_dereference-failure_null-pointer_plugin-loader-architecture.c line 14 column 5 function load_plugin thread 0
+----------------------------------------------------
+  file = 0
+Failed to open file: nonexistent_plugin.so
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/067_dereference-failure_null-pointer_plugin-loader-architecture.c line 51 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/067_dereference-failure_null-pointer_plugin-loader-architecture.c line 51 column 5 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

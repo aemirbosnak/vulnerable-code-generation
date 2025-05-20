@@ -1,0 +1,11 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/221_dereference-failure_invalid-pointer_http-request-parser.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/221_dereference-failure_invalid-pointer_http-request-parser.c:19:13: warning: multi-character character constant [-Wmultichar]
+  body[0] = '{"name": "John Doe"}';
+            ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/221_dereference-failure_invalid-pointer_http-request-parser.c:19:13: warning: character constant too long for its type
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/221_dereference-failure_invalid-pointer_http-request-parser.c:19:11: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Wint-conversion]
+  body[0] = '{"name": "John Doe"}';
+          ^ ~~~~~~~~~~~~~~~~~~~~~~
+ERROR: PARSING ERROR

@@ -1,0 +1,88 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/013_out-of-bounds_read_text-based-game-engine.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/013_out-of-bounds_read_text-based-game-engine.c:27:49: warning: array index 101 is past the end of the array (that has type 'char[100]') [-Warray-bounds]
+            printf("Your current health: %d\n", game_state[101]);
+                                                ^          ~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/013_out-of-bounds_read_text-based-game-engine.c:12:5: note: array 'game_state' declared here
+    char game_state[100];
+    ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.270s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 22 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/013_out-of-bounds_read_text-based-game-engine.c line 18 column 5 function game_loop
+Symex completed in: 0.004s (55 assignments)
+Slicing time: 0.000s (removed 36 assignments)
+Generated 9 VCC(s), 4 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 22 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/013_out-of-bounds_read_text-based-game-engine.c line 18 column 5 function game_loop
+Symex completed in: 0.003s (53 assignments)
+Slicing time: 0.000s (removed 37 assignments)
+Generated 10 VCC(s), 5 remaining after simplification (16 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 22 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 22 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/013_out-of-bounds_read_text-based-game-engine.c line 18 column 5 function game_loop
+Unwinding loop 22 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 22 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/013_out-of-bounds_read_text-based-game-engine.c line 18 column 5 function game_loop
+Symex completed in: 0.013s (154 assignments)
+Slicing time: 0.000s (removed 103 assignments)
+Generated 30 VCC(s), 12 remaining after simplification (51 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.100s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/013_out-of-bounds_read_text-based-game-engine.c line 11 column 5 function game_loop thread 0
+----------------------------------------------------
+  player_input = { 102 }
+Welcome to the Dungeon of Doom!
+
+You are a brave adventurer, ready to face the challenges ahead.
+
+
+What would you like to do? (fight, rest, or leave)
+
+
+State 6 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 103 column 5 function strcmp thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 103 column 5 function strcmp
+  dereference failure: array bounds violated
+
+
+VERIFICATION FAILED
+
+Bug found (k = 2)

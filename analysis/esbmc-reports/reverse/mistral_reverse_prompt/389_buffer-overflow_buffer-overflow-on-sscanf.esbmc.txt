@@ -1,0 +1,19 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/389_buffer-overflow_buffer-overflow-on-sscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/389_buffer-overflow_buffer-overflow-on-sscanf.c:32:34: warning: incompatible pointer types passing 'char (*)[4096]' to parameter of type 'char **' [-Wincompatible-pointer-types]
+        while ((status = getline(&buffer, BUFFER_SIZE, file)) != -1) {
+                                 ^~~~~~~
+/usr/include/stdio.h:707:45: note: passing argument to parameter '__lineptr' here
+extern __ssize_t getline (char **__restrict __lineptr,
+                                            ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/389_buffer-overflow_buffer-overflow-on-sscanf.c:32:43: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'size_t *' (aka 'unsigned long *') [-Wint-conversion]
+        while ((status = getline(&buffer, BUFFER_SIZE, file)) != -1) {
+                                          ^~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/389_buffer-overflow_buffer-overflow-on-sscanf.c:14:21: note: expanded from macro 'BUFFER_SIZE'
+#define BUFFER_SIZE 4096
+                    ^~~~
+/usr/include/stdio.h:708:46: note: passing argument to parameter '__n' here
+                          size_t *__restrict __n,
+                                             ^
+ERROR: PARSING ERROR

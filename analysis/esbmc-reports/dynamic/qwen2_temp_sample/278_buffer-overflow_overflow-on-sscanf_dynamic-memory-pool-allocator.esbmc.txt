@@ -1,0 +1,42 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/278_buffer-overflow_overflow-on-sscanf_dynamic-memory-pool-allocator.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.300s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/278_buffer-overflow_overflow-on-sscanf_dynamic-memory-pool-allocator.c line 43 column 5 function print_blocks
+Symex completed in: 0.004s (61 assignments)
+Slicing time: 0.000s (removed 33 assignments)
+Generated 14 VCC(s), 14 remaining after simplification (28 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.031s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/278_buffer-overflow_overflow-on-sscanf_dynamic-memory-pool-allocator.c line 20 column 5 function init_pool thread 0
+----------------------------------------------------
+  pool = ( struct __anon_typedef_PoolBlock_at_/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/278_buffer-overflow_overflow-on-sscanf_dynamic-memory-pool-allocator_c__11_9 *)(&dynamic_1_array[0])
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/278_buffer-overflow_overflow-on-sscanf_dynamic-memory-pool-allocator.c line 36 column 5 function add_block thread 0
+----------------------------------------------------
+  block = &dynamic_1_array[0]
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/278_buffer-overflow_overflow-on-sscanf_dynamic-memory-pool-allocator.c line 39 column 5 function add_block thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/278_buffer-overflow_overflow-on-sscanf_dynamic-memory-pool-allocator.c line 39 column 5 function add_block
+  buffer overflow on sscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

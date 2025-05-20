@@ -1,0 +1,40 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/686_buffer-overflow_buffer-overflow-on-fscanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.307s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (31 assignments)
+Slicing time: 0.000s (removed 21 assignments)
+Generated 2 VCC(s), 2 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.017s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/686_buffer-overflow_buffer-overflow-on-fscanf.c line 18 column 5 function readBooks thread 0
+----------------------------------------------------
+  file = 0
+Error opening file
+
+Enter book title to search: 
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/686_buffer-overflow_buffer-overflow-on-fscanf.c line 45 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/686_buffer-overflow_buffer-overflow-on-fscanf.c line 45 column 5 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

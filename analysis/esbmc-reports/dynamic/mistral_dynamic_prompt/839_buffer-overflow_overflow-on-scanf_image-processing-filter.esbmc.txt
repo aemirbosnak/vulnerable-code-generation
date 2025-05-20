@@ -1,0 +1,41 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/839_buffer-overflow_overflow-on-scanf_image-processing-filter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.396s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/839_buffer-overflow_overflow-on-scanf_image-processing-filter.c line 13 column 9 function processImage
+Symex completed in: 0.009s (63 assignments)
+Slicing time: 0.000s (removed 37 assignments)
+Generated 20 VCC(s), 20 remaining after simplification (26 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.259s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/839_buffer-overflow_overflow-on-scanf_image-processing-filter.c line 15 column 13 function processImage thread 0
+----------------------------------------------------
+  r = 245 (00000000 00000000 00000000 11110101)
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/839_buffer-overflow_overflow-on-scanf_image-processing-filter.c line 17 column 13 function processImage thread 0
+----------------------------------------------------
+  r = 255 (00000000 00000000 00000000 11111111)
+
+State 11 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/839_buffer-overflow_overflow-on-scanf_image-processing-filter.c line 20 column 13 function processImage thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/839_buffer-overflow_overflow-on-scanf_image-processing-filter.c line 20 column 13 function processImage
+  dereference failure: array bounds violated
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

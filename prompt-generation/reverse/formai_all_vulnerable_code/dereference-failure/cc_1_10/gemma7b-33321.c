@@ -1,0 +1,53 @@
+//Gemma-7B DATASET v1.0 Category: Graph Coloring Problem ; Style: thoughtful
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX 100
+
+void graph_coloring(int **graph, int n, int **colors, int *usedColors) {
+  for (int i = 0; i < n; i++) {
+    int color = colors[i];
+    for (int j = 0; j < n; j++) {
+      if (graph[i][j] && color == usedColors[j]) {
+        return;
+      }
+    }
+    usedColors[i] = color;
+  }
+  return;
+}
+
+int main() {
+  int n, m;
+  scanf("Enter the number of nodes: ", &n);
+  scanf("Enter the number of edges: ", &m);
+
+  int **graph = (int **)malloc(n * sizeof(int *));
+  for (int i = 0; i < n; i++) {
+    graph[i] = (int *)malloc(n * sizeof(int));
+  }
+
+  for (int i = 0; i < m; i++) {
+    int u, v;
+    scanf("Enter the two nodes connected: ", &u, &v);
+    graph[u][v] = 1;
+  }
+
+  int **colors = (int *)malloc(n * sizeof(int));
+  for (int i = 0; i < n; i++) {
+    colors[i] = 0;
+  }
+
+  int usedColors = 0;
+
+  graph_coloring(graph, n, colors, &usedColors);
+
+  for (int i = 0; i < n; i++) {
+    printf("Node %d has color %d\n", i + 1, colors[i]);
+  }
+
+  free(graph);
+  free(colors);
+
+  return 0;
+}

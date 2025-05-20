@@ -1,0 +1,42 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:15:36: error: incompatible pointer to integer conversion assigning to 'int' from 'char *' [-Wint-conversion]
+  candidateName[numCandidates][20] = (char *)malloc(numCandidates * 20 * sizeof(char));
+                                   ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:16:28: error: incompatible pointer to integer conversion assigning to 'int' from 'int *'; dereference with * [-Wint-conversion]
+  voteCount[numCandidates] = (int *)malloc(numCandidates * sizeof(int));
+                           ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             *
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:21:17: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+    scanf("%s", candidateName[i][0]);
+           ~~   ^~~~~~~~~~~~~~~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:40:31: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+  printf("The winner is: %s", candidateName[winner][0]);
+                         ~~   ^~~~~~~~~~~~~~~~~~~~~~~~
+                         %d
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:43:8: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'void *' [-Wint-conversion]
+  free(candidateName[numCandidates][20]);
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/esbmc.fe97-91af-44d8/headers/stdlib.h:29:17: note: passing argument to parameter 'p' here
+void free(void *p);
+                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:44:8: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'void *' [-Wint-conversion]
+  free(voteCount[numCandidates]);
+       ^~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/esbmc.fe97-91af-44d8/headers/stdlib.h:29:17: note: passing argument to parameter 'p' here
+void free(void *p);
+                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:15:3: warning: array index 20 is past the end of the array (that has type 'int[20]') [-Warray-bounds]
+  candidateName[numCandidates][20] = (char *)malloc(numCandidates * 20 * sizeof(char));
+  ^                            ~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:10:3: note: array 'candidateName' declared here
+  int numCandidates, numVoters, i, voteCount[100], candidateName[100][20];
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:43:8: warning: array index 20 is past the end of the array (that has type 'int[20]') [-Warray-bounds]
+  free(candidateName[numCandidates][20]);
+       ^                            ~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/198_dereference-failure_dereference-failure.c:10:3: note: array 'candidateName' declared here
+  int numCandidates, numVoters, i, voteCount[100], candidateName[100][20];
+  ^
+ERROR: PARSING ERROR

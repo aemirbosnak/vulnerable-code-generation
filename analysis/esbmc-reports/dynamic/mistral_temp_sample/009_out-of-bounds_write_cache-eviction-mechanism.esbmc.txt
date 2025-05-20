@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/009_out-of-bounds_write_cache-eviction-mechanism.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/009_out-of-bounds_write_cache-eviction-mechanism.c:36:9: error: call to undeclared function 'evict_entry'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        evict_entry(index);
+        ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/009_out-of-bounds_write_cache-eviction-mechanism.c:43:6: error: conflicting types for 'evict_entry'
+void evict_entry(int index) {
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/009_out-of-bounds_write_cache-eviction-mechanism.c:36:9: note: previous implicit declaration is here
+        evict_entry(index);
+        ^
+ERROR: PARSING ERROR

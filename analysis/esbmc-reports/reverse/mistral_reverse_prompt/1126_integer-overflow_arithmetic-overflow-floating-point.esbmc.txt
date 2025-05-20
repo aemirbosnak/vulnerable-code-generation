@@ -1,0 +1,48 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1126_integer-overflow_arithmetic-overflow-floating-point.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.444s
+GOTO program processing time: 0.040s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function atof
+WARNING: no body for function atof
+WARNING: no body for function atof
+Not unwinding loop 26 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 27 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1126_integer-overflow_arithmetic-overflow-floating-point.c line 33 column 5 function main
+Symex completed in: 0.020s (207 assignments)
+Slicing time: 0.002s (removed 145 assignments)
+Generated 104 VCC(s), 25 remaining after simplification (62 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.019s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 1.544s
+Building error trace
+
+[Counterexample]
+
+
+State 6 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1126_integer-overflow_arithmetic-overflow-floating-point.c line 29 column 5 function main thread 0
+----------------------------------------------------
+  drone = { .x=main::$tmp::return_value$_atof$1?1!0&0#1, .y=main::$tmp::return_value$_atof$2?1!0&0#1,
+    .vx=0.000000,
+    .vy=0.000000 }
+
+State 8 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/1126_integer-overflow_arithmetic-overflow-floating-point.c line 31 column 5 function main thread 0
+----------------------------------------------------
+  dt = 2.066557e-308 (00000000 00001110 11011100 00110010 01101001 11110100 11011101 11111011)
+
+State 10 file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/stdlib.c line 264 column 1 function atoi
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

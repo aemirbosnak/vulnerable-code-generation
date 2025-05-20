@@ -1,0 +1,38 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/280_buffer-overflow_overflow-on-sscanf_text-based-game-engine.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.319s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 14 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Symex completed in: 0.004s (58 assignments)
+Slicing time: 0.000s (removed 40 assignments)
+Generated 10 VCC(s), 7 remaining after simplification (18 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+Building error trace
+
+[Counterexample]
+
+Welcome to the Text-Based Adventure Game!
+
+Please enter your name and age (format: name age): 
+Enter your name (max 10 chars): 
+
+State 9 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/280_buffer-overflow_overflow-on-sscanf_text-based-game-engine.c line 14 column 5 function process_input thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/280_buffer-overflow_overflow-on-sscanf_text-based-game-engine.c line 14 column 5 function process_input
+  buffer overflow on sscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

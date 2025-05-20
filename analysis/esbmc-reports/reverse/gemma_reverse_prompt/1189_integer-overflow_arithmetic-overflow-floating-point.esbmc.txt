@@ -1,0 +1,58 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c:22:38: warning: multi-character character constant [-Wmultichar]
+  if (unit_from == 'm' && unit_to == 'km') {
+                                     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c:24:45: warning: multi-character character constant [-Wmultichar]
+  } else if (unit_from == 'm' && unit_to == 'cm') {
+                                            ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c:26:45: warning: multi-character character constant [-Wmultichar]
+  } else if (unit_from == 'm' && unit_to == 'mm') {
+                                            ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c:30:45: warning: multi-character character constant [-Wmultichar]
+  } else if (unit_from == 'f' && unit_to == 'in') {
+                                            ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c:22:35: warning: result of comparison of constant 27501 with expression of type 'char' is always false [-Wtautological-constant-out-of-range-compare]
+  if (unit_from == 'm' && unit_to == 'km') {
+                          ~~~~~~~ ^  ~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c:24:42: warning: result of comparison of constant 25453 with expression of type 'char' is always false [-Wtautological-constant-out-of-range-compare]
+  } else if (unit_from == 'm' && unit_to == 'cm') {
+                                 ~~~~~~~ ^  ~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c:26:42: warning: result of comparison of constant 28013 with expression of type 'char' is always false [-Wtautological-constant-out-of-range-compare]
+  } else if (unit_from == 'm' && unit_to == 'mm') {
+                                 ~~~~~~~ ^  ~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c:30:42: warning: result of comparison of constant 26990 with expression of type 'char' is always false [-Wtautological-constant-out-of-range-compare]
+  } else if (unit_from == 'f' && unit_to == 'in') {
+                                 ~~~~~~~ ^  ~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.227s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.000s (17 assignments)
+Slicing time: 0.000s (removed 14 assignments)
+Generated 1 VCC(s), 1 remaining after simplification (3 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+Enter the value: 
+
+State 2 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c line 14 column 3 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/1189_integer-overflow_arithmetic-overflow-floating-point.c line 14 column 3 function main
+  buffer overflow on scanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

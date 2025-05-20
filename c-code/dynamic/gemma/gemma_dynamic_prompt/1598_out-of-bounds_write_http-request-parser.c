@@ -1,0 +1,26 @@
+#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+  char *buf = malloc(10);
+  buf[0] = 'H';
+  buf[1] = 'T';
+  buf[2] = 'T';
+  buf[3] = 'P';
+  buf[4] = 'A';
+  buf[5] = 'C';
+  buf[6] = 'H';
+  buf[7] = 'T';
+  buf[8] = 'R';
+  buf[9] = '\0';
+
+  printf("%s", buf);
+
+  free(buf);
+  return 0;
+}

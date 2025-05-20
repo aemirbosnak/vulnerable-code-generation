@@ -1,0 +1,14 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/323_out-of-bounds_write_file-synchronization-daemon.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/323_out-of-bounds_write_file-synchronization-daemon.c:44:76: warning: passing 'int *' to parameter of type 'socklen_t *' (aka 'unsigned int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+    while ((client_fd = accept(client_fd, (struct sockaddr *)&client_addr, &addr_len)) != -1) {
+                                                                           ^~~~~~~~~
+/usr/include/x86_64-linux-gnu/sys/socket.h:307:28: note: passing argument to parameter '__addr_len' here
+                   socklen_t *__restrict __addr_len);
+                                         ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/323_out-of-bounds_write_file-synchronization-daemon.c:54:13: error: call to undeclared library function 'bzero' with type 'void (void *, unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+            bzero(buffer, BUFFER_SIZE);
+            ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/323_out-of-bounds_write_file-synchronization-daemon.c:54:13: note: include the header <strings.h> or explicitly provide a declaration for 'bzero'
+ERROR: PARSING ERROR

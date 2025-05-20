@@ -1,0 +1,22 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/002_dereference-failure_invalid-pointer_command-line-text-editor.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.356s
+GOTO program processing time: 0.014s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/002_dereference-failure_invalid-pointer_command-line-text-editor.c line 59 column 5 function main
+Symex completed in: 0.018s (154 assignments)
+Slicing time: 0.002s (removed 77 assignments)
+Generated 45 VCC(s), 15 remaining after simplification (77 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.067s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

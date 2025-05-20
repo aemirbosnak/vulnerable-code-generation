@@ -1,0 +1,45 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/388_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/388_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c:44:10: warning: attempt to call free on non-heap object 'jobs' [-Wfree-nonheap-object]
+    free(jobs);
+         ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.382s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function srand
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/388_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 36 column 5 function main
+Symex completed in: 0.007s (105 assignments)
+Slicing time: 0.002s (removed 57 assignments)
+Generated 49 VCC(s), 23 remaining after simplification (48 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.413s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/388_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 35 column 5 function main thread 0
+----------------------------------------------------
+  jobs = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/388_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 37 column 9 function main thread 0
+----------------------------------------------------
+  jobs[0] = ( struct Job *)0
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/388_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 38 column 9 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/388_dereference-failure_forgotten-memory_multi-threaded-job-scheduler.c line 38 column 9 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

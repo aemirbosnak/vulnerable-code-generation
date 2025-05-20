@@ -1,0 +1,42 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1616_out-of-bounds_write_file-upload-handler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.279s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1616_out-of-bounds_write_file-upload-handler.c line 42 column 5 function main
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1616_out-of-bounds_write_file-upload-handler.c line 19 column 5 function upload_file
+Symex completed in: 0.005s (135 assignments)
+Slicing time: 0.000s (removed 64 assignments)
+Generated 22 VCC(s), 19 remaining after simplification (71 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.149s
+Building error trace
+
+[Counterexample]
+
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1616_out-of-bounds_write_file-upload-handler.c line 34 column 5 function main thread 0
+----------------------------------------------------
+  buffer = 0
+
+State 5 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 30 column 3 function strcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 30 column 3 function strcpy
+  Source pointer is null
+  src != (signed char *)0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

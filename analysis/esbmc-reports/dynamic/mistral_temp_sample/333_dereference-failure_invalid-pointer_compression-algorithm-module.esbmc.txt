@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/333_dereference-failure_invalid-pointer_compression-algorithm-module.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/333_dereference-failure_invalid-pointer_compression-algorithm-module.c:39:5: error: call to undeclared function 'find_first_char'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    find_first_char(buffer);
+    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/333_dereference-failure_invalid-pointer_compression-algorithm-module.c:44:6: error: conflicting types for 'find_first_char'
+void find_first_char(char *str, char c) {
+     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/333_dereference-failure_invalid-pointer_compression-algorithm-module.c:39:5: note: previous implicit declaration is here
+    find_first_char(buffer);
+    ^
+ERROR: PARSING ERROR

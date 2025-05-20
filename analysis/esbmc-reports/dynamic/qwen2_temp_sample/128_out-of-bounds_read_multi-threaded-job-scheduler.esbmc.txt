@@ -1,0 +1,42 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/128_out-of-bounds_read_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/128_out-of-bounds_read_multi-threaded-job-scheduler.c:17:17: warning: array index 7 is past the end of the array (that has type 'int[5]') [-Warray-bounds]
+    int value = buffer[7];  // Out-of-bounds read
+                ^      ~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/128_out-of-bounds_read_multi-threaded-job-scheduler.c:14:5: note: array 'buffer' declared here
+    int buffer[5];
+    ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.486s
+GOTO program processing time: 0.015s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/128_out-of-bounds_read_multi-threaded-job-scheduler.c line 26 column 5 function main
+Symex completed in: 0.007s (58 assignments)
+Slicing time: 0.000s (removed 51 assignments)
+Generated 7 VCC(s), 2 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+Building error trace
+
+[Counterexample]
+
+Thread 0: Reading from buffer[7]
+
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/128_out-of-bounds_read_multi-threaded-job-scheduler.c line 17 column 5 function thread_func thread 1
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/128_out-of-bounds_read_multi-threaded-job-scheduler.c line 17 column 5 function thread_func
+  array bounds violated: array `buffer' upper bound
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

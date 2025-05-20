@@ -1,0 +1,34 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c:20:44: error: function definition is not allowed here
+  char caesar_cipher(char letter, int key) {
+                                           ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c:29:52: error: function definition is not allowed here
+  char multiplicative_cipher(char letter, int key) {
+                                                   ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c:38:49: error: function definition is not allowed here
+  char affine_cipher(char letter, int a, int b) {
+                                                ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c:51:40: error: call to undeclared function 'caesar_cipher'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      printf("Enciphered message: %s", caesar_cipher(message, key));
+                                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c:51:40: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+      printf("Enciphered message: %s", caesar_cipher(message, key));
+                                  ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                  %d
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c:54:40: error: call to undeclared function 'multiplicative_cipher'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      printf("Enciphered message: %s", multiplicative_cipher(message, key));
+                                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c:54:40: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+      printf("Enciphered message: %s", multiplicative_cipher(message, key));
+                                  ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                  %d
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c:57:40: error: call to undeclared function 'affine_cipher'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+      printf("Enciphered message: %s", affine_cipher(message, key, key));
+                                       ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/465_buffer-overflow_buffer-overflow-on-gets.c:57:40: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+      printf("Enciphered message: %s", affine_cipher(message, key, key));
+                                  ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                  %d
+ERROR: PARSING ERROR

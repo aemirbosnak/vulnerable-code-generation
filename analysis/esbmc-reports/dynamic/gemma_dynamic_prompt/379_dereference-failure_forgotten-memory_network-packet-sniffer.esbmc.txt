@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/379_dereference-failure_forgotten-memory_network-packet-sniffer.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/379_dereference-failure_forgotten-memory_network-packet-sniffer.c:15:38: error: call to undeclared function 'htons'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  sockfd = socket(AF_INET, SOCK_RAW, htons(3));
+                                     ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/379_dereference-failure_forgotten-memory_network-packet-sniffer.c:45:3: error: call to undeclared function 'close'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  close(sockfd);
+  ^
+ERROR: PARSING ERROR

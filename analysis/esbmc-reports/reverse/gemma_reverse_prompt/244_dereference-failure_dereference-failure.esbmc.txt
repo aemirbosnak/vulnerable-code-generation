@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/244_dereference-failure_dereference-failure.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/244_dereference-failure_dereference-failure.c:23:33: error: incompatible function pointer types passing 'void (void *)' to parameter of type 'void *(*)(void *)' [-Wincompatible-function-pointer-types]
+  pthread_create(&thread, NULL, handleClient, "Hello, world!");
+                                ^~~~~~~~~~~~
+/tmp/esbmc.8863-8815-3af3/headers/pthread.h:269:15: note: passing argument to parameter '__start_routine' here
+                           void *(*__start_routine) (void *),
+                                   ^
+ERROR: PARSING ERROR

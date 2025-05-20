@@ -1,0 +1,43 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/313_buffer-overflow_buffer-overflow-on-sscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/313_buffer-overflow_buffer-overflow-on-sscanf.c:21:41: warning: format specifies type 'int *' but the argument has type 'char *' [-Wformat]
+  sscanf(argv[2], "%s:%d", remote_host, &remote_port);
+                      ~~                ^~~~~~~~~~~~
+                      %s
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/313_buffer-overflow_buffer-overflow-on-sscanf.c:34:23: warning: incompatible pointer types passing 'char[256]' to parameter of type 'const struct sockaddr *' [-Wincompatible-pointer-types]
+    connect(remotefd, remote_host, remote_port);
+                      ^~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/sys/socket.h:126:52: note: passing argument to parameter '__addr' here
+extern int connect (int __fd, __CONST_SOCKADDR_ARG __addr, socklen_t __len);
+                                                   ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.329s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.002s (38 assignments)
+Slicing time: 0.000s (removed 28 assignments)
+Generated 2 VCC(s), 2 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.059s
+Building error trace
+
+[Counterexample]
+
+
+State 3 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/313_buffer-overflow_buffer-overflow-on-sscanf.c line 20 column 3 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/313_buffer-overflow_buffer-overflow-on-sscanf.c line 20 column 3 function main
+  buffer overflow on sscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

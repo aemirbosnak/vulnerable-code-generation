@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/680_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/680_buffer-overflow_buffer-overflow-on-fscanf.c:25:46: error: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char[100]' [-Wint-conversion]
+    books[(*num_books)++] = (Book){ .title = title, .author = author, .pages = pages, .genre = genre };
+                                             ^~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/680_buffer-overflow_buffer-overflow-on-fscanf.c:25:63: error: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char[100]' [-Wint-conversion]
+    books[(*num_books)++] = (Book){ .title = title, .author = author, .pages = pages, .genre = genre };
+                                                              ^~~~~~
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/680_buffer-overflow_buffer-overflow-on-fscanf.c:25:96: error: incompatible pointer to integer conversion initializing 'char' with an expression of type 'char[50]' [-Wint-conversion]
+    books[(*num_books)++] = (Book){ .title = title, .author = author, .pages = pages, .genre = genre };
+                                                                                               ^~~~~
+ERROR: PARSING ERROR

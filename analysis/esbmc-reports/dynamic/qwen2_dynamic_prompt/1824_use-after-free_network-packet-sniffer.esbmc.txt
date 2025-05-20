@@ -1,0 +1,228 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.290s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Symex completed in: 0.003s (51 assignments)
+Slicing time: 0.002s (removed 28 assignments)
+Generated 14 VCC(s), 7 remaining after simplification (23 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Symex completed in: 0.003s (51 assignments)
+Slicing time: 0.000s (removed 28 assignments)
+Generated 16 VCC(s), 9 remaining after simplification (23 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.034s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Symex completed in: 0.015s (302 assignments)
+Slicing time: 0.003s (removed 121 assignments)
+Generated 130 VCC(s), 78 remaining after simplification (181 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.026s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.072s
+BMC program time: 0.114s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Symex completed in: 0.015s (302 assignments)
+Slicing time: 0.003s (removed 121 assignments)
+Generated 137 VCC(s), 85 remaining after simplification (181 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.028s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.400s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Symex completed in: 0.016s (409 assignments)
+Slicing time: 0.003s (removed 149 assignments)
+Generated 180 VCC(s), 108 remaining after simplification (260 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.190s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.318s
+BMC program time: 0.524s
+No bug has been found in the base case
+Checking forward condition, k = 3
+Starting Bounded Model Checking
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Not unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Symex completed in: 0.029s (409 assignments)
+Slicing time: 0.005s (removed 149 assignments)
+Generated 187 VCC(s), 115 remaining after simplification (260 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.273s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 3.141s
+The forward condition is unable to prove the property
+Checking base case, k = 4
+Starting Bounded Model Checking
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Symex completed in: 0.023s (509 assignments)
+Slicing time: 0.004s (removed 170 assignments)
+Generated 221 VCC(s), 134 remaining after simplification (339 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.514s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.662s
+BMC program time: 1.200s
+No bug has been found in the base case
+Checking forward condition, k = 4
+Starting Bounded Model Checking
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 17 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 17 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Not unwinding loop 17 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 51 column 3 function strncpy
+Unwinding loop 18 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 18 iteration 3   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Not unwinding loop 18 iteration 4   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 55 column 5 function strncpy
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Unwinding loop 38 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Not unwinding loop 38 iteration 4   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1824_use-after-free_network-packet-sniffer.c line 32 column 5 function process_packets
+Symex completed in: 0.028s (509 assignments)
+Slicing time: 0.004s (removed 170 assignments)
+Generated 228 VCC(s), 141 remaining after simplification (339 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.664s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

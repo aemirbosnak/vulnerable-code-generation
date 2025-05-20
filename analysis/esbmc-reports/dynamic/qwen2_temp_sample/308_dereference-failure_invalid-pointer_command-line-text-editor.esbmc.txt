@@ -1,0 +1,49 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/308_dereference-failure_invalid-pointer_command-line-text-editor.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.317s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+WARNING: no body for function perror
+Not unwinding loop 25 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Symex completed in: 0.007s (104 assignments)
+Slicing time: 0.000s (removed 49 assignments)
+Generated 20 VCC(s), 17 remaining after simplification (55 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.220s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/308_dereference-failure_invalid-pointer_command-line-text-editor.c line 24 column 5 function main thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/308_dereference-failure_invalid-pointer_command-line-text-editor.c line 31 column 5 function main thread 0
+----------------------------------------------------
+  size = 15 (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00001111)
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/308_dereference-failure_invalid-pointer_command-line-text-editor.c line 34 column 5 function main thread 0
+----------------------------------------------------
+  buffer = &dynamic_6_array[0]
+Editing...
+
+
+State 15 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/308_dereference-failure_invalid-pointer_command-line-text-editor.c line 12 column 5 function edit thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/308_dereference-failure_invalid-pointer_command-line-text-editor.c line 12 column 5 function edit
+  dereference failure: array bounds violated
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

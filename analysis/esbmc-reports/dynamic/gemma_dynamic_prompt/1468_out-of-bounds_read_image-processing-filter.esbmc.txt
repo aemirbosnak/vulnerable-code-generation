@@ -1,0 +1,41 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1468_out-of-bounds_read_image-processing-filter.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1468_out-of-bounds_read_image-processing-filter.c:35:31: warning: implicit conversion from 'unsigned int' to 'unsigned char' changes value from 3735928559 to 239 [-Wconstant-conversion]
+    img_data[img_size + 10] = 0xdeadbeef;
+                            ~ ^~~~~~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.502s
+GOTO program processing time: 0.012s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Symex completed in: 0.006s (96 assignments)
+Slicing time: 0.000s (removed 42 assignments)
+Generated 17 VCC(s), 14 remaining after simplification (54 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.318s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1468_out-of-bounds_read_image-processing-filter.c line 12 column 5 function main thread 0
+----------------------------------------------------
+  img_data = invalid-object
+
+State 3 file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 185 column 24 function fread
+  dereference failure: invalid pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

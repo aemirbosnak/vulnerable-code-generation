@@ -1,0 +1,69 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:24:7: error: expected expression
+      FILE *file = fopen(filename, "r");
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:25:11: error: use of undeclared identifier 'file'; did you mean 'free'?
+      if (file) {
+          ^~~~
+          free
+/tmp/esbmc.1e86-1260-ad2e/headers/stdlib.h:29:6: note: 'free' declared here
+void free(void *p);
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:27:16: error: use of undeclared identifier 'file'; did you mean 'free'?
+        fscanf(file, "%s", buffer);
+               ^~~~
+               free
+/tmp/esbmc.1e86-1260-ad2e/headers/stdlib.h:29:6: note: 'free' declared here
+void free(void *p);
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:29:16: error: use of undeclared identifier 'file'; did you mean 'free'?
+        fclose(file);
+               ^~~~
+               free
+/tmp/esbmc.1e86-1260-ad2e/headers/stdlib.h:29:6: note: 'free' declared here
+void free(void *p);
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:35:7: error: use of undeclared identifier 'file'
+      file = fopen(filename, "w");
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:36:11: error: use of undeclared identifier 'file'; did you mean 'free'?
+      if (file) {
+          ^~~~
+          free
+/tmp/esbmc.1e86-1260-ad2e/headers/stdlib.h:29:6: note: 'free' declared here
+void free(void *p);
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:40:17: error: use of undeclared identifier 'file'; did you mean 'free'?
+        fprintf(file, "%s", data);
+                ^~~~
+                free
+/tmp/esbmc.1e86-1260-ad2e/headers/stdlib.h:29:6: note: 'free' declared here
+void free(void *p);
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:41:16: error: use of undeclared identifier 'file'; did you mean 'free'?
+        fclose(file);
+               ^~~~
+               free
+/tmp/esbmc.1e86-1260-ad2e/headers/stdlib.h:29:6: note: 'free' declared here
+void free(void *p);
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:47:7: error: use of undeclared identifier 'file'
+      file = fopen(filename, "r");
+      ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:48:11: error: use of undeclared identifier 'file'; did you mean 'free'?
+      if (file) {
+          ^~~~
+          free
+/tmp/esbmc.1e86-1260-ad2e/headers/stdlib.h:29:6: note: 'free' declared here
+void free(void *p);
+     ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/624_buffer-overflow_buffer-overflow-on-fscanf.c:49:16: error: use of undeclared identifier 'file'; did you mean 'free'?
+        fclose(file);
+               ^~~~
+               free
+/tmp/esbmc.1e86-1260-ad2e/headers/stdlib.h:29:6: note: 'free' declared here
+void free(void *p);
+     ^
+ERROR: PARSING ERROR

@@ -1,0 +1,37 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/203_dereference-failure_invalid-pointer_plugin-loader-architecture.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.422s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/203_dereference-failure_invalid-pointer_plugin-loader-architecture.c line 21 column 5 function main
+Symex completed in: 0.007s (62 assignments)
+Slicing time: 0.000s (removed 38 assignments)
+Generated 13 VCC(s), 13 remaining after simplification (24 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.103s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/203_dereference-failure_invalid-pointer_plugin-loader-architecture.c line 17 column 5 function main thread 0
+----------------------------------------------------
+  args = (signed char * *)0
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/203_dereference-failure_invalid-pointer_plugin-loader-architecture.c line 18 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/203_dereference-failure_invalid-pointer_plugin-loader-architecture.c line 18 column 5 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

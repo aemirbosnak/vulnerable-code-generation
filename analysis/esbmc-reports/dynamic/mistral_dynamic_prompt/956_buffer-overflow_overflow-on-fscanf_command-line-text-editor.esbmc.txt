@@ -1,0 +1,62 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/956_buffer-overflow_overflow-on-fscanf_command-line-text-editor.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.254s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 22 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+Not unwinding loop 22 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 107 column 12 function strcmp
+WARNING: no body for function strtoul
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding recursion edit iteration 1 (1 max)
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Symex completed in: 0.015s (176 assignments)
+Slicing time: 0.002s (removed 107 assignments)
+Generated 32 VCC(s), 16 remaining after simplification (69 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.008s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 3.042s
+Building error trace
+
+[Counterexample]
+
+
+[Edit]
+
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/956_buffer-overflow_overflow-on-fscanf_command-line-text-editor.c line 16 column 5 function edit thread 0
+----------------------------------------------------
+  input = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 13 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/956_buffer-overflow_overflow-on-fscanf_command-line-text-editor.c line 25 column 9 function edit thread 0
+----------------------------------------------------
+  end = 0
+
+State 14 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/956_buffer-overflow_overflow-on-fscanf_command-line-text-editor.c line 26 column 9 function edit thread 0
+----------------------------------------------------
+  num = -1073741824 (11000000 00000000 00000000 00000000)
+
+State 16 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/956_buffer-overflow_overflow-on-fscanf_command-line-text-editor.c line 33 column 13 function edit thread 0
+----------------------------------------------------
+  cursor = -1073741824 (11000000 00000000 00000000 00000000)
+
+State 17 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/956_buffer-overflow_overflow-on-fscanf_command-line-text-editor.c line 35 column 13 function edit thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/956_buffer-overflow_overflow-on-fscanf_command-line-text-editor.c line 35 column 13 function edit
+  array bounds violated: array `buffer' lower bound
+  (signed long int)cursor >= 0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

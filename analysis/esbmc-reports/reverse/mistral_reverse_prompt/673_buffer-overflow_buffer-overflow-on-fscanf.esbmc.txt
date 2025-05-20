@@ -1,0 +1,12 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/673_buffer-overflow_buffer-overflow-on-fscanf.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/673_buffer-overflow_buffer-overflow-on-fscanf.c:34:14: error: call to undeclared library function 'toupper' with type 'int (int)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        *p = toupper(*p);
+             ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/673_buffer-overflow_buffer-overflow-on-fscanf.c:34:14: note: include the header <ctype.h> or explicitly provide a declaration for 'toupper'
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/673_buffer-overflow_buffer-overflow-on-fscanf.c:36:18: error: call to undeclared library function 'tolower' with type 'int (int)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+            *p = tolower(*p);
+                 ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/673_buffer-overflow_buffer-overflow-on-fscanf.c:36:18: note: include the header <ctype.h> or explicitly provide a declaration for 'tolower'
+ERROR: PARSING ERROR

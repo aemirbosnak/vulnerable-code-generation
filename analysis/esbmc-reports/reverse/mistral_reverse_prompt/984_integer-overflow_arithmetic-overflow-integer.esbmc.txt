@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/984_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/984_integer-overflow_arithmetic-overflow-integer.c:36:35: error: function definition is not allowed here
+    void swap(char** a, char** b) { char* t = *a; *a = *b; *b = t; }
+                                  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/984_integer-overflow_arithmetic-overflow-integer.c:46:27: error: call to undeclared function 'swap'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+            if (last < i) swap(&arr[last], &arr[i]);
+                          ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/984_integer-overflow_arithmetic-overflow-integer.c:49:9: error: call to undeclared function 'swap'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        swap(&arr[last], &arr[right]);
+        ^
+ERROR: PARSING ERROR

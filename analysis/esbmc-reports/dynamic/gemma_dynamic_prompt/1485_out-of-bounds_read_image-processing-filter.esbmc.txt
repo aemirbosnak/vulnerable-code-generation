@@ -1,0 +1,45 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1485_out-of-bounds_read_image-processing-filter.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1485_out-of-bounds_read_image-processing-filter.c:12:5: warning: array index 1024 is past the end of the array (that has type 'int[1024]') [-Warray-bounds]
+    img[1024] = 1; // Out of bounds access
+    ^   ~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1485_out-of-bounds_read_image-processing-filter.c:11:5: note: array 'img' declared here
+    int img[1024] = {0};
+    ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1485_out-of-bounds_read_image-processing-filter.c:13:18: warning: array index 1024 is past the end of the array (that has type 'int[1024]') [-Warray-bounds]
+    printf("%d", img[1024]);
+                 ^   ~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1485_out-of-bounds_read_image-processing-filter.c:11:5: note: array 'img' declared here
+    int img[1024] = {0};
+    ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.624s
+GOTO program processing time: 0.015s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.009s (14 assignments)
+Slicing time: 0.000s (removed 12 assignments)
+Generated 1 VCC(s), 1 remaining after simplification (2 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1485_out-of-bounds_read_image-processing-filter.c line 12 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1485_out-of-bounds_read_image-processing-filter.c line 12 column 5 function main
+  array bounds violated: array `img' upper bound
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

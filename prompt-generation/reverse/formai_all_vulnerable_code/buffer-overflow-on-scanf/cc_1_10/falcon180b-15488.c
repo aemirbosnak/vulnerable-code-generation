@@ -1,0 +1,57 @@
+//Falcon-180B DATASET v1.0 Category: Levenshtein Distance Calculator ; Style: dynamic
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_LENGTH 1000
+
+int min(int a, int b) {
+    return a < b? a : b;
+}
+
+int levenshtein_distance(char *s1, char *s2) {
+    int len1 = strlen(s1);
+    int len2 = strlen(s2);
+    int d[MAX_LENGTH+1][MAX_LENGTH+1];
+    int i, j;
+
+    // Initialize the matrix
+    for (i = 0; i <= len1; i++) {
+        d[i][0] = i;
+    }
+    for (j = 0; j <= len2; j++) {
+        d[0][j] = j;
+    }
+
+    // Calculate the Levenshtein distance
+    for (i = 1; i <= len1; i++) {
+        for (j = 1; j <= len2; j++) {
+            if (s1[i-1] == s2[j-1]) {
+                d[i][j] = d[i-1][j-1];
+            } else {
+                d[i][j] = min(d[i-1][j], d[i][j-1]) + 1;
+            }
+        }
+    }
+
+    return d[len1][len2];
+}
+
+int main() {
+    char s1[MAX_LENGTH], s2[MAX_LENGTH];
+    int dist;
+
+    // Get input strings
+    printf("Enter first string: ");
+    scanf("%s", s1);
+    printf("Enter second string: ");
+    scanf("%s", s2);
+
+    // Calculate Levenshtein distance
+    dist = levenshtein_distance(s1, s2);
+
+    // Output result
+    printf("Levenshtein distance between '%s' and '%s': %d\n", s1, s2, dist);
+
+    return 0;
+}

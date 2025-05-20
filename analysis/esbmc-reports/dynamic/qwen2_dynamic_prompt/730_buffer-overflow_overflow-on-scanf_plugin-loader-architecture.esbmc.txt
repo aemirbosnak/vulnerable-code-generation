@@ -1,0 +1,40 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/730_buffer-overflow_overflow-on-scanf_plugin-loader-architecture.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.278s
+GOTO program processing time: 0.006s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Symex completed in: 0.002s (30 assignments)
+Slicing time: 0.000s (removed 21 assignments)
+Generated 1 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.144s
+Building error trace
+
+[Counterexample]
+
+Enter plugin name: 
+/path/to/plugins/
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/730_buffer-overflow_overflow-on-scanf_plugin-loader-architecture.c line 18 column 5 function load_plugin thread 0
+----------------------------------------------------
+  file = &dynamic_4_value
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/730_buffer-overflow_overflow-on-scanf_plugin-loader-architecture.c line 25 column 12 function load_plugin thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/730_buffer-overflow_overflow-on-scanf_plugin-loader-architecture.c line 25 column 12 function load_plugin
+  buffer overflow on fscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

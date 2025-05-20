@@ -1,0 +1,38 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/2018_integer-overflow_encryption-library-interface.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.592s
+GOTO program processing time: 0.014s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 9 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/2018_integer-overflow_encryption-library-interface.c line 20 column 5 function generate_key
+Symex completed in: 0.007s (88 assignments)
+Slicing time: 0.002s (removed 40 assignments)
+Generated 19 VCC(s), 16 remaining after simplification (48 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.144s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/2018_integer-overflow_encryption-library-interface.c line 17 column 5 function generate_key thread 0
+----------------------------------------------------
+  key = { .key=0, .anon_pad$1=0, .data={ .pointer_object=nil, .pointer_offset=nil }, .len=0 }
+
+State 5 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

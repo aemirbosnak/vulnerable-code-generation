@@ -1,0 +1,29 @@
+#include <string.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char *ptr = NULL;
+    int i = 0;
+
+    ptr = malloc(10);
+    if (ptr == NULL)
+    {
+        printf("Error allocating memory.\n");
+        return 1;
+    }
+
+    for (i = 0; i < 10; i++)
+    {
+        *(ptr + i) = i + 1;
+    }
+
+    free(ptr);
+
+    return 0;
+}

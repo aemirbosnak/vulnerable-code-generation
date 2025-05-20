@@ -1,0 +1,55 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1654_out-of-bounds_write_network-packet-sniffer.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1654_out-of-bounds_write_network-packet-sniffer.c:49:9: warning: array index 4096 is past the end of the array (that has type 'char[4096]') [-Warray-bounds]
+        buffer[BUFSIZE] = 'X'; // This line intentionally causes an out-of-bounds write
+        ^      ~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1654_out-of-bounds_write_network-packet-sniffer.c:16:5: note: array 'buffer' declared here
+    char buffer[BUFSIZE];
+    ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.596s
+GOTO program processing time: 0.013s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function socket
+WARNING: no body for function perror
+WARNING: no body for function bind
+WARNING: no body for function perror
+WARNING: no body for function close
+WARNING: no body for function recvfrom
+WARNING: no body for function perror
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1654_out-of-bounds_write_network-packet-sniffer.c line 36 column 5 function packet_sniffer
+Symex completed in: 0.004s (53 assignments)
+Slicing time: 0.000s (removed 34 assignments)
+Generated 7 VCC(s), 7 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.142s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1654_out-of-bounds_write_network-packet-sniffer.c line 19 column 19 function packet_sniffer thread 0
+----------------------------------------------------
+  sockfd = -10 (11111111 11111111 11111111 11110110)
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1654_out-of-bounds_write_network-packet-sniffer.c line 38 column 9 function packet_sniffer thread 0
+----------------------------------------------------
+  bytes_received = 9223372036854775791 (01111111 11111111 11111111 11111111 11111111 11111111 11111111 11101111)
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1654_out-of-bounds_write_network-packet-sniffer.c line 45 column 9 function packet_sniffer thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1654_out-of-bounds_write_network-packet-sniffer.c line 45 column 9 function packet_sniffer
+  array bounds violated: array `buffer' upper bound
+  bytes_received < 4096
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

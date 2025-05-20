@@ -1,0 +1,3014 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c:15:11: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+  int i = (int)arg;
+          ^~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c:24:52: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+    pthread_create(&threads[i], NULL, thread_func, (void *)i);
+                                                   ^~~~~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.413s
+GOTO program processing time: 0.015s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.005s (64 assignments)
+Slicing time: 0.000s (removed 51 assignments)
+Generated 8 VCC(s), 5 remaining after simplification (13 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+BMC program time: 0.008s
+Thread interleavings 2
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (54 assignments)
+Slicing time: 0.000s (removed 49 assignments)
+Generated 4 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 3
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (53 assignments)
+Slicing time: 0.000s (removed 48 assignments)
+Generated 4 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 4
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (52 assignments)
+Slicing time: 0.000s (removed 47 assignments)
+Generated 3 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 5
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (39 assignments)
+Slicing time: 0.000s (removed 36 assignments)
+Generated 2 VCC(s), 1 remaining after simplification (3 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.005s (64 assignments)
+Slicing time: 0.000s (removed 51 assignments)
+Generated 9 VCC(s), 6 remaining after simplification (13 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.008s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function sleep
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.017s (106 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 19 VCC(s), 12 remaining after simplification (26 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.211s
+BMC program time: 0.232s
+Thread interleavings 2
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (89 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 3
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (88 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 4
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (87 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 5
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (74 assignments)
+Slicing time: 0.000s (removed 69 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 6
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.009s (103 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 15 VCC(s), 8 remaining after simplification (23 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.199s
+BMC program time: 0.211s
+Thread interleavings 7
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (90 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 8
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (89 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 9
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (88 assignments)
+Slicing time: 0.002s (removed 80 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 10
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (76 assignments)
+Slicing time: 0.000s (removed 69 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 11
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.006s (102 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 14 VCC(s), 7 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.213s
+BMC program time: 0.222s
+Thread interleavings 12
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (89 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.008s
+Thread interleavings 13
+Symex completed in: 0.002s (85 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.002s
+Thread interleavings 14
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (83 assignments)
+Slicing time: 0.002s (removed 76 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 15
+Symex completed in: 0.002s (84 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.002s
+Thread interleavings 16
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 17
+Symex completed in: 0.002s (83 assignments)
+Slicing time: 0.000s (removed 79 assignments)
+Generated 5 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.002s
+Thread interleavings 18
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (81 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 19
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (68 assignments)
+Slicing time: 0.002s (removed 63 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 20
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.011s (104 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 15 VCC(s), 8 remaining after simplification (24 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.241s
+BMC program time: 0.255s
+Thread interleavings 21
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (90 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+Thread interleavings 22
+Symex completed in: 0.002s (86 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.002s
+Thread interleavings 23
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (84 assignments)
+Slicing time: 0.000s (removed 76 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+BMC program time: 0.003s
+Thread interleavings 24
+Symex completed in: 0.002s (85 assignments)
+Slicing time: 0.002s (removed 80 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.003s
+Thread interleavings 25
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (83 assignments)
+Slicing time: 0.002s (removed 75 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 26
+Symex completed in: 0.002s (84 assignments)
+Slicing time: 0.000s (removed 79 assignments)
+Generated 5 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.002s
+Thread interleavings 27
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 28
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.005s (102 assignments)
+Slicing time: 0.002s (removed 80 assignments)
+Generated 14 VCC(s), 7 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.261s
+BMC program time: 0.272s
+Thread interleavings 29
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (90 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 30
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (89 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 31
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (88 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 32
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (76 assignments)
+Slicing time: 0.000s (removed 69 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 33
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (70 assignments)
+Slicing time: 0.002s (removed 63 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 34
+WARNING: no body for function sleep
+Symex completed in: 0.010s (91 assignments)
+Slicing time: 0.002s (removed 73 assignments)
+Generated 13 VCC(s), 6 remaining after simplification (18 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.011s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.299s
+BMC program time: 0.320s
+Thread interleavings 35
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (88 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 36
+Symex completed in: 0.002s (79 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.002s
+Thread interleavings 37
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (82 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 38
+Symex completed in: 0.000s (78 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.000s
+Thread interleavings 39
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (81 assignments)
+Slicing time: 0.002s (removed 74 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 40
+Symex completed in: 0.002s (77 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 5 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.002s
+Thread interleavings 41
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (80 assignments)
+Slicing time: 0.002s (removed 73 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 42
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (67 assignments)
+Slicing time: 0.000s (removed 62 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 43
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.006s (95 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 16 VCC(s), 9 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.224s
+BMC program time: 0.235s
+Thread interleavings 44
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (89 assignments)
+Slicing time: 0.002s (removed 81 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 45
+Symex completed in: 0.000s (80 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.000s
+Thread interleavings 46
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (83 assignments)
+Slicing time: 0.002s (removed 75 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 47
+Symex completed in: 0.002s (79 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.002s
+Thread interleavings 48
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 49
+Symex completed in: 0.000s (78 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 5 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.000s
+Thread interleavings 50
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (81 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 51
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.006s (103 assignments)
+Slicing time: 0.002s (removed 80 assignments)
+Generated 14 VCC(s), 7 remaining after simplification (23 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.229s
+BMC program time: 0.238s
+Thread interleavings 52
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (90 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 53
+Symex completed in: 0.000s (86 assignments)
+Slicing time: 0.002s (removed 81 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.002s
+Thread interleavings 54
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (84 assignments)
+Slicing time: 0.002s (removed 76 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 55
+Symex completed in: 0.002s (85 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.002s
+Thread interleavings 56
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (83 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 57
+Symex completed in: 0.002s (84 assignments)
+Slicing time: 0.000s (removed 79 assignments)
+Generated 5 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.002s
+Thread interleavings 58
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 59
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.005s (102 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 14 VCC(s), 7 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.238s
+BMC program time: 0.245s
+Thread interleavings 60
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (90 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 61
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (89 assignments)
+Slicing time: 0.002s (removed 81 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 62
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (88 assignments)
+Slicing time: 0.002s (removed 80 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 63
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (76 assignments)
+Slicing time: 0.000s (removed 69 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 64
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (70 assignments)
+Slicing time: 0.000s (removed 63 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 65
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (69 assignments)
+Slicing time: 0.000s (removed 62 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 66
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.004s (94 assignments)
+Slicing time: 0.000s (removed 72 assignments)
+Generated 18 VCC(s), 10 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.221s
+BMC program time: 0.228s
+Thread interleavings 67
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (87 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 68
+WARNING: no body for function sleep
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.002s (removed 66 assignments)
+Generated 12 VCC(s), 4 remaining after simplification (16 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.214s
+BMC program time: 0.219s
+Thread interleavings 69
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (81 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 70
+WARNING: no body for function sleep
+Symex completed in: 0.003s (91 assignments)
+Slicing time: 0.002s (removed 73 assignments)
+Generated 12 VCC(s), 4 remaining after simplification (18 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.223s
+BMC program time: 0.229s
+Thread interleavings 71
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (90 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 72
+Symex completed in: 0.002s (81 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.002s
+Thread interleavings 73
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (84 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 74
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.004s (98 assignments)
+Slicing time: 0.000s (removed 88 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 75
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (91 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 76
+Symex completed in: 0.002s (87 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.002s
+Thread interleavings 77
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (85 assignments)
+Slicing time: 0.000s (removed 76 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 78
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.003s (97 assignments)
+Slicing time: 0.000s (removed 88 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 79
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (91 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 80
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (89 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 81
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.004s (83 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 82
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 83
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (80 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 84
+WARNING: no body for function sleep
+Symex completed in: 0.002s (80 assignments)
+Slicing time: 0.000s (removed 65 assignments)
+Generated 10 VCC(s), 4 remaining after simplification (15 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.227s
+BMC program time: 0.231s
+Thread interleavings 85
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (79 assignments)
+Slicing time: 0.000s (removed 72 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 86
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (66 assignments)
+Slicing time: 0.002s (removed 61 assignments)
+Generated 4 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 87
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.007s (96 assignments)
+Slicing time: 0.000s (removed 72 assignments)
+Generated 21 VCC(s), 13 remaining after simplification (24 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.214s
+BMC program time: 0.224s
+Thread interleavings 88
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (86 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 89
+WARNING: no body for function sleep
+Symex completed in: 0.000s (81 assignments)
+Slicing time: 0.002s (removed 66 assignments)
+Generated 12 VCC(s), 4 remaining after simplification (15 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.212s
+BMC program time: 0.216s
+Thread interleavings 90
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (80 assignments)
+Slicing time: 0.002s (removed 74 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 91
+WARNING: no body for function sleep
+Symex completed in: 0.003s (90 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 12 VCC(s), 4 remaining after simplification (17 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.207s
+BMC program time: 0.213s
+Thread interleavings 92
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (89 assignments)
+Slicing time: 0.002s (removed 81 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 93
+Symex completed in: 0.000s (80 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.000s
+Thread interleavings 94
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (83 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 95
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.004s (97 assignments)
+Slicing time: 0.000s (removed 88 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+Thread interleavings 96
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (90 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 97
+Symex completed in: 0.002s (86 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.002s
+Thread interleavings 98
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (84 assignments)
+Slicing time: 0.000s (removed 76 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 99
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.003s (96 assignments)
+Slicing time: 0.000s (removed 88 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 100
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (90 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 101
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (88 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 102
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.002s (removed 75 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 103
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (81 assignments)
+Slicing time: 0.002s (removed 74 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 104
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (79 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 105
+WARNING: no body for function sleep
+Symex completed in: 0.000s (79 assignments)
+Slicing time: 0.000s (removed 65 assignments)
+Generated 10 VCC(s), 4 remaining after simplification (14 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.213s
+BMC program time: 0.217s
+Thread interleavings 106
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (78 assignments)
+Slicing time: 0.000s (removed 72 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 107
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.004s (92 assignments)
+Slicing time: 0.002s (removed 73 assignments)
+Generated 15 VCC(s), 8 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.222s
+BMC program time: 0.228s
+Thread interleavings 108
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (87 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 109
+Symex completed in: 0.000s (78 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (3 assignments)
+BMC program time: 0.000s
+Thread interleavings 110
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (81 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 111
+Symex completed in: 0.002s (77 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (3 assignments)
+BMC program time: 0.002s
+Thread interleavings 112
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (80 assignments)
+Slicing time: 0.002s (removed 74 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 113
+Symex completed in: 0.000s (76 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 5 VCC(s), 0 remaining after simplification (3 assignments)
+BMC program time: 0.000s
+Thread interleavings 114
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (79 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 115
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.004s (101 assignments)
+Slicing time: 0.002s (removed 80 assignments)
+Generated 14 VCC(s), 7 remaining after simplification (21 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.188s
+BMC program time: 0.194s
+Thread interleavings 116
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (88 assignments)
+Slicing time: 0.002s (removed 82 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+Thread interleavings 117
+Symex completed in: 0.000s (84 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (3 assignments)
+BMC program time: 0.002s
+Thread interleavings 118
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.000s (removed 76 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 119
+Symex completed in: 0.002s (83 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 7 VCC(s), 0 remaining after simplification (3 assignments)
+BMC program time: 0.002s
+Thread interleavings 120
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (81 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 121
+Symex completed in: 0.002s (82 assignments)
+Slicing time: 0.000s (removed 79 assignments)
+Generated 5 VCC(s), 0 remaining after simplification (3 assignments)
+BMC program time: 0.003s
+Thread interleavings 122
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (80 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 123
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.006s (100 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 14 VCC(s), 7 remaining after simplification (20 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.185s
+BMC program time: 0.194s
+Thread interleavings 124
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (88 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 125
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (87 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 126
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (86 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 6 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 127
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (74 assignments)
+Slicing time: 0.000s (removed 69 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 128
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (68 assignments)
+Slicing time: 0.000s (removed 63 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 129
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (67 assignments)
+Slicing time: 0.000s (removed 62 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 130
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (66 assignments)
+Slicing time: 0.000s (removed 61 assignments)
+Generated 4 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 131
+WARNING: no body for function sleep
+Symex completed in: 0.003s (87 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 11 VCC(s), 6 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.176s
+BMC program time: 0.181s
+Thread interleavings 132
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (74 assignments)
+Slicing time: 0.000s (removed 69 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 133
+Symex completed in: 0.002s (77 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 7 VCC(s), 2 remaining after simplification (4 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+BMC program time: 0.004s
+Thread interleavings 134
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (68 assignments)
+Slicing time: 0.002s (removed 63 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 135
+Symex completed in: 0.002s (76 assignments)
+Slicing time: 0.000s (removed 72 assignments)
+Generated 7 VCC(s), 2 remaining after simplification (4 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 136
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (67 assignments)
+Slicing time: 0.000s (removed 62 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 137
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.006s (94 assignments)
+Slicing time: 0.000s (removed 72 assignments)
+Generated 18 VCC(s), 10 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.219s
+BMC program time: 0.228s
+Thread interleavings 138
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (87 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 139
+WARNING: no body for function sleep
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.002s (removed 66 assignments)
+Generated 12 VCC(s), 4 remaining after simplification (16 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.212s
+BMC program time: 0.217s
+Thread interleavings 140
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (81 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+Thread interleavings 141
+WARNING: no body for function sleep
+Symex completed in: 0.003s (91 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 12 VCC(s), 4 remaining after simplification (18 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.182s
+BMC program time: 0.187s
+Thread interleavings 142
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (90 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 143
+Symex completed in: 0.000s (81 assignments)
+Slicing time: 0.002s (removed 75 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.002s
+Thread interleavings 144
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (84 assignments)
+Slicing time: 0.002s (removed 75 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 145
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.003s (98 assignments)
+Slicing time: 0.000s (removed 88 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 146
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (91 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 147
+Symex completed in: 0.002s (87 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.002s
+Thread interleavings 148
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (85 assignments)
+Slicing time: 0.000s (removed 76 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 149
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.003s (97 assignments)
+Slicing time: 0.000s (removed 88 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 150
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (91 assignments)
+Slicing time: 0.002s (removed 82 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 151
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (89 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 152
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (83 assignments)
+Slicing time: 0.002s (removed 75 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 153
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 154
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (80 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 155
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.004s (93 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 16 VCC(s), 8 remaining after simplification (20 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.159s
+BMC program time: 0.165s
+Thread interleavings 156
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (88 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 157
+Symex completed in: 0.000s (79 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.000s
+Thread interleavings 158
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 159
+Symex completed in: 0.000s (78 assignments)
+Slicing time: 0.000s (removed 74 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.002s
+Thread interleavings 160
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (81 assignments)
+Slicing time: 0.002s (removed 74 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 161
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.005s (100 assignments)
+Slicing time: 0.002s (removed 80 assignments)
+Generated 13 VCC(s), 5 remaining after simplification (20 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.156s
+BMC program time: 0.164s
+Thread interleavings 162
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (89 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 163
+Symex completed in: 0.000s (85 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.002s
+Thread interleavings 164
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (83 assignments)
+Slicing time: 0.000s (removed 76 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 165
+Symex completed in: 0.000s (84 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 8 VCC(s), 0 remaining after simplification (4 assignments)
+BMC program time: 0.000s
+Thread interleavings 166
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (82 assignments)
+Slicing time: 0.000s (removed 75 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 167
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.003s (99 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 13 VCC(s), 5 remaining after simplification (19 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.136s
+BMC program time: 0.140s
+Thread interleavings 168
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (89 assignments)
+Slicing time: 0.000s (removed 82 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 169
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (88 assignments)
+Slicing time: 0.000s (removed 81 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 170
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (86 assignments)
+Slicing time: 0.000s (removed 80 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 171
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (80 assignments)
+Slicing time: 0.002s (removed 74 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 172
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (79 assignments)
+Slicing time: 0.000s (removed 73 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 173
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (78 assignments)
+Slicing time: 0.000s (removed 72 assignments)
+Generated 5 VCC(s), 1 remaining after simplification (6 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 174
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (66 assignments)
+Slicing time: 0.000s (removed 61 assignments)
+Generated 4 VCC(s), 1 remaining after simplification (5 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 175
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (53 assignments)
+Slicing time: 0.000s (removed 50 assignments)
+Generated 3 VCC(s), 1 remaining after simplification (3 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+No bug has been found in the base case
+Checking forward condition, k = 2
+Starting Bounded Model Checking
+WARNING: no body for function sleep
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.009s (106 assignments)
+Slicing time: 0.002s (removed 80 assignments)
+Generated 20 VCC(s), 13 remaining after simplification (26 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.184s
+The forward condition is unable to prove the property
+Checking base case, k = 3
+Starting Bounded Model Checking
+WARNING: no body for function sleep
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.011s (150 assignments)
+Slicing time: 0.002s (removed 109 assignments)
+Generated 33 VCC(s), 21 remaining after simplification (41 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.348s
+BMC program time: 0.363s
+Thread interleavings 2
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (124 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 3
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (123 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 4
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (122 assignments)
+Slicing time: 0.002s (removed 113 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 5
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (109 assignments)
+Slicing time: 0.000s (removed 102 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 6
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.005s (140 assignments)
+Slicing time: 0.000s (removed 109 assignments)
+Generated 22 VCC(s), 10 remaining after simplification (31 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.447s
+BMC program time: 0.454s
+Thread interleavings 7
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (125 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 8
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (124 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 9
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (123 assignments)
+Slicing time: 0.000s (removed 113 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 10
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (111 assignments)
+Slicing time: 0.002s (removed 102 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 11
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.004s (139 assignments)
+Slicing time: 0.000s (removed 109 assignments)
+Generated 21 VCC(s), 9 remaining after simplification (30 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.332s
+BMC program time: 0.338s
+Thread interleavings 12
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (124 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+Thread interleavings 13
+Symex completed in: 0.002s (120 assignments)
+Slicing time: 0.002s (removed 114 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.003s
+Thread interleavings 14
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (118 assignments)
+Slicing time: 0.000s (removed 109 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 15
+Symex completed in: 0.002s (119 assignments)
+Slicing time: 0.000s (removed 113 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.002s
+Thread interleavings 16
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (117 assignments)
+Slicing time: 0.002s (removed 108 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 17
+Symex completed in: 0.002s (118 assignments)
+Slicing time: 0.002s (removed 112 assignments)
+Generated 9 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.003s
+Thread interleavings 18
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (116 assignments)
+Slicing time: 0.002s (removed 107 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 19
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (103 assignments)
+Slicing time: 0.000s (removed 96 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 20
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.005s (141 assignments)
+Slicing time: 0.000s (removed 109 assignments)
+Generated 22 VCC(s), 10 remaining after simplification (32 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.337s
+BMC program time: 0.344s
+Thread interleavings 21
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (125 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 22
+Symex completed in: 0.002s (121 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.002s
+Thread interleavings 23
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (119 assignments)
+Slicing time: 0.000s (removed 109 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 24
+Symex completed in: 0.000s (120 assignments)
+Slicing time: 0.002s (removed 113 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.002s
+Thread interleavings 25
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (118 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 26
+Symex completed in: 0.002s (119 assignments)
+Slicing time: 0.000s (removed 112 assignments)
+Generated 9 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.002s
+Thread interleavings 27
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (117 assignments)
+Slicing time: 0.000s (removed 107 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 28
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.004s (139 assignments)
+Slicing time: 0.000s (removed 109 assignments)
+Generated 21 VCC(s), 9 remaining after simplification (30 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.308s
+BMC program time: 0.318s
+Thread interleavings 29
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (125 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 30
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (124 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 31
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (123 assignments)
+Slicing time: 0.002s (removed 113 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 32
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (111 assignments)
+Slicing time: 0.000s (removed 102 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 33
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (105 assignments)
+Slicing time: 0.000s (removed 96 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 34
+WARNING: no body for function sleep
+Symex completed in: 0.004s (128 assignments)
+Slicing time: 0.000s (removed 102 assignments)
+Generated 20 VCC(s), 8 remaining after simplification (26 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.395s
+BMC program time: 0.401s
+Thread interleavings 35
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (123 assignments)
+Slicing time: 0.002s (removed 114 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 36
+Symex completed in: 0.000s (114 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.000s
+Thread interleavings 37
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (117 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 38
+Symex completed in: 0.000s (113 assignments)
+Slicing time: 0.000s (removed 107 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.000s
+Thread interleavings 39
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (116 assignments)
+Slicing time: 0.000s (removed 107 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 40
+Symex completed in: 0.000s (112 assignments)
+Slicing time: 0.000s (removed 106 assignments)
+Generated 9 VCC(s), 0 remaining after simplification (6 assignments)
+BMC program time: 0.000s
+Thread interleavings 41
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (115 assignments)
+Slicing time: 0.000s (removed 106 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 42
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (102 assignments)
+Slicing time: 0.000s (removed 95 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 43
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.006s (134 assignments)
+Slicing time: 0.000s (removed 102 assignments)
+Generated 25 VCC(s), 13 remaining after simplification (32 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.477s
+BMC program time: 0.487s
+Thread interleavings 44
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (124 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 45
+Symex completed in: 0.000s (115 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.002s
+Thread interleavings 46
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (118 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 47
+Symex completed in: 0.000s (114 assignments)
+Slicing time: 0.002s (removed 107 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.002s
+Thread interleavings 48
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (117 assignments)
+Slicing time: 0.000s (removed 107 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 49
+Symex completed in: 0.002s (113 assignments)
+Slicing time: 0.000s (removed 106 assignments)
+Generated 9 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.002s
+Thread interleavings 50
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (116 assignments)
+Slicing time: 0.002s (removed 106 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 51
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.006s (140 assignments)
+Slicing time: 0.000s (removed 109 assignments)
+Generated 21 VCC(s), 9 remaining after simplification (31 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.401s
+BMC program time: 0.410s
+Thread interleavings 52
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (125 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 53
+Symex completed in: 0.002s (121 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.002s
+Thread interleavings 54
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (119 assignments)
+Slicing time: 0.002s (removed 109 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 55
+Symex completed in: 0.000s (120 assignments)
+Slicing time: 0.000s (removed 113 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.000s
+Thread interleavings 56
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (118 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 57
+Symex completed in: 0.002s (119 assignments)
+Slicing time: 0.000s (removed 112 assignments)
+Generated 9 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.002s
+Thread interleavings 58
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (117 assignments)
+Slicing time: 0.000s (removed 107 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 59
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.004s (139 assignments)
+Slicing time: 0.000s (removed 109 assignments)
+Generated 21 VCC(s), 9 remaining after simplification (30 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.393s
+BMC program time: 0.399s
+Thread interleavings 60
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (125 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 61
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (124 assignments)
+Slicing time: 0.002s (removed 114 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 62
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (123 assignments)
+Slicing time: 0.000s (removed 113 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 63
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (111 assignments)
+Slicing time: 0.000s (removed 102 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 64
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (105 assignments)
+Slicing time: 0.002s (removed 96 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 65
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (104 assignments)
+Slicing time: 0.002s (removed 95 assignments)
+Generated 9 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 66
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.005s (133 assignments)
+Slicing time: 0.002s (removed 101 assignments)
+Generated 27 VCC(s), 14 remaining after simplification (32 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.402s
+BMC program time: 0.411s
+Thread interleavings 67
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (122 assignments)
+Slicing time: 0.002s (removed 113 assignments)
+Generated 11 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+Thread interleavings 68
+WARNING: no body for function sleep
+Symex completed in: 0.002s (119 assignments)
+Slicing time: 0.000s (removed 95 assignments)
+Generated 19 VCC(s), 6 remaining after simplification (24 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.403s
+BMC program time: 0.409s
+Thread interleavings 69
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (116 assignments)
+Slicing time: 0.000s (removed 107 assignments)
+Generated 11 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 70
+WARNING: no body for function sleep
+Symex completed in: 0.002s (128 assignments)
+Slicing time: 0.002s (removed 102 assignments)
+Generated 19 VCC(s), 6 remaining after simplification (26 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.480s
+BMC program time: 0.486s
+Thread interleavings 71
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (125 assignments)
+Slicing time: 0.002s (removed 114 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 72
+Symex completed in: 0.000s (116 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 13 VCC(s), 0 remaining after simplification (8 assignments)
+BMC program time: 0.000s
+Thread interleavings 73
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (119 assignments)
+Slicing time: 0.002s (removed 108 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 74
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.004s (133 assignments)
+Slicing time: 0.002s (removed 121 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (12 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 75
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (126 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 76
+Symex completed in: 0.000s (122 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 13 VCC(s), 0 remaining after simplification (8 assignments)
+BMC program time: 0.000s
+Thread interleavings 77
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (120 assignments)
+Slicing time: 0.002s (removed 109 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 78
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.003s (132 assignments)
+Slicing time: 0.000s (removed 121 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 79
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (126 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 80
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (124 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 81
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (118 assignments)
+Slicing time: 0.002s (removed 108 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+BMC program time: 0.003s
+Thread interleavings 82
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (117 assignments)
+Slicing time: 0.002s (removed 107 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 83
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (115 assignments)
+Slicing time: 0.000s (removed 106 assignments)
+Generated 11 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 84
+WARNING: no body for function sleep
+Symex completed in: 0.002s (117 assignments)
+Slicing time: 0.002s (removed 94 assignments)
+Generated 16 VCC(s), 6 remaining after simplification (23 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.457s
+BMC program time: 0.464s
+Thread interleavings 85
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (114 assignments)
+Slicing time: 0.000s (removed 105 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+Thread interleavings 86
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (101 assignments)
+Slicing time: 0.002s (removed 94 assignments)
+Generated 7 VCC(s), 1 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 87
+Unwinding loop 39 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.010s (135 assignments)
+Slicing time: 0.002s (removed 101 assignments)
+Generated 30 VCC(s), 17 remaining after simplification (34 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.403s
+BMC program time: 0.418s
+Thread interleavings 88
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (121 assignments)
+Slicing time: 0.000s (removed 113 assignments)
+Generated 11 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.009s
+Thread interleavings 89
+WARNING: no body for function sleep
+Symex completed in: 0.002s (118 assignments)
+Slicing time: 0.000s (removed 95 assignments)
+Generated 19 VCC(s), 6 remaining after simplification (23 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.494s
+BMC program time: 0.498s
+Thread interleavings 90
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (115 assignments)
+Slicing time: 0.002s (removed 107 assignments)
+Generated 11 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.008s
+Thread interleavings 91
+WARNING: no body for function sleep
+Symex completed in: 0.004s (127 assignments)
+Slicing time: 0.000s (removed 102 assignments)
+Generated 19 VCC(s), 6 remaining after simplification (25 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.505s
+BMC program time: 0.516s
+Thread interleavings 92
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (124 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 93
+Symex completed in: 0.000s (115 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 13 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.000s
+Thread interleavings 94
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (118 assignments)
+Slicing time: 0.002s (removed 108 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 95
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.004s (132 assignments)
+Slicing time: 0.000s (removed 121 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (11 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.005s
+Thread interleavings 96
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (125 assignments)
+Slicing time: 0.000s (removed 115 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 97
+Symex completed in: 0.000s (121 assignments)
+Slicing time: 0.002s (removed 114 assignments)
+Generated 13 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.002s
+Thread interleavings 98
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (119 assignments)
+Slicing time: 0.002s (removed 109 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 99
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.003s (131 assignments)
+Slicing time: 0.002s (removed 121 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.004s
+Thread interleavings 100
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (125 assignments)
+Slicing time: 0.002s (removed 115 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (10 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 101
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (123 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 102
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (117 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 103
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (116 assignments)
+Slicing time: 0.000s (removed 107 assignments)
+Generated 14 VCC(s), 1 remaining after simplification (9 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 104
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (114 assignments)
+Slicing time: 0.000s (removed 106 assignments)
+Generated 11 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 105
+WARNING: no body for function sleep
+Symex completed in: 0.002s (116 assignments)
+Slicing time: 0.000s (removed 94 assignments)
+Generated 16 VCC(s), 6 remaining after simplification (22 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.450s
+BMC program time: 0.455s
+Thread interleavings 106
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.002s (113 assignments)
+Slicing time: 0.000s (removed 105 assignments)
+Generated 8 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+Thread interleavings 107
+WARNING: no body for function sleep
+WARNING: no body for function sleep
+Symex completed in: 0.006s (131 assignments)
+Slicing time: 0.002s (removed 102 assignments)
+Generated 24 VCC(s), 12 remaining after simplification (29 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.417s
+BMC program time: 0.428s
+Thread interleavings 108
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (122 assignments)
+Slicing time: 0.000s (removed 114 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.003s
+Thread interleavings 109
+Symex completed in: 0.000s (113 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.000s
+Thread interleavings 110
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (116 assignments)
+Slicing time: 0.000s (removed 108 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.000s
+Thread interleavings 111
+Symex completed in: 0.000s (112 assignments)
+Slicing time: 0.002s (removed 107 assignments)
+Generated 12 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.002s
+Thread interleavings 112
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (115 assignments)
+Slicing time: 0.000s (removed 107 assignments)
+Generated 13 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 113
+Symex completed in: 0.000s (111 assignments)
+Slicing time: 0.000s (removed 106 assignments)
+Generated 9 VCC(s), 0 remaining after simplification (5 assignments)
+BMC program time: 0.000s
+Thread interleavings 114
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.000s (114 assignments)
+Slicing time: 0.000s (removed 106 assignments)
+Generated 10 VCC(s), 1 remaining after simplification (8 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.002s
+Thread interleavings 115
+WARNING: no body for function sleep
+Not unwinding loop 39 iteration 3   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_temp_sample/021_dereference-failure_invalid-pointer_multi-threaded-job-scheduler.c line 23 column 3 function main
+Symex completed in: 0.007s (138 assignments)
+Slicing time: 0.002s (removed 109 assignments)
+Generated 21 VCC(s), 9 remaining after simplification (29 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+ERROR: Timed out

@@ -1,0 +1,82 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.826s
+ERROR: the format specifiers do not match with the arguments
+GOTO program processing time: 0.019s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.004s (38 assignments)
+Slicing time: 0.000s (removed 31 assignments)
+Generated 1 VCC(s), 0 remaining after simplification (7 assignments)
+BMC program time: 0.004s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 34 column 5 function main
+Symex completed in: 0.003s (38 assignments)
+Slicing time: 0.000s (removed 31 assignments)
+Generated 3 VCC(s), 2 remaining after simplification (7 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 21 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 21 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 39 column 9 function main
+Unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 16 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 39 column 9 function main
+Symex completed in: 0.055s (209 assignments)
+Slicing time: 0.004s (removed 85 assignments)
+Generated 97 VCC(s), 68 remaining after simplification (124 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.018s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 2.212s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 28 column 5 function main thread 0
+----------------------------------------------------
+  jobs = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+Job Scheduler
+
+Enter number of jobs (or 0 to exit): 
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 36 column 9 function main thread 0
+----------------------------------------------------
+  buffer = { -128, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 37 column 9 function main thread 0
+----------------------------------------------------
+  num_jobs = 1 (00000000 00000000 00000000 00000001)
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 40 column 13 function main thread 0
+----------------------------------------------------
+  jobs[0] = ( struct __anon_typedef_Job_at_/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler_c__13_9 *)0
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 41 column 13 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/881_buffer-overflow_overflow-on-fscanf_multi-threaded-job-scheduler.c line 41 column 13 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 2)

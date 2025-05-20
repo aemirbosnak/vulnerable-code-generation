@@ -1,0 +1,98 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c:51:5: warning: array index 10 is past the end of the array (that has type 'CacheEntry[10]') [-Warray-bounds]
+    cache[10].key = 4; // This will overwrite the next entry after cache
+    ^     ~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c:16:1: note: array 'cache' declared here
+CacheEntry cache[CACHE_SIZE];
+^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c:52:5: warning: array index 10 is past the end of the array (that has type 'CacheEntry[10]') [-Warray-bounds]
+    cache[10].value = 40;
+    ^     ~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c:16:1: note: array 'cache' declared here
+CacheEntry cache[CACHE_SIZE];
+^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.412s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 35 column 5 function get_from_cache
+Symex completed in: 0.003s (42 assignments)
+Slicing time: 0.000s (removed 27 assignments)
+Generated 21 VCC(s), 5 remaining after simplification (15 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+BMC program time: 0.006s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 35 column 5 function get_from_cache
+Symex completed in: 0.003s (42 assignments)
+Slicing time: 0.000s (removed 27 assignments)
+Generated 22 VCC(s), 6 remaining after simplification (15 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 35 column 5 function get_from_cache
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 35 column 5 function get_from_cache
+Symex completed in: 0.003s (50 assignments)
+Slicing time: 0.002s (removed 33 assignments)
+Generated 26 VCC(s), 6 remaining after simplification (17 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.000s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 29 column 5 function insert_into_cache thread 0
+----------------------------------------------------
+  cache[(signed long int)cache_count].key = { .key=1, .value=0 }
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 30 column 5 function insert_into_cache thread 0
+----------------------------------------------------
+  cache[(signed long int)cache_count].value = 10 (00000000 00000000 00000000 00001010)
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 29 column 5 function insert_into_cache thread 0
+----------------------------------------------------
+  cache[(signed long int)cache_count].key = 2 (00000000 00000000 00000000 00000010)
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 30 column 5 function insert_into_cache thread 0
+----------------------------------------------------
+  cache[(signed long int)cache_count].value = 20 (00000000 00000000 00000000 00010100)
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 29 column 5 function insert_into_cache thread 0
+----------------------------------------------------
+  cache[(signed long int)cache_count].key = 3 (00000000 00000000 00000000 00000011)
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 30 column 5 function insert_into_cache thread 0
+----------------------------------------------------
+  cache[(signed long int)cache_count].value = 30 (00000000 00000000 00000000 00011110)
+Value for key 2: 0
+
+
+State 12 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 51 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1692_out-of-bounds_write_cache-eviction-mechanism.c line 51 column 5 function main
+  array bounds violated: array `cache' upper bound
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 2)

@@ -1,0 +1,38 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/385_buffer-overflow_buffer-overflow-on-sscanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.527s
+GOTO program processing time: 0.013s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Symex completed in: 0.008s (84 assignments)
+Slicing time: 0.000s (removed 50 assignments)
+Generated 14 VCC(s), 10 remaining after simplification (34 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.132s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/385_buffer-overflow_buffer-overflow-on-sscanf.c line 20 column 5 function parse_meminfo thread 0
+----------------------------------------------------
+  fp = &dynamic_2_value
+
+State 6 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/385_buffer-overflow_buffer-overflow-on-sscanf.c line 25 column 13 function parse_meminfo thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/qwen2/385_buffer-overflow_buffer-overflow-on-sscanf.c line 25 column 13 function parse_meminfo
+  buffer overflow on sscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

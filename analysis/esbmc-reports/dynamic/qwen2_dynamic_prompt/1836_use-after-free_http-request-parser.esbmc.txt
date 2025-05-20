@@ -1,0 +1,8 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1836_use-after-free_http-request-parser.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1836_use-after-free_http-request-parser.c:24:19: error: call to undeclared library function 'strndup' with type 'char *(const char *, unsigned long)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    req->method = strndup(request, space1 - request);
+                  ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/1836_use-after-free_http-request-parser.c:24:19: note: include the header <string.h> or explicitly provide a declaration for 'strndup'
+ERROR: PARSING ERROR

@@ -1,0 +1,67 @@
+//Falcon-180B DATASET v1.0 Category: Basic Unix-like Shell ; Style: complete
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+#define MAX_COMMAND_LENGTH 4096
+#define DELIM " \t\r\n\a"
+
+char **split_command(char *command) {
+    int argc = 0;
+    char **argv = NULL;
+    char *token;
+
+    token = strtok(command, DELIM);
+    while (token!= NULL) {
+        argc++;
+        argv = realloc(argv, sizeof(char *) * argc);
+        argv[argc - 1] = token;
+        token = strtok(NULL, DELIM);
+    }
+    argv[argc] = NULL;
+
+    return argv;
+}
+
+int execute_command(char **argv) {
+    pid_t pid;
+    int status;
+
+    pid = fork();
+    if (pid == 0) {
+        if (execvp(argv[0], argv) == -1) {
+            perror("execvp");
+            exit(EXIT_FAILURE);
+        }
+    } else if (pid < 0) {
+        perror("fork");
+        exit(EXIT_FAILURE);
+    } else {
+        waitpid(pid, &status, 0);
+    }
+
+    return status;
+}
+
+int main() {
+    char input[MAX_COMMAND_LENGTH];
+    char **argv = NULL;
+    int status;
+
+    printf("Unix-like Shell\n");
+
+    while (1) {
+        printf("> ");
+        fgets(input, MAX_COMMAND_LENGTH, stdin);
+        argv = split_command(input);
+
+        status = execute_command(argv);
+
+        free(argv);
+    }
+
+    return 0;
+}

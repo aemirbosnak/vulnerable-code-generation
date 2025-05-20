@@ -1,0 +1,86 @@
+//MISTRAL-7B DATASET v1.0 Category: Mailing list manager ; Style: retro
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_LIST_SIZE 100
+#define EMAIL_LENGTH 100
+
+typedef struct {
+    char name[30];
+    char email[EMAIL_LENGTH];
+} Subscriber;
+
+Subscriber list[MAX_LIST_SIZE];
+int list_size = 0;
+
+void add_subscriber(char *name, char *email) {
+    if (list_size >= MAX_LIST_SIZE) {
+        printf("Mailing list is full.\n");
+        return;
+    }
+
+    strcpy(list[list_size].name, name);
+    strcpy(list[list_size].email, email);
+    list_size++;
+}
+
+void remove_subscriber(int index) {
+    if (index < 0 || index >= list_size) {
+        printf("Invalid index.\n");
+        return;
+    }
+
+    memmove(&list[index], &list[index + 1], (list_size - index - 1) * sizeof(Subscriber));
+    list_size--;
+}
+
+void display_list() {
+    int i;
+
+    printf("\nMailing List:\n");
+    printf("-----------------\n");
+
+    for (i = 0; i < list_size; i++) {
+        printf("%s: %s\n", list[i].name, list[i].email);
+    }
+}
+
+int main() {
+    char name[30], email[EMAIL_LENGTH];
+    int choice, index;
+
+    while (1) {
+        printf("\nRetro Mailing List Manager\n");
+        printf("1. Add Subscriber\n");
+        printf("2. Remove Subscriber\n");
+        printf("3. Display List\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter name: ");
+                scanf("%s", name);
+                printf("Enter email: ");
+                scanf("%s", email);
+                add_subscriber(name, email);
+                break;
+            case 2:
+                printf("Enter index: ");
+                scanf("%d", &index);
+                remove_subscriber(index);
+                break;
+            case 3:
+                display_list();
+                break;
+            case 4:
+                exit(0);
+            default:
+                printf("Invalid choice.\n");
+        }
+    }
+
+    return 0;
+}

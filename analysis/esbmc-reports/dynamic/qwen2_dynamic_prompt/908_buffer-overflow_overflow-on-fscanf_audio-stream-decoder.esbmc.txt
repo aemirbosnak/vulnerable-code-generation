@@ -1,0 +1,37 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/908_buffer-overflow_overflow-on-fscanf_audio-stream-decoder.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.456s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Symex completed in: 0.003s (39 assignments)
+Slicing time: 0.000s (removed 22 assignments)
+Generated 3 VCC(s), 3 remaining after simplification (17 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.180s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/908_buffer-overflow_overflow-on-fscanf_audio-stream-decoder.c line 12 column 5 function decode_audio_stream thread 0
+----------------------------------------------------
+  file = &dynamic_1_value
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/908_buffer-overflow_overflow-on-fscanf_audio-stream-decoder.c line 19 column 12 function decode_audio_stream thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/908_buffer-overflow_overflow-on-fscanf_audio-stream-decoder.c line 19 column 12 function decode_audio_stream
+  buffer overflow on fscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

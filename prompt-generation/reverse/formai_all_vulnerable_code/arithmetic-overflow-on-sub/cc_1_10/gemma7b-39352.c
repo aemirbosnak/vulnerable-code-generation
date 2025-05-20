@@ -1,0 +1,71 @@
+//Gemma-7B DATASET v1.0 Category: Bucket Sort Implementation ; Style: innovative
+#include <stdio.h>
+#include <stdlib.h>
+
+void bucket_sort(int **arr, int n)
+{
+    int i, j, k, min, max, bucket_size, **buckets;
+
+    min = arr[0][0];
+    max = arr[0][0];
+
+    for (i = 0; i < n; i++)
+    {
+        min = fmin(min, arr[i][0]);
+        max = fmax(max, arr[i][0]);
+    }
+
+    bucket_size = (max - min) / n + 1;
+    buckets = malloc(n * sizeof(int *));
+
+    for (i = 0; i < n; i++)
+    {
+        buckets[i] = malloc(bucket_size * sizeof(int));
+    }
+
+    for (i = 0; i < n; i++)
+    {
+        buckets[arr[i][0]]++;
+    }
+
+    for (i = 0; i < n; i++)
+    {
+        buckets[arr[i][0]]--;
+    }
+
+    free(buckets);
+}
+
+int main()
+{
+    int n, i, j, **arr;
+
+    scanf("Enter the number of elements: ", &n);
+
+    arr = malloc(n * sizeof(int *));
+
+    for (i = 0; i < n; i++)
+    {
+        arr[i] = malloc(2 * sizeof(int));
+    }
+
+    printf("Enter the elements: ");
+
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d %d", &arr[i][0], &arr[i][1]);
+    }
+
+    bucket_sort(arr, n);
+
+    printf("Sorted elements: ");
+
+    for (i = 0; i < n; i++)
+    {
+        printf("%d %d ", arr[i][0], arr[i][1]);
+    }
+
+    free(arr);
+
+    return 0;
+}

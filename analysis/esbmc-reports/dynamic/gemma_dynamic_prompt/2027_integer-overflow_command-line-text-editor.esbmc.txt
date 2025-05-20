@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2027_integer-overflow_command-line-text-editor.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2027_integer-overflow_command-line-text-editor.c:37:7: error: expected expression
+      FILE *fp = fopen("text.txt", "w");
+      ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2027_integer-overflow_command-line-text-editor.c:38:15: error: use of undeclared identifier 'fp'
+      fprintf(fp, "%s", buffer);
+              ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/2027_integer-overflow_command-line-text-editor.c:39:14: error: use of undeclared identifier 'fp'
+      fclose(fp);
+             ^
+ERROR: PARSING ERROR

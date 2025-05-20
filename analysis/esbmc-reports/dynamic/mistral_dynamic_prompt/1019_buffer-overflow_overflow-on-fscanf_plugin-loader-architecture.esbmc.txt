@@ -1,0 +1,10 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1019_buffer-overflow_overflow-on-fscanf_plugin-loader-architecture.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1019_buffer-overflow_overflow-on-fscanf_plugin-loader-architecture.c:21:47: warning: format specifies type 'char *' but the argument has type 'void (*)()' [-Wformat]
+    fscanf(file, "%s %*s %s\n", plugin->name, plugin->func);
+                         ~~                   ^~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/1019_buffer-overflow_overflow-on-fscanf_plugin-loader-architecture.c:40:5: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    gets(buf); // DO NOT USE gets() in a real-world application!
+    ^
+ERROR: PARSING ERROR

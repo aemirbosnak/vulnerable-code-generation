@@ -1,0 +1,51 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/125_dereference-failure_forgotten-memory_dynamic-memory-pool-allocator.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.249s
+GOTO program processing time: 0.010s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 16 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Symex completed in: 0.008s (134 assignments)
+Slicing time: 0.000s (removed 85 assignments)
+Generated 25 VCC(s), 23 remaining after simplification (49 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.311s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/125_dereference-failure_forgotten-memory_dynamic-memory-pool-allocator.c line 17 column 5 function allocate thread 0
+----------------------------------------------------
+  new_block = ( struct Block *)0
+Out of memory
+
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/125_dereference-failure_forgotten-memory_dynamic-memory-pool-allocator.c line 53 column 5 function main thread 0
+----------------------------------------------------
+  data1 = 0
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/125_dereference-failure_forgotten-memory_dynamic-memory-pool-allocator.c line 17 column 5 function allocate thread 0
+----------------------------------------------------
+  new_block = ( struct Block *)(&dynamic_3_array[0])
+
+State 11 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/125_dereference-failure_forgotten-memory_dynamic-memory-pool-allocator.c line 17 column 5 function allocate thread 0
+----------------------------------------------------
+  new_block = ( struct Block *)(&dynamic_5_array[0])
+
+State 19 file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 36 column 5 function strcpy thread 0
+----------------------------------------------------
+Violated property:
+  file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 36 column 5 function strcpy
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

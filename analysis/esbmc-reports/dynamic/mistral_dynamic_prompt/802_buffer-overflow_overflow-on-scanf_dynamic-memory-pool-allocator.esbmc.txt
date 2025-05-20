@@ -1,0 +1,11 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/802_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/802_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c:32:58: warning: format specifies type 'int' but the argument has type 'size_t' (aka 'unsigned long') [-Wformat]
+        printf("Address: %p, Size: %d, Data: ", current, current->size);
+                                   ~~                    ^~~~~~~~~~~~~
+                                   %zu
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/802_buffer-overflow_overflow-on-scanf_dynamic-memory-pool-allocator.c:33:9: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+        gets(current->data);
+        ^
+ERROR: PARSING ERROR

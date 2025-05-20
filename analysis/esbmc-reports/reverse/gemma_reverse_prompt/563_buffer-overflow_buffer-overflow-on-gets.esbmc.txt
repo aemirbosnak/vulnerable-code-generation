@@ -1,0 +1,15 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/563_buffer-overflow_buffer-overflow-on-gets.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/563_buffer-overflow_buffer-overflow-on-gets.c:11:3: error: call to undeclared function 'gets'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  gets(source_code);
+  ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/563_buffer-overflow_buffer-overflow-on-gets.c:19:25: error: call to undeclared library function 'isdigit' with type 'int (int)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    for (; token[i] && !isdigit(token[i]); i++) {
+                        ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/563_buffer-overflow_buffer-overflow-on-gets.c:19:25: note: include the header <ctype.h> or explicitly provide a declaration for 'isdigit'
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/563_buffer-overflow_buffer-overflow-on-gets.c:30:25: error: call to undeclared library function 'isalnum' with type 'int (int)'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    for (; token[i] && !isalnum(token[i]); i++) {
+                        ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/563_buffer-overflow_buffer-overflow-on-gets.c:30:25: note: include the header <ctype.h> or explicitly provide a declaration for 'isalnum'
+ERROR: PARSING ERROR

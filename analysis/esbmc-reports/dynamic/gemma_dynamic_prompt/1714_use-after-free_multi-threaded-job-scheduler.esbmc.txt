@@ -1,0 +1,13 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1714_use-after-free_multi-threaded-job-scheduler.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1714_use-after-free_multi-threaded-job-scheduler.c:12:42: error: incompatible pointer to integer conversion passing 'void *' to parameter of type 'pthread_key_t' (aka 'unsigned int') [-Wint-conversion]
+    int* ptr = (int*)pthread_getspecific(thread_id);
+                                         ^~~~~~~~~
+/tmp/esbmc.cbed-2b9e-c682/headers/pthread.h:764:49: note: passing argument to parameter '__key' here
+extern void *pthread_getspecific (pthread_key_t __key);
+                                                ^
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/1714_use-after-free_multi-threaded-job-scheduler.c:19:60: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        pthread_create(&threads[i], NULL, thread_function, (void*)i);
+                                                           ^~~~~~~~
+ERROR: PARSING ERROR

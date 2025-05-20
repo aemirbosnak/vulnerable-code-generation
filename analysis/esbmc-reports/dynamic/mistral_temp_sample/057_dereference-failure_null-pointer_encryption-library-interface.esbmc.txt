@@ -1,0 +1,46 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/057_dereference-failure_null-pointer_encryption-library-interface.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/057_dereference-failure_null-pointer_encryption-library-interface.c:50:10: warning: attempt to call free on non-heap object 'input' [-Wfree-nonheap-object]
+    free(input);
+         ^
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.261s
+GOTO program processing time: 0.008s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/057_dereference-failure_null-pointer_encryption-library-interface.c line 19 column 5 function encrypt
+Symex completed in: 0.006s (82 assignments)
+Slicing time: 0.000s (removed 48 assignments)
+Generated 19 VCC(s), 13 remaining after simplification (34 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.151s
+Building error trace
+
+[Counterexample]
+
+Enter a string to encrypt: 
+
+State 6 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/057_dereference-failure_null-pointer_encryption-library-interface.c line 12 column 5 function encrypt thread 0
+----------------------------------------------------
+  key = 0
+Error: Out of memory
+
+Encrypted: 
+
+
+State 9 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/057_dereference-failure_null-pointer_encryption-library-interface.c line 50 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/057_dereference-failure_null-pointer_encryption-library-interface.c line 50 column 5 function main
+  dereference failure: free() of non-dynamic memory
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

@@ -1,0 +1,110 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.291s
+GOTO program processing time: 0.009s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 9 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 20 column 5 function unsafe_word_count
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 32 column 5 function unsafe_word_count
+Symex completed in: 0.010s (115 assignments)
+Slicing time: 0.000s (removed 67 assignments)
+Generated 25 VCC(s), 11 remaining after simplification (48 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.037s
+BMC program time: 0.050s
+No bug has been found in the base case
+Checking forward condition, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 9 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 20 column 5 function unsafe_word_count
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 32 column 5 function unsafe_word_count
+Symex completed in: 0.010s (112 assignments)
+Slicing time: 0.002s (removed 68 assignments)
+Generated 27 VCC(s), 13 remaining after simplification (44 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.224s
+The forward condition is unable to prove the property
+Checking base case, k = 2
+Starting Bounded Model Checking
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 9 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 9 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 23 column 9 function unsafe_word_count
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 23 column 9 function unsafe_word_count
+Unwinding loop 39 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 20 column 5 function unsafe_word_count
+Unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 2 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Unwinding loop 4 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Not unwinding loop 4 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 33 column 3 function strcpy
+Unwinding loop 9 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Not unwinding loop 9 iteration 2   file /home/runner/work/esbmc/esbmc/src/c2goto/library/string.c line 89 column 3 function strlen
+Unwinding loop 38 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 23 column 9 function unsafe_word_count
+Not unwinding loop 38 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 23 column 9 function unsafe_word_count
+Not unwinding loop 39 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 20 column 5 function unsafe_word_count
+Unwinding loop 40 iteration 1   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 32 column 5 function unsafe_word_count
+Not unwinding loop 40 iteration 2   file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 32 column 5 function unsafe_word_count
+Symex completed in: 0.030s (341 assignments)
+Slicing time: 0.002s (removed 161 assignments)
+Generated 114 VCC(s), 50 remaining after simplification (180 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.265s
+Building error trace
+
+[Counterexample]
+
+
+State 4 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 10 column 5 function unsafe_word_count thread 0
+----------------------------------------------------
+  file = &dynamic_13_value
+
+State 5 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 11 column 5 function unsafe_word_count thread 0
+----------------------------------------------------
+  buffer = { 32, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 6 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 12 column 5 function unsafe_word_count thread 0
+----------------------------------------------------
+  word_count = { 2147483647, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1073741824, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 7 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 13 column 5 function unsafe_word_count thread 0
+----------------------------------------------------
+  current_word = { 0, 0, 64, 0, 0, 0, 0, 0, 0, 0 }
+
+State 15 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 22 column 9 function unsafe_word_count thread 0
+----------------------------------------------------
+  len = 1 (00000000 00000000 00000000 00000001)
+
+State 16 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 25 column 17 function unsafe_word_count thread 0
+----------------------------------------------------
+  current_word[0] = 0 (00000000)
+
+State 20 file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 26 column 17 function unsafe_word_count thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/mistral/695_buffer-overflow_buffer-overflow-on-fscanf.c line 26 column 17 function unsafe_word_count
+  arithmetic overflow on add
+  !overflow("+", word_count[(signed long int)((signed int)(current_word[(signed long int)(i + 1)]))], 1)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 2)

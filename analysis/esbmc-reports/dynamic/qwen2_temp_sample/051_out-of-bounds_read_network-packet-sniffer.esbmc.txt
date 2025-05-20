@@ -1,0 +1,49 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/051_out-of-bounds_read_network-packet-sniffer.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.416s
+GOTO program processing time: 0.013s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function socket
+WARNING: no body for function perror
+WARNING: no body for function recvfrom
+WARNING: no body for function perror
+WARNING: no body for function close
+Not unwinding loop 39 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/051_out-of-bounds_read_network-packet-sniffer.c line 15 column 5 function read_packet
+Not unwinding loop 40 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/051_out-of-bounds_read_network-packet-sniffer.c line 26 column 9 function process_packet
+Not unwinding loop 41 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/051_out-of-bounds_read_network-packet-sniffer.c line 49 column 5 function main
+Symex completed in: 0.009s (66 assignments)
+Slicing time: 0.000s (removed 36 assignments)
+Generated 9 VCC(s), 7 remaining after simplification (30 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.062s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/051_out-of-bounds_read_network-packet-sniffer.c line 43 column 5 function main thread 0
+----------------------------------------------------
+  sockfd = -4 (11111111 11111111 11111111 11111100)
+
+State 3 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/051_out-of-bounds_read_network-packet-sniffer.c line 50 column 9 function main thread 0
+----------------------------------------------------
+  packet_size = -2147483646 (10000000 00000000 00000000 00000010)
+
+State 5 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/051_out-of-bounds_read_network-packet-sniffer.c line 22 column 5 function process_packet thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/051_out-of-bounds_read_network-packet-sniffer.c line 22 column 5 function process_packet
+  arithmetic overflow on sub
+  !overflow("-", size, 30)
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

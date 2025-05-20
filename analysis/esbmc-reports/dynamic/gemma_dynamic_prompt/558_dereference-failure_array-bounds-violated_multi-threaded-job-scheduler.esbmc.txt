@@ -1,0 +1,38 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/558_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.365s
+GOTO program processing time: 0.011s
+Checking base case, k = 1
+Starting Bounded Model Checking
+No target candidate for function call *startdata.func
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/558_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 17 column 3 function main
+Symex completed in: 0.005s (77 assignments)
+Slicing time: 0.000s (removed 52 assignments)
+Generated 12 VCC(s), 11 remaining after simplification (25 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.027s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/558_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 12 column 3 function main thread 0
+----------------------------------------------------
+  arr = (signed int *)0
+
+State 4 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/558_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 13 column 3 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/gemma_dynamic_prompt/558_dereference-failure_array-bounds-violated_multi-threaded-job-scheduler.c line 13 column 3 function main
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

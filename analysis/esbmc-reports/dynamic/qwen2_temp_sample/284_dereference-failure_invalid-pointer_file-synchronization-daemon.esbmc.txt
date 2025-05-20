@@ -1,0 +1,44 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/284_dereference-failure_invalid-pointer_file-synchronization-daemon.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/284_dereference-failure_invalid-pointer_file-synchronization-daemon.c:30:15: warning: incompatible pointer types assigning to 'FILE *' (aka 'struct _IO_FILE *') from 'char *' [-Wincompatible-pointer-types]
+    dest_file = *(char **)NULL;
+              ^ ~~~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/284_dereference-failure_invalid-pointer_file-synchronization-daemon.c:30:17: warning: indirection of non-volatile null pointer will be deleted, not trap [-Wnull-dereference]
+    dest_file = *(char **)NULL;
+                ^~~~~~~~~~~~~~
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/284_dereference-failure_invalid-pointer_file-synchronization-daemon.c:30:17: note: consider using __builtin_trap() or qualifying pointer with 'volatile'
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.407s
+GOTO program processing time: 0.027s
+Checking base case, k = 1
+Starting Bounded Model Checking
+WARNING: no body for function perror
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/284_dereference-failure_invalid-pointer_file-synchronization-daemon.c line 33 column 5 function sync_files
+Symex completed in: 0.020s (102 assignments)
+Slicing time: 0.002s (removed 58 assignments)
+Generated 17 VCC(s), 13 remaining after simplification (44 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.215s
+Building error trace
+
+[Counterexample]
+
+/file.txt
+/file.txt
+
+State 7 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/284_dereference-failure_invalid-pointer_file-synchronization-daemon.c line 30 column 5 function sync_files thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_temp_sample/284_dereference-failure_invalid-pointer_file-synchronization-daemon.c line 30 column 5 function sync_files
+  dereference failure: NULL pointer
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

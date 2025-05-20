@@ -1,0 +1,35 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/876_buffer-overflow_overflow-on-fscanf_cache-eviction-mechanism.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.258s
+GOTO program processing time: 0.005s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 38 iteration 1   file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/876_buffer-overflow_overflow-on-fscanf_cache-eviction-mechanism.c line 18 column 5 function main
+Symex completed in: 0.002s (16 assignments)
+Slicing time: 0.000s (removed 12 assignments)
+Generated 1 VCC(s), 1 remaining after simplification (4 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.002s
+Building error trace
+
+[Counterexample]
+
+Enter data to store in cache: 
+
+State 2 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/876_buffer-overflow_overflow-on-fscanf_cache-eviction-mechanism.c line 14 column 5 function simulate_cache_eviction thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/qwen2_dynamic_prompt/876_buffer-overflow_overflow-on-fscanf_cache-eviction-mechanism.c line 14 column 5 function simulate_cache_eviction
+  buffer overflow on fscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

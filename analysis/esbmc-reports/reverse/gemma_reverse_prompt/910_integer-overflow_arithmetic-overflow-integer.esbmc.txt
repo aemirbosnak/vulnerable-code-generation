@@ -1,0 +1,26 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/910_integer-overflow_arithmetic-overflow-integer.c
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/910_integer-overflow_arithmetic-overflow-integer.c:32:11: error: expected ';' after expression
+    time_t t = time(NULL);
+          ^
+          ;
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/910_integer-overflow_arithmetic-overflow-integer.c:32:5: error: use of undeclared identifier 'time_t'
+    time_t t = time(NULL);
+    ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/910_integer-overflow_arithmetic-overflow-integer.c:32:12: error: use of undeclared identifier 't'
+    time_t t = time(NULL);
+           ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/910_integer-overflow_arithmetic-overflow-integer.c:32:16: error: call to undeclared function 'time'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    time_t t = time(NULL);
+               ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/910_integer-overflow_arithmetic-overflow-integer.c:33:5: error: call to undeclared function 'strftime'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    strftime(file_date, 20, "%Y%m%d_%H%M%S", localtime(&t));
+    ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/910_integer-overflow_arithmetic-overflow-integer.c:33:46: error: call to undeclared function 'localtime'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    strftime(file_date, 20, "%Y%m%d_%H%M%S", localtime(&t));
+                                             ^
+/home/emir/senior-research/analysis/esbmc/../../c-code/reverse/gemma/910_integer-overflow_arithmetic-overflow-integer.c:33:57: error: use of undeclared identifier 't'
+    strftime(file_date, 20, "%Y%m%d_%H%M%S", localtime(&t));
+                                                        ^
+ERROR: PARSING ERROR

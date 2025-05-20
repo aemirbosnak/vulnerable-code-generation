@@ -1,0 +1,50 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/390_out-of-bounds_read_plugin-loader-architecture.c
+/home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/390_out-of-bounds_read_plugin-loader-architecture.c:33:13: warning: address of stack memory associated with local variable 'plugin' returned [-Wreturn-stack-address]
+    return &plugin;
+            ^~~~~~
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.265s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+Not unwinding loop 3 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 184 column 3 function fread
+No target candidate for function call *plugin->init
+No target candidate for function call *plugin->execute
+No target candidate for function call *plugin->deinit
+Symex completed in: 0.005s (129 assignments)
+Slicing time: 0.002s (removed 69 assignments)
+Generated 32 VCC(s), 22 remaining after simplification (60 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.121s
+Building error trace
+
+[Counterexample]
+
+
+State 1 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/390_out-of-bounds_read_plugin-loader-architecture.c line 17 column 5 function load_plugin thread 0
+----------------------------------------------------
+  fp = &dynamic_1_value
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/390_out-of-bounds_read_plugin-loader-architecture.c line 37 column 5 function main thread 0
+----------------------------------------------------
+  plugin = &plugin
+
+State 10 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/390_out-of-bounds_read_plugin-loader-architecture.c line 40 column 9 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_temp_sample/390_out-of-bounds_read_plugin-loader-architecture.c line 40 column 9 function main
+  dereference failure: accessed expired variable pointer `plugin'
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)

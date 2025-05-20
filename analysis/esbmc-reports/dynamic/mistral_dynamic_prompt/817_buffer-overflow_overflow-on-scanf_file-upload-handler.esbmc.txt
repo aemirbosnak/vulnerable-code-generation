@@ -1,0 +1,36 @@
+ESBMC version 7.9.0 64-bit x86_64 linux
+Target: 64-bit little-endian x86_64-unknown-linux with esbmclibc
+Parsing /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/817_buffer-overflow_overflow-on-scanf_file-upload-handler.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.250s
+GOTO program processing time: 0.007s
+Checking base case, k = 1
+Starting Bounded Model Checking
+Not unwinding loop 2 iteration 1   file /home/runner/work/esbmc/esbmc/src/c2goto/library/io.c line 133 column 3 function fgets
+Symex completed in: 0.004s (65 assignments)
+Slicing time: 0.000s (removed 41 assignments)
+Generated 11 VCC(s), 8 remaining after simplification (24 assignments)
+No solver specified; defaulting to Boolector
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Boolector 3.2.4
+Runtime decision procedure: 0.055s
+Building error trace
+
+[Counterexample]
+
+Enter the path of the file to upload (exceeding buffer size):
+
+
+State 8 file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/817_buffer-overflow_overflow-on-scanf_file-upload-handler.c line 25 column 5 function main thread 0
+----------------------------------------------------
+Violated property:
+  file /home/emir/senior-research/vulnerability-analysis/compilable_c_code/mistral_dynamic_prompt/817_buffer-overflow_overflow-on-scanf_file-upload-handler.c line 25 column 5 function main
+  buffer overflow on sscanf
+  0
+
+
+VERIFICATION FAILED
+
+Bug found (k = 1)
