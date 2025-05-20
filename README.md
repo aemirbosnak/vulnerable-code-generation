@@ -131,6 +131,8 @@ To set up the environment, simply install the necessary dependencies by running:
 pip install -r requirements.txt
 ```
 
-#### Final Remarks
+### Outputs and Results
+All intermediate and final results—including model generations, C code files, ESBMC reports, and summaries—are included in the replication release v1.0. These outputs are required to reproduce the tables and findings in the paper and are not tracked in the main branch due to their size.
 
+### Final Remarks
 This repository provides a comprehensive framework for evaluating the security risks associated with the use of LLMs in generating code. The techniques can be adapted to other tasks involving code generation, vulnerability analysis, and prompt engineering for LLMs.
